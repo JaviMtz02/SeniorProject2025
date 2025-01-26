@@ -1,12 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737920688
+::res://::1737922353
 icon.svg::CompressedTexture2D::6407636745531623624::1737677850::1737677985::1::::<><>::
 README.md::TextFile::-1::1737679440::0::1::::<><>::
 ::res://addons/::1737678268
 ::res://Assets(Sprites & Such)/::1737678890
 ::res://Assets(Sprites & Such)/Sounds/::1737678535
 ::res://Assets(Sprites & Such)/Sprites/::1737920688
-::res://Assets(Sprites & Such)/Sprites/animals/::1737920599
+::res://Assets(Sprites & Such)/Sprites/animals/::1737922375
+fossils2.png::CompressedTexture2D::5137085652342604009::1737922375::1737922377::1::::<><>::
+fossils3.PNG::CompressedTexture2D::9028637449749372625::1737922328::1737922355::1::::<><>::
 pets spritesheet grey outline.png::CompressedTexture2D::1170320251806800865::1737920579::1737920582::1::::<><>::
 pets spritesheet.png::CompressedTexture2D::2292887502259066099::1737920563::1737920570::1::::<><>::
 ::res://Assets(Sprites & Such)/Sprites/animals/individual sprites/::1737920595
@@ -59,13 +61,75 @@ Slice 21.png::CompressedTexture2D::7292200033525137466::1737920599::1737920601::
 Slice 22.png::CompressedTexture2D::109622570883614597::1737920599::1737920601::1::::<><>::
 Slice 23.png::CompressedTexture2D::8229120496114799617::1737920599::1737920601::1::::<><>::
 Slice 24.png::CompressedTexture2D::2657629298857360865::1737920599::1737920601::1::::<><>::
-::res://Assets(Sprites & Such)/Sprites/Background/::1737920422
+::res://Assets(Sprites & Such)/Sprites/Background/::1737921640
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/::1737921292
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 1/::1737921313
+1.png::CompressedTexture2D::4381520452190905591::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::1462007424888965595::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::2782043176999896524::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::5680157619059208997::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 2/::1737921313
+1.png::CompressedTexture2D::3698734057406095613::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::7664280026836232997::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::3869393617490564853::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::1985554627463365954::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 3/::1737921313
+1.png::CompressedTexture2D::5490464368272508897::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::2104638257380974306::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::7676040555843633327::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::8642529140356592205::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 4/::1737921313
+1.png::CompressedTexture2D::4733781098098564389::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::1893319809619066848::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::4732178359753958554::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::7704808972609458248::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 5/::1737921313
+1.png::CompressedTexture2D::2133149337299544659::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::1931186394061206246::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::6656234089193117906::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::3642749978718820542::1737921292::1737921313::1::::<><>::
+5.png::CompressedTexture2D::1019772073192506795::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 6/::1737921313
+1.png::CompressedTexture2D::6855457511328796602::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::2695718262157608532::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::2375238666681017859::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::6472183237149178599::1737921292::1737921313::1::::<><>::
+5.png::CompressedTexture2D::6147256456975219402::1737921292::1737921313::1::::<><>::
+6.png::CompressedTexture2D::2211041581533767966::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 7/::1737921313
+1.png::CompressedTexture2D::4735744618705703220::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::7377421380430946595::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::1463943282530580052::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::4974556045614425971::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 8/::1737921313
+1.png::CompressedTexture2D::5791427237295914371::1737921292::1737921313::1::::<><>::
+2.png::CompressedTexture2D::3886145256476549817::1737921292::1737921313::1::::<><>::
+3.png::CompressedTexture2D::5699641495906185957::1737921292::1737921313::1::::<><>::
+4.png::CompressedTexture2D::4899998133172962961::1737921292::1737921313::1::::<><>::
+5.png::CompressedTexture2D::5287397068758539643::1737921292::1737921313::1::::<><>::
+6.png::CompressedTexture2D::5514862823574845649::1737921292::1737921313::1::::<><>::
 ::res://Assets(Sprites & Such)/Sprites/Characters/::1737920415
 burglar_actions.png::CompressedTexture2D::3316561554619535271::1737678877::1737920415::1::::<><>::
 guard_museum_movement.png::CompressedTexture2D::3229777133052111460::1737678880::1737920413::1::::<><>::
-::res://Assets(Sprites & Such)/Sprites/Floors_Walls/::1737920700
+::res://Assets(Sprites & Such)/Sprites/Floors_Walls/::1737921902
 floor and walls spritesheet black outline.png::CompressedTexture2D::3332100287611790601::1737920675::1737920686::1::::<><>::
 floor and walls spritesheet.png::CompressedTexture2D::4228386484022282233::1737920679::1737920690::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Floors_Walls/Floors & Walls/::1737921851
+Tileset_16x16_1.png::CompressedTexture2D::8246212116667590832::1737921807::1737921851::1::::<><>::
+Tileset_16x16_2.png::CompressedTexture2D::3760040630976118175::1737921807::1737921851::1::::<><>::
+Tileset_16x16_3.png::CompressedTexture2D::5867232192359799851::1737921807::1737921851::1::::<><>::
+Tileset_16x16_9.png::CompressedTexture2D::6520826641907924086::1737921807::1737921851::1::::<><>::
+Tileset_16x16_16.png::CompressedTexture2D::7530857858762807852::1737921807::1737921851::1::::<><>::
+Tileset_32x32_1.png::CompressedTexture2D::2056398962897913084::1737921807::1737921851::1::::<><>::
+Tileset_32x32_2.png::CompressedTexture2D::8536720641420689265::1737921807::1737921851::1::::<><>::
+Tileset_32x32_3.png::CompressedTexture2D::3248707621568796546::1737921807::1737921851::1::::<><>::
+Tileset_32x32_9.png::CompressedTexture2D::1727679540283726132::1737921807::1737921851::1::::<><>::
+Tileset_32x32_16.png::CompressedTexture2D::5699007599736029832::1737921807::1737921851::1::::<><>::
+Tileset_48x48_1.png::CompressedTexture2D::7770811774909256513::1737921807::1737921851::1::::<><>::
+Tileset_48x48_2.png::CompressedTexture2D::98033501329890678::1737921807::1737921851::1::::<><>::
+Tileset_48x48_3.png::CompressedTexture2D::2383175188234637979::1737921807::1737921851::1::::<><>::
+Tileset_48x48_9.png::CompressedTexture2D::2608495956056118504::1737921807::1737921851::1::::<><>::
+Tileset_48x48_16.png::CompressedTexture2D::787605464265753104::1737921807::1737921851::1::::<><>::
 ::res://Assets(Sprites & Such)/Sprites/Floors_Walls/individual sprites/::1737920698
 Slice 1.png::CompressedTexture2D::894473508606457674::1737920694::1737920698::1::::<><>::
 Slice 2.png::CompressedTexture2D::444473929455345393::1737920694::1737920698::1::::<><>::
@@ -223,7 +287,7 @@ Slice 153.png::CompressedTexture2D::250968333375483180::1737920694::1737920697::
 Slice 154.png::CompressedTexture2D::4043047416352183977::1737920694::1737920697::1::::<><>::
 Slice 155.png::CompressedTexture2D::6308086163738969461::1737920694::1737920697::1::::<><>::
 Slice 156.png::CompressedTexture2D::2738421973540686151::1737920694::1737920697::1::::<><>::
-::res://Assets(Sprites & Such)/Sprites/Floors_Walls/individual sprites black outline/::1737920701
+::res://Assets(Sprites & Such)/Sprites/Floors_Walls/individual sprites black outline/::1737920705
 Slice 1.png::CompressedTexture2D::1010569780324299495::1737920700::1737920705::1::::<><>::
 Slice 2.png::CompressedTexture2D::6274585263633422559::1737920701::1737920705::1::::<><>::
 Slice 3.png::CompressedTexture2D::9060677578682885739::1737920701::1737920705::1::::<><>::
@@ -380,10 +444,11 @@ Slice 153.png::CompressedTexture2D::4421735521854506162::1737920701::1737920705:
 Slice 154.png::CompressedTexture2D::5262335110357539327::1737920701::1737920705::1::::<><>::
 Slice 155.png::CompressedTexture2D::5999871427640729482::1737920701::1737920705::1::::<><>::
 Slice 156.png::CompressedTexture2D::7436079281424333051::1737920701::1737920705::1::::<><>::
-::res://Assets(Sprites & Such)/Sprites/Furniture/::1737920516
+::res://Assets(Sprites & Such)/Sprites/Furniture/::1737922353
 furniture pack coloured outline.png::CompressedTexture2D::525577317961988156::1737920439::1737920444::1::::<><>::
 furniture pack grey outline.png::CompressedTexture2D::5323767892378216204::1737920436::1737920445::1::::<><>::
 furniture spritesheet.png::CompressedTexture2D::452444035550166490::1737920442::1737920447::1::::<><>::
+furniture.png::CompressedTexture2D::8037975529954339087::1737921632::1737921659::1::::<><>::
 ::res://Assets(Sprites & Such)/Sprites/Furniture/individual sprites/::1737920526
 part-Slice 1.png::CompressedTexture2D::2096566059471579713::1737920516::1737920525::1::::<><>::
 part-Slice 2.png::CompressedTexture2D::1994963635377040298::1737920517::1737920525::1::::<><>::
@@ -1893,6 +1958,16 @@ part-Slice 500.png::CompressedTexture2D::407848390005960916::1737920471::1737920
 part-Slice 501.png::CompressedTexture2D::8312225161375303267::1737920471::1737920474::1::::<><>::
 part-Slice 502.png::CompressedTexture2D::6199800527177191739::1737920471::1737920474::1::::<><>::
 part-Slice 503.png::CompressedTexture2D::2335147834227152690::1737920471::1737920474::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Furniture/Interior/::1737921891
+::res://Assets(Sprites & Such)/Sprites/Furniture/Interior/16x16/::1737921905
+Interiors_free_16x16.png::CompressedTexture2D::7691490750011831118::1737921890::1737921905::1::::<><>::
+Room_Builder_free_16x16.png::CompressedTexture2D::3504848176295122092::1737921890::1737921905::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Furniture/Interior/32x32/::1737921905
+Interiors_free_32x32.png::CompressedTexture2D::3349272000649467120::1737921891::1737921905::1::::<><>::
+Room_Builder_free_32x32.png::CompressedTexture2D::1872125354585155219::1737921891::1737921905::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Furniture/Interior/48x48/::1737921905
+Interiors_free_48x48.png::CompressedTexture2D::367003955403333169::1737921891::1737921905::1::::<><>::
+Room_Builder_free_48x48.png::CompressedTexture2D::5980835670556080217::1737921891::1737921905::1::::<><>::
 ::res://Assets(Sprites & Such)/Text/::1737678550
 ::res://Scenes/::1737678412
 ::res://Scripts/::1737678424
