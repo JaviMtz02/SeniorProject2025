@@ -1,17 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737927832
+::res://::1737928206
 icon.svg::CompressedTexture2D::6407636745531623624::1737677850::1737677985::1::::<><>::
 README.md::TextFile::-1::1737679440::0::1::::<><>::
 ::res://addons/::1737678268
 ::res://Assets(Sprites & Such)/::1737678890
 ::res://Assets(Sprites & Such)/Sounds/::1737678535
-::res://Assets(Sprites & Such)/Sprites/::1737920688
+::res://Assets(Sprites & Such)/Sprites/::1737928132
 ::res://Assets(Sprites & Such)/Sprites/animals/::1737924202
 fossils2.png::CompressedTexture2D::5137085652342604009::1737922375::1737922377::1::::<><>::
 fossils3.PNG::CompressedTexture2D::9028637449749372625::1737922328::1737922355::1::::<><>::
 pets spritesheet grey outline.png::CompressedTexture2D::1170320251806800865::1737920579::1737920582::1::::<><>::
 pets spritesheet.png::CompressedTexture2D::2292887502259066099::1737920563::1737920570::1::::<><>::
-::res://Assets(Sprites & Such)/Sprites/Background/::1737921640
+::res://Assets(Sprites & Such)/Sprites/Background/::1737928206
 ::res://Assets(Sprites & Such)/Sprites/Background/Clouds/::1737921292
 ::res://Assets(Sprites & Such)/Sprites/Background/Clouds/Clouds 1/::1737921313
 1.png::CompressedTexture2D::4381520452190905591::1737921292::1737921313::1::::<><>::
@@ -58,6 +58,59 @@ pets spritesheet.png::CompressedTexture2D::2292887502259066099::1737920563::1737
 4.png::CompressedTexture2D::4899998133172962961::1737921292::1737921313::1::::<><>::
 5.png::CompressedTexture2D::5287397068758539643::1737921292::1737921313::1::::<><>::
 6.png::CompressedTexture2D::5514862823574845649::1737921292::1737921313::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/::1737928123
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/Condominium/::1737928136
+Condominium_Design_2_layer_1.png::CompressedTexture2D::8116005653790041957::1737928122::1737928136::1::::<><>::
+Condominium_Design_2_layer_2.png::CompressedTexture2D::1080842345975701369::1737928122::1737928136::1::::<><>::
+Condominium_Design_2_preview.png::CompressedTexture2D::1743969174774697647::1737928122::1737928136::1::::<><>::
+Condominium_Design_layer_1.png::CompressedTexture2D::8816626981053362425::1737928122::1737928136::1::::<><>::
+Condominium_Design_layer_2.png::CompressedTexture2D::84890295426376029::1737928122::1737928136::1::::<><>::
+Condominium_Design_preview.png::CompressedTexture2D::1564368255957011644::1737928122::1737928136::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/Gym/::1737928136
+Gym_2_layer_1.png::CompressedTexture2D::4631199681735134359::1737928122::1737928136::1::::<><>::
+Gym_2_layer_2.png::CompressedTexture2D::4389438592157394426::1737928122::1737928136::1::::<><>::
+Gym_2_preview.png::CompressedTexture2D::2267502662082841916::1737928122::1737928136::1::::<><>::
+Gym_layer_1.png::CompressedTexture2D::1738337631396482611::1737928122::1737928136::1::::<><>::
+Gym_layer_2.png::CompressedTexture2D::508315994778909119::1737928122::1737928136::1::::<><>::
+Gym_preview.png::CompressedTexture2D::2480871355850773753::1737928122::1737928136::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/Home/::1737928136
+Generic_Home_1_Layer_1.png::CompressedTexture2D::6124558588675738946::1737928123::1737928136::1::::<><>::
+Generic_Home_1_Layer_2_.png::CompressedTexture2D::6783768133679644971::1737928123::1737928136::1::::<><>::
+Generic_Home_1_preview_16x16.png::CompressedTexture2D::2249557978233630996::1737928123::1737928136::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/Ice_Cream_Shop/::1737928136
+Ice_Cream_Shop_Design_layer_1.png::CompressedTexture2D::2103682694253323944::1737928123::1737928136::1::::<><>::
+Ice_Cream_Shop_Design_layer_2.png::CompressedTexture2D::6328499610313932941::1737928123::1737928136::1::::<><>::
+Ice_Cream_Shop_Design_layer_3.png::CompressedTexture2D::6299665305074402424::1737928123::1737928136::1::::<><>::
+Ice_Cream_Shop_Design_preview.png::CompressedTexture2D::5559360469045914520::1737928123::1737928136::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/Japanese_Home/::1737928136
+Japanese_Home_1_Layer_1_16x16.png::CompressedTexture2D::7930105789842418618::1737928123::1737928136::1::::<><>::
+Japanese_Home_1_Layer_2_16x16.png::CompressedTexture2D::704621383683842130::1737928123::1737928136::1::::<><>::
+Japanese_Home_1_preview_16x16.png::CompressedTexture2D::5595215326194462782::1737928123::1737928136::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/Museum/::1737928136
+Museum_entrance_layer_1.png::CompressedTexture2D::1484513684798204869::1737928123::1737928136::1::::<><>::
+Museum_entrance_layer_2.png::CompressedTexture2D::3621883976671032655::1737928123::1737928136::1::::<><>::
+Museum_entrance_preview.png::CompressedTexture2D::2912754242820354522::1737928123::1737928136::1::::<><>::
+Museum_room_1_layer_1.png::CompressedTexture2D::67897559072912443::1737928123::1737928136::1::::<><>::
+Museum_room_1_layer_2.png::CompressedTexture2D::3786935103211068070::1737928123::1737928136::1::::<><>::
+Museum_room_1_preview.png::CompressedTexture2D::1551624108014824707::1737928123::1737928136::1::::<><>::
+Museum_room_2_layer_1.png::CompressedTexture2D::8489277825762341858::1737928123::1737928136::1::::<><>::
+Museum_room_2_layer_2.png::CompressedTexture2D::1286627750240723701::1737928123::1737928136::1::::<><>::
+Museum_room_2_preview.png::CompressedTexture2D::2021023913481565345::1737928123::1737928136::1::::<><>::
+Museum_room_3_layer_1.png::CompressedTexture2D::3217894541128328145::1737928123::1737928136::1::::<><>::
+Museum_room_3_layer_2.png::CompressedTexture2D::8410762858021783071::1737928123::1737928136::1::::<><>::
+Museum_room_3_preview.png::CompressedTexture2D::4952205370661721183::1737928123::1737928136::1::::<><>::
+Museum_room_4_layer_1.png::CompressedTexture2D::3061380153452653406::1737928123::1737928136::1::::<><>::
+Museum_room_4_layer_2.png::CompressedTexture2D::7287472131108759420::1737928123::1737928136::1::::<><>::
+Museum_room_4_preview.png::CompressedTexture2D::9048774043073999907::1737928123::1737928136::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/Shooting Range/::1737928136
+Shooting_Range_Design_layer_1.png::CompressedTexture2D::1779613121809933173::1737928123::1737928136::1::::<><>::
+Shooting_Range_Design_layer_2.png::CompressedTexture2D::6623279370164651281::1737928123::1737928136::1::::<><>::
+Shooting_Range_Design_preview.png::CompressedTexture2D::9138422486113541643::1737928123::1737928136::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/Background/Setting Design/TV_Studio/::1737928136
+Tv_Studio_Design_layer_1.png::CompressedTexture2D::7861435946656841338::1737928123::1737928136::1::::<><>::
+Tv_Studio_Design_layer_2.png::CompressedTexture2D::6723871204331843572::1737928123::1737928136::1::::<><>::
+Tv_Studio_Design_layer_3.png::CompressedTexture2D::3028895589233009906::1737928123::1737928136::1::::<><>::
+Tv_Studio_Design_preview.png::CompressedTexture2D::5467852741375347134::1737928123::1737928136::1::::<><>::
 ::res://Assets(Sprites & Such)/Sprites/Characters/::1737920415
 burglar_actions.png::CompressedTexture2D::3316561554619535271::1737678877::1737920415::1::::<><>::
 guard_museum_movement.png::CompressedTexture2D::3229777133052111460::1737678880::1737920413::1::::<><>::
@@ -391,7 +444,7 @@ furniture spritesheet.png::CompressedTexture2D::6769281803947051022::1737920442:
 furniture.png::CompressedTexture2D::7631690907594550311::1737921632::1737927569::1::::<><>::
 ::res://Assets(Sprites & Such)/Sprites/Furniture/Animated_Objects/::1737927870
 ::res://Assets(Sprites & Such)/Sprites/Furniture/Animated_Objects/16x16/::1737927870
-::res://Assets(Sprites & Such)/Sprites/Furniture/Animated_Objects/16x16/spritesheets/::1737927873
+::res://Assets(Sprites & Such)/Sprites/Furniture/Animated_Objects/16x16/spritesheets/::1737927879
 aniamted_haunted_mirror.png::CompressedTexture2D::1441273441585651327::1737927870::1737927878::1::::<><>::
 animated_amplifier.png::CompressedTexture2D::445518629333338477::1737927870::1737927878::1::::<><>::
 animated_amplifier_big.png::CompressedTexture2D::7458182787098556357::1737927870::1737927878::1::::<><>::
@@ -1773,6 +1826,9 @@ Room_Builder_Walls_16x16.png::CompressedTexture2D::5804912344758655309::17379278
 24_Ice_Cream_Shop.png::CompressedTexture2D::1934803092166752710::1737927815::1737927836::1::::<><>::
 25_Shooting_Range.png::CompressedTexture2D::487538492405041680::1737927815::1737927836::1::::<><>::
 26_Condominium.png::CompressedTexture2D::820311035121265547::1737927815::1737927836::1::::<><>::
+::res://Assets(Sprites & Such)/Sprites/UI/::1737928216
+UI_16x16.png::CompressedTexture2D::5485479918667153035::1737928162::1737928209::1::::<><>::
+UI_thinking_emotes_animation_16x16.png::CompressedTexture2D::727185421714266417::1737928216::1737928219::1::::<><>::
 ::res://Assets(Sprites & Such)/Text/::1737678550
 ::res://Scenes/::1737678412
 ::res://Scripts/::1737678424
