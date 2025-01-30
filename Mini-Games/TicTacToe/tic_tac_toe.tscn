@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://0hq0jx8worqk"]
+
+[ext_resource type="Script" path="res://Mini-Games/TicTacToe/tic_tac_toe.gd" id="1_3qpvu"]
+[ext_resource type="Script" path="res://Mini-Games/TicTacToe/button_dupe.gd" id="2_vypde"]
+[ext_resource type="Texture2D" uid="uid://cq3yvgs65xps6" path="res://Mini-Games/TicTacToe/tmpTextures/blank.png" id="3_bo7j3"]
+[ext_resource type="Script" path="res://Mini-Games/TicTacToe/tic_tac_button.gd" id="3_yr16o"]
+
+[node name="TicTacToe" type="Node2D"]
+scale = Vector2(1.92073, 1.92073)
+script = ExtResource("1_3qpvu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 605.0
+offset_bottom = 347.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 5.72699
+offset_top = 151.505
+offset_right = 99.727
+offset_bottom = 193.505
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "X's Turn"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 144.0
+offset_top = 5.0
+offset_right = 394.0
+offset_bottom = 255.0
+script = ExtResource("2_vypde")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_bo7j3")
+stretch_mode = 0
+script = ExtResource("3_yr16o")
+
+[connection signal="button_press" from="GridContainer/TextureButton" to="." method="_on_texture_button_button_press"]
