@@ -1,2 +1,14 @@
-res://Scenes/house.tscn
-res://Scenes/House Scenes/house.tscn
+res://Scenes/House Level/characters/Dog/dog.tscn
+res://Scripts/node_state_machine.gd
+res://Scenes/House Level/characters/Dog/walk_state.gd
+res://Scenes/House Level/characters/Dog/bark_state.gd
+res://Scenes/House Level/house.tscn
+res://Scenes/House Level/characters/Dog/idle_state.gd
+res://Scenes/Burglar/burglar.tscn
+res://Scenes/House Level/Loot/ball.tscn
+res://Scenes/House Level/Loot Scripts/ball.gd
+res://Scenes/Burglar/burglar.gd
+res://Scripts/node_state_machine_burglar.gd
+res://Scenes/Burglar/walk_state.gd
+res://Scenes/Burglar/idle_state.gd
+res://Scenes/Burglar/take_loot_state.gd

@@ -11,13 +11,22 @@ config_version=5
 [application]
 
 config/name="Burglar Game"
-run/main_scene="res://Scenes/House Scenes/house.tscn"
+run/main_scene="res://Scenes/House Level/house.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_height=800
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
 project/assembly_name="Burglar Game"
+
+[global_group]
+
+navigation_polygon_source_geometry_group=""
 
 [input]
 
@@ -49,6 +58,7 @@ down={
 [layer_names]
 
 2d_physics/layer_1="Walls_Layer"
+2d_physics/layer_2="Loot Layer"
 
 [rendering]
 

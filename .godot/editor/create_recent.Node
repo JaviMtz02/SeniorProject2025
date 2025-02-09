@@ -1,4 +1,13 @@
 Node
-TileMapLayer
+CollisionShape2D
+Area2D
+Sprite2D
+RayCast2D
+Camera2D
+AnimatedSprite2D
+CharacterBody2D
+NavigationAgent2D
 TileMap
+NavigationRegion2D
+TileMapLayer
 Node2D

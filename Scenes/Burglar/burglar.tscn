@@ -1,0 +1,129 @@
+[gd_scene load_steps=17 format=3 uid="uid://cn2v6r5xd2gqc"]
+
+[ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="2_0gd4x"]
+[ext_resource type="Script" path="res://Scripts/node_state_machine_burglar.gd" id="2_umsxp"]
+[ext_resource type="Script" path="res://Scenes/Burglar/idle_state.gd" id="3_j7vaf"]
+[ext_resource type="Script" path="res://Scenes/Burglar/walk_state.gd" id="3_y1n7j"]
+[ext_resource type="Script" path="res://Scenes/Burglar/take_loot_state.gd" id="6_g7kpk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_458jq"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(40, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gawvw"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(60, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pijti"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(80, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w116"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(100, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fhg6"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(120, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67f3y"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(140, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nvha"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(0, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vghyd"]
+atlas = ExtResource("2_0gd4x")
+region = Rect2(20, 0, 20, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ng3gl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_458jq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gawvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pijti")
+}],
+"loop": true,
+"name": &"back",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w116")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fhg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67f3y")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nvha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vghyd")
+}],
+"loop": true,
+"name": &"left_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1me5"]
+size = Vector2(10, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow3h4"]
+size = Vector2(21, 28)
+
+[node name="Burglar" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ng3gl")
+animation = &"forward"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 3
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_w1me5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="LootInteraction" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootInteraction"]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_ow3h4")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("2_umsxp")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("burglar", "anim_sprite", "loot_interaction")]
+script = ExtResource("3_j7vaf")
+burglar = NodePath("../..")
+anim_sprite = NodePath("../../AnimatedSprite2D")
+loot_interaction = NodePath("../../LootInteraction")
+
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("burglar", "anim_sprite", "loot_interaction")]
+script = ExtResource("3_y1n7j")
+burglar = NodePath("../..")
+anim_sprite = NodePath("../../AnimatedSprite2D")
+loot_interaction = NodePath("../../LootInteraction")
+
+[node name="TakeLoot" type="Node" parent="StateMachine" node_paths=PackedStringArray("burglar", "loot_interaction")]
+script = ExtResource("6_g7kpk")
+burglar = NodePath("../..")
+loot_interaction = NodePath("../../LootInteraction")
