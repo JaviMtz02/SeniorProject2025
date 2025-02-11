@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp5auh0nsunp6"]
+
+[ext_resource type="Texture2D" uid="uid://duvgwsse1g6wr" path="res://Assets/Sprites/Loot Sprites/House Loot/kachow.png" id="1_thxpu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_753us"]
+size = Vector2(17, 15)
+
+[node name="Kachow" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_thxpu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_753us")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn13hiu4goe32"]
+
+[ext_resource type="Texture2D" uid="uid://bqv3cs3ggjhk5" path="res://Assets/Sprites/Loot Sprites/House Loot/robot.png" id="1_e7mxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfd8t"]
+size = Vector2(15, 25)
+
+[node name="Robot" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e7mxv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_sfd8t")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh01w44v3llaj"]
+
+[ext_resource type="Texture2D" uid="uid://bwxas2o8k887" path="res://Assets/Sprites/Loot Sprites/House Loot/keyboard.png" id="1_u24gw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32yhs"]
+size = Vector2(23, 12)
+
+[node name="Keyboard" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u24gw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_32yhs")

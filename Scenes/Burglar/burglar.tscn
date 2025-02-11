@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://cn2v6r5xd2gqc"]
+[gd_scene load_steps=18 format=3 uid="uid://cn2v6r5xd2gqc"]
 
+[ext_resource type="Script" path="res://Scenes/Burglar/burglar.gd" id="1_ptfhq"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="2_0gd4x"]
 [ext_resource type="Script" path="res://Scripts/node_state_machine_burglar.gd" id="2_umsxp"]
 [ext_resource type="Script" path="res://Scenes/Burglar/idle_state.gd" id="3_j7vaf"]
@@ -86,26 +87,21 @@ size = Vector2(10, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow3h4"]
 size = Vector2(21, 28)
 
-[node name="Burglar" type="CharacterBody2D"]
+[node name="Burglar" type="CharacterBody2D" node_paths=PackedStringArray("burglar", "loot_interaction")]
+script = ExtResource("1_ptfhq")
+burglar = NodePath(".")
+loot_interaction = NodePath("LootInteraction")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ng3gl")
 animation = &"forward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visibility_layer = 3
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_w1me5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
-
-[node name="LootInteraction" type="Area2D" parent="."]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LootInteraction"]
-position = Vector2(0.5, 2)
-shape = SubResource("RectangleShape2D_ow3h4")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("2_umsxp")
@@ -127,3 +123,11 @@ loot_interaction = NodePath("../../LootInteraction")
 script = ExtResource("6_g7kpk")
 burglar = NodePath("../..")
 loot_interaction = NodePath("../../LootInteraction")
+
+[node name="LootInteraction" type="Area2D" parent="." groups=["loot_interaction"]]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootInteraction"]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_ow3h4")

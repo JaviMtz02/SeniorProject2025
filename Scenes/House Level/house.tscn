@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://dthi565027qtm"]
+[gd_scene load_steps=61 format=4 uid="uid://dthi565027qtm"]
 
 [ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Floors & Walls/Tileset_16x16_16.png" id="1_848k0"]
 [ext_resource type="Texture2D" uid="uid://bpxj4sp0gm7qr" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png" id="2_7pkew"]
@@ -22,7 +22,22 @@
 [ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="20_pjwmv"]
 [ext_resource type="PackedScene" uid="uid://sdns7q1mfc6t" path="res://Scenes/House Level/characters/Dog/dog.tscn" id="21_3vikf"]
 [ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="22_6ob7k"]
-[ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot/ball.tscn" id="23_iwso7"]
+[ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot Scenes/ball.tscn" id="23_iwso7"]
+[ext_resource type="PackedScene" uid="uid://dassywovt6r47" path="res://Scenes/House Level/Loot Scenes/phone.tscn" id="23_lub5n"]
+[ext_resource type="Script" path="res://Scenes/House Level/Loot Scripts/loot.gd" id="24_lfu3r"]
+[ext_resource type="PackedScene" uid="uid://cjrpelqwlam1x" path="res://Scenes/House Level/Loot Scenes/vase.tscn" id="25_dgrcy"]
+[ext_resource type="PackedScene" uid="uid://cp5auh0nsunp6" path="res://Scenes/House Level/Loot Scenes/kachow.tscn" id="26_fqyn1"]
+[ext_resource type="PackedScene" uid="uid://c5x14yqg4be5w" path="res://Scenes/House Level/Loot Scenes/artifact.tscn" id="27_arj0y"]
+[ext_resource type="PackedScene" uid="uid://dh01w44v3llaj" path="res://Scenes/House Level/Loot Scenes/keyboard.tscn" id="28_dxgwq"]
+[ext_resource type="PackedScene" uid="uid://bquuht2vh8v8c" path="res://Scenes/House Level/Loot Scenes/book.tscn" id="29_ewlil"]
+[ext_resource type="PackedScene" uid="uid://c2to4epp01ay6" path="res://Scenes/House Level/Loot Scenes/art_2.tscn" id="30_g8sa4"]
+[ext_resource type="PackedScene" uid="uid://7186vuh0sif5" path="res://Scenes/House Level/Loot Scenes/art.tscn" id="31_ayuub"]
+[ext_resource type="PackedScene" uid="uid://diwu7amf4xnbh" path="res://Scenes/House Level/Loot Scenes/art_3.tscn" id="32_2jcoy"]
+[ext_resource type="PackedScene" uid="uid://c4usk3ut2lmef" path="res://Scenes/House Level/Loot Scenes/art_4.tscn" id="33_lwjgl"]
+[ext_resource type="PackedScene" uid="uid://bn13hiu4goe32" path="res://Scenes/House Level/Loot Scenes/robot.tscn" id="34_765gb"]
+[ext_resource type="PackedScene" uid="uid://bi4ro7popdrb" path="res://Scenes/House Level/Loot Scenes/skateboard.tscn" id="35_g50dt"]
+[ext_resource type="PackedScene" uid="uid://5qwrysg7p2fa" path="res://Scenes/House Level/Loot Scenes/television.tscn" id="36_uhqje"]
+[ext_resource type="PackedScene" uid="uid://b8wd6wgu55o4x" path="res://Scenes/House Level/Loot Scenes/trophy.tscn" id="37_lryl0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_typuc"]
 texture = ExtResource("1_848k0")
@@ -10382,5 +10397,81 @@ position = Vector2(-101, 833)
 
 [node name="Loot" type="Node" parent="."]
 
+[node name="Phone" parent="Loot" groups=["loot"] instance=ExtResource("23_lub5n")]
+position = Vector2(-353, 532)
+script = ExtResource("24_lfu3r")
+value = 2.0
+inventory_space_req = 6.0
+
 [node name="Ball" parent="Loot" instance=ExtResource("23_iwso7")]
-position = Vector2(-136, 515)
+position = Vector2(-137, 516)
+
+[node name="Vase" parent="Loot" groups=["loot"] instance=ExtResource("25_dgrcy")]
+position = Vector2(-186, 347)
+script = ExtResource("24_lfu3r")
+value = 7.0
+inventory_space_req = 6.0
+
+[node name="Kachow" parent="Loot" groups=["loot"] instance=ExtResource("26_fqyn1")]
+position = Vector2(35, 561)
+script = ExtResource("24_lfu3r")
+value = 10.0
+inventory_space_req = 1.0
+
+[node name="Artifact" parent="Loot" instance=ExtResource("27_arj0y")]
+position = Vector2(-33, 751)
+value = 8.0
+inventory_space_req = 5.0
+
+[node name="Keyboard" parent="Loot" groups=["loot"] instance=ExtResource("28_dxgwq")]
+position = Vector2(91, 690)
+script = ExtResource("24_lfu3r")
+value = 25.0
+inventory_space_req = 15.0
+
+[node name="Book" parent="Loot" groups=["loot"] instance=ExtResource("29_ewlil")]
+position = Vector2(145, 385)
+
+[node name="Art2" parent="Loot" groups=["loot"] instance=ExtResource("30_g8sa4")]
+position = Vector2(-61, 668)
+
+[node name="Art" parent="Loot" instance=ExtResource("31_ayuub")]
+position = Vector2(-54, 564)
+
+[node name="Art3" parent="Loot" groups=["loot"] instance=ExtResource("32_2jcoy")]
+position = Vector2(-187, 564)
+script = ExtResource("24_lfu3r")
+value = 9.0
+inventory_space_req = 4.0
+
+[node name="Art4" parent="Loot" groups=["loot"] instance=ExtResource("33_lwjgl")]
+position = Vector2(-156, 676)
+script = ExtResource("24_lfu3r")
+value = 1.0
+inventory_space_req = 5.0
+
+[node name="Robot" parent="Loot" groups=["loot"] instance=ExtResource("34_765gb")]
+position = Vector2(-322, 385)
+script = ExtResource("24_lfu3r")
+value = 2.0
+inventory_space_req = 7.0
+
+[node name="Skateboard" parent="Loot" groups=["loot"] instance=ExtResource("35_g50dt")]
+position = Vector2(278, 387)
+script = ExtResource("24_lfu3r")
+value = 5.0
+inventory_space_req = 10.0
+
+[node name="Television" parent="Loot" groups=["loot"] instance=ExtResource("36_uhqje")]
+position = Vector2(194, 814)
+
+[node name="Trophy" parent="Loot" groups=["loot"] instance=ExtResource("37_lryl0")]
+position = Vector2(-42, 329)
+script = ExtResource("24_lfu3r")
+value = 10.0
+
+[node name="Vase2" parent="Loot" groups=["loot"] instance=ExtResource("25_dgrcy")]
+position = Vector2(-9, 393)
+script = ExtResource("24_lfu3r")
+value = 8.0
+inventory_space_req = 3.0

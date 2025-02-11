@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjrpelqwlam1x"]
+
+[ext_resource type="Texture2D" uid="uid://h6mqngmovu2o" path="res://Assets/Sprites/Loot Sprites/House Loot/vase.png" id="1_qry6a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4lmqq"]
+radius = 7.07107
+
+[node name="Vase" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qry6a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_4lmqq")
