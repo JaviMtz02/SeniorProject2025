@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739307495
+::res://::1739406065
 icon.svg::CompressedTexture2D::6407636745531623624::1737677850::1737677985::1::::<><>::
 README.md::TextFile::-1::1738876075::0::1::::<><>::
 ::res://addons/::1738383280
 ::res://Assets/::1738890830
-::res://Assets/Sprites/::1739133478
+::res://Assets/Sprites/::1739400897
 ::res://Assets/Sprites/animals/::1739155314
 ::res://Assets/Sprites/animals/1 Dog/::1738890831
 Attack.png::CompressedTexture2D::3579114334195840562::1738890827::1738890831::1::::<><>::
@@ -104,71 +104,48 @@ Tv_Studio_Design_preview.png::CompressedTexture2D::5467852741375347134::17388760
 ::res://Assets/Sprites/Characters/::1738981340
 burglar_walking.png::CompressedTexture2D::9110177690202893824::1738981307::1738981340::1::::<><>::
 guard_museum_movement.png::CompressedTexture2D::3229777133052111460::1738876008::1738890597::1::::<><>::
-::res://Assets/Sprites/Floors_Walls/::1738876006
-::res://Assets/Sprites/Floors_Walls/Floors & Walls/::1738890597
-Tileset_16x16_3.png::CompressedTexture2D::5867232192359799851::1738876008::1738890597::1::::<><>::
-Tileset_16x16_9.png::CompressedTexture2D::6520826641907924086::1738876008::1738890597::1::::<><>::
-Tileset_16x16_16.png::CompressedTexture2D::7530857858762807852::1738876008::1738890597::1::::<><>::
+::res://Assets/Sprites/Floors_Walls/::1739405891
+Tileset_16x16_16.png::CompressedTexture2D::7530857858762807852::1738876008::1739405883::1::::<><>::
 ::res://Assets/Sprites/Furniture/::1738981089
 furniture_modified.png::CompressedTexture2D::4378257288323244382::1738876007::1738890595::1::::<><>::
 ::res://Assets/Sprites/Furniture/Interiors/::1738876007
-::res://Assets/Sprites/Furniture/Interiors/16x16/::1738890597
+::res://Assets/Sprites/Furniture/Interiors/16x16/::1739406065
+Colored_ceilings_16x16.png::CompressedTexture2D::2850751559806005399::1738876008::1739406066::1::::<><>::
 Room_Builder_16x16.png::CompressedTexture2D::6498749391395300715::1738876008::1738890597::1::::<><>::
-::res://Assets/Sprites/Furniture/Interiors/16x16/Old stuff/::1738890597
-Colored_ceilings_16x16.png::CompressedTexture2D::2850751559806005399::1738876008::1738890596::1::::<><>::
-Floors_only_16x16.png::CompressedTexture2D::7518935633526726604::1738876008::1738890596::1::::<><>::
-Tilesets_16x16.png::CompressedTexture2D::5213164051345718258::1738876008::1738890597::1::::<><>::
-Tileset_16x16_3.png::CompressedTexture2D::2392192802597770181::1738876008::1738890596::1::::<><>::
-Tileset_16x16_4.png::CompressedTexture2D::6786252097548592480::1738876008::1738890596::1::::<><>::
-Tileset_16x16_8.png::CompressedTexture2D::2058043088836602803::1738876008::1738890596::1::::<><>::
-Tileset_16x16_9.png::CompressedTexture2D::4616864493936599207::1738876008::1738890596::1::::<><>::
-Tileset_16x16_10.png::CompressedTexture2D::6014223801881424228::1738876008::1738890596::1::::<><>::
-Tileset_16x16_11.png::CompressedTexture2D::2735174033794539418::1738876008::1738890596::1::::<><>::
-Tileset_16x16_13.png::CompressedTexture2D::3932113132554650970::1738876008::1738890596::1::::<><>::
-Tileset_16x16_14.png::CompressedTexture2D::1032073917895016282::1738876008::1738890596::1::::<><>::
-Tileset_16x16_15.png::CompressedTexture2D::3371445836550294995::1738876008::1738890596::1::::<><>::
-Tileset_16x16_16.png::CompressedTexture2D::8512645405539349399::1738876008::1738890596::1::::<><>::
-Tileset_16x16_17.png::CompressedTexture2D::5319233670281698102::1738876008::1738890596::1::::<><>::
-Tileset_16x16_18.png::CompressedTexture2D::5199265820019383798::1738876008::1738890595::1::::<><>::
-Tileset_16x16_19.png::CompressedTexture2D::5353079477553191319::1738876008::1738890595::1::::<><>::
-::res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/::1738890595
-Room_Builder_3d_walls_16x16.png::CompressedTexture2D::1681533026015796312::1738876008::1738890595::1::::<><>::
+::res://Assets/Sprites/Furniture/Interiors/16x16/Old stuff/::1739406065
+::res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/::1739406016
 Room_Builder_Arched_Entryways_16x16.png::CompressedTexture2D::7036776140834813654::1738876008::1738890595::1::::<><>::
-Room_Builder_Baseboards_16x16.png::CompressedTexture2D::3103258700794821300::1738876008::1738890595::1::::<><>::
-Room_Builder_borders_16x16.png::CompressedTexture2D::2720092503910263927::1738876008::1738890595::1::::<><>::
 Room_Builder_Floors_16x16.png::CompressedTexture2D::5666349746850119730::1738876008::1738890595::1::::<><>::
 Room_Builder_Floor_Connectors_16x16.png::CompressedTexture2D::4162612329265548281::1738876008::1738890595::1::::<><>::
-Room_Builder_Floor_Paths_16x16.png::CompressedTexture2D::1834137000858366757::1738876008::1738890595::1::::<><>::
 Room_Builder_Floor_Shadows_16x16.png::CompressedTexture2D::1473775979808228066::1738876008::1738890595::1::::<><>::
-Room_Builder_Walls_16x16.png::CompressedTexture2D::5804912344758655309::1738876008::1738890595::1::::<><>::
-::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/::1738890596
-1_Generic_16x16.png::CompressedTexture2D::3187885331234422440::1738876007::1738890595::1::::<><>::
-2_LivingRoom_16x16.png::CompressedTexture2D::3487333237301883473::1738876007::1738890595::1::::<><>::
-3_Bathroom_16x16.png::CompressedTexture2D::330424948576832295::1738876007::1738890595::1::::<><>::
-4_Bedroom_16x16.png::CompressedTexture2D::7148158762746758069::1738876007::1738890595::1::::<><>::
-5_Classroom_and_library_16x16.png::CompressedTexture2D::2278969714463829682::1738876007::1738890595::1::::<><>::
-6_Music_and_sport_16x16.png::CompressedTexture2D::3970311246110059370::1738876007::1738890595::1::::<><>::
-7_Art_16x16.png::CompressedTexture2D::213601344417102204::1738876007::1738890595::1::::<><>::
-8_Gym_16x16.png::CompressedTexture2D::2245927636761319251::1738876007::1738890595::1::::<><>::
-9_Fishing_16x16.png::CompressedTexture2D::4753251399364267733::1738876007::1738890595::1::::<><>::
-10_Birthday_party_16x16.png::CompressedTexture2D::6787258997179381055::1738876008::1738890595::1::::<><>::
-11_Halloween_16x16.png::CompressedTexture2D::1348298505069437360::1738876008::1738890595::1::::<><>::
-12_Kitchen_16x16.png::CompressedTexture2D::3224879430271931495::1738876008::1738890595::1::::<><>::
-13_Conference_Hall_16x16.png::CompressedTexture2D::1748631138574953984::1738876008::1738890596::1::::<><>::
-14_Basement_16x16.png::CompressedTexture2D::7360707181012161110::1738876008::1738890596::1::::<><>::
-15_Christmas_16x16.png::CompressedTexture2D::3934010801714755451::1738876007::1738890596::1::::<><>::
-16_Grocery_store_16x16.png::CompressedTexture2D::800044796867638476::1738876007::1738890596::1::::<><>::
-17_Visibile_Upstairs_System_16x16.png::CompressedTexture2D::216554859004024973::1738876007::1738890596::1::::<><>::
-18_Jail_16x16.png::CompressedTexture2D::940323172192196332::1738876007::1738890596::1::::<><>::
-19_Hospital_16x16.png::CompressedTexture2D::8445795872907362240::1738876007::1738890596::1::::<><>::
-20_Japanese_interiors.png::CompressedTexture2D::3214893629692312480::1738876007::1738890595::1::::<><>::
-21_Clothing_Store.png::CompressedTexture2D::3089826440642823153::1738876007::1738890596::1::::<><>::
-22_Museum.png::CompressedTexture2D::2076925612707889756::1738876007::1738890596::1::::<><>::
-23_Television_and_Film_Studio.png::CompressedTexture2D::1552357338915090074::1738876007::1738890595::1::::<><>::
-24_Ice_Cream_Shop.png::CompressedTexture2D::1934803092166752710::1738876007::1738890595::1::::<><>::
-25_Shooting_Range.png::CompressedTexture2D::487538492405041680::1738876007::1738890595::1::::<><>::
-26_Condominium.png::CompressedTexture2D::820311035121265547::1738876007::1738890595::1::::<><>::
-::res://Assets/Sprites/Loot Sprites/::1739133487
+::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/::1739406035
+1_Generic_16x16.png::CompressedTexture2D::6631076049343538493::1738876007::1739311363::1::::<><>::
+2_LivingRoom_16x16.png::CompressedTexture2D::1838557739700600990::1738876007::1739311363::1::::<><>::
+3_Bathroom_16x16.png::CompressedTexture2D::7586520790873706007::1738876007::1739311363::1::::<><>::
+4_Bedroom_16x16.png::CompressedTexture2D::285068852073924626::1738876007::1739311363::1::::<><>::
+5_Classroom_and_library_16x16.png::CompressedTexture2D::3182835273636488355::1738876007::1739311363::1::::<><>::
+6_Music_and_sport_16x16.png::CompressedTexture2D::3548029292037553543::1738876007::1739311363::1::::<><>::
+7_Art_16x16.png::CompressedTexture2D::2726536036387822080::1738876007::1739311363::1::::<><>::
+8_Gym_16x16.png::CompressedTexture2D::1746591577694660304::1738876007::1739311363::1::::<><>::
+9_Fishing_16x16.png::CompressedTexture2D::2956850143078306945::1738876007::1739311363::1::::<><>::
+10_Birthday_party_16x16.png::CompressedTexture2D::1309954417963015713::1738876008::1739311363::1::::<><>::
+11_Halloween_16x16.png::CompressedTexture2D::6506557029222859885::1738876008::1739311363::1::::<><>::
+12_Kitchen_16x16.png::CompressedTexture2D::4544630047867737089::1738876008::1739311363::1::::<><>::
+13_Conference_Hall_16x16.png::CompressedTexture2D::6235853775575591485::1738876008::1739311362::1::::<><>::
+14_Basement_16x16.png::CompressedTexture2D::5618057691220002007::1738876008::1739311363::1::::<><>::
+15_Christmas_16x16.png::CompressedTexture2D::8189888028496251495::1738876007::1739311362::1::::<><>::
+16_Grocery_store_16x16.png::CompressedTexture2D::2183370918000972293::1738876007::1739311362::1::::<><>::
+17_Visibile_Upstairs_System_16x16.png::CompressedTexture2D::533733819982642277::1738876007::1739311362::1::::<><>::
+18_Jail_16x16.png::CompressedTexture2D::7953587674633422072::1738876007::1739311362::1::::<><>::
+19_Hospital_16x16.png::CompressedTexture2D::5014179380241189412::1738876007::1739311362::1::::<><>::
+20_Japanese_interiors.png::CompressedTexture2D::7528156387210314481::1738876007::1739311362::1::::<><>::
+21_Clothing_Store.png::CompressedTexture2D::3101721451029035318::1738876007::1739311362::1::::<><>::
+22_Museum.png::CompressedTexture2D::7300493805556021994::1738876007::1739311362::1::::<><>::
+23_Television_and_Film_Studio.png::CompressedTexture2D::9146372493493734175::1738876007::1739311362::1::::<><>::
+24_Ice_Cream_Shop.png::CompressedTexture2D::3501036861423093679::1738876007::1739311362::1::::<><>::
+26_Condominium.png::CompressedTexture2D::6736313853737046896::1738876007::1739311362::1::::<><>::
+::res://Assets/Sprites/Loot Sprites/::1739400721
+coin.png::CompressedTexture2D::5983278552499006682::1739328032::1739328032::1::::<><>::
 ::res://Assets/Sprites/Loot Sprites/House Loot/::1739155503
 arcademachine.png::CompressedTexture2D::84930997645024894::1739155282::1739155475::1::::<><>::
 art2.png::CompressedTexture2D::7582435750771907024::1739155281::1739155475::1::::<><>::
@@ -197,45 +174,57 @@ decor_16x16.png::CompressedTexture2D::2254906124270632496::1738876007::173889059
 grass.png::CompressedTexture2D::3477310823460702482::1738876007::1738890595::1::::<><>::
 objects.png::CompressedTexture2D::641542003242617393::1738876007::1738890595::1::::<><>::
 plains.png::CompressedTexture2D::5451480902769084113::1738876007::1738890595::1::::<><>::
-::res://Assets/Sprites/UI/::1738890595
+::res://Assets/Sprites/UI/::1739402139
+burglar_bag.png::CompressedTexture2D::8327549015086996369::1739311389::1739311389::1::::<><>::
+deposit_key.png::CompressedTexture2D::6927355474837783547::1739402138::1739402139::1::::<><>::
+door.png::CompressedTexture2D::167207288193082674::1739400713::1739400898::1::::<><>::
+key_press.png::CompressedTexture2D::9134159717818766284::1739309930::1739309930::1::::<><>::
+Time.png::CompressedTexture2D::1743294224497326844::1739325824::1739325824::1::::<><>::
 UI_16x16.png::CompressedTexture2D::5485479918667153035::1738876007::1738890595::1::::<><>::
 UI_thinking_emotes_animation_16x16.png::CompressedTexture2D::727185421714266417::1738876007::1738890595::1::::<><>::
-::res://Scenes/::1738981557
-::res://Scenes/Burglar/::1739286405
-burglar.gd::GDScript::-1::1739242498::0::1::::<>CharacterBody2D<>::
-burglar.tscn::PackedScene::5742365890790561954::1739286405::0::1::::<><>::res://Scenes/Burglar/burglar.gd<>uid://d22bkbwceaui7::::res://Assets/Sprites/Characters/burglar_walking.png<>res://Scripts/node_state_machine_burglar.gd<>res://Scenes/Burglar/idle_state.gd<>res://Scenes/Burglar/walk_state.gd<>res://Scenes/Burglar/take_loot_state.gd
+value.png::CompressedTexture2D::8107896255805987456::1739313383::1739313383::1::::<><>::
+::res://Scenes/::1739405192
+coin.tscn::PackedScene::4660993417585491552::1739400925::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://crilyuqbwxm4y::::res://Assets/Sprites/Loot Sprites/coin.png
+::res://Scenes/Burglar/::1739404508
+burglar.gd::GDScript::-1::1739404351::0::1::::<>CharacterBody2D<>::
+burglar.tscn::PackedScene::5742365890790561954::1739404508::0::1::::<><>::res://Scenes/Burglar/burglar.gd<>uid://d22bkbwceaui7::::res://Assets/Sprites/Characters/burglar_walking.png<>res://Scripts/node_state_machine_burglar.gd<>res://Scenes/Burglar/idle_state.gd<>uid://d3ewjndjta6yq::::res://Assets/Sprites/UI/key_press.png<>uid://dnrr4p76plfnk::::res://Assets/Sprites/UI/value.png<>uid://dqv6rsbp81orx::::res://Assets/Sprites/UI/burglar_bag.png<>res://Scenes/Burglar/walk_state.gd<>uid://bcomx8bxn0j1::::res://Text/PressStart2P.ttf<>res://Scenes/Burglar/take_loot_state.gd<>uid://y3p2ifslo6c3::::res://Assets/Sprites/UI/Time.png<>uid://c5xwsdwgf1sgh::::res://Assets/Sprites/UI/deposit_key.png
 idle_state.gd::GDScript::-1::1739137406::0::1::::<>NodeState<>::
 take_loot_state.gd::GDScript::-1::1739144435::0::1::::<>NodeState<>::
 walk_state.gd::GDScript::-1::1739137547::0::1::::<>NodeState<>::
-::res://Scenes/House Level/::1739286385
-house.tscn::PackedScene::8507841709980845986::1739286385::0::1::::<><>::uid://dfkaemy6j22ds::::res://Assets/Sprites/Floors_Walls/Floors & Walls/Tileset_16x16_16.png<>uid://bpxj4sp0gm7qr::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png<>uid://bl7fj71jan58f::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/12_Kitchen_16x16.png<>uid://bkay8wq357yi8::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/21_Clothing_Store.png<>uid://bloiagsbx6xca::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/1_Generic_16x16.png<>uid://b3m4i1dhlubv7::::res://Assets/Sprites/Furniture/furniture_modified.png<>uid://dslha23pywgxk::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png<>uid://c83veo2y5x3k0::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/4_Bedroom_16x16.png<>uid://eycbyr4gcydr::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/3_Bathroom_16x16.png<>uid://domiv2y2al4n7::::res://Assets/Sprites/Background/Setting Design/Home/Generic_Home_1_Layer_1.png<>uid://dc4t1ijej4rn7::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/14_Basement_16x16.png<>uid://7ej8eovvsr01::::res://Assets/Sprites/Nature/decor_16x16.png<>uid://bpso2ihgmui5w::::res://Assets/Sprites/Nature/grass.png<>uid://cjw0dgwp7h2vd::::res://Assets/Sprites/Nature/plains.png<>uid://je1dre1ywoaj::::res://Assets/Sprites/Nature/objects.png<>uid://bgu6pxyi7ovvj::::res://Assets/Sprites/Furniture/Interiors/16x16/Old stuff/Colored_ceilings_16x16.png<>uid://bheepfrmnoev::::res://Assets/Sprites/Background/Setting Design/Condominium/Condominium_Design_layer_2.png<>uid://wj16fu1mo5ka::::res://Assets/Sprites/Background/Setting Design/Condominium/Condominium_Design_preview.png<>uid://ckhve70sn8xqn::::res://Assets/Sprites/Background/Clouds/Clouds 3/1.png<>uid://dhmljcbnbh4xf::::res://Assets/Sprites/Background/Clouds/Clouds 3/3.png<>uid://sdns7q1mfc6t::::res://Scenes/House Level/characters/Dog/dog.tscn<>uid://cn2v6r5xd2gqc::::res://Scenes/Burglar/burglar.tscn<>uid://cc1lmo3urbp40::::res://Scenes/House Level/Loot Scenes/ball.tscn<>uid://dassywovt6r47::::res://Scenes/House Level/Loot Scenes/phone.tscn<>res://Scenes/House Level/Loot Scripts/loot.gd<>uid://cjrpelqwlam1x::::res://Scenes/House Level/Loot Scenes/vase.tscn<>uid://cp5auh0nsunp6::::res://Scenes/House Level/Loot Scenes/kachow.tscn<>uid://c5x14yqg4be5w::::res://Scenes/House Level/Loot Scenes/artifact.tscn<>uid://dh01w44v3llaj::::res://Scenes/House Level/Loot Scenes/keyboard.tscn<>uid://bquuht2vh8v8c::::res://Scenes/House Level/Loot Scenes/book.tscn<>uid://c2to4epp01ay6::::res://Scenes/House Level/Loot Scenes/art_2.tscn<>uid://7186vuh0sif5::::res://Scenes/House Level/Loot Scenes/art.tscn<>uid://diwu7amf4xnbh::::res://Scenes/House Level/Loot Scenes/art_3.tscn<>uid://c4usk3ut2lmef::::res://Scenes/House Level/Loot Scenes/art_4.tscn<>uid://bn13hiu4goe32::::res://Scenes/House Level/Loot Scenes/robot.tscn<>uid://bi4ro7popdrb::::res://Scenes/House Level/Loot Scenes/skateboard.tscn<>uid://5qwrysg7p2fa::::res://Scenes/House Level/Loot Scenes/television.tscn<>uid://b8wd6wgu55o4x::::res://Scenes/House Level/Loot Scenes/trophy.tscn
+::res://Scenes/House Level/::1739406065
+door.tscn::PackedScene::5330555479389335278::1739404222::0::1::::<><>::uid://cm8453c3loqc::::res://Assets/Sprites/UI/door.png<>res://Scenes/House Level/House Scripts/door.gd
+house.tscn::PackedScene::8507841709980845986::1739406065::0::1::::<><>::uid://dfkaemy6j22ds::::res://Assets/Sprites/Floors_Walls/Tileset_16x16_16.png<>res://Scenes/House Level/House Scripts/house.gd<>uid://1gu1ovhdruwk::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png<>uid://b50pnmg6jjcb6::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/12_Kitchen_16x16.png<>uid://bkgq5tnpqu3d7::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/21_Clothing_Store.png<>uid://c1qe4a5vigxtl::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/1_Generic_16x16.png<>uid://b3m4i1dhlubv7::::res://Assets/Sprites/Furniture/furniture_modified.png<>uid://cdo52i5n77k4c::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png<>uid://ecdbo7kt2tdy::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/4_Bedroom_16x16.png<>uid://dgc75hyc7avln::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/3_Bathroom_16x16.png<>uid://domiv2y2al4n7::::res://Assets/Sprites/Background/Setting Design/Home/Generic_Home_1_Layer_1.png<>uid://cmboubko4hdpf::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/14_Basement_16x16.png<>uid://7ej8eovvsr01::::res://Assets/Sprites/Nature/decor_16x16.png<>uid://bpso2ihgmui5w::::res://Assets/Sprites/Nature/grass.png<>uid://cjw0dgwp7h2vd::::res://Assets/Sprites/Nature/plains.png<>uid://je1dre1ywoaj::::res://Assets/Sprites/Nature/objects.png<>uid://bgu6pxyi7ovvj::::res://Assets/Sprites/Furniture/Interiors/16x16/Colored_ceilings_16x16.png<>uid://bheepfrmnoev::::res://Assets/Sprites/Background/Setting Design/Condominium/Condominium_Design_layer_2.png<>uid://wj16fu1mo5ka::::res://Assets/Sprites/Background/Setting Design/Condominium/Condominium_Design_preview.png<>uid://ckhve70sn8xqn::::res://Assets/Sprites/Background/Clouds/Clouds 3/1.png<>uid://dhmljcbnbh4xf::::res://Assets/Sprites/Background/Clouds/Clouds 3/3.png<>uid://sdns7q1mfc6t::::res://Scenes/House Level/characters/Dog/dog.tscn<>uid://cn2v6r5xd2gqc::::res://Scenes/Burglar/burglar.tscn<>uid://cc1lmo3urbp40::::res://Scenes/House Level/Loot Scenes/ball.tscn<>uid://dassywovt6r47::::res://Scenes/House Level/Loot Scenes/phone.tscn<>res://Scenes/House Level/House Scripts/loot.gd<>uid://cjrpelqwlam1x::::res://Scenes/House Level/Loot Scenes/vase.tscn<>uid://cp5auh0nsunp6::::res://Scenes/House Level/Loot Scenes/kachow.tscn<>uid://c5x14yqg4be5w::::res://Scenes/House Level/Loot Scenes/artifact.tscn<>uid://dh01w44v3llaj::::res://Scenes/House Level/Loot Scenes/keyboard.tscn<>uid://bquuht2vh8v8c::::res://Scenes/House Level/Loot Scenes/book.tscn<>uid://c2to4epp01ay6::::res://Scenes/House Level/Loot Scenes/art_2.tscn<>uid://7186vuh0sif5::::res://Scenes/House Level/Loot Scenes/art.tscn<>uid://diwu7amf4xnbh::::res://Scenes/House Level/Loot Scenes/art_3.tscn<>uid://c4usk3ut2lmef::::res://Scenes/House Level/Loot Scenes/art_4.tscn<>uid://bn13hiu4goe32::::res://Scenes/House Level/Loot Scenes/robot.tscn<>uid://bi4ro7popdrb::::res://Scenes/House Level/Loot Scenes/skateboard.tscn<>uid://b8wd6wgu55o4x::::res://Scenes/House Level/Loot Scenes/trophy.tscn<>uid://b7n2468oeulka::::res://Scenes/coin.tscn<>uid://ch7fp8it6w4du::::res://Scenes/House Level/door.tscn
 ::res://Scenes/House Level/characters/::1738974838
 ::res://Scenes/House Level/characters/Dog/::1739238899
 bark_state.gd::GDScript::-1::1739132155::0::1::::<>NodeState<>::
 dog.tscn::PackedScene::1270415490604646625::1739238899::0::1::::<><>::uid://r4dmsd5wykkm::::res://Assets/Sprites/animals/1 Dog/Death.png<>uid://bq80qwvus62wc::::res://Assets/Sprites/animals/1 Dog/Attack.png<>uid://cbne8awjvvy01::::res://Assets/Sprites/animals/1 Dog/Hurt.png<>uid://c210sh51qtimu::::res://Assets/Sprites/animals/1 Dog/Idle.png<>uid://7akku86tit8h::::res://Assets/Sprites/animals/1 Dog/Walk.png<>res://Scripts/node_state_machine.gd<>res://Scenes/House Level/characters/Dog/walk_state.gd<>res://Scenes/House Level/characters/Dog/idle_state.gd<>res://Scenes/House Level/characters/Dog/bark_state.gd
 idle_state.gd::GDScript::-1::1739129181::0::1::::<>NodeState<>::
 walk_state.gd::GDScript::-1::1739132235::0::1::::<>NodeState<>::
-::res://Scenes/House Level/Loot Scenes/::1739286385
-art.tscn::PackedScene::2301776972633550184::1739242552::0::1::::<><>::res://Scenes/House Level/Loot Scripts/loot.gd<>uid://1vvq6uy1ffve::::res://Assets/Sprites/Loot Sprites/House Loot/art.png
-artifact.tscn::PackedScene::6927619080294403898::1739240064::0::1::::<><>::uid://c42ysesdulons::::res://Assets/Sprites/Loot Sprites/House Loot/artifact.png<>res://Scenes/House Level/Loot Scripts/loot.gd
-art_2.tscn::PackedScene::6708065382843614031::1739240102::0::1::::<><>::uid://dga8uyaovluma::::res://Assets/Sprites/Loot Sprites/House Loot/art2.png<>res://Scenes/House Level/Loot Scripts/loot.gd
-art_3.tscn::PackedScene::7767460614837666181::1739157055::0::1::::<><>::uid://c46km2s4dvlqy::::res://Assets/Sprites/Loot Sprites/House Loot/art3.png
-art_4.tscn::PackedScene::6850717654228874917::1739157109::0::1::::<><>::uid://c4rvl84l4k25b::::res://Assets/Sprites/Loot Sprites/House Loot/art4.png
-ball.tscn::PackedScene::4967582972228020423::1739286385::0::1::::<><>::res://Scenes/House Level/Loot Scripts/loot.gd<>uid://de2jecfb0u587::::res://Assets/Sprites/Loot Sprites/House Loot/basketball.png
-book.tscn::PackedScene::3551957618013670928::1739240141::0::1::::<><>::res://Scenes/House Level/Loot Scripts/loot.gd<>uid://db7wckqf4cfp::::res://Assets/Sprites/Loot Sprites/House Loot/book.png
-kachow.tscn::PackedScene::5887641477355656689::1739156395::0::1::::<><>::uid://duvgwsse1g6wr::::res://Assets/Sprites/Loot Sprites/House Loot/kachow.png
-keyboard.tscn::PackedScene::7703812898643348653::1739156587::0::1::::<><>::uid://bwxas2o8k887::::res://Assets/Sprites/Loot Sprites/House Loot/keyboard.png
-phone.tscn::PackedScene::7197557793697631366::1739156023::0::1::::<><>::uid://caa2jj226uij2::::res://Assets/Sprites/Loot Sprites/House Loot/telephone.png
-robot.tscn::PackedScene::3354262501356962131::1739156244::0::1::::<><>::uid://bqv3cs3ggjhk5::::res://Assets/Sprites/Loot Sprites/House Loot/robot.png
-skateboard.tscn::PackedScene::88495802418598279::1739156160::0::1::::<><>::uid://gg4ws1rsllag::::res://Assets/Sprites/Loot Sprites/House Loot/skateboard.png
-television.tscn::PackedScene::2140062774226052558::1739155903::0::1::::<><>::uid://df7h08h7w02we::::res://Assets/Sprites/Loot Sprites/House Loot/television.png
-trophy.tscn::PackedScene::4748307510659360505::1739155836::0::1::::<><>::uid://1i66a6evvr3e::::res://Assets/Sprites/Loot Sprites/House Loot/trophy.png
-vase.tscn::PackedScene::5440553883502642347::1739155709::0::1::::<><>::uid://h6mqngmovu2o::::res://Assets/Sprites/Loot Sprites/House Loot/vase.png
-::res://Scenes/House Level/Loot Scripts/::1739286385
-loot.gd::GDScript::-1::1739286385::0::1::::<>Area2D<>::
-::res://Scripts/::1739286297
+::res://Scenes/House Level/House Scripts/::1739405722
+door.gd::GDScript::-1::1739404395::0::1::::<>Area2D<>::
+house.gd::GDScript::-1::1739405722::0::1::::<>Node2D<>::
+loot.gd::GDScript::-1::1739404508::0::1::::<>Area2D<>::
+::res://Scenes/House Level/Loot Scenes/::1739404296
+art.tscn::PackedScene::2301776972633550184::1739400925::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://1vvq6uy1ffve::::res://Assets/Sprites/Loot Sprites/House Loot/art.png
+artifact.tscn::PackedScene::6927619080294403898::1739404296::0::1::::<><>::uid://c42ysesdulons::::res://Assets/Sprites/Loot Sprites/House Loot/artifact.png<>res://Scenes/House Level/House Scripts/loot.gd
+art_2.tscn::PackedScene::6708065382843614031::1739400925::0::1::::<><>::uid://dga8uyaovluma::::res://Assets/Sprites/Loot Sprites/House Loot/art2.png<>res://Scenes/House Level/House Scripts/loot.gd
+art_3.tscn::PackedScene::7767460614837666181::1739307805::0::1::::<><>::uid://c46km2s4dvlqy::::res://Assets/Sprites/Loot Sprites/House Loot/art3.png
+art_4.tscn::PackedScene::6850717654228874917::1739307802::0::1::::<><>::uid://c4rvl84l4k25b::::res://Assets/Sprites/Loot Sprites/House Loot/art4.png
+ball.tscn::PackedScene::4967582972228020423::1739400925::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://de2jecfb0u587::::res://Assets/Sprites/Loot Sprites/House Loot/basketball.png
+book.tscn::PackedScene::3551957618013670928::1739400925::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://db7wckqf4cfp::::res://Assets/Sprites/Loot Sprites/House Loot/book.png
+kachow.tscn::PackedScene::5887641477355656689::1739307799::0::1::::<><>::uid://duvgwsse1g6wr::::res://Assets/Sprites/Loot Sprites/House Loot/kachow.png
+keyboard.tscn::PackedScene::7703812898643348653::1739307798::0::1::::<><>::uid://bwxas2o8k887::::res://Assets/Sprites/Loot Sprites/House Loot/keyboard.png
+phone.tscn::PackedScene::7197557793697631366::1739307796::0::1::::<><>::uid://caa2jj226uij2::::res://Assets/Sprites/Loot Sprites/House Loot/telephone.png
+robot.tscn::PackedScene::3354262501356962131::1739307791::0::1::::<><>::uid://bqv3cs3ggjhk5::::res://Assets/Sprites/Loot Sprites/House Loot/robot.png
+skateboard.tscn::PackedScene::88495802418598279::1739307847::0::1::::<><>::uid://gg4ws1rsllag::::res://Assets/Sprites/Loot Sprites/House Loot/skateboard.png
+trophy.tscn::PackedScene::4748307510659360505::1739307845::0::1::::<><>::uid://1i66a6evvr3e::::res://Assets/Sprites/Loot Sprites/House Loot/trophy.png
+vase.tscn::PackedScene::5440553883502642347::1739307844::0::1::::<><>::uid://h6mqngmovu2o::::res://Assets/Sprites/Loot Sprites/House Loot/vase.png
+::res://Scenes/Museum Level/::1739405416
+museum.tscn::PackedScene::624999825420704140::1739405416::0::1::::<><>::
+::res://Scripts/::1739400004
 node_state.gd::GDScript::-1::1738976015::0::1::::NodeState<>Node<>::
-node_state_machine.gd::GDScript::-1::1739286297::0::1::::NodeStateMachine<>Node<>::
+node_state_machine.gd::GDScript::-1::1739400004::0::1::::NodeStateMachine<>Node<>::
 node_state_machine_burglar.gd::GDScript::-1::1739144093::0::1::::NodeStateMachineBurglar<>Node<>::
 ::res://Sounds/::1737678535
-::res://Text/::1737678550
+::res://Text/::1739312058
+PressStart2P.ttf::FontFile::75190325664051560::1739312057::1739312058::1::::<><>::

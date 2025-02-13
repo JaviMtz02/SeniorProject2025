@@ -1,18 +1,11 @@
-res://Scenes/Burglar/burglar.tscn
-res://Scripts/node_state_machine.gd
-res://Scenes/House Level/Loot Scenes/ball.tscn
 res://Scenes/House Level/house.tscn
-res://Scenes/House Level/Loot Scenes/robot.tscn
-res://Scenes/House Level/Loot Scenes/phone.tscn
-res://Scenes/House Level/Loot Scenes/keyboard.tscn
-res://Scenes/House Level/Loot Scenes/kachow.tscn
-res://Scenes/House Level/Loot Scenes/book.tscn
-res://Scenes/House Level/Loot Scenes/art_4.tscn
-res://Scenes/House Level/Loot Scenes/art_3.tscn
-res://Scenes/House Level/Loot Scenes/art_2.tscn
+res://Scripts/node_state_machine.gd
+res://Scenes/Burglar/burglar.gd
+res://Scenes/Burglar/burglar.tscn
+res://Scenes/coin.tscn
+res://Scenes/House Level/door.tscn
+res://Scenes/House Level/House Scripts/door.gd
+res://Scenes/House Level/House Scripts/house.gd
+res://Scenes/House Level/House Scripts/loot.gd
 res://Scenes/House Level/Loot Scenes/artifact.tscn
-res://Scenes/House Level/Loot Scenes/art.tscn
-res://Scenes/House Level/Loot Scenes/vase.tscn
-res://Scenes/House Level/Loot Scenes/trophy.tscn
-res://Scenes/House Level/Loot Scenes/television.tscn
-res://Scenes/House Level/Loot Scenes/skateboard.tscn
+res://Scenes/Museum Level/museum.tscn

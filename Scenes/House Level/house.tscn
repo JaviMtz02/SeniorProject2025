@@ -1,21 +1,22 @@
-[gd_scene load_steps=61 format=4 uid="uid://dthi565027qtm"]
+[gd_scene load_steps=63 format=4 uid="uid://dthi565027qtm"]
 
-[ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Floors & Walls/Tileset_16x16_16.png" id="1_848k0"]
-[ext_resource type="Texture2D" uid="uid://bpxj4sp0gm7qr" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png" id="2_7pkew"]
-[ext_resource type="Texture2D" uid="uid://bl7fj71jan58f" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/12_Kitchen_16x16.png" id="3_xco4q"]
-[ext_resource type="Texture2D" uid="uid://bkay8wq357yi8" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/21_Clothing_Store.png" id="4_kamuk"]
-[ext_resource type="Texture2D" uid="uid://bloiagsbx6xca" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/1_Generic_16x16.png" id="5_gd4w6"]
+[ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Tileset_16x16_16.png" id="1_848k0"]
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/house.gd" id="1_dvkor"]
+[ext_resource type="Texture2D" uid="uid://1gu1ovhdruwk" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png" id="2_7pkew"]
+[ext_resource type="Texture2D" uid="uid://b50pnmg6jjcb6" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/12_Kitchen_16x16.png" id="3_xco4q"]
+[ext_resource type="Texture2D" uid="uid://bkgq5tnpqu3d7" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/21_Clothing_Store.png" id="4_kamuk"]
+[ext_resource type="Texture2D" uid="uid://c1qe4a5vigxtl" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/1_Generic_16x16.png" id="5_gd4w6"]
 [ext_resource type="Texture2D" uid="uid://b3m4i1dhlubv7" path="res://Assets/Sprites/Furniture/furniture_modified.png" id="6_d0r03"]
-[ext_resource type="Texture2D" uid="uid://dslha23pywgxk" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png" id="7_4605s"]
-[ext_resource type="Texture2D" uid="uid://c83veo2y5x3k0" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/4_Bedroom_16x16.png" id="8_kmb2j"]
-[ext_resource type="Texture2D" uid="uid://eycbyr4gcydr" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/3_Bathroom_16x16.png" id="9_5k2a7"]
+[ext_resource type="Texture2D" uid="uid://cdo52i5n77k4c" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png" id="7_4605s"]
+[ext_resource type="Texture2D" uid="uid://ecdbo7kt2tdy" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/4_Bedroom_16x16.png" id="8_kmb2j"]
+[ext_resource type="Texture2D" uid="uid://dgc75hyc7avln" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/3_Bathroom_16x16.png" id="9_5k2a7"]
 [ext_resource type="Texture2D" uid="uid://domiv2y2al4n7" path="res://Assets/Sprites/Background/Setting Design/Home/Generic_Home_1_Layer_1.png" id="10_vpsp7"]
-[ext_resource type="Texture2D" uid="uid://dc4t1ijej4rn7" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/14_Basement_16x16.png" id="11_5cayo"]
+[ext_resource type="Texture2D" uid="uid://cmboubko4hdpf" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/14_Basement_16x16.png" id="11_5cayo"]
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="12_oidxm"]
 [ext_resource type="Texture2D" uid="uid://bpso2ihgmui5w" path="res://Assets/Sprites/Nature/grass.png" id="13_lean8"]
 [ext_resource type="Texture2D" uid="uid://cjw0dgwp7h2vd" path="res://Assets/Sprites/Nature/plains.png" id="14_p6t2c"]
 [ext_resource type="Texture2D" uid="uid://je1dre1ywoaj" path="res://Assets/Sprites/Nature/objects.png" id="15_ysm2s"]
-[ext_resource type="Texture2D" uid="uid://bgu6pxyi7ovvj" path="res://Assets/Sprites/Furniture/Interiors/16x16/Old stuff/Colored_ceilings_16x16.png" id="16_iqi2x"]
+[ext_resource type="Texture2D" uid="uid://bgu6pxyi7ovvj" path="res://Assets/Sprites/Furniture/Interiors/16x16/Colored_ceilings_16x16.png" id="16_iqi2x"]
 [ext_resource type="Texture2D" uid="uid://bheepfrmnoev" path="res://Assets/Sprites/Background/Setting Design/Condominium/Condominium_Design_layer_2.png" id="17_6qti5"]
 [ext_resource type="Texture2D" uid="uid://wj16fu1mo5ka" path="res://Assets/Sprites/Background/Setting Design/Condominium/Condominium_Design_preview.png" id="18_lyrs8"]
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="19_on312"]
@@ -24,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="22_6ob7k"]
 [ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot Scenes/ball.tscn" id="23_iwso7"]
 [ext_resource type="PackedScene" uid="uid://dassywovt6r47" path="res://Scenes/House Level/Loot Scenes/phone.tscn" id="23_lub5n"]
-[ext_resource type="Script" path="res://Scenes/House Level/Loot Scripts/loot.gd" id="24_lfu3r"]
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="24_lfu3r"]
 [ext_resource type="PackedScene" uid="uid://cjrpelqwlam1x" path="res://Scenes/House Level/Loot Scenes/vase.tscn" id="25_dgrcy"]
 [ext_resource type="PackedScene" uid="uid://cp5auh0nsunp6" path="res://Scenes/House Level/Loot Scenes/kachow.tscn" id="26_fqyn1"]
 [ext_resource type="PackedScene" uid="uid://c5x14yqg4be5w" path="res://Scenes/House Level/Loot Scenes/artifact.tscn" id="27_arj0y"]
@@ -36,8 +37,9 @@
 [ext_resource type="PackedScene" uid="uid://c4usk3ut2lmef" path="res://Scenes/House Level/Loot Scenes/art_4.tscn" id="33_lwjgl"]
 [ext_resource type="PackedScene" uid="uid://bn13hiu4goe32" path="res://Scenes/House Level/Loot Scenes/robot.tscn" id="34_765gb"]
 [ext_resource type="PackedScene" uid="uid://bi4ro7popdrb" path="res://Scenes/House Level/Loot Scenes/skateboard.tscn" id="35_g50dt"]
-[ext_resource type="PackedScene" uid="uid://5qwrysg7p2fa" path="res://Scenes/House Level/Loot Scenes/television.tscn" id="36_uhqje"]
 [ext_resource type="PackedScene" uid="uid://b8wd6wgu55o4x" path="res://Scenes/House Level/Loot Scenes/trophy.tscn" id="37_lryl0"]
+[ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="39_xe4ym"]
+[ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/House Level/door.tscn" id="41_fdx47"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_typuc"]
 texture = ExtResource("1_848k0")
@@ -3396,6 +3398,7 @@ texture = ExtResource("5_gd4w6")
 11:63/0 = 0
 12:63/0 = 0
 14:63/0 = 0
+14:63/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.625, -4.25, 4.625, -3.625, 4.875, 8, -4.75, 8)
 15:63/0 = 0
 0:64/0 = 0
 1:64/0 = 0
@@ -3412,6 +3415,7 @@ texture = ExtResource("5_gd4w6")
 12:64/0 = 0
 13:64/0 = 0
 14:64/0 = 0
+14:64/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -8, 4.75, -8, 4, -2, -3, -2.25)
 15:64/0 = 0
 0:65/0 = 0
 1:65/0 = 0
@@ -3672,6 +3676,7 @@ texture = ExtResource("6_d0r03")
 24:2/0 = 0
 25:2/0 = 0
 26:2/0 = 0
+26:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.5, -7, -0.5, -7, -0.5, 3.75, -5.125, 3.875)
 27:2/0 = 0
 28:2/0 = 0
 29:2/0 = 0
@@ -3702,6 +3707,7 @@ texture = ExtResource("6_d0r03")
 24:3/0 = 0
 25:3/0 = 0
 26:3/0 = 0
+26:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -4.75, 0.75, -5, 0.625, 4.875, -5, 4.75)
 27:3/0 = 0
 28:3/0 = 0
 29:3/0 = 0
@@ -4505,7 +4511,7 @@ texture = ExtResource("7_4605s")
 0:43/0 = 0
 0:43/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.25, -8, 6.25, -8, 5.75, -1, 0.125, 0.625, -5.75, -1)
 1:43/0 = 0
-1:43/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.25, -8, 2.75, 3.125, -8, 3)
+1:43/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.75, -8, 5.875, -8, 5.875, -0.75, 3.125, 0.75, -2.5, 0.75, -5.75, -1.625)
 2:43/0 = 0
 3:43/0 = 0
 4:43/0 = 0
@@ -5254,7 +5260,9 @@ texture = ExtResource("7_4605s")
 9:95/0 = 0
 10:95/0 = 0
 11:95/0 = 0
+11:95/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.75, -6.75, 8, -7, 8, 8, -2.75, 8)
 12:95/0 = 0
+12:95/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.75, 3.5, -6.75, 3.25, 8, -8, 8)
 13:95/0 = 0
 14:95/0 = 0
 15:95/0 = 0
@@ -6838,9 +6846,13 @@ texture = ExtResource("9_5k2a7")
 10:1/0 = 0
 11:1/0 = 0
 12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.125, -8, 8, -8, 8, 8, -2.125, 8)
 13:1/0 = 0
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.875, -8, 1.875, 8, -8, 8)
 14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.875, -2.625, 8, -2.875, 8, 8, -1.625, 8)
 15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.25, -4, -5, -3.75, 8, -8, 8)
 0:2/0 = 0
 1:2/0 = 0
 3:2/0 = 0
@@ -10325,7 +10337,6 @@ sources/4 = SubResource("TileSetAtlasSource_8lfdp")
 sources/5 = SubResource("TileSetAtlasSource_nt0fj")
 sources/7 = SubResource("TileSetAtlasSource_rgmsg")
 sources/8 = SubResource("TileSetAtlasSource_sbfyy")
-sources/1 = SubResource("TileSetAtlasSource_typuc")
 sources/3 = SubResource("TileSetAtlasSource_nd5ae")
 sources/2 = SubResource("TileSetAtlasSource_ugtj0")
 sources/10 = SubResource("TileSetAtlasSource_28hrk")
@@ -10336,11 +10347,12 @@ sources/16 = SubResource("TileSetAtlasSource_578kb")
 sources/17 = SubResource("TileSetAtlasSource_h3e8y")
 sources/18 = SubResource("TileSetAtlasSource_68d1w")
 sources/19 = SubResource("TileSetAtlasSource_7mi0e")
-sources/21 = SubResource("TileSetAtlasSource_aqim5")
 sources/22 = SubResource("TileSetAtlasSource_5lywg")
 sources/23 = SubResource("TileSetAtlasSource_ksr3f")
-sources/24 = SubResource("TileSetAtlasSource_fpgkm")
 sources/25 = SubResource("TileSetAtlasSource_4wc8b")
+sources/1 = SubResource("TileSetAtlasSource_typuc")
+sources/24 = SubResource("TileSetAtlasSource_fpgkm")
+sources/21 = SubResource("TileSetAtlasSource_aqim5")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_r1ddd"]
 vertices = PackedVector2Array(229.641, 785.258, 236, 785.133, 236, 788, -205.07, 796, -221.32, 796, -221.188, 788, -205.938, 788, -205.07, 812, -205.32, 812, -96.2266, 788, -204, 711.008, -148, 710.68, -148, 740, -204, 756, 28, 788, 28, 820, -205.273, 825.742, 281.641, 788, 281.867, 825.023, 154.594, 788, 154.977, 740, 228.758, 740, 98.0703, 820, 98.5703, 788, -205.438, 756, -98.75, 740)
@@ -10350,6 +10362,7 @@ source_geometry_mode = 1
 agent_radius = 20.0
 
 [node name="House" type="Node2D"]
+script = ExtResource("1_dvkor")
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -10393,7 +10406,7 @@ navigation_polygon = SubResource("NavigationPolygon_r1ddd")
 position = Vector2(194, 740)
 
 [node name="Burglar" parent="." instance=ExtResource("22_6ob7k")]
-position = Vector2(-101, 833)
+position = Vector2(-96, 832)
 
 [node name="Loot" type="Node" parent="."]
 
@@ -10462,9 +10475,6 @@ script = ExtResource("24_lfu3r")
 value = 5.0
 inventory_space_req = 10.0
 
-[node name="Television" parent="Loot" groups=["loot"] instance=ExtResource("36_uhqje")]
-position = Vector2(194, 814)
-
 [node name="Trophy" parent="Loot" groups=["loot"] instance=ExtResource("37_lryl0")]
 position = Vector2(-42, 329)
 script = ExtResource("24_lfu3r")
@@ -10475,3 +10485,123 @@ position = Vector2(-9, 393)
 script = ExtResource("24_lfu3r")
 value = 8.0
 inventory_space_req = 3.0
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin2" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-295, 710)
+
+[node name="Coin" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-98, 776)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-249, 712)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-273, 697)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-349, 709)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-354, 787)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-353, 838)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-264, 839)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(168, 766)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(217, 766)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-21, 807)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(116, 812)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(260, 814)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(281, 709)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(195, 609)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(241, 590)
+
+[node name="Coin17" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(242, 645)
+
+[node name="Coin18" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-335, 614)
+
+[node name="Coin19" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-228, 644)
+
+[node name="Coin20" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-139, 592)
+
+[node name="Coin21" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-18, 643)
+
+[node name="Coin22" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(116, 562)
+
+[node name="Coin23" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-40, 458)
+
+[node name="Coin24" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(42, 531)
+
+[node name="Coin25" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-167, 451)
+
+[node name="Coin26" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-298, 494)
+
+[node name="Coin27" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-211, 519)
+
+[node name="Coin28" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(275, 512)
+
+[node name="Coin29" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(161, 479)
+
+[node name="Coin30" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(242, 372)
+
+[node name="Coin31" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(173, 346)
+
+[node name="Coin32" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-227, 386)
+
+[node name="Coin33" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(-62, 358)
+
+[node name="Coin34" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(41, 356)
+
+[node name="Coin35" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(190, 816)
+
+[node name="Coin36" parent="Coins" instance=ExtResource("39_xe4ym")]
+position = Vector2(151, 837)
+
+[node name="Door" parent="." instance=ExtResource("41_fdx47")]
+position = Vector2(-94, 851)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -909.0
+offset_top = -130.0
+offset_right = 975.0
+offset_bottom = 1172.0
+color = Color(0.168627, 0.184314, 0.466667, 0.392157)
