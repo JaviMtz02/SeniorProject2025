@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4usk3ut2lmef"]
+
+[ext_resource type="Texture2D" uid="uid://c4rvl84l4k25b" path="res://Assets/Sprites/Loot Sprites/House Loot/art4.png" id="1_m3dag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fufvl"]
+size = Vector2(17, 16)
+
+[node name="Art4" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m3dag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_fufvl")

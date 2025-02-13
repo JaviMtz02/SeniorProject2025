@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi4ro7popdrb"]
+
+[ext_resource type="Texture2D" uid="uid://gg4ws1rsllag" path="res://Assets/Sprites/Loot Sprites/House Loot/skateboard.png" id="1_u8wxt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf6fl"]
+size = Vector2(21.2886, 7.21325)
+
+[node name="Skateboard" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u8wxt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.431552, -0.515295)
+rotation = 2.36492
+shape = SubResource("RectangleShape2D_wf6fl")

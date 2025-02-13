@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5x14yqg4be5w"]
+
+[ext_resource type="Texture2D" uid="uid://c42ysesdulons" path="res://Assets/Sprites/Loot Sprites/House Loot/artifact.png" id="1_ntwjb"]
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_wttcu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2386"]
+size = Vector2(26, 26)
+
+[node name="Artifact" type="Area2D" groups=["loot"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_wttcu")
+value = 5.0
+inventory_space_req = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ntwjb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v2386")

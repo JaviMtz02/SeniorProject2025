@@ -1,2 +1,11 @@
-res://Scenes/house.tscn
-res://Scenes/House Scenes/house.tscn
+res://Scenes/House Level/house.tscn
+res://Scripts/node_state_machine.gd
+res://Scenes/Burglar/burglar.gd
+res://Scenes/Burglar/burglar.tscn
+res://Scenes/coin.tscn
+res://Scenes/House Level/door.tscn
+res://Scenes/House Level/House Scripts/door.gd
+res://Scenes/House Level/House Scripts/house.gd
+res://Scenes/House Level/House Scripts/loot.gd
+res://Scenes/House Level/Loot Scenes/artifact.tscn
+res://Scenes/Museum Level/museum.tscn
