@@ -6,11 +6,14 @@ const SERVER_IP = "127.0.0.1"
 const MULTIPLAYER_PLAYER = preload("res://Scenes/Multiplayer Burglar/multiplayer_player.tscn")
 
 var _players_spawn_node
+var host_mode_enabled = false
 
 func become_host():
 	print("You are now the host!")
 	
 	_players_spawn_node = get_tree().get_current_scene().get_node("Players")
+	
+	host_mode_enabled = true
 	
 	var server_peer = ENetMultiplayerPeer.new()
 	server_peer.create_server(SERVER_PORT)

@@ -10,6 +10,12 @@ extends CharacterBody2D
 
 var direction = Vector2.ZERO
 
+func _ready():
+	if multiplayer.get_unique_id() == player_id:
+		$Camera2D.make_current()
+	else:
+		$Camera2D.enabled = false
+
 func _apply_animations(delta):
 	if direction != Vector2.ZERO:
 		if abs(direction.x) > abs(direction.y): # Horizontal movement
@@ -37,3 +43,6 @@ func _apply_movement_from_input(delta):
 func _physics_process(delta: float) -> void:
 	if multiplayer.is_server():
 		_apply_movement_from_input(delta)
+	
+	if not multiplayer.is_server() || MultiplayerManager.host_mode_enabled:
+		_apply_animations(delta)

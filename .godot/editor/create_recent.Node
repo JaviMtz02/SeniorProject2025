@@ -1,13 +1,13 @@
-MultiplayerSynchronizer
+Control
+Node
 Camera2D
+MultiplayerSynchronizer
 CharacterBody2D
 Node2D
 MultiplayerSpawner
-Node
 Button
 VBoxContainer
 Panel
-Control
 TileMapLayer
 AnimatedSprite2D
 CollisionShape2D
