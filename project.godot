@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="Burglar Game"
-run/main_scene="res://Scenes/House Level/house.tscn"
+run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+MultiplayerManager="*res://Scripts/Multiplayer/multiplayer_manager.gd"
 
 [display]
 
 window/size/viewport_height=800
+window/size/always_on_top=true
 window/stretch/mode="canvas_items"
 
 [dotnet]

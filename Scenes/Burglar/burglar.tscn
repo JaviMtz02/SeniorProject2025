@@ -169,6 +169,8 @@ offset_left = -145.0
 offset_top = -101.0
 offset_right = 143.0
 offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="Value" type="Sprite2D" parent="Camera2D/Control"]
 position = Vector2(16, 33)

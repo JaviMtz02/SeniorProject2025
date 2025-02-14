@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://1ohhqhcpoc5"]
+
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_aiob2"]
+[ext_resource type="PackedScene" uid="uid://dthi565027qtm" path="res://Scenes/House Level/house.tscn" id="2_g57pp"]
+[ext_resource type="Texture2D" uid="uid://bsxxuyvd1yrbx" path="res://Assets/Sprites/Background/Clouds/Clouds 2/1.png" id="3_ye7k5"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_aiob2")
+level = ExtResource("2_g57pp")
+
+[node name="Menu" type="Node" parent="."]
+
+[node name="Start" type="Control" parent="Menu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 479.0
+offset_top = 32.0
+offset_right = 679.0
+offset_bottom = 82.0
+
+[node name="Panel" type="Panel" parent="Menu/Start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/Start/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartGame" type="Button" parent="Menu/Start/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="Multiplayer" type="Control" parent="Menu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 480.0
+offset_top = 227.0
+offset_right = 680.0
+offset_bottom = 302.0
+
+[node name="Panel" type="Panel" parent="Menu/Multiplayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/Multiplayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HostGame" type="Button" parent="Menu/Multiplayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Host
+"
+
+[node name="JoinHost" type="Button" parent="Menu/Multiplayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Join Host"
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/Multiplayer Burglar/multiplayer_player.tscn")
+spawn_path = NodePath("../Players")
+spawn_limit = 4
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(607, 430)
+scale = Vector2(2.69136, 2.69136)
+texture = ExtResource("3_ye7k5")
+
+[connection signal="pressed" from="Menu/Start/Panel/VBoxContainer/StartGame" to="GameManager" method="start_game"]
+[connection signal="pressed" from="Menu/Multiplayer/Panel/VBoxContainer/HostGame" to="GameManager" method="become_host"]
+[connection signal="pressed" from="Menu/Multiplayer/Panel/VBoxContainer/JoinHost" to="GameManager" method="join_host"]
