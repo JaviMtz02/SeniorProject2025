@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u8540tukgxdq"
-path="res://.godot/imported/Room_Builder_Floor_Shadows_16x16.png-7e82b261002db297da36e1795037c7d2.ctex"
+uid="uid://bxp4a53sfd770"
+path="res://.godot/imported/Modern_Exteriors_RTU_2_layer_1_16x16.png-fb2853325630bd3cea7417c9cf9a7b51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floor_Shadows_16x16.png"
-dest_files=["res://.godot/imported/Room_Builder_Floor_Shadows_16x16.png-7e82b261002db297da36e1795037c7d2.ctex"]
+source_file="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_2_layer_1_16x16.png"
+dest_files=["res://.godot/imported/Modern_Exteriors_RTU_2_layer_1_16x16.png-fb2853325630bd3cea7417c9cf9a7b51.ctex"]
 
 [params]
 

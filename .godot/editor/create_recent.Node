@@ -1,4 +1,6 @@
+ColorRect
 TileMapLayer
+TileMap
 Node
 AnimatedSprite2D
 CollisionShape2D
@@ -8,7 +10,5 @@ Timer
 Label
 Button
 Control
-ColorRect
 RayCast2D
 Camera2D
-CharacterBody2D

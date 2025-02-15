@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlk1ortsb4pyu"
-path="res://.godot/imported/18_Jail_16x16.png-0f2ac15921c7a7c0c738e7df3014edbe.ctex"
+uid="uid://bc6ir33pyso0t"
+path="res://.godot/imported/Modern_Exteriors_RTU_1_layer_1_16x16.png-375d2a263e5e3a027cfbede3a343e9dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/18_Jail_16x16.png"
-dest_files=["res://.godot/imported/18_Jail_16x16.png-0f2ac15921c7a7c0c738e7df3014edbe.ctex"]
+source_file="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_1_layer_1_16x16.png"
+dest_files=["res://.godot/imported/Modern_Exteriors_RTU_1_layer_1_16x16.png-375d2a263e5e3a027cfbede3a343e9dd.ctex"]
 
 [params]
 
