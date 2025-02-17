@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd0l31vll4u03"]
+
+[ext_resource type="Texture2D" uid="uid://bsxxuyvd1yrbx" path="res://Assets/Sprites/Background/Clouds/Clouds 2/1.png" id="1_4aow3"]
+[ext_resource type="PackedScene" uid="uid://bisbd58hrarr8" path="res://Scenes/Menus/pause_menu.tscn" id="1_8em00"]
+
+[node name="test_scene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 806.0
+texture = ExtResource("1_4aow3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("1_8em00")]
