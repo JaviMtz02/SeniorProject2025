@@ -5,13 +5,13 @@ extends Control
 @onready var arcade: Button = $MarginContainer/HBoxContainer/VBoxContainer/arcade
 @onready var options: Button = $MarginContainer/HBoxContainer/VBoxContainer/options
 @onready var quit: Button = $MarginContainer/HBoxContainer/VBoxContainer/quit
-@onready var play_game = preload("res://Scenes/House Level/house.tscn") as PackedScene
+var level_select := "res://Scenes/Menus/level_select.tscn"
 
 func _ready() -> void:
 	quit.button_down.connect(_on_quit_pressed)
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_packed(play_game)
+	get_tree().change_scene_to_file(level_select)
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
