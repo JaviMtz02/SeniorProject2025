@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://i50wkd86wgwi"]
+[gd_scene load_steps=13 format=4 uid="uid://i50wkd86wgwi"]
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
 [ext_resource type="Texture2D" uid="uid://bl31iuobainjl" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_3_layer_1.png" id="2_16h7c"]
 [ext_resource type="Texture2D" uid="uid://vfdyumnbofib" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png" id="3_qancv"]
 [ext_resource type="Texture2D" uid="uid://dcaociyj7ijg1" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/22_Museum.png" id="4_l6ubn"]
+[ext_resource type="PackedScene" uid="uid://bisbd58hrarr8" path="res://Scenes/Menus/pause_menu.tscn" id="5_tkbka"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cb7hj"]
 texture = ExtResource("1_40f3k")
@@ -2839,3 +2840,7 @@ tile_set = SubResource("TileSet_yjfy0")
 
 [node name="Decoration" type="TileMapLayer" parent="MuseumLayout"]
 tile_set = SubResource("TileSet_4s1ji")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_tkbka")]

@@ -2,6 +2,7 @@ extends Control
 
 @onready var exit_game = preload("res://Scenes/Menus/start_menu.tscn") as PackedScene
 var exit_game_path := "res://Scenes/Menus/start_menu.tscn"
+var level_select := "res://Scenes/Menus/level_select.tscn"
 var paused = false
 
 func _ready() -> void:
@@ -25,6 +26,9 @@ func _on_restart_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	pass # Replace with function body.
+
+func _on_level_select_pressed() -> void:
+	get_tree().change_scene_to_file(level_select)
 
 func _on_exit_pressed() -> void:
 	'''
