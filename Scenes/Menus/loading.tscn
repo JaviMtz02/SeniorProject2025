@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://gsvf8yiq1j2q"]
+
+[ext_resource type="Texture2D" uid="uid://b8pcxhvpggumn" path="res://Assets/Sprites/Background/Clouds/Clouds 4/1.png" id="1_2etpn"]
+[ext_resource type="Texture2D" uid="uid://dh1jcwjlofyuy" path="res://Assets/Sprites/Background/Clouds/Clouds 4/4.png" id="2_wgjfv"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="3_4ia3l"]
+
+[node name="Loading" type="Control"]
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Loading" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Loading"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2etpn")
+
+[node name="TextureRect2" type="TextureRect" parent="Loading"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wgjfv")
+
+[node name="Label" type="Label" parent="Loading"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -141.0
+offset_right = 50.5
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_4ia3l")
+theme_override_font_sizes/font_size = 91
+text = "Loading..."

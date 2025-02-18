@@ -1,11 +1,15 @@
-res://Scenes/House Level/house.tscn
+res://Scenes/Menus/start_menu.tscn
 res://Scripts/node_state_machine.gd
-res://Scenes/Burglar/burglar.gd
-res://Scenes/Burglar/burglar.tscn
-res://Scenes/coin.tscn
-res://Scenes/House Level/door.tscn
-res://Scenes/House Level/House Scripts/door.gd
-res://Scenes/House Level/House Scripts/house.gd
-res://Scenes/House Level/House Scripts/loot.gd
-res://Scenes/House Level/Loot Scenes/artifact.tscn
-res://Scenes/Museum Level/museum.tscn
+res://Scenes/Player/player.tscn
+res://Scenes/Menus/multiplayer_menu.tscn
+res://Scripts/start_menu.gd
+res://Scenes/Menus/play_menu.tscn
+res://Scripts/play_menu.gd
+res://Scripts/multiplayer_menu.gd
+res://Scenes/Menus/loading.tscn
+res://Scripts/Multiplayer/network_manager.gd
+res://Scripts/Multiplayer/enet_network.gd
+res://Scenes/Network/enet_network.tscn
+res://Scenes/Network/multiplayer_manager.tscn
+res://Scripts/Multiplayer/multiplayer_manager.gd
+res://Scripts/player.gd
