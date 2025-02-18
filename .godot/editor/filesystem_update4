@@ -1,3 +1,7 @@
-res://Scenes/Museum Level/museum.tscn
-res://Scenes/House Level/house.tscn
+res://Scenes/Burglar/burglar.tscn
 res://Scripts/node_state_machine.gd
+res://Scenes/Museum Level/museum.tscn
+res://Scenes/Museum Level/Guard/guard.tscn
+res://Scenes/House Level/house.tscn
+res://Scenes/door.tscn
+res://Scenes/Museum Level/Guard/follow_burglar_state.gd

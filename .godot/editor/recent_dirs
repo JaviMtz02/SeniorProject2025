@@ -1,3 +1,5 @@
+res://Assets/Sprites/Characters
+res://Scenes/Museum Level/Guard
 res://Scenes/Museum Level
 res://Assets/Sprites/UI
 res://Scenes/House Level
@@ -5,7 +7,5 @@ res://Scenes
 res://Assets/Sprites/Loot Sprites
 res://
 res://Scenes/Burglar
-res://Assets/Sprites/Characters
-res://Scenes/House Level/characters/Dog
 res://Scripts
 res://Assets/Sprites/animals/1 Dog

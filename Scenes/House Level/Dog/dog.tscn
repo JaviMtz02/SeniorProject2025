@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c210sh51qtimu" path="res://Assets/Sprites/animals/1 Dog/Idle.png" id="5_d4dmd"]
 [ext_resource type="Texture2D" uid="uid://7akku86tit8h" path="res://Assets/Sprites/animals/1 Dog/Walk.png" id="6_se4hr"]
 [ext_resource type="Script" path="res://Scripts/node_state_machine.gd" id="7_w7wig"]
-[ext_resource type="Script" path="res://Scenes/House Level/characters/Dog/walk_state.gd" id="8_e48on"]
-[ext_resource type="Script" path="res://Scenes/House Level/characters/Dog/idle_state.gd" id="8_u5xtk"]
-[ext_resource type="Script" path="res://Scenes/House Level/characters/Dog/bark_state.gd" id="9_0d7xg"]
+[ext_resource type="Script" path="res://Scenes/House Level/Dog/walk_state.gd" id="8_e48on"]
+[ext_resource type="Script" path="res://Scenes/House Level/Dog/idle_state.gd" id="8_u5xtk"]
+[ext_resource type="Script" path="res://Scenes/House Level/Dog/bark_state.gd" id="9_0d7xg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33wmv"]
 atlas = ExtResource("3_hhmpc")
