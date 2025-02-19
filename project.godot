@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Burglar Game"
+<<<<<<< HEAD
 run/main_scene="res://Scenes/Menus/start_menu.tscn"
+=======
+run/main_scene="res://Scenes/Museum Level/museum.tscn"
+>>>>>>> Museum_Level
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -29,6 +33,8 @@ project/assembly_name="Burglar Game"
 navigation_polygon_source_geometry_group=""
 loot=""
 loot_interaction=""
+navigation_museum=""
+Burglar=""
 
 [input]
 
