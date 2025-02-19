@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqnwrfswgrhh5"]
+
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_r85dr"]
+[ext_resource type="Texture2D" uid="uid://r25fruvxrqod" path="res://Assets/Sprites/Loot Sprites/Museum Loot/totem.png" id="2_kw3rp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8i1l"]
+size = Vector2(14, 26)
+
+[node name="Totem" type="Area2D" groups=["loot"]]
+script = ExtResource("1_r85dr")
+value = 30.0
+inventory_space_req = 14.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kw3rp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -4)
+shape = SubResource("RectangleShape2D_y8i1l")
