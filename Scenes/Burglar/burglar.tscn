@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cn2v6r5xd2gqc"]
+[gd_scene load_steps=29 format=3 uid="uid://cn2v6r5xd2gqc"]
 
 [ext_resource type="Script" path="res://Scenes/Burglar/burglar.gd" id="1_ptfhq"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="2_0gd4x"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dqv6rsbp81orx" path="res://Assets/Sprites/UI/burglar_bag.png" id="3_rpoaa"]
 [ext_resource type="Script" path="res://Scenes/Burglar/walk_state.gd" id="3_y1n7j"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_wekip"]
-[ext_resource type="Script" path="res://Scenes/Burglar/take_loot_state.gd" id="6_g7kpk"]
 [ext_resource type="Texture2D" uid="uid://y3p2ifslo6c3" path="res://Assets/Sprites/UI/Time.png" id="7_4d1p6"]
 [ext_resource type="Texture2D" uid="uid://c5xwsdwgf1sgh" path="res://Assets/Sprites/UI/deposit_key.png" id="8_7a7yh"]
 
@@ -245,11 +244,6 @@ loot_interaction = NodePath("../../LootInteraction")
 script = ExtResource("3_y1n7j")
 burglar = NodePath("../..")
 anim_sprite = NodePath("../../AnimatedSprite2D")
-loot_interaction = NodePath("../../LootInteraction")
-
-[node name="TakeLoot" type="Node" parent="StateMachine" node_paths=PackedStringArray("burglar", "loot_interaction")]
-script = ExtResource("6_g7kpk")
-burglar = NodePath("../..")
 loot_interaction = NodePath("../../LootInteraction")
 
 [node name="LootInteraction" type="Area2D" parent="." groups=["loot_interaction"]]
