@@ -137,7 +137,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow3h4"]
 size = Vector2(21, 28)
 
-[node name="Burglar" type="CharacterBody2D" node_paths=PackedStringArray("burglar", "loot_interaction", "take_loot_button", "deposit_button", "value_label", "inventory_label", "time_label") groups=["Burglar"]]
+[node name="Burglar" type="CharacterBody2D" node_paths=PackedStringArray("burglar", "loot_interaction", "take_loot_button", "deposit_button", "value_label", "inventory_label", "time_label")]
 script = ExtResource("1_ptfhq")
 burglar = NodePath(".")
 loot_interaction = NodePath("LootInteraction")

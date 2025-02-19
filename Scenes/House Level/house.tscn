@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://wj16fu1mo5ka" path="res://Assets/Sprites/Background/Setting Design/Condominium/Condominium_Design_preview.png" id="18_lyrs8"]
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="19_on312"]
 [ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="20_pjwmv"]
-[ext_resource type="PackedScene" uid="uid://sdns7q1mfc6t" path="res://Scenes/House Level/Dog/dog.tscn" id="21_3vikf"]
+[ext_resource type="PackedScene" uid="uid://sdns7q1mfc6t" path="res://Scenes/House Level/characters/Dog/dog.tscn" id="21_3vikf"]
 [ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="22_6ob7k"]
 [ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot Scenes/ball.tscn" id="23_iwso7"]
 [ext_resource type="PackedScene" uid="uid://dassywovt6r47" path="res://Scenes/House Level/Loot Scenes/phone.tscn" id="23_lub5n"]
@@ -40,7 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://bi4ro7popdrb" path="res://Scenes/House Level/Loot Scenes/skateboard.tscn" id="35_g50dt"]
 [ext_resource type="PackedScene" uid="uid://b8wd6wgu55o4x" path="res://Scenes/House Level/Loot Scenes/trophy.tscn" id="37_lryl0"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="39_xe4ym"]
-[ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="41_fdx47"]
+[ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/House Level/door.tscn" id="41_fdx47"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_typuc"]
 texture = ExtResource("1_848k0")
