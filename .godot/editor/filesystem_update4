@@ -1,5 +1,2 @@
-res://Scripts/node_state_machine.gd
-res://Scenes/Museum Level/Loot Scenes/antique_2.tscn
-res://Scenes/Museum Level/Loot Scenes/area_2d.tscn
-res://Scenes/Museum Level/Loot Scenes/disk_2.tscn
 res://Scenes/Museum Level/museum.tscn
+res://Scripts/node_state_machine.gd

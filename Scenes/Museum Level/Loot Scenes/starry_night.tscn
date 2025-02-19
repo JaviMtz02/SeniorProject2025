@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d17i20xpbe6we"]
+
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_4punq"]
+[ext_resource type="Texture2D" uid="uid://b1inej0p7bsms" path="res://Assets/Sprites/Loot Sprites/Museum Loot/starry_night.png" id="2_w2p68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_et0io"]
+size = Vector2(30, 33)
+
+[node name="StarryNight" type="Area2D" groups=["loot"]]
+script = ExtResource("1_4punq")
+value = 150.0
+inventory_space_req = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_w2p68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_et0io")

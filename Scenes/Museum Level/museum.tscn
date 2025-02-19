@@ -1,6 +1,7 @@
-[gd_scene load_steps=38 format=4 uid="uid://i50wkd86wgwi"]
+[gd_scene load_steps=85 format=4 uid="uid://i50wkd86wgwi"]
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
+[ext_resource type="Script" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
 [ext_resource type="Texture2D" uid="uid://bc6ir33pyso0t" path="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_1_layer_1_16x16.png" id="1_a1que"]
 [ext_resource type="Texture2D" uid="uid://bl31iuobainjl" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_3_layer_1.png" id="2_16h7c"]
 [ext_resource type="Texture2D" uid="uid://bxp4a53sfd770" path="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_2_layer_1_16x16.png" id="2_hriux"]
@@ -14,7 +15,53 @@
 [ext_resource type="Texture2D" uid="uid://cagjgr87o0dp4" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png" id="9_tfhnb"]
 [ext_resource type="PackedScene" uid="uid://dwyseg08pilxd" path="res://Scenes/Museum Level/Guard/guard.tscn" id="13_x1mcs"]
 [ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="14_8dy78"]
+[ext_resource type="PackedScene" uid="uid://dice2umpg6y62" path="res://Scenes/Museum Level/Loot Scenes/antique.tscn" id="14_hli1t"]
+[ext_resource type="PackedScene" uid="uid://dky444q5cjswa" path="res://Scenes/Museum Level/Loot Scenes/antique_2.tscn" id="15_jm2vv"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_tt1tv"]
+[ext_resource type="PackedScene" uid="uid://lwrvkckh5b75" path="res://Scenes/Museum Level/Loot Scenes/antique_3.tscn" id="16_4yynd"]
+[ext_resource type="PackedScene" uid="uid://dpm5om5qnbvlu" path="res://Scenes/Museum Level/Loot Scenes/antique_4.tscn" id="17_1bxy6"]
+[ext_resource type="PackedScene" uid="uid://cju68344motmd" path="res://Scenes/Museum Level/Loot Scenes/antique_5.tscn" id="18_wr2te"]
+[ext_resource type="PackedScene" uid="uid://waxlp4dutt66" path="res://Scenes/Museum Level/Loot Scenes/art.tscn" id="19_ehp3d"]
+[ext_resource type="PackedScene" uid="uid://cbfevtl453hoq" path="res://Scenes/Museum Level/Loot Scenes/art_3.tscn" id="21_kvnmn"]
+[ext_resource type="PackedScene" uid="uid://cw5tw3d1ptx2w" path="res://Scenes/Museum Level/Loot Scenes/art_4.tscn" id="22_85r8o"]
+[ext_resource type="PackedScene" uid="uid://bb5dbuffpt0rs" path="res://Scenes/Museum Level/Loot Scenes/art_5.tscn" id="23_8dcgj"]
+[ext_resource type="PackedScene" uid="uid://buywou2d3tnb7" path="res://Scenes/Museum Level/Loot Scenes/art_6.tscn" id="24_fj0vb"]
+[ext_resource type="PackedScene" uid="uid://b6fl3uavx0ep5" path="res://Scenes/Museum Level/Loot Scenes/bugs.tscn" id="25_hqd22"]
+[ext_resource type="PackedScene" uid="uid://1aa3v0bsy3ug" path="res://Scenes/Museum Level/Loot Scenes/bugs_2.tscn" id="26_wc4ml"]
+[ext_resource type="PackedScene" uid="uid://1u4rd1xdgsjs" path="res://Scenes/Museum Level/Loot Scenes/butterfly.tscn" id="27_wfinb"]
+[ext_resource type="PackedScene" uid="uid://qslijlsto4t6" path="res://Scenes/Museum Level/Loot Scenes/butterfly_2.tscn" id="28_u5vvt"]
+[ext_resource type="PackedScene" uid="uid://eapbg65ld6yj" path="res://Scenes/Museum Level/Loot Scenes/butterfly_3.tscn" id="29_7vy34"]
+[ext_resource type="PackedScene" uid="uid://drxaoyo8phq3o" path="res://Scenes/Museum Level/Loot Scenes/butterfly_4.tscn" id="30_lwb3f"]
+[ext_resource type="PackedScene" uid="uid://deg83pv50pr6e" path="res://Scenes/Museum Level/Loot Scenes/dino_skull.tscn" id="31_fwaau"]
+[ext_resource type="PackedScene" uid="uid://yjwlmocupn4n" path="res://Scenes/Museum Level/Loot Scenes/disk.tscn" id="32_ab8pt"]
+[ext_resource type="PackedScene" uid="uid://c0yyty2e5jgp8" path="res://Scenes/Museum Level/Loot Scenes/disk_2.tscn" id="33_nb4dp"]
+[ext_resource type="PackedScene" uid="uid://xuuxsqco4fk3" path="res://Scenes/Museum Level/Loot Scenes/fossil.tscn" id="34_gdexa"]
+[ext_resource type="PackedScene" uid="uid://do2prd6celgnr" path="res://Scenes/Museum Level/Loot Scenes/fossil_2.tscn" id="35_trikm"]
+[ext_resource type="PackedScene" uid="uid://bsrdpv176mp7g" path="res://Scenes/Museum Level/Loot Scenes/fossil_3.tscn" id="36_kjem3"]
+[ext_resource type="PackedScene" uid="uid://cshqxqeq7eq35" path="res://Scenes/Museum Level/Loot Scenes/fossil_4.tscn" id="37_xxwie"]
+[ext_resource type="PackedScene" uid="uid://hw2i2iai6qvy" path="res://Scenes/Museum Level/Loot Scenes/frog.tscn" id="38_roxoy"]
+[ext_resource type="PackedScene" uid="uid://cglrds5ieh6i" path="res://Scenes/Museum Level/Loot Scenes/frog_2.tscn" id="39_qiggf"]
+[ext_resource type="PackedScene" uid="uid://o0da1vn0yhqb" path="res://Scenes/Museum Level/Loot Scenes/glass_case.tscn" id="40_4utoe"]
+[ext_resource type="PackedScene" uid="uid://br3hr1rjcr0c6" path="res://Scenes/Museum Level/Loot Scenes/glass_case_2.tscn" id="41_phn5q"]
+[ext_resource type="PackedScene" uid="uid://dhkf0hv18rl4i" path="res://Scenes/Museum Level/Loot Scenes/glas_case_3.tscn" id="42_mqxwj"]
+[ext_resource type="PackedScene" uid="uid://pfkjcpfc7tf2" path="res://Scenes/Museum Level/Loot Scenes/mona_lisa.tscn" id="43_vthwh"]
+[ext_resource type="PackedScene" uid="uid://bd6iedfyibr7s" path="res://Scenes/Museum Level/Loot Scenes/vase.tscn" id="44_5i63t"]
+[ext_resource type="PackedScene" uid="uid://w1wennbl1w3a" path="res://Scenes/Museum Level/Loot Scenes/vase_6.tscn" id="45_j8g3n"]
+[ext_resource type="PackedScene" uid="uid://d3n8b87iylb3r" path="res://Scenes/Museum Level/Loot Scenes/vase_5.tscn" id="46_omyj8"]
+[ext_resource type="PackedScene" uid="uid://dhx3n73rv3obf" path="res://Scenes/Museum Level/Loot Scenes/vase_4.tscn" id="47_13wdx"]
+[ext_resource type="PackedScene" uid="uid://cvmcdedsms1fu" path="res://Scenes/Museum Level/Loot Scenes/vase_3.tscn" id="48_o5vb6"]
+[ext_resource type="PackedScene" uid="uid://bm87by01uy3ys" path="res://Scenes/Museum Level/Loot Scenes/vase_2.tscn" id="49_4btw8"]
+[ext_resource type="PackedScene" uid="uid://cqnwrfswgrhh5" path="res://Scenes/Museum Level/Loot Scenes/totem.tscn" id="50_8y7a2"]
+[ext_resource type="PackedScene" uid="uid://d17i20xpbe6we" path="res://Scenes/Museum Level/Loot Scenes/starry_night.tscn" id="51_w4xyu"]
+[ext_resource type="PackedScene" uid="uid://ugont15y8ehc" path="res://Scenes/Museum Level/Loot Scenes/souvenir.tscn" id="52_dpjoc"]
+[ext_resource type="PackedScene" uid="uid://dab5loaacdbjv" path="res://Scenes/Museum Level/Loot Scenes/souvenir_5.tscn" id="53_xdkha"]
+[ext_resource type="PackedScene" uid="uid://bbyqwx88ihyeo" path="res://Scenes/Museum Level/Loot Scenes/souvenir_4.tscn" id="54_6xop6"]
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="55_kdo4x"]
+[ext_resource type="PackedScene" uid="uid://d2wguhfxepus1" path="res://Scenes/Museum Level/Loot Scenes/souvenir_3.tscn" id="56_ydr80"]
+[ext_resource type="PackedScene" uid="uid://bx34pb3cc502l" path="res://Scenes/Museum Level/Loot Scenes/souvenir_2.tscn" id="57_7tgaq"]
+[ext_resource type="PackedScene" uid="uid://cxmi4elwfthhd" path="res://Scenes/Museum Level/Loot Scenes/scroll.tscn" id="58_q7xq7"]
+[ext_resource type="PackedScene" uid="uid://cu215lf7exnsv" path="res://Scenes/Museum Level/Loot Scenes/art_2.tscn" id="58_tsuaq"]
+[ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="59_ikusx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysar5"]
 texture = ExtResource("1_a1que")
@@ -5118,8 +5165,11 @@ texture = ExtResource("9_tfhnb")
 0:20/0 = 0
 1:20/0 = 0
 2:20/0 = 0
+2:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.875, -4.125, 8, -4.125, 8, 8, -4, 8)
 3:20/0 = 0
+3:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.875, 8, -4.125, 8, 8, -8, 8)
 4:20/0 = 0
+4:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.875, 4.125, -3.875, 4.125, 8, -8, 8)
 5:20/0 = 0
 6:20/0 = 0
 7:20/0 = 0
@@ -5132,6 +5182,7 @@ texture = ExtResource("9_tfhnb")
 15:20/0 = 0
 0:21/0 = 0
 2:21/0 = 0
+2:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.75, -8, 8, -8, 8, 8, -3.875, 8)
 3:21/0 = 0
 4:21/0 = 0
 5:21/0 = 0
@@ -5146,6 +5197,7 @@ texture = ExtResource("9_tfhnb")
 15:21/0 = 0
 0:22/0 = 0
 2:22/0 = 0
+2:22/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.75, -8, 8, -8, 8, -2, -3.875, -2.125)
 3:22/0 = 0
 5:22/0 = 0
 6:22/0 = 0
@@ -9827,6 +9879,7 @@ source_geometry_group_name = &"navigation_museum"
 agent_radius = 15.0
 
 [node name="Museum" type="Node2D"]
+script = ExtResource("1_73gus")
 
 [node name="MuseumLayout" type="Node" parent="."]
 
@@ -9890,19 +9943,574 @@ position = Vector2(-368, -397)
 
 [node name="Loot" type="Node" parent="."]
 
+[node name="Antique" parent="Loot" instance=ExtResource("14_hli1t")]
+position = Vector2(-936, -69)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Antique2" parent="Loot" instance=ExtResource("15_jm2vv")]
+position = Vector2(-1030, -69)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Antique3" parent="Loot" instance=ExtResource("16_4yynd")]
+position = Vector2(537, 497)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Antique4" parent="Loot" instance=ExtResource("17_1bxy6")]
+position = Vector2(487, -260)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Antique5" parent="Loot" instance=ExtResource("18_wr2te")]
+position = Vector2(-1344, -21)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art" parent="Loot" instance=ExtResource("19_ehp3d")]
+position = Vector2(-1344, 492)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art3" parent="Loot" instance=ExtResource("21_kvnmn")]
+position = Vector2(-1064, 243)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art4" parent="Loot" instance=ExtResource("22_85r8o")]
+position = Vector2(-1392, 387)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art5" parent="Loot" instance=ExtResource("23_8dcgj")]
+position = Vector2(-1296, 396)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art6" parent="Loot" instance=ExtResource("24_fj0vb")]
+position = Vector2(-944, 386)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Bugs" parent="Loot" instance=ExtResource("25_hqd22")]
+position = Vector2(265, -268)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Bugs2" parent="Loot" instance=ExtResource("26_wc4ml")]
+position = Vector2(-647, 420)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Butterfly" parent="Loot" instance=ExtResource("27_wfinb")]
+position = Vector2(-757, 499)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Butterfly2" parent="Loot" instance=ExtResource("28_u5vvt")]
+position = Vector2(-550, 502)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Butterfly3" parent="Loot" instance=ExtResource("29_7vy34")]
+position = Vector2(-562, 490)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Butterfly4" parent="Loot" instance=ExtResource("30_lwb3f")]
+position = Vector2(-786, 411)
+collision_layer = 2
+collision_mask = 4
+
+[node name="DinoSkull" parent="Loot" instance=ExtResource("31_fwaau")]
+position = Vector2(-126, 34)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Disk" parent="Loot" instance=ExtResource("32_ab8pt")]
+position = Vector2(-875, -14)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Disk2" parent="Loot" instance=ExtResource("33_nb4dp")]
+position = Vector2(-888, -9)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Fossil" parent="Loot" instance=ExtResource("34_gdexa")]
+position = Vector2(-579, -425)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Fossil2" parent="Loot" instance=ExtResource("35_trikm")]
+position = Vector2(-113, -329)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Fossil3" parent="Loot" instance=ExtResource("36_kjem3")]
+position = Vector2(-366, -235)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Fossil4" parent="Loot" instance=ExtResource("37_xxwie")]
+position = Vector2(-427, -335)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Frog" parent="Loot" instance=ExtResource("38_roxoy")]
+position = Vector2(1, -241)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Frog2" parent="Loot" instance=ExtResource("39_qiggf")]
+position = Vector2(-672, -488)
+collision_layer = 2
+collision_mask = 4
+
+[node name="GlassCase" parent="Loot" instance=ExtResource("40_4utoe")]
+position = Vector2(-481, -423)
+collision_layer = 2
+collision_mask = 4
+
+[node name="GlassCase2" parent="Loot" instance=ExtResource("41_phn5q")]
+position = Vector2(-115, 142)
+collision_layer = 2
+collision_mask = 4
+
+[node name="GlasCase3" parent="Loot" instance=ExtResource("42_mqxwj")]
+position = Vector2(-194, 144)
+collision_layer = 2
+collision_mask = 4
+
+[node name="MonaLisa" parent="Loot" instance=ExtResource("43_vthwh")]
+position = Vector2(257, -370)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Vase" parent="Loot" instance=ExtResource("44_5i63t")]
+position = Vector2(544, 166)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Vase6" parent="Loot" instance=ExtResource("45_j8g3n")]
+position = Vector2(273, 166)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Vase5" parent="Loot" instance=ExtResource("46_omyj8")]
+position = Vector2(472, 169)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Vase4" parent="Loot" instance=ExtResource("47_13wdx")]
+position = Vector2(472, 24)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Vase3" parent="Loot" instance=ExtResource("48_o5vb6")]
+position = Vector2(272, 21)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Vase2" parent="Loot" instance=ExtResource("49_4btw8")]
+position = Vector2(400, 84)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Totem" parent="Loot" instance=ExtResource("50_8y7a2")]
+position = Vector2(-1343, -133)
+collision_layer = 2
+collision_mask = 4
+
+[node name="StarryNight" parent="Loot" instance=ExtResource("51_w4xyu")]
+position = Vector2(-960, 484)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir" parent="Loot" instance=ExtResource("52_dpjoc")]
+position = Vector2(266, 536)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir5" parent="Loot" instance=ExtResource("53_xdkha")]
+position = Vector2(150, 538)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir4" parent="Loot" instance=ExtResource("54_6xop6")]
+position = Vector2(6, 473)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("55_kdo4x")
+
+[node name="Souvenir3" parent="Loot" instance=ExtResource("56_ydr80")]
+position = Vector2(265, 473)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir2" parent="Loot" groups=["loot"] instance=ExtResource("57_7tgaq")]
+position = Vector2(135, 472)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art7" parent="Loot" instance=ExtResource("22_85r8o")]
+position = Vector2(-1472, 243)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Scroll" parent="Loot" instance=ExtResource("58_q7xq7")]
+position = Vector2(-1137, -227)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art8" parent="Loot" instance=ExtResource("23_8dcgj")]
+position = Vector2(-1424, 492)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art9" parent="Loot" instance=ExtResource("24_fj0vb")]
+position = Vector2(-1040, 483)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art2" parent="Loot" instance=ExtResource("58_tsuaq")]
+position = Vector2(-1304, 243)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art10" parent="Loot" instance=ExtResource("21_kvnmn")]
+position = Vector2(-1240, 243)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art11" parent="Loot" instance=ExtResource("23_8dcgj")]
+position = Vector2(-1120, 243)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art12" parent="Loot" instance=ExtResource("23_8dcgj")]
+position = Vector2(-848, 243)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art14" parent="Loot" instance=ExtResource("23_8dcgj")]
+position = Vector2(-864, 387)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Art13" parent="Loot" instance=ExtResource("24_fj0vb")]
+position = Vector2(-1488, 387)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Vase7" parent="Loot" instance=ExtResource("48_o5vb6")]
+position = Vector2(544, 21)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir6" parent="Loot" instance=ExtResource("56_ydr80")]
+position = Vector2(40, 569)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir7" parent="Loot" instance=ExtResource("54_6xop6")]
+position = Vector2(-73, 570)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("55_kdo4x")
+
+[node name="Souvenir8" parent="Loot" groups=["loot"] instance=ExtResource("57_7tgaq")]
+position = Vector2(-72, 472)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir9" parent="Loot" instance=ExtResource("52_dpjoc")]
+position = Vector2(57, 458)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir10" parent="Loot" groups=["loot"] instance=ExtResource("57_7tgaq")]
+position = Vector2(217, 568)
+collision_layer = 2
+collision_mask = 4
+
+[node name="Souvenir11" parent="Loot" instance=ExtResource("53_xdkha")]
+position = Vector2(216, 459)
+collision_layer = 2
+collision_mask = 4
+
 [node name="Coins" type="Node" parent="."]
 
+[node name="Coin" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-305, 520)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-658, 464)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-755, 527)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-652, 593)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-560, 528)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-874, 558)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1173, 559)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1416, 559)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1416, 440)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-863, 443)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1173, 442)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1168, 318)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-893, 319)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1459, 320)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1373, 170)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1230, 173)
+
+[node name="Coin17" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1025, 176)
+
+[node name="Coin18" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-834, 173)
+
+[node name="Coin19" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1460, -151)
+
+[node name="Coin20" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1170, -163)
+
+[node name="Coin21" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-941, -163)
+
+[node name="Coin22" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1296, -62)
+
+[node name="Coin23" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-797, -86)
+
+[node name="Coin24" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-483, 95)
+
+[node name="Coin25" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-337, 165)
+
+[node name="Coin26" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-329, -73)
+
+[node name="Coin27" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-188, 55)
+
+[node name="Coin28" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-116, -76)
+
+[node name="Coin29" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-584, -281)
+
+[node name="Coin30" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-356, -278)
+
+[node name="Coin31" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-111, -282)
+
+[node name="Coin32" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-577, -470)
+
+[node name="Coin33" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-578, -372)
+
+[node name="Coin34" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-379, -390)
+
+[node name="Coin35" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-248, -408)
+
+[node name="Coin36" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-167, -472)
+
+[node name="Coin37" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-115, -373)
+
+[node name="Coin38" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-729, -39)
+
+[node name="Coin39" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-727, -137)
+
+[node name="Coin40" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-728, -260)
+
+[node name="Coin41" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-733, -408)
+
+[node name="Coin42" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-584, -154)
+
+[node name="Coin43" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-408, -153)
+
+[node name="Coin44" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-201, -152)
+
+[node name="Coin45" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(38, -152)
+
+[node name="Coin46" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(94, 3)
+
+[node name="Coin47" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(95, 113)
+
+[node name="Coin48" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(311, 103)
+
+[node name="Coin49" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(504, 96)
+
+[node name="Coin50" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(395, 512)
+
+[node name="Coin51" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(368, 408)
+
+[node name="Coin52" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(533, 418)
+
+[node name="Coin53" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(460, 335)
+
+[node name="Coin54" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-31, 539)
+
+[node name="Coin55" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(136, 592)
+
+[node name="Coin56" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(215, 513)
+
+[node name="Coin57" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(65, 515)
+
+[node name="Coin58" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(66, 411)
+
+[node name="Coin59" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(224, 414)
+
+[node name="Coin60" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-425, 565)
+
+[node name="Coin61" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-475, 533)
+
+[node name="Coin62" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-155, 568)
+
+[node name="Coin63" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-202, 518)
+
+[node name="Coin64" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-197, 441)
+
+[node name="Coin65" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-200, 375)
+
+[node name="Coin66" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-378, 407)
+
+[node name="Coin67" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-456, 360)
+
+[node name="Coin68" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-376, 299)
+
+[node name="Coin69" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-255, 301)
+
+[node name="Coin70" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-95, 299)
+
+[node name="Coin71" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(49, 299)
+
+[node name="Coin72" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(194, 297)
+
+[node name="Coin73" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(342, 295)
+
+[node name="Coin74" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(105, -249)
+
+[node name="Coin75" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(185, -109)
+
+[node name="Coin76" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(295, -123)
+
+[node name="Coin77" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(310, -72)
+
+[node name="Coin78" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(488, -123)
+
+[node name="Coin79" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(422, -89)
+
+[node name="Coin80" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-715, 214)
+
+[node name="Coin81" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-714, 103)
+
+[node name="Coin82" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-529, 300)
+
+[node name="Coin83" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-677, 300)
+
+[node name="Coin84" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1130, 72)
+
+[node name="Coin85" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-1352, 69)
+
+[node name="Coin86" parent="Coins" instance=ExtResource("59_ikusx")]
+position = Vector2(-921, 69)
+
 [node name="Burglar" parent="." instance=ExtResource("14_8dy78")]
-position = Vector2(-306, 581)
+position = Vector2(-242, 581)
 
 [node name="Door" parent="." instance=ExtResource("15_tt1tv")]
-position = Vector2(-250, 611)
-scale = Vector2(3, 1)
+position = Vector2(-238, 611)
+scale = Vector2(5, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 1
-offset_left = -1999.0
+offset_left = -1998.0
 offset_top = -826.0
-offset_right = 1237.0
+offset_right = 1238.0
 offset_bottom = 1119.0
 color = Color(0.294118, 0.239216, 0.376471, 0.47451)
