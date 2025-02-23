@@ -1,17 +1,14 @@
 class_name StartMenu
 extends Control
 
-@onready var play: Button = $MarginContainer/HBoxContainer/VBoxContainer/play
-@onready var arcade: Button = $MarginContainer/HBoxContainer/VBoxContainer/arcade
-@onready var options: Button = $MarginContainer/HBoxContainer/VBoxContainer/options
-@onready var quit: Button = $MarginContainer/HBoxContainer/VBoxContainer/quit
-var level_select := "res://Scenes/Menus/level_select.tscn"
-
-func _ready() -> void:
-	quit.button_down.connect(_on_quit_pressed)
+const OPTIONS_MENU = "res://Scenes/Menus/options_menu.tscn"
+const LEVEL_SELECT = "res://Scenes/Menus/level_select.tscn"
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file(level_select)
+	get_tree().call_deferred(&"change_scene_to_packed", preload(LEVEL_SELECT))
+	
+func _on_options_pressed():
+	get_tree().call_deferred(&"change_scene_to_packed", preload(OPTIONS_MENU))
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()

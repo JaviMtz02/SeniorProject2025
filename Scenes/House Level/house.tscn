@@ -1,7 +1,8 @@
-[gd_scene load_steps=63 format=4 uid="uid://dthi565027qtm"]
+[gd_scene load_steps=64 format=4 uid="uid://dthi565027qtm"]
 
 [ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Tileset_16x16_16.png" id="1_848k0"]
 [ext_resource type="Script" path="res://Scenes/House Level/House Scripts/house.gd" id="1_dvkor"]
+[ext_resource type="PackedScene" uid="uid://dphs7mmyn8ocp" path="res://Scenes/Menus/pause_menu.tscn" id="2_6ymqc"]
 [ext_resource type="Texture2D" uid="uid://1gu1ovhdruwk" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png" id="2_7pkew"]
 [ext_resource type="Texture2D" uid="uid://b50pnmg6jjcb6" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/12_Kitchen_16x16.png" id="3_xco4q"]
 [ext_resource type="Texture2D" uid="uid://bkgq5tnpqu3d7" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/21_Clothing_Store.png" id="4_kamuk"]
@@ -10364,8 +10365,11 @@ agent_radius = 20.0
 [node name="House" type="Node2D"]
 script = ExtResource("1_dvkor")
 
-[node name="TileMap" type="TileMap" parent="."]
-format = 2
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_6ymqc")]
+
+[node name="TileMap" type="Node2D" parent="."]
 
 [node name="Sky_BG" type="TileMapLayer" parent="TileMap"]
 z_index = -1

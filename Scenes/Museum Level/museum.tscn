@@ -1,10 +1,11 @@
-[gd_scene load_steps=85 format=4 uid="uid://i50wkd86wgwi"]
+[gd_scene load_steps=86 format=4 uid="uid://i50wkd86wgwi"]
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
 [ext_resource type="Script" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
 [ext_resource type="Texture2D" uid="uid://bc6ir33pyso0t" path="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_1_layer_1_16x16.png" id="1_a1que"]
 [ext_resource type="Texture2D" uid="uid://bl31iuobainjl" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_3_layer_1.png" id="2_16h7c"]
 [ext_resource type="Texture2D" uid="uid://bxp4a53sfd770" path="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_2_layer_1_16x16.png" id="2_hriux"]
+[ext_resource type="PackedScene" uid="uid://dphs7mmyn8ocp" path="res://Scenes/Menus/pause_menu.tscn" id="2_vf107"]
 [ext_resource type="Texture2D" uid="uid://1f4pnqfjmbhm" path="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_1_preview_16x16.png" id="3_oqrin"]
 [ext_resource type="Texture2D" uid="uid://vfdyumnbofib" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png" id="3_qancv"]
 [ext_resource type="Texture2D" uid="uid://cmy27nb0meg71" path="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="4_akc08"]
@@ -9880,6 +9881,10 @@ agent_radius = 15.0
 
 [node name="Museum" type="Node2D"]
 script = ExtResource("1_73gus")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_vf107")]
 
 [node name="MuseumLayout" type="Node" parent="."]
 
