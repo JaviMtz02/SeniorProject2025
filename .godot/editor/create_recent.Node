@@ -1,8 +1,10 @@
-Node2D
+MultiplayerSpawner
 MultiplayerSynchronizer
 Node
+Node2D
+Marker2D
+Area2D
 Camera2D
-MultiplayerSpawner
 WorldEnvironment
 TextureRect
 Label
@@ -10,5 +12,3 @@ Panel
 CharacterBody2D
 TileMapLayer
 AnimatedSprite2D
-CollisionShape2D
-Area2D

@@ -10,3 +10,10 @@ res://Scripts/Player/player.gd
 res://Scripts/Player/player_input.gd
 res://Scenes/Player/camera_input.tscn
 res://Scripts/Player/camera_input.gd
+res://Scripts/mobs.gd
+res://Scenes/House Level/characters/Dog/dog_spawn.tscn
+res://Scenes/Menus/level_select.tscn
+res://Scenes/Menus/play_menu.tscn
+res://Scenes/House Level/characters/Dog/dog.tscn
+res://Scenes/mob_spawn.tscn
+res://Scenes/House Level/characters/Dog/walk_state.gd

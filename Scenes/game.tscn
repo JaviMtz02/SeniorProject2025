@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://21nqia04qxxw"]
+[gd_scene load_steps=3 format=3 uid="uid://21nqia04qxxw"]
 
 [ext_resource type="PackedScene" uid="uid://hriwlaw3dyt6" path="res://Scenes/Network/multiplayer_manager.tscn" id="1_1gml5"]
+[ext_resource type="PackedScene" uid="uid://dthi565027qtm" path="res://Scenes/House Level/house.tscn" id="2_n50m6"]
 
 [node name="Game" type="Node2D"]
 
@@ -15,4 +16,7 @@ _player_spawn_point = NodePath("../Node2D/PlayerSpawnPoint")
 
 [node name="MapSpawnPoint" type="Node2D" parent="Node2D"]
 
+[node name="House" parent="Node2D/MapSpawnPoint" instance=ExtResource("2_n50m6")]
+
 [node name="PlayerSpawnPoint" type="Node2D" parent="Node2D"]
+position = Vector2(-96, 807)

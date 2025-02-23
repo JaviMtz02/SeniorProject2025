@@ -36,7 +36,7 @@ func _remove_player_from_game(network_id: int):
 			_players_in_game.erase(network_id)
 	
 func _ready_player(player: Player):
-	player.position = Vector2(randi_range(0, 100),randi_range(0, 100))
+	player.position = Vector2.ZERO
 
 func _client_connected(network_id: int):
 	print("Client connected: %s" % network_id)

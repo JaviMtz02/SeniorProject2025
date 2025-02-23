@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5a6c5qt25160"]
+
+[ext_resource type="Script" path="res://Scripts/mobs.gd" id="1_ldde6"]
+
+[node name="MobSpawn" type="Node"]
+script = ExtResource("1_ldde6")
+
+[node name="MobSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/House Level/characters/Dog/dog.tscn")
