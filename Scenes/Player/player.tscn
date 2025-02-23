@@ -1,7 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://rkr03nmyt1qe"]
+[gd_scene load_steps=18 format=3 uid="uid://rkr03nmyt1qe"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_onuv7"]
+[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_onuv7"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="1_topoq"]
+[ext_resource type="PackedScene" uid="uid://biqaowkrhjgip" path="res://Scenes/Player/camera_input.tscn" id="3_4up23"]
+[ext_resource type="Script" path="res://Scripts/Player/player_input.gd" id="3_d4vvq"]
+[ext_resource type="Script" path="res://Scripts/Player/camera_input.gd" id="4_y08sy"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_5dk0h"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_458jq"]
 atlas = ExtResource("1_topoq")
@@ -80,8 +88,18 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21ds8"]
 size = Vector2(10, 22)
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_i3e05"]
+properties/0/path = NodePath(".:input_dir")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_player_input", "anim_sprite")]
 script = ExtResource("1_onuv7")
+_player_input = NodePath("PlayerInput")
+anim_sprite = NodePath("AnimatedSprite2D")
+
+[node name="PlayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_5dk0h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7bfuh")
@@ -90,3 +108,15 @@ animation = &"forward"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_21ds8")
+
+[node name="CameraInput" parent="." node_paths=PackedStringArray("camera_2D") instance=ExtResource("3_4up23")]
+script = ExtResource("4_y08sy")
+camera_2D = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="CameraInput"]
+
+[node name="PlayerInput" type="Node" parent="."]
+script = ExtResource("3_d4vvq")
+
+[node name="InputSynchronizer" type="MultiplayerSynchronizer" parent="PlayerInput"]
+replication_config = SubResource("SceneReplicationConfig_i3e05")

@@ -6,3 +6,7 @@ res://Scenes/Player/player.tscn
 res://Scenes/Menus/multiplayer_menu.tscn
 res://Scripts/multiplayer_menu.gd
 res://Scripts/player.gd
+res://Scripts/Player/player.gd
+res://Scripts/Player/player_input.gd
+res://Scenes/Player/camera_input.tscn
+res://Scripts/Player/camera_input.gd

@@ -1,7 +1,9 @@
-MultiplayerSpawner
 Node2D
-WorldEnvironment
+MultiplayerSynchronizer
 Node
+Camera2D
+MultiplayerSpawner
+WorldEnvironment
 TextureRect
 Label
 Panel
@@ -10,6 +12,3 @@ TileMapLayer
 AnimatedSprite2D
 CollisionShape2D
 Area2D
-Sprite2D
-Timer
-Button

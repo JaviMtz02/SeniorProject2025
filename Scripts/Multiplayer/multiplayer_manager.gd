@@ -21,7 +21,7 @@ func _add_player_to_game(network_id: int):
 	print("Adding player to game: %s" % network_id)
 	# Spawn player in game
 	var player_to_add = _multiplayer_scene.instantiate()
-	player_to_add.name =  str(network_id)
+	player_to_add.name = str(network_id)
 	_ready_player(player_to_add)
 	
 	_players_in_game[network_id] = player_to_add
