@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739847287
+::res://::1740266655
 icon.svg::CompressedTexture2D::6407636745531623624::1739246357::1739845571::1::::<><>::
 README.md::TextFile::-1::1739246357::0::1::::<><>::
 ::res://Assets/::1739246357
@@ -164,7 +164,7 @@ Time.png::CompressedTexture2D::1743294224497326844::1739489990::1739845571::1:::
 UI_16x16.png::CompressedTexture2D::5485479918667153035::1739246357::1739845571::1::::<><>::
 UI_thinking_emotes_animation_16x16.png::CompressedTexture2D::727185421714266417::1739246357::1739845571::1::::<><>::
 value.png::CompressedTexture2D::8107896255805987456::1739489990::1739845571::1::::<><>::
-::res://Scenes/::1739845698
+::res://Scenes/::1739848200
 coin.tscn::PackedScene::4660993417585491552::1739489990::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://crilyuqbwxm4y::::res://Assets/Sprites/Loot Sprites/coin.png
 ::res://Scenes/Burglar/::1739845497
 burglar.gd::GDScript::-1::1739489990::0::1::::<>CharacterBody2D<>::
@@ -200,32 +200,37 @@ robot.tscn::PackedScene::3354262501356962131::1739489990::0::1::::<><>::uid://bq
 skateboard.tscn::PackedScene::88495802418598279::1739489990::0::1::::<><>::uid://gg4ws1rsllag::::res://Assets/Sprites/Loot Sprites/House Loot/skateboard.png
 trophy.tscn::PackedScene::4748307510659360505::1739489990::0::1::::<><>::uid://1i66a6evvr3e::::res://Assets/Sprites/Loot Sprites/House Loot/trophy.png
 vase.tscn::PackedScene::5440553883502642347::1739489990::0::1::::<><>::uid://h6mqngmovu2o::::res://Assets/Sprites/Loot Sprites/House Loot/vase.png
-::res://Scenes/Menus/::1739848146
+::res://Scenes/Menus/::1739850668
 level_select.tscn::PackedScene::8870108596763940916::1739845497::0::1::::<><>::res://Scripts/level_select.gd<>uid://bsxxuyvd1yrbx::::res://Assets/Sprites/Background/Clouds/Clouds 2/1.png<>uid://dhgvtps06akor::::res://Assets/Sprites/Background/Clouds/Clouds 2/2.png<>uid://bveml21jya4c4::::res://Assets/Sprites/Background/Clouds/Clouds 2/3.png<>uid://3j22at14ldao::::res://Assets/Sprites/Background/Clouds/Clouds 2/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
-multiplayer_menu.tscn::PackedScene::1396702109956744791::1739848146::0::1::::<><>::res://Scripts/multiplayer_menu.gd<>uid://c4w3nbpw21oww::::res://Assets/Sprites/Background/Clouds/Clouds 6/1.png<>uid://83t3l5hbaghn::::res://Assets/Sprites/Background/Clouds/Clouds 6/3.png<>uid://cyhf6av0pb4p4::::res://Assets/Sprites/Background/Clouds/Clouds 6/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
+loading.tscn::PackedScene::459577617950649242::1739849631::0::1::::<><>::uid://b8pcxhvpggumn::::res://Assets/Sprites/Background/Clouds/Clouds 4/1.png<>uid://dh1jcwjlofyuy::::res://Assets/Sprites/Background/Clouds/Clouds 4/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
+multiplayer_menu.tscn::PackedScene::1396702109956744791::1739850668::0::1::::<><>::res://Scripts/multiplayer_menu.gd<>uid://c4w3nbpw21oww::::res://Assets/Sprites/Background/Clouds/Clouds 6/1.png<>uid://83t3l5hbaghn::::res://Assets/Sprites/Background/Clouds/Clouds 6/3.png<>uid://cyhf6av0pb4p4::::res://Assets/Sprites/Background/Clouds/Clouds 6/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
 options_menu.tscn::PackedScene::221331878045011482::1739845497::0::1::::<><>::
 pause_menu.gdshader::Shader::-1::1739845497::0::1::::<><>::
 pause_menu.tscn::PackedScene::2985157933764753239::1739845497::0::1::::<><>::res://Scripts/pause_menu.gd<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf<>res://Scenes/Menus/pause_menu.gdshader
-play_menu.tscn::PackedScene::980600513231172755::1739848105::0::1::::<><>::res://Scripts/play_menu.gd<>uid://c4w3nbpw21oww::::res://Assets/Sprites/Background/Clouds/Clouds 6/1.png<>uid://83t3l5hbaghn::::res://Assets/Sprites/Background/Clouds/Clouds 6/3.png<>uid://cyhf6av0pb4p4::::res://Assets/Sprites/Background/Clouds/Clouds 6/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
-loading.tscn::PackedScene::459577617950649242::1739847945::0::1::::<><>::uid://b8pcxhvpggumn::::res://Assets/Sprites/Background/Clouds/Clouds 4/1.png<>uid://dh1jcwjlofyuy::::res://Assets/Sprites/Background/Clouds/Clouds 4/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
-start_menu.tscn::PackedScene::5542428102474458446::1739848105::0::1::::<><>::uid://ckhve70sn8xqn::::res://Assets/Sprites/Background/Clouds/Clouds 3/1.png<>res://Scripts/start_menu.gd<>uid://dhmljcbnbh4xf::::res://Assets/Sprites/Background/Clouds/Clouds 3/3.png<>uid://dvergsij0vrm0::::res://Assets/Sprites/Background/Clouds/Clouds 3/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
+play_menu.tscn::PackedScene::980600513231172755::1739850668::0::1::::<><>::res://Scripts/play_menu.gd<>uid://c4w3nbpw21oww::::res://Assets/Sprites/Background/Clouds/Clouds 6/1.png<>uid://83t3l5hbaghn::::res://Assets/Sprites/Background/Clouds/Clouds 6/3.png<>uid://cyhf6av0pb4p4::::res://Assets/Sprites/Background/Clouds/Clouds 6/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
+start_menu.tscn::PackedScene::5542428102474458446::1739850668::0::1::::<><>::uid://ckhve70sn8xqn::::res://Assets/Sprites/Background/Clouds/Clouds 3/1.png<>res://Scripts/start_menu.gd<>uid://dhmljcbnbh4xf::::res://Assets/Sprites/Background/Clouds/Clouds 3/3.png<>uid://dvergsij0vrm0::::res://Assets/Sprites/Background/Clouds/Clouds 3/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
 test_scene.tscn::PackedScene::7422157313558312566::1739845497::0::1::::<><>::uid://bsxxuyvd1yrbx::::res://Assets/Sprites/Background/Clouds/Clouds 2/1.png<>uid://bisbd58hrarr8::::res://Scenes/Menus/pause_menu.tscn
 ::res://Scenes/Museum Level/::1739845497
 museum.tscn::PackedScene::624999825420704140::1739845497::0::1::::<><>::uid://75i65fkgc3l::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png<>uid://bl31iuobainjl::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_3_layer_1.png<>uid://vfdyumnbofib::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png<>uid://dcaociyj7ijg1::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/22_Museum.png<>uid://bisbd58hrarr8::::res://Scenes/Menus/pause_menu.tscn
-::res://Scenes/Player/::1739848105
-player.tscn::PackedScene::1214932444426136548::1739848105::0::1::::<><>::uid://d22bkbwceaui7::::res://Assets/Sprites/Characters/burglar_walking.png
-::res://Scripts/::1739847543
+::res://Scenes/Network/::1739849484
+enet_network.tscn::PackedScene::4437347083534803332::1739849112::0::1::::<><>::res://Scripts/Multiplayer/enet_network.gd
+multiplayer_manager.tscn::PackedScene::526941929487276957::1739849484::0::1::::<><>::res://Scripts/Multiplayer/multiplayer_manager.gd
+::res://Scenes/Player/::1739850668
+player.tscn::PackedScene::1214932444426136548::1739850668::0::1::::<><>::res://Scripts/player.gd<>uid://d22bkbwceaui7::::res://Assets/Sprites/Characters/burglar_walking.png
+::res://Scripts/::1739850390
 level_select.gd::GDScript::-1::1739845497::0::1::::<>Control<>::
+multiplayer_menu.gd::GDScript::-1::1739849752::0::1::::<>Control<>::
 node_state.gd::GDScript::-1::1739489990::0::1::::NodeState<>Node<>::
 node_state_machine.gd::GDScript::-1::1739845613::0::1::::NodeStateMachine<>Node<>::
 node_state_machine_burglar.gd::GDScript::-1::1739495283::0::1::::NodeStateMachineBurglar<>Node<>::
 pause_menu.gd::GDScript::-1::1739845497::0::1::::<>Control<>::
+player.gd::GDScript::-1::1739850390::0::1::::Player<>CharacterBody2D<>::
 play_menu.gd::GDScript::-1::1739846512::0::1::::<>Control<>::
-multiplayer_menu.gd::GDScript::-1::1739847543::0::1::::<>Control<>::
-start_menu.gd::GDScript::-1::1739846147::0::1::::StartMenu<>Control<>::
-::res://Scripts/Multiplayer/::1739848146
-network_manager.gd::GDScript::-1::1739848146::0::1::::<>Node<>::
-enet_network.gd::GDScript::-1::1739847253::0::1::::<>Node<>::
+start_menu.gd::GDScript::-1::1739849076::0::1::::StartMenu<>Control<>::
+::res://Scripts/Multiplayer/::1739850668
+enet_network.gd::GDScript::-1::1739848756::0::1::::<>Node<>::
+multiplayer_manager.gd::GDScript::-1::1739850668::0::1::::<>Node<>::
+network_manager.gd::GDScript::-1::1739849385::0::1::::<>Node<>::
 ::res://Text/::1739845570
 Pixel Game.otf::FontFile::8172452374792886061::1739845497::1739845570::1::::<><>::
 PressStart2P.ttf::FontFile::75190325664051560::1739489990::1739845570::1::::<><>::

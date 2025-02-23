@@ -4,7 +4,11 @@ extends Node
 
 var _multiplayer_scene = preload("res://Scenes/Player/player.tscn")
 
+var _players_in_game: Dictionary = {}
+
 func _ready() -> void:
+	await get_tree().process_frame
+	
 	if NetworkManager.is_hosting_game:
 		multiplayer.peer_connected.connect(_client_connected)
 		multiplayer.peer_disconnected.connect(_client_disconnected)
@@ -20,9 +24,16 @@ func _add_player_to_game(network_id: int):
 	player_to_add.name =  str(network_id)
 	_ready_player(player_to_add)
 	
+	_players_in_game[network_id] = player_to_add
+	_player_spawn_point.add_child(player_to_add)
+	
 func _remove_player_from_game(network_id: int):
 	print("Removing player to game: %s" % network_id)
-	# Remove player
+	if _players_in_game.has(network_id):
+		var player_to_remove = _players_in_game[network_id]
+		if player_to_remove:
+			player_to_remove.queue_free()
+			_players_in_game.erase(network_id)
 	
 func _ready_player(player: Player):
 	player.position = Vector2(randi_range(0, 100),randi_range(0, 100))

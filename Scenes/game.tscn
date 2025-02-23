@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://21nqia04qxxw"]
+
+[ext_resource type="PackedScene" uid="uid://hriwlaw3dyt6" path="res://Scenes/Network/multiplayer_manager.tscn" id="1_1gml5"]
+
+[node name="Game" type="Node2D"]
+
+[node name="PlayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/Player/player.tscn")
+spawn_path = NodePath("../Node2D/PlayerSpawnPoint")
+
+[node name="MultiplayerManager" parent="." node_paths=PackedStringArray("_player_spawn_point") instance=ExtResource("1_1gml5")]
+_player_spawn_point = NodePath("../Node2D/PlayerSpawnPoint")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="MapSpawnPoint" type="Node2D" parent="Node2D"]
+
+[node name="PlayerSpawnPoint" type="Node2D" parent="Node2D"]

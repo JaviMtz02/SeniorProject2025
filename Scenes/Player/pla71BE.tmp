@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://rkr03nmyt1qe"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_onuv7"]
+[ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="1_topoq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_458jq"]
+atlas = ExtResource("1_topoq")
+region = Rect2(40, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gawvw"]
+atlas = ExtResource("1_topoq")
+region = Rect2(60, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pijti"]
+atlas = ExtResource("1_topoq")
+region = Rect2(80, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w116"]
+atlas = ExtResource("1_topoq")
+region = Rect2(100, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fhg6"]
+atlas = ExtResource("1_topoq")
+region = Rect2(120, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67f3y"]
+atlas = ExtResource("1_topoq")
+region = Rect2(140, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nvha"]
+atlas = ExtResource("1_topoq")
+region = Rect2(0, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vghyd"]
+atlas = ExtResource("1_topoq")
+region = Rect2(20, 0, 20, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7bfuh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_458jq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gawvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pijti")
+}],
+"loop": true,
+"name": &"back",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w116")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fhg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67f3y")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nvha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vghyd")
+}],
+"loop": true,
+"name": &"left_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21ds8"]
+size = Vector2(10, 22)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_onuv7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7bfuh")
+animation = &"forward"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_21ds8")
