@@ -1,0 +1,114 @@
+[gd_scene load_steps=15 format=3 uid="uid://bg7fofw2p6tku"]
+
+[ext_resource type="Texture2D" uid="uid://bherk0lrhp6l2" path="res://Assets/Sprites/Characters/Blue_Lab_Guard.png" id="1_keeug"]
+[ext_resource type="Script" path="res://Scripts/node_state_machine.gd" id="2_jrur6"]
+[ext_resource type="Script" path="res://Scenes/Lab Level/Blue Guard/idle_state.gd" id="3_3bwdg"]
+[ext_resource type="Script" path="res://Scenes/Lab Level/Blue Guard/walk_state.gd" id="4_nobut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3umv"]
+atlas = ExtResource("1_keeug")
+region = Rect2(40, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ta3j"]
+atlas = ExtResource("1_keeug")
+region = Rect2(60, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n1ap"]
+atlas = ExtResource("1_keeug")
+region = Rect2(80, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyx6x"]
+atlas = ExtResource("1_keeug")
+region = Rect2(100, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6oh8"]
+atlas = ExtResource("1_keeug")
+region = Rect2(120, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25j0o"]
+atlas = ExtResource("1_keeug")
+region = Rect2(140, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77owf"]
+atlas = ExtResource("1_keeug")
+region = Rect2(0, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owunm"]
+atlas = ExtResource("1_keeug")
+region = Rect2(20, 0, 20, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pfypl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3umv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ta3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n1ap")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyx6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6oh8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25j0o")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77owf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owunm")
+}],
+"loop": true,
+"name": &"left_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bo2tw"]
+radius = 5.0
+
+[node name="BlueGuard" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pfypl")
+animation = &"forward"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_bo2tw")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("2_jrur6")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("blue_guard", "anim")]
+script = ExtResource("3_3bwdg")
+blue_guard = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("blue_guard", "anim", "nav_agent", "detector")]
+script = ExtResource("4_nobut")
+blue_guard = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+nav_agent = NodePath("../../NavigationAgent2D")
+detector = NodePath("../../RayCast2D")

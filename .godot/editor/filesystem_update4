@@ -1,3 +1,10 @@
-res://Scenes/Burglar/burglar.tscn
+res://Scenes/Lab Level/Green Guard/green_guard.tscn
 res://Scripts/node_state_machine.gd
-res://Scenes/Museum Level/museum.tscn
+res://Scenes/Lab Level/Green Guard/idle_state.gd
+res://Scenes/Lab Level/Green Guard/walk_state.gd
+res://Scenes/Lab Level/lab_level.tscn
+res://Scenes/Lab Level/Red Guard/red_guard.tscn
+res://Scenes/Lab Level/Blue Guard/blue_guard.tscn
+res://Scenes/Lab Level/Lab Guard/lab_guard.tscn
+res://Scenes/Lab Level/Lab Guard/idle_state.gd
+res://Scenes/Lab Level/Lab Guard/walk_state.gd

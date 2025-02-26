@@ -1,0 +1,114 @@
+[gd_scene load_steps=15 format=3 uid="uid://bxwr7q0mpyrrw"]
+
+[ext_resource type="Texture2D" uid="uid://cj6s3lqpdatx7" path="res://Assets/Sprites/Characters/Red_Lab_Guard.png" id="1_aejxo"]
+[ext_resource type="Script" path="res://Scripts/node_state_machine.gd" id="2_yl0la"]
+[ext_resource type="Script" path="res://Scenes/Lab Level/Red Guard/idle_state.gd" id="3_64eu3"]
+[ext_resource type="Script" path="res://Scenes/Lab Level/Red Guard/walk_state.gd" id="4_dehnw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiujg"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(40, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi7sr"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(60, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr83y"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(80, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1s1x"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(100, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssp2l"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(120, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp11m"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(140, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc8xs"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(0, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3axv3"]
+atlas = ExtResource("1_aejxo")
+region = Rect2(20, 0, 20, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aws62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fiujg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi7sr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dr83y")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1s1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssp2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp11m")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc8xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3axv3")
+}],
+"loop": true,
+"name": &"left_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p2si2"]
+radius = 5.0
+
+[node name="RedGuard" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_aws62")
+animation = &"forward"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_p2si2")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("2_yl0la")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("red_guard", "anim")]
+script = ExtResource("3_64eu3")
+red_guard = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("red_guard", "anim", "nav_agent", "detector")]
+script = ExtResource("4_dehnw")
+red_guard = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+nav_agent = NodePath("../../NavigationAgent2D")
+detector = NodePath("../../RayCast2D")

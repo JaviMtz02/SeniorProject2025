@@ -1,6 +1,10 @@
+res://Assets/Sprites/Characters
+res://Scenes/Lab Level/Lab Guard
+res://Scenes/Lab Level/Blue Guard
+res://Scenes/Lab Level/Red Guard
+res://Scenes/Lab Level/Green Guard
 res://Scenes/Museum Level
 res://Scenes/Museum Level/Loot Scenes
-res://Assets/Sprites/Characters
 res://Scenes/Museum Level/Guard
 res://Assets/Sprites/UI
 res://Scenes/House Level
