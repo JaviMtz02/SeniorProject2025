@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://5l15gah3aj2v"]
+
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_dcfdl"]
+[ext_resource type="Texture2D" uid="uid://bc47nf0o4k30u" path="res://Assets/Sprites/Loot Sprites/Lab Loot/rat.png" id="2_cjdwh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2exwp"]
+size = Vector2(20, 21)
+
+[node name="Rat" type="Area2D" groups=["loot"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_dcfdl")
+value = 75.0
+inventory_space_req = 50.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cjdwh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_2exwp")

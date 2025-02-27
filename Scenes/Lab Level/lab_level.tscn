@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://f1i8qyoj157k"]
+[gd_scene load_steps=65 format=4 uid="uid://f1i8qyoj157k"]
 
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="1_grgwg"]
 [ext_resource type="Texture2D" uid="uid://bdrl03db17lgm" path="res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png" id="1_t2nat"]
@@ -19,6 +19,26 @@
 [ext_resource type="PackedScene" uid="uid://bd17uo0wesown" path="res://Scenes/Lab Level/Green Guard/green_guard.tscn" id="16_3p2fa"]
 [ext_resource type="PackedScene" uid="uid://bg7fofw2p6tku" path="res://Scenes/Lab Level/Blue Guard/blue_guard.tscn" id="17_uca5v"]
 [ext_resource type="PackedScene" uid="uid://blnvrkjcn1lsm" path="res://Scenes/Lab Level/Lab Guard/lab_guard.tscn" id="17_wbchc"]
+[ext_resource type="PackedScene" uid="uid://bpdjpd7bnfsay" path="res://Scenes/Lab Level/Loot Scenes/blue_flask.tscn" id="18_lhbur"]
+[ext_resource type="PackedScene" uid="uid://bh1v8buvu430w" path="res://Scenes/Lab Level/Loot Scenes/blue_injection.tscn" id="19_071jl"]
+[ext_resource type="PackedScene" uid="uid://beggil6hqn02g" path="res://Scenes/Lab Level/Loot Scenes/blue_medicine.tscn" id="20_e4iwy"]
+[ext_resource type="PackedScene" uid="uid://cl4b6scimgh2x" path="res://Scenes/Lab Level/Loot Scenes/doctor_costume.tscn" id="21_666de"]
+[ext_resource type="PackedScene" uid="uid://d4dkn0feo6vsx" path="res://Scenes/Lab Level/Loot Scenes/green_beaker.tscn" id="22_sg63b"]
+[ext_resource type="PackedScene" uid="uid://bua5lkoj4yhap" path="res://Scenes/Lab Level/Loot Scenes/green_flask.tscn" id="23_451ct"]
+[ext_resource type="PackedScene" uid="uid://cossyrd61pdoj" path="res://Scenes/Lab Level/Loot Scenes/green_injection.tscn" id="24_neg5e"]
+[ext_resource type="PackedScene" uid="uid://b40jdxoyme776" path="res://Scenes/Lab Level/Loot Scenes/green_medicine.tscn" id="25_cmejt"]
+[ext_resource type="PackedScene" uid="uid://loc2rp4xeocd" path="res://Scenes/Lab Level/Loot Scenes/magenta_flask.tscn" id="26_b7irt"]
+[ext_resource type="PackedScene" uid="uid://brri0ky0nimqh" path="res://Scenes/Lab Level/Loot Scenes/mustard_beaker.tscn" id="27_j31jc"]
+[ext_resource type="PackedScene" uid="uid://b10ijpgvpy2gp" path="res://Scenes/Lab Level/Loot Scenes/mustard_flask.tscn" id="28_idmc8"]
+[ext_resource type="PackedScene" uid="uid://b8gw0mtf0kfv3" path="res://Scenes/Lab Level/Loot Scenes/pink_beaker.tscn" id="29_fbou0"]
+[ext_resource type="PackedScene" uid="uid://ob43rx8fwf07" path="res://Scenes/Lab Level/Loot Scenes/purple_beaker.tscn" id="30_51bhv"]
+[ext_resource type="PackedScene" uid="uid://b8nd77vc1jxpq" path="res://Scenes/Lab Level/Loot Scenes/purple_orb.tscn" id="31_e8ysd"]
+[ext_resource type="PackedScene" uid="uid://5l15gah3aj2v" path="res://Scenes/Lab Level/Loot Scenes/rat.tscn" id="32_15phl"]
+[ext_resource type="PackedScene" uid="uid://dr81pvs60x27n" path="res://Scenes/Lab Level/Loot Scenes/red_beaker.tscn" id="33_4i15u"]
+[ext_resource type="PackedScene" uid="uid://cf851wr0opg4x" path="res://Scenes/Lab Level/Loot Scenes/red_flask.tscn" id="34_np4td"]
+[ext_resource type="PackedScene" uid="uid://beujr21tblhpy" path="res://Scenes/Lab Level/Loot Scenes/red_injection.tscn" id="35_p8a73"]
+[ext_resource type="PackedScene" uid="uid://qniu82cpy17q" path="res://Scenes/Lab Level/Loot Scenes/red_medicine.tscn" id="36_pbuf2"]
+[ext_resource type="PackedScene" uid="uid://dxu8nnepn30y7" path="res://Scenes/Lab Level/Loot Scenes/space_costume.tscn" id="37_hiqr5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpxap"]
 texture = ExtResource("1_grgwg")
@@ -7642,6 +7662,68 @@ position = Vector2(-112, -127)
 
 [node name="LabGuard2" parent="Guard" instance=ExtResource("17_wbchc")]
 position = Vector2(136, 0)
+
+[node name="Loot" type="Node" parent="."]
+
+[node name="BlueFlask" parent="Loot" instance=ExtResource("18_lhbur")]
+position = Vector2(89, 29)
+
+[node name="BlueInjection" parent="Loot" instance=ExtResource("19_071jl")]
+position = Vector2(-8, 46)
+
+[node name="BlueMedicine" parent="Loot" instance=ExtResource("20_e4iwy")]
+position = Vector2(-24, 30)
+
+[node name="DoctorCostume" parent="Loot" instance=ExtResource("21_666de")]
+position = Vector2(44, -24)
+
+[node name="GreenBeaker" parent="Loot" instance=ExtResource("22_sg63b")]
+position = Vector2(-7, -26)
+
+[node name="GreenFlask" parent="Loot" instance=ExtResource("23_451ct")]
+position = Vector2(-37, -23)
+
+[node name="GreenInjection" parent="Loot" instance=ExtResource("24_neg5e")]
+position = Vector2(61, -23)
+
+[node name="GreenMedicine" parent="Loot" instance=ExtResource("25_cmejt")]
+position = Vector2(-39, 16)
+
+[node name="MagentaFlask" parent="Loot" instance=ExtResource("26_b7irt")]
+position = Vector2(50, 22)
+
+[node name="MustardBeaker" parent="Loot" instance=ExtResource("27_j31jc")]
+position = Vector2(-140, -176)
+
+[node name="MustardFlask" parent="Loot" instance=ExtResource("28_idmc8")]
+position = Vector2(94, -175)
+
+[node name="PinkBeaker" parent="Loot" instance=ExtResource("29_fbou0")]
+position = Vector2(86, -41)
+
+[node name="PurpleBeaker" parent="Loot" instance=ExtResource("30_51bhv")]
+position = Vector2(100, 5)
+
+[node name="PurpleOrb" parent="Loot" instance=ExtResource("31_e8ysd")]
+position = Vector2(118, -55)
+
+[node name="Rat" parent="Loot" instance=ExtResource("32_15phl")]
+position = Vector2(-206, -414)
+
+[node name="RedBeaker" parent="Loot" instance=ExtResource("33_4i15u")]
+position = Vector2(-87, -43)
+
+[node name="RedFlask" parent="Loot" instance=ExtResource("34_np4td")]
+position = Vector2(-70, -79)
+
+[node name="RedInjection" parent="Loot" instance=ExtResource("35_p8a73")]
+position = Vector2(-46, -87)
+
+[node name="RedMedicine" parent="Loot" instance=ExtResource("36_pbuf2")]
+position = Vector2(-58, -58)
+
+[node name="SpaceCostume" parent="Loot" instance=ExtResource("37_hiqr5")]
+position = Vector2(1081, -197)
 
 [node name="Door" parent="." instance=ExtResource("15_txdqp")]
 z_index = 1

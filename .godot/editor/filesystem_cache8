@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740540398
+::res://::1740622795
 icon.svg::CompressedTexture2D::6407636745531623624::1737677850::1737677985::1::::<><>::
 README.md::TextFile::-1::1739487100::0::1::::<><>::
 ::res://addons/::1738383280
@@ -85,7 +85,7 @@ Tv_Studio_Design_layer_1.png::CompressedTexture2D::7861435946656841338::17399817
 Tv_Studio_Design_layer_2.png::CompressedTexture2D::6723871204331843572::1739981795::1739982566::1::::<><>::
 Tv_Studio_Design_layer_3.png::CompressedTexture2D::3028895589233009906::1739981795::1739982566::1::::<><>::
 Tv_Studio_Design_preview.png::CompressedTexture2D::5467852741375347134::1739981795::1739982566::1::::<><>::
-::res://Assets/Sprites/Characters/::1740540472
+::res://Assets/Sprites/Characters/::1740540473
 Blue_Lab_Guard.png::CompressedTexture2D::2887051477850630229::1740529495::1740529495::1::::<><>::
 burglar_walking.png::CompressedTexture2D::9110177690202893824::1739487051::1739982566::1::::<><>::
 Green_Lab_Gurad.png::CompressedTexture2D::7274133042287433415::1740540472::1740540473::1::::<><>::
@@ -142,7 +142,7 @@ Room_Builder_Floor_Shadows_16x16.png::CompressedTexture2D::1473775979808228066::
 24_Ice_Cream_Shop.png::CompressedTexture2D::3501036861423093679::1739981795::1739982566::1::::<><>::
 26_Condominium.png::CompressedTexture2D::6736313853737046896::1738876007::1739982566::1::::<><>::
 Modern_Office_Shadowless_16x16.png::CompressedTexture2D::4785785746958015375::1739982517::1739982566::1::::<><>::
-::res://Assets/Sprites/Loot Sprites/::1739982565
+::res://Assets/Sprites/Loot Sprites/::1740622854
 coin.png::CompressedTexture2D::5983278552499006682::1739487051::1739982565::1::::<><>::
 ::res://Assets/Sprites/Loot Sprites/House Loot/::1739982566
 arcademachine.png::CompressedTexture2D::84930997645024894::1739487051::1739982566::1::::<><>::
@@ -166,6 +166,27 @@ skateboard.png::CompressedTexture2D::435320394990806858::1739487051::1739982565:
 telephone.png::CompressedTexture2D::4774497314024889757::1739487051::1739982565::1::::<><>::
 trophy.png::CompressedTexture2D::1843362591107719992::1739487051::1739982565::1::::<><>::
 vase.png::CompressedTexture2D::556075485094917244::1739487051::1739982565::1::::<><>::
+::res://Assets/Sprites/Loot Sprites/Lab Loot/::1740622873
+blue_flask.png::CompressedTexture2D::5096032816581988007::1740622873::1740622873::1::::<><>::
+blue_injection.png::CompressedTexture2D::3584625089175074860::1740622873::1740622873::1::::<><>::
+blue_medicine.png::CompressedTexture2D::5181428257992794908::1740622873::1740622873::1::::<><>::
+doctor_costume.png::CompressedTexture2D::6028043509062564594::1740622873::1740622873::1::::<><>::
+green_beaker.png::CompressedTexture2D::9022922067317576052::1740622873::1740622873::1::::<><>::
+green_flask.png::CompressedTexture2D::6482161045190515381::1740622873::1740622873::1::::<><>::
+green_injection.png::CompressedTexture2D::927951533864923457::1740622873::1740622873::1::::<><>::
+green_medicine.png::CompressedTexture2D::7466763692955105611::1740622873::1740622873::1::::<><>::
+magenta_flask.png::CompressedTexture2D::2345378164531147879::1740622873::1740622873::1::::<><>::
+mustard_beaker.png::CompressedTexture2D::5455196074950377285::1740622873::1740622873::1::::<><>::
+mustard_flask.png::CompressedTexture2D::1488275474568573383::1740622873::1740622873::1::::<><>::
+pink_beaker.png::CompressedTexture2D::6090974171102100988::1740622873::1740622873::1::::<><>::
+purple_beaker.png::CompressedTexture2D::2255274743381526830::1740622873::1740622873::1::::<><>::
+purple_orb.png::CompressedTexture2D::7374825379458413731::1740622873::1740622873::1::::<><>::
+rat.png::CompressedTexture2D::2588631786838326902::1740622873::1740622873::1::::<><>::
+red_beaker.png::CompressedTexture2D::7804641225117438948::1740622873::1740622873::1::::<><>::
+red_flask.png::CompressedTexture2D::7052283949918005977::1740622873::1740622873::1::::<><>::
+red_injection.png::CompressedTexture2D::4881241195000769722::1740622873::1740622873::1::::<><>::
+red_medicine.png::CompressedTexture2D::7941323099358631004::1740622873::1740622873::1::::<><>::
+space_costume.png::CompressedTexture2D::2225786634184745583::1740622873::1740622873::1::::<><>::
 ::res://Assets/Sprites/Loot Sprites/Museum Loot/::1739982566
 antique2.png::CompressedTexture2D::2548994780542065088::1739982517::1739982565::1::::<><>::
 antique3.png::CompressedTexture2D::812716793913542932::1739982517::1739982565::1::::<><>::
@@ -266,17 +287,23 @@ robot.tscn::PackedScene::3354262501356962131::1739487051::0::1::::<><>::uid://bq
 skateboard.tscn::PackedScene::88495802418598279::1739487051::0::1::::<><>::uid://gg4ws1rsllag::::res://Assets/Sprites/Loot Sprites/House Loot/skateboard.png
 trophy.tscn::PackedScene::4748307510659360505::1739487051::0::1::::<><>::uid://1i66a6evvr3e::::res://Assets/Sprites/Loot Sprites/House Loot/trophy.png
 vase.tscn::PackedScene::5440553883502642347::1739487051::0::1::::<><>::uid://h6mqngmovu2o::::res://Assets/Sprites/Loot Sprites/House Loot/vase.png
-::res://Scenes/Lab Level/::1740533359
-lab_level.tscn::PackedScene::405163585034798306::1740533359::0::1::::<><>::uid://7ej8eovvsr01::::res://Assets/Sprites/Nature/decor_16x16.png<>uid://bdrl03db17lgm::::res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png<>uid://bisbd58hrarr8::::res://Scenes/Menus/pause_menu.tscn<>uid://csfvhdtyded2h::::res://Assets/Sprites/Floors_Walls/blue_room.png<>uid://cjw0dgwp7h2vd::::res://Assets/Sprites/Nature/plains.png<>uid://ci766lv2di8bj::::res://Assets/Sprites/Floors_Walls/green_room.png<>uid://dory2820k1hcs::::res://Assets/Sprites/Floors_Walls/red_room.png<>uid://vfdyumnbofib::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png<>uid://ds7jfvkp8cmfi::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_2_layer_1.png<>uid://cagjgr87o0dp4::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png<>uid://dlk1ortsb4pyu::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/18_Jail_16x16.png<>uid://cdo52i5n77k4c::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png<>uid://b7n2468oeulka::::res://Scenes/coin.tscn<>uid://cn2v6r5xd2gqc::::res://Scenes/Burglar/burglar.tscn<>uid://bxwr7q0mpyrrw::::res://Scenes/Lab Level/Red Guard/red_guard.tscn<>uid://ch7fp8it6w4du::::res://Scenes/door.tscn<>uid://bg7fofw2p6tku::::res://Scenes/Lab Level/Blue Guard/blue_guard.tscn
-::res://Scenes/Lab Level/Blue Guard/::1740533359
-blue_guard.tscn::PackedScene::2873942717580199164::1740533359::0::1::::<><>::uid://bherk0lrhp6l2::::res://Assets/Sprites/Characters/Blue_Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Blue Guard/idle_state.gd<>res://Scenes/Lab Level/Blue Guard/walk_state.gd
+::res://Scenes/Lab Level/::1740542833
+lab_level.tscn::PackedScene::405163585034798306::1740542833::0::1::::<><>::uid://7ej8eovvsr01::::res://Assets/Sprites/Nature/decor_16x16.png<>uid://bdrl03db17lgm::::res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png<>uid://bisbd58hrarr8::::res://Scenes/Menus/pause_menu.tscn<>uid://csfvhdtyded2h::::res://Assets/Sprites/Floors_Walls/blue_room.png<>uid://cjw0dgwp7h2vd::::res://Assets/Sprites/Nature/plains.png<>uid://ci766lv2di8bj::::res://Assets/Sprites/Floors_Walls/green_room.png<>uid://dory2820k1hcs::::res://Assets/Sprites/Floors_Walls/red_room.png<>uid://vfdyumnbofib::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png<>uid://ds7jfvkp8cmfi::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_2_layer_1.png<>uid://cagjgr87o0dp4::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png<>uid://dlk1ortsb4pyu::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/18_Jail_16x16.png<>uid://cdo52i5n77k4c::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png<>uid://b7n2468oeulka::::res://Scenes/coin.tscn<>uid://cn2v6r5xd2gqc::::res://Scenes/Burglar/burglar.tscn<>uid://bxwr7q0mpyrrw::::res://Scenes/Lab Level/Red Guard/red_guard.tscn<>uid://ch7fp8it6w4du::::res://Scenes/door.tscn<>uid://bd17uo0wesown::::res://Scenes/Lab Level/Green Guard/green_guard.tscn<>uid://bg7fofw2p6tku::::res://Scenes/Lab Level/Blue Guard/blue_guard.tscn<>uid://blnvrkjcn1lsm::::res://Scenes/Lab Level/Lab Guard/lab_guard.tscn
+::res://Scenes/Lab Level/Blue Guard/::1740541423
+blue_guard.tscn::PackedScene::2873942717580199164::1740541423::0::1::::<><>::uid://bherk0lrhp6l2::::res://Assets/Sprites/Characters/Blue_Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Blue Guard/idle_state.gd<>res://Scenes/Lab Level/Blue Guard/walk_state.gd
 idle_state.gd::GDScript::-1::1740533041::0::1::::<>NodeState<>::
 walk_state.gd::GDScript::-1::1740533199::0::1::::<>NodeState<>::
-::res://Scenes/Lab Level/Green Guard/::1740529097
-green_guard.tscn::PackedScene::2652640470812038657::1740529097::0::1::::<><>::
-::res://Scenes/Lab Level/Red Guard/::1740533359
+::res://Scenes/Lab Level/Green Guard/::1740542833
+green_guard.tscn::PackedScene::2652640470812038657::1740542833::0::1::::<><>::uid://dbvv55fogyodj::::res://Assets/Sprites/Characters/Green_Lab_Gurad.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Green Guard/idle_state.gd<>res://Scenes/Lab Level/Green Guard/walk_state.gd
+idle_state.gd::GDScript::-1::1740540781::0::1::::<>NodeState<>::
+walk_state.gd::GDScript::-1::1740541415::0::1::::<>NodeState<>::
+::res://Scenes/Lab Level/Lab Guard/::1740542833
+idle_state.gd::GDScript::-1::1740541969::0::1::::<>NodeState<>::
+lab_guard.tscn::PackedScene::3186640829104732988::1740542833::0::1::::<><>::uid://dk84rkj5yxo3x::::res://Assets/Sprites/Characters/Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Lab Guard/idle_state.gd<>res://Scenes/Lab Level/Lab Guard/walk_state.gd
+walk_state.gd::GDScript::-1::1740542580::0::1::::<>NodeState<>::
+::res://Scenes/Lab Level/Red Guard/::1740541423
 idle_state.gd::GDScript::-1::1740531363::0::1::::<>NodeState<>::
-red_guard.tscn::PackedScene::4047270611799093900::1740533359::0::1::::<><>::uid://cj6s3lqpdatx7::::res://Assets/Sprites/Characters/Red_Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Red Guard/idle_state.gd<>res://Scenes/Lab Level/Red Guard/walk_state.gd
+red_guard.tscn::PackedScene::4047270611799093900::1740541423::0::1::::<><>::uid://cj6s3lqpdatx7::::res://Assets/Sprites/Characters/Red_Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Red Guard/idle_state.gd<>res://Scenes/Lab Level/Red Guard/walk_state.gd
 walk_state.gd::GDScript::-1::1740531235::0::1::::<>NodeState<>::
 ::res://Scenes/Menus/::1739981703
 level_select.tscn::PackedScene::8870108596763940916::1739981703::0::1::::<><>::res://Scripts/level_select.gd<>uid://bsxxuyvd1yrbx::::res://Assets/Sprites/Background/Clouds/Clouds 2/1.png<>uid://dhgvtps06akor::::res://Assets/Sprites/Background/Clouds/Clouds 2/2.png<>uid://bveml21jya4c4::::res://Assets/Sprites/Background/Clouds/Clouds 2/3.png<>uid://3j22at14ldao::::res://Assets/Sprites/Background/Clouds/Clouds 2/4.png<>uid://doo2djw4si86l::::res://Text/Pixel Game.otf
@@ -338,10 +365,10 @@ vase_3.tscn::PackedScene::6271706623763272310::1739982517::0::1::::<><>::res://S
 vase_4.tscn::PackedScene::7699789660810439599::1739982517::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://76clbsyi25bm::::res://Assets/Sprites/Loot Sprites/Museum Loot/vase4.png
 vase_5.tscn::PackedScene::9153393813402471205::1739982517::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cx6nl851duyfh::::res://Assets/Sprites/Loot Sprites/Museum Loot/vase5.png
 vase_6.tscn::PackedScene::1599172001605941104::1739982517::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cc5imdqsvig0m::::res://Assets/Sprites/Loot Sprites/Museum Loot/vase6.png
-::res://Scripts/::1740530825
+::res://Scripts/::1740540556
 level_select.gd::GDScript::-1::1739981703::0::1::::<>Control<>::
 node_state.gd::GDScript::-1::1740530825::0::1::::NodeState<>Node<>::
-node_state_machine.gd::GDScript::-1::1740528068::0::1::::NodeStateMachine<>Node<>::
+node_state_machine.gd::GDScript::-1::1740540556::0::1::::NodeStateMachine<>Node<>::
 node_state_machine_burglar.gd::GDScript::-1::1739487051::0::1::::NodeStateMachineBurglar<>Node<>::
 pause_menu.gd::GDScript::-1::1739981703::0::1::::<>Control<>::
 start_menu.gd::GDScript::-1::1739981703::0::1::::StartMenu<>Control<>::
