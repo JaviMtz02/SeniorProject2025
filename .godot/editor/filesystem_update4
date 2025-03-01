@@ -1,0 +1,4 @@
+res://Scenes/Lab Level/lab_level.tscn
+res://Scripts/node_state_machine.gd
+res://Scenes/Lab Level/Green Guard/walk_state.gd
+res://Scenes/Lab Level/lab.gd

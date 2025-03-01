@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf851wr0opg4x"]
+
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_daect"]
+[ext_resource type="Texture2D" uid="uid://c7qgc61ctjp4l" path="res://Assets/Sprites/Loot Sprites/Lab Loot/red_flask.png" id="2_jheqt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brtpp"]
+size = Vector2(5, 11)
+
+[node name="RedFlask" type="Area2D" groups=["loot"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_daect")
+value = 7.0
+inventory_space_req = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jheqt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_brtpp")

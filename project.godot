@@ -31,6 +31,10 @@ loot=""
 loot_interaction=""
 navigation_museum=""
 Burglar=""
+red_path=""
+blue_path=""
+green_path=""
+lab_path=""
 
 [input]
 
