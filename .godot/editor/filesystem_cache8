@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740622795
+::res://::1740698696
 icon.svg::CompressedTexture2D::6407636745531623624::1737677850::1737677985::1::::<><>::
 README.md::TextFile::-1::1739487100::0::1::::<><>::
 ::res://addons/::1738383280
@@ -287,20 +287,41 @@ robot.tscn::PackedScene::3354262501356962131::1739487051::0::1::::<><>::uid://bq
 skateboard.tscn::PackedScene::88495802418598279::1739487051::0::1::::<><>::uid://gg4ws1rsllag::::res://Assets/Sprites/Loot Sprites/House Loot/skateboard.png
 trophy.tscn::PackedScene::4748307510659360505::1739487051::0::1::::<><>::uid://1i66a6evvr3e::::res://Assets/Sprites/Loot Sprites/House Loot/trophy.png
 vase.tscn::PackedScene::5440553883502642347::1739487051::0::1::::<><>::uid://h6mqngmovu2o::::res://Assets/Sprites/Loot Sprites/House Loot/vase.png
-::res://Scenes/Lab Level/::1740542833
-lab_level.tscn::PackedScene::405163585034798306::1740542833::0::1::::<><>::uid://7ej8eovvsr01::::res://Assets/Sprites/Nature/decor_16x16.png<>uid://bdrl03db17lgm::::res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png<>uid://bisbd58hrarr8::::res://Scenes/Menus/pause_menu.tscn<>uid://csfvhdtyded2h::::res://Assets/Sprites/Floors_Walls/blue_room.png<>uid://cjw0dgwp7h2vd::::res://Assets/Sprites/Nature/plains.png<>uid://ci766lv2di8bj::::res://Assets/Sprites/Floors_Walls/green_room.png<>uid://dory2820k1hcs::::res://Assets/Sprites/Floors_Walls/red_room.png<>uid://vfdyumnbofib::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png<>uid://ds7jfvkp8cmfi::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_2_layer_1.png<>uid://cagjgr87o0dp4::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png<>uid://dlk1ortsb4pyu::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/18_Jail_16x16.png<>uid://cdo52i5n77k4c::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png<>uid://b7n2468oeulka::::res://Scenes/coin.tscn<>uid://cn2v6r5xd2gqc::::res://Scenes/Burglar/burglar.tscn<>uid://bxwr7q0mpyrrw::::res://Scenes/Lab Level/Red Guard/red_guard.tscn<>uid://ch7fp8it6w4du::::res://Scenes/door.tscn<>uid://bd17uo0wesown::::res://Scenes/Lab Level/Green Guard/green_guard.tscn<>uid://bg7fofw2p6tku::::res://Scenes/Lab Level/Blue Guard/blue_guard.tscn<>uid://blnvrkjcn1lsm::::res://Scenes/Lab Level/Lab Guard/lab_guard.tscn
+::res://Scenes/Lab Level/::1740625414
+lab_level.tscn::PackedScene::405163585034798306::1740625414::0::1::::<><>::uid://7ej8eovvsr01::::res://Assets/Sprites/Nature/decor_16x16.png<>uid://bdrl03db17lgm::::res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png<>uid://bisbd58hrarr8::::res://Scenes/Menus/pause_menu.tscn<>uid://csfvhdtyded2h::::res://Assets/Sprites/Floors_Walls/blue_room.png<>uid://cjw0dgwp7h2vd::::res://Assets/Sprites/Nature/plains.png<>uid://ci766lv2di8bj::::res://Assets/Sprites/Floors_Walls/green_room.png<>uid://dory2820k1hcs::::res://Assets/Sprites/Floors_Walls/red_room.png<>uid://vfdyumnbofib::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png<>uid://ds7jfvkp8cmfi::::res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_2_layer_1.png<>uid://cagjgr87o0dp4::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png<>uid://dlk1ortsb4pyu::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/18_Jail_16x16.png<>uid://cdo52i5n77k4c::::res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png<>uid://b7n2468oeulka::::res://Scenes/coin.tscn<>uid://cn2v6r5xd2gqc::::res://Scenes/Burglar/burglar.tscn<>uid://bxwr7q0mpyrrw::::res://Scenes/Lab Level/Red Guard/red_guard.tscn<>uid://ch7fp8it6w4du::::res://Scenes/door.tscn<>uid://bd17uo0wesown::::res://Scenes/Lab Level/Green Guard/green_guard.tscn<>uid://bg7fofw2p6tku::::res://Scenes/Lab Level/Blue Guard/blue_guard.tscn<>uid://blnvrkjcn1lsm::::res://Scenes/Lab Level/Lab Guard/lab_guard.tscn<>uid://bpdjpd7bnfsay::::res://Scenes/Lab Level/Loot Scenes/blue_flask.tscn<>uid://bh1v8buvu430w::::res://Scenes/Lab Level/Loot Scenes/blue_injection.tscn<>uid://beggil6hqn02g::::res://Scenes/Lab Level/Loot Scenes/blue_medicine.tscn<>uid://cl4b6scimgh2x::::res://Scenes/Lab Level/Loot Scenes/doctor_costume.tscn<>uid://d4dkn0feo6vsx::::res://Scenes/Lab Level/Loot Scenes/green_beaker.tscn<>uid://bua5lkoj4yhap::::res://Scenes/Lab Level/Loot Scenes/green_flask.tscn<>uid://cossyrd61pdoj::::res://Scenes/Lab Level/Loot Scenes/green_injection.tscn<>uid://b40jdxoyme776::::res://Scenes/Lab Level/Loot Scenes/green_medicine.tscn<>uid://loc2rp4xeocd::::res://Scenes/Lab Level/Loot Scenes/magenta_flask.tscn<>uid://brri0ky0nimqh::::res://Scenes/Lab Level/Loot Scenes/mustard_beaker.tscn<>uid://b10ijpgvpy2gp::::res://Scenes/Lab Level/Loot Scenes/mustard_flask.tscn<>uid://b8gw0mtf0kfv3::::res://Scenes/Lab Level/Loot Scenes/pink_beaker.tscn<>uid://ob43rx8fwf07::::res://Scenes/Lab Level/Loot Scenes/purple_beaker.tscn<>uid://b8nd77vc1jxpq::::res://Scenes/Lab Level/Loot Scenes/purple_orb.tscn<>uid://5l15gah3aj2v::::res://Scenes/Lab Level/Loot Scenes/rat.tscn<>uid://dr81pvs60x27n::::res://Scenes/Lab Level/Loot Scenes/red_beaker.tscn<>uid://cf851wr0opg4x::::res://Scenes/Lab Level/Loot Scenes/red_flask.tscn<>uid://beujr21tblhpy::::res://Scenes/Lab Level/Loot Scenes/red_injection.tscn<>uid://qniu82cpy17q::::res://Scenes/Lab Level/Loot Scenes/red_medicine.tscn<>uid://dxu8nnepn30y7::::res://Scenes/Lab Level/Loot Scenes/space_costume.tscn
 ::res://Scenes/Lab Level/Blue Guard/::1740541423
 blue_guard.tscn::PackedScene::2873942717580199164::1740541423::0::1::::<><>::uid://bherk0lrhp6l2::::res://Assets/Sprites/Characters/Blue_Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Blue Guard/idle_state.gd<>res://Scenes/Lab Level/Blue Guard/walk_state.gd
 idle_state.gd::GDScript::-1::1740533041::0::1::::<>NodeState<>::
 walk_state.gd::GDScript::-1::1740533199::0::1::::<>NodeState<>::
-::res://Scenes/Lab Level/Green Guard/::1740542833
+::res://Scenes/Lab Level/Green Guard/::1740623030
 green_guard.tscn::PackedScene::2652640470812038657::1740542833::0::1::::<><>::uid://dbvv55fogyodj::::res://Assets/Sprites/Characters/Green_Lab_Gurad.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Green Guard/idle_state.gd<>res://Scenes/Lab Level/Green Guard/walk_state.gd
 idle_state.gd::GDScript::-1::1740540781::0::1::::<>NodeState<>::
-walk_state.gd::GDScript::-1::1740541415::0::1::::<>NodeState<>::
+walk_state.gd::GDScript::-1::1740623030::0::1::::<>NodeState<>::
 ::res://Scenes/Lab Level/Lab Guard/::1740542833
 idle_state.gd::GDScript::-1::1740541969::0::1::::<>NodeState<>::
 lab_guard.tscn::PackedScene::3186640829104732988::1740542833::0::1::::<><>::uid://dk84rkj5yxo3x::::res://Assets/Sprites/Characters/Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Lab Guard/idle_state.gd<>res://Scenes/Lab Level/Lab Guard/walk_state.gd
 walk_state.gd::GDScript::-1::1740542580::0::1::::<>NodeState<>::
+::res://Scenes/Lab Level/Loot Scenes/::1740625229
+blue_flask.tscn::PackedScene::3446019918436054648::1740623071::0::1::::<><>::uid://ceus6e3qfbavf::::res://Assets/Sprites/Loot Sprites/Lab Loot/blue_flask.png<>res://Scenes/House Level/House Scripts/loot.gd
+blue_injection.tscn::PackedScene::2932750483213321376::1740623160::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://brcoisy5n73i3::::res://Assets/Sprites/Loot Sprites/Lab Loot/blue_injection.png
+blue_medicine.tscn::PackedScene::2679941539063185800::1740623265::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cf26mpsyfirf5::::res://Assets/Sprites/Loot Sprites/Lab Loot/blue_medicine.png
+doctor_costume.tscn::PackedScene::5604902627765785785::1740623344::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cr5a84ikom3s5::::res://Assets/Sprites/Loot Sprites/Lab Loot/doctor_costume.png
+green_beaker.tscn::PackedScene::9201563356102319335::1740623454::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://d1s1hcwo35clg::::res://Assets/Sprites/Loot Sprites/Lab Loot/green_beaker.png
+green_flask.tscn::PackedScene::3792039257279083739::1740623562::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cymailvtw4t5f::::res://Assets/Sprites/Loot Sprites/Lab Loot/green_flask.png
+green_injection.tscn::PackedScene::5793780641790447401::1740623660::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://nhrhxqcjw330::::res://Assets/Sprites/Loot Sprites/Lab Loot/green_injection.png
+green_medicine.tscn::PackedScene::4474059634135144127::1740623784::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://dem7rihwhrkbj::::res://Assets/Sprites/Loot Sprites/Lab Loot/green_medicine.png
+magenta_flask.tscn::PackedScene::801149136413713391::1740623883::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://8oebhjm6xv6n::::res://Assets/Sprites/Loot Sprites/Lab Loot/magenta_flask.png
+mustard_beaker.tscn::PackedScene::3615256391610816135::1740623990::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cjysjundr1cft::::res://Assets/Sprites/Loot Sprites/Lab Loot/mustard_beaker.png
+mustard_flask.tscn::PackedScene::4263442668314955543::1740624224::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://vg6xdwbgtl88::::res://Assets/Sprites/Loot Sprites/Lab Loot/mustard_flask.png
+pink_beaker.tscn::PackedScene::4716419868853483706::1740624306::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cs1rppvmc3nh1::::res://Assets/Sprites/Loot Sprites/Lab Loot/pink_beaker.png
+purple_beaker.tscn::PackedScene::986519913640453734::1740624441::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://7eqbsvi88hfq::::res://Assets/Sprites/Loot Sprites/Lab Loot/purple_beaker.png
+purple_orb.tscn::PackedScene::4729730444248296658::1740624696::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://ddcokc1t8dh84::::res://Assets/Sprites/Loot Sprites/Lab Loot/purple_orb.png
+rat.tscn::PackedScene::2130005995560281583::1740624784::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://bc47nf0o4k30u::::res://Assets/Sprites/Loot Sprites/Lab Loot/rat.png
+red_beaker.tscn::PackedScene::8422203419770003169::1740624898::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://djgvkhu6mg2mq::::res://Assets/Sprites/Loot Sprites/Lab Loot/red_beaker.png
+red_flask.tscn::PackedScene::5193779174815427905::1740624962::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://c7qgc61ctjp4l::::res://Assets/Sprites/Loot Sprites/Lab Loot/red_flask.png
+red_injection.tscn::PackedScene::2709041883918126586::1740625071::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cbsrlgxyyi6q5::::res://Assets/Sprites/Loot Sprites/Lab Loot/red_injection.png
+red_medicine.tscn::PackedScene::1150381635923689192::1740625137::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://dle3owqcil5rk::::res://Assets/Sprites/Loot Sprites/Lab Loot/red_medicine.png
+space_costume.tscn::PackedScene::8816920575600104004::1740625229::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://6ygm7b80but8::::res://Assets/Sprites/Loot Sprites/Lab Loot/space_costume.png
 ::res://Scenes/Lab Level/Red Guard/::1740541423
 idle_state.gd::GDScript::-1::1740531363::0::1::::<>NodeState<>::
 red_guard.tscn::PackedScene::4047270611799093900::1740541423::0::1::::<><>::uid://cj6s3lqpdatx7::::res://Assets/Sprites/Characters/Red_Lab_Guard.png<>res://Scripts/node_state_machine.gd<>res://Scenes/Lab Level/Red Guard/idle_state.gd<>res://Scenes/Lab Level/Red Guard/walk_state.gd
@@ -365,10 +386,10 @@ vase_3.tscn::PackedScene::6271706623763272310::1739982517::0::1::::<><>::res://S
 vase_4.tscn::PackedScene::7699789660810439599::1739982517::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://76clbsyi25bm::::res://Assets/Sprites/Loot Sprites/Museum Loot/vase4.png
 vase_5.tscn::PackedScene::9153393813402471205::1739982517::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cx6nl851duyfh::::res://Assets/Sprites/Loot Sprites/Museum Loot/vase5.png
 vase_6.tscn::PackedScene::1599172001605941104::1739982517::0::1::::<><>::res://Scenes/House Level/House Scripts/loot.gd<>uid://cc5imdqsvig0m::::res://Assets/Sprites/Loot Sprites/Museum Loot/vase6.png
-::res://Scripts/::1740540556
+::res://Scripts/::1740623030
 level_select.gd::GDScript::-1::1739981703::0::1::::<>Control<>::
 node_state.gd::GDScript::-1::1740530825::0::1::::NodeState<>Node<>::
-node_state_machine.gd::GDScript::-1::1740540556::0::1::::NodeStateMachine<>Node<>::
+node_state_machine.gd::GDScript::-1::1740623030::0::1::::NodeStateMachine<>Node<>::
 node_state_machine_burglar.gd::GDScript::-1::1739487051::0::1::::NodeStateMachineBurglar<>Node<>::
 pause_menu.gd::GDScript::-1::1739981703::0::1::::<>Control<>::
 start_menu.gd::GDScript::-1::1739981703::0::1::::StartMenu<>Control<>::
