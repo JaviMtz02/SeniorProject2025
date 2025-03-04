@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dncc4fdhte7di"]
+
+[ext_resource type="Texture2D" uid="uid://ddcokc1t8dh84" path="res://Assets/Sprites/Loot Sprites/Lab Loot/purple_orb.png" id="1_7vi5d"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Plinko/plinko_ball.gd" id="1_k4k3u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a43q7"]
+bounce = 0.3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iybgh"]
+radius = 8.0
+
+[node name="PlinkoBall" type="RigidBody2D" node_paths=PackedStringArray("ball") groups=["blocks"]]
+physics_material_override = SubResource("PhysicsMaterial_a43q7")
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_k4k3u")
+ball = NodePath(".")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_7vi5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -3)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_iybgh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

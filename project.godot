@@ -35,6 +35,8 @@ red_path=""
 blue_path=""
 green_path=""
 lab_path=""
+blocks=""
+ground=""
 
 [input]
 

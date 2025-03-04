@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm33mydth7cuc"]
+
+[ext_resource type="Texture2D" uid="uid://dwxklhh4wbwtv" path="res://Assets/Sprites/Minigame Sprites/Floor.png" id="1_eby7s"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Stacking Blocks/stacking_blocks.gd" id="1_velmj"]
+[ext_resource type="PackedScene" uid="uid://cjv0iampk6oiw" path="res://Scenes/Minigames/Stacking Blocks/block.tscn" id="2_2ts0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvktf"]
+size = Vector2(601, 17)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sf5if"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0160"]
+size = Vector2(606, 18)
+
+[node name="StackingBlocks" type="Node2D" node_paths=PackedStringArray("end_line")]
+position = Vector2(8, -968)
+script = ExtResource("1_velmj")
+block = ExtResource("2_2ts0c")
+end_line = NodePath("EndLine")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1153.0
+offset_bottom = 799.0
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="Floor" type="StaticBody2D" parent="." groups=["ground"]]
+position = Vector2(546, 659)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(23.5, 0)
+scale = Vector2(4.69531, 1)
+texture = ExtResource("1_eby7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(23.5, -0.5)
+shape = SubResource("RectangleShape2D_yvktf")
+
+[node name="EndLine" type="Area2D" parent="."]
+position = Vector2(269, 198)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="EndLine"]
+position = Vector2(302.75, 8.74999)
+scale = Vector2(606.5, 18.5)
+texture = SubResource("CanvasTexture_sf5if")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndLine"]
+position = Vector2(303, 9)
+shape = SubResource("RectangleShape2D_g0160")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 399)

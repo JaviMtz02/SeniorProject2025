@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="1_grgwg"]
 [ext_resource type="Script" path="res://Scenes/Lab Level/lab.gd" id="1_jvsnw"]
 [ext_resource type="Texture2D" uid="uid://bdrl03db17lgm" path="res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png" id="1_t2nat"]
-[ext_resource type="PackedScene" uid="uid://bisbd58hrarr8" path="res://Scenes/Menus/pause_menu.tscn" id="1_w125l"]
+[ext_resource type="PackedScene" uid="uid://dphs7mmyn8ocp" path="res://Scenes/Menus/pause_menu.tscn" id="1_w125l"]
 [ext_resource type="Texture2D" uid="uid://csfvhdtyded2h" path="res://Assets/Sprites/Floors_Walls/blue_room.png" id="2_0q8xi"]
 [ext_resource type="Texture2D" uid="uid://cjw0dgwp7h2vd" path="res://Assets/Sprites/Nature/plains.png" id="2_m7n28"]
 [ext_resource type="Texture2D" uid="uid://ci766lv2di8bj" path="res://Assets/Sprites/Floors_Walls/green_room.png" id="3_5nhx8"]

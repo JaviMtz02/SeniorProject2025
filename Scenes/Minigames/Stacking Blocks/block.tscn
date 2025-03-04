@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjv0iampk6oiw"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Stacking Blocks/block.gd" id="1_n6dws"]
+[ext_resource type="Texture2D" uid="uid://duvgwsse1g6wr" path="res://Assets/Sprites/Loot Sprites/House Loot/kachow.png" id="1_ucsa1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ff3hg"]
+friction = 0.5
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pu4pw"]
+size = Vector2(28.3333, 25)
+
+[node name="Block" type="RigidBody2D" node_paths=PackedStringArray("block") groups=["blocks"]]
+physics_material_override = SubResource("PhysicsMaterial_ff3hg")
+gravity_scale = 1.2
+contact_monitor = true
+max_contacts_reported = 2
+linear_damp = 0.8
+angular_damp = 0.8
+script = ExtResource("1_n6dws")
+block = NodePath(".")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_ucsa1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -2.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_pu4pw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

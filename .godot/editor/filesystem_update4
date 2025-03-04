@@ -1,4 +1,5 @@
-res://Scenes/Lab Level/lab_level.tscn
-res://Scripts/node_state_machine.gd
+res://Scenes/Minigames/Stacking Blocks/stacking_blocks.tscn
 res://Scenes/Lab Level/Green Guard/walk_state.gd
-res://Scenes/Lab Level/lab.gd
+res://Scenes/Minigames/Stacking Blocks/end_line.gd
+res://Scenes/Minigames/Stacking Blocks/stacking_blocks.gd
+res://Scenes/Minigames/Stacking Blocks/block.tscn
