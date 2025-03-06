@@ -37,6 +37,7 @@ green_path=""
 lab_path=""
 blocks=""
 ground=""
+killzone=""
 
 [input]
 

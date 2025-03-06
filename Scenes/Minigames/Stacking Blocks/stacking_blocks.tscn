@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm33mydth7cuc"]
+[gd_scene load_steps=8 format=3 uid="uid://bm33mydth7cuc"]
 
 [ext_resource type="Texture2D" uid="uid://dwxklhh4wbwtv" path="res://Assets/Sprites/Minigame Sprites/Floor.png" id="1_eby7s"]
 [ext_resource type="Script" path="res://Scenes/Minigames/Stacking Blocks/stacking_blocks.gd" id="1_velmj"]
 [ext_resource type="PackedScene" uid="uid://cjv0iampk6oiw" path="res://Scenes/Minigames/Stacking Blocks/block.tscn" id="2_2ts0c"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_kttpm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvktf"]
 size = Vector2(601, 17)
@@ -52,3 +53,13 @@ shape = SubResource("RectangleShape2D_g0160")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 399)
+
+[node name="BlocksRemaining" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 25.0
+offset_right = 331.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("4_kttpm")
+theme_override_font_sizes/font_size = 24
+text = "Blocks 
+Remaining: 10"

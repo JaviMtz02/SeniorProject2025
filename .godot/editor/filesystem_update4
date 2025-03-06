@@ -1,5 +1,5 @@
-res://Scenes/Minigames/Stacking Blocks/stacking_blocks.tscn
+res://Scenes/Minigames/Checker Game/checker_flip.tscn
+res://Scenes/Minigames/PicturePuzzle/GlowShader.gdshader
 res://Scenes/Lab Level/Green Guard/walk_state.gd
-res://Scenes/Minigames/Stacking Blocks/end_line.gd
-res://Scenes/Minigames/Stacking Blocks/stacking_blocks.gd
-res://Scenes/Minigames/Stacking Blocks/block.tscn
+res://Scenes/Minigames/Checker Game/checker.gd
+res://Scenes/Minigames/Checker Game/checker_flip.gd

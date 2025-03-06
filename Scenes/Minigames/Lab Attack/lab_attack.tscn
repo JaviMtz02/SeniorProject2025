@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bopyieiq5rs5a"]
+
+[node name="LabAttack" type="Node2D"]
+editor_description = "Game where burglar has to shoot down guards attacking him"

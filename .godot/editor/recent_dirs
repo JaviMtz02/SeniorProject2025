@@ -1,3 +1,13 @@
+res://Scenes/Minigames/Memory Game
+res://Scenes/Minigames/Sliding Pattern Matching
+res://Scenes/Minigames/Minesweeper
+res://Scenes/Minigames/Maze Game
+res://Scenes/Minigames/Shuffle Game
+res://Assets/Sprites/Minigame Sprites
+res://Scenes/Minigames/PicturePuzzle
+res://Scenes/Minigames/Catch Items
+res://Scenes/Minigames/Coin Matching
+res://Assets/Sprites/Loot Sprites
 res://Scenes/Minigames/Plinko
 res://Scenes/Minigames
 res://Scenes/Lab Level/Loot Scenes
@@ -10,10 +20,3 @@ res://Scenes/Museum Level
 res://Scenes/Museum Level/Loot Scenes
 res://Scenes/Museum Level/Guard
 res://Assets/Sprites/UI
-res://Scenes/House Level
-res://Scenes
-res://Assets/Sprites/Loot Sprites
-res://
-res://Scenes/Burglar
-res://Scripts
-res://Assets/Sprites/animals/1 Dog

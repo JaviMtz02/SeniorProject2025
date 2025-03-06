@@ -10,6 +10,7 @@ var drop_speed: float = 2.5
 signal block_landed
 
 func _ready():
+	add_to_group("blocks")
 	block.position = Vector2(550, 64)
 	block.freeze = true
 	
@@ -27,7 +28,7 @@ func _process(_delta) -> void:
 		dropped = true
 		
 
-func _on_body_entered(body: Node) -> void:
+func _on_body_entered(_body: Node) -> void:
 	if not landed:
 		call_deferred("_emit_landing_signal")
 		landed = true

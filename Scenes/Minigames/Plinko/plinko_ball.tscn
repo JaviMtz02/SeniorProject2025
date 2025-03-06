@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Minigames/Plinko/plinko_ball.gd" id="1_k4k3u"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a43q7"]
-bounce = 0.3
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iybgh"]
 radius = 8.0
