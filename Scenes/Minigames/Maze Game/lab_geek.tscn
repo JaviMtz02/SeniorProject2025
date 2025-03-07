@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=3 uid="uid://biwenw5uto8dd"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Maze Game/lab_geek.gd" id="1_onq6h"]
+[ext_resource type="Texture2D" uid="uid://cj6s3lqpdatx7" path="res://Assets/Sprites/Characters/Red_Lab_Guard.png" id="1_tf411"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37hly"]
+atlas = ExtResource("1_tf411")
+region = Rect2(40, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40o36"]
+atlas = ExtResource("1_tf411")
+region = Rect2(60, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pubfb"]
+atlas = ExtResource("1_tf411")
+region = Rect2(80, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miic8"]
+atlas = ExtResource("1_tf411")
+region = Rect2(100, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvxqc"]
+atlas = ExtResource("1_tf411")
+region = Rect2(120, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwimm"]
+atlas = ExtResource("1_tf411")
+region = Rect2(140, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o45rk"]
+atlas = ExtResource("1_tf411")
+region = Rect2(0, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkf3s"]
+atlas = ExtResource("1_tf411")
+region = Rect2(20, 0, 20, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqq3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37hly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40o36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pubfb")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miic8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvxqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwimm")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o45rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkf3s")
+}],
+"loop": true,
+"name": &"left_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4yoba"]
+radius = 5.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ve0s2"]
+radius = 5.0
+height = 22.0
+
+[node name="LabGeek" type="CharacterBody2D" node_paths=PackedStringArray("anim")]
+script = ExtResource("1_onq6h")
+anim = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uqq3f")
+animation = &"forward"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_4yoba")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(10, 10)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_ve0s2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

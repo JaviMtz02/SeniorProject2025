@@ -1,7 +1,9 @@
+res://Scenes/Minigames/Lab Attack
+res://Scenes/Minigames/Maze Game
+res://Assets/Sprites/Characters
 res://Scenes/Minigames/Memory Game
 res://Scenes/Minigames/Sliding Pattern Matching
 res://Scenes/Minigames/Minesweeper
-res://Scenes/Minigames/Maze Game
 res://Scenes/Minigames/Shuffle Game
 res://Assets/Sprites/Minigame Sprites
 res://Scenes/Minigames/PicturePuzzle
@@ -11,7 +13,6 @@ res://Assets/Sprites/Loot Sprites
 res://Scenes/Minigames/Plinko
 res://Scenes/Minigames
 res://Scenes/Lab Level/Loot Scenes
-res://Assets/Sprites/Characters
 res://Scenes/Lab Level/Lab Guard
 res://Scenes/Lab Level/Blue Guard
 res://Scenes/Lab Level/Red Guard
@@ -19,4 +20,3 @@ res://Scenes/Lab Level/Green Guard
 res://Scenes/Museum Level
 res://Scenes/Museum Level/Loot Scenes
 res://Scenes/Museum Level/Guard
-res://Assets/Sprites/UI

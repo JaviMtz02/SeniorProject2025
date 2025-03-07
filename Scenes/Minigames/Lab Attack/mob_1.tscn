@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5bh70kxmvp4i"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/mob_1.gd" id="1_fo2tq"]
+[ext_resource type="Texture2D" uid="uid://c04chnt5blok4" path="res://Assets/Sprites/Minigame Sprites/chaser.png" id="1_t1x8i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mrfw0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kky1j"]
+radius = 13.0384
+
+[node name="Mob1" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent")]
+collision_mask = 8
+script = ExtResource("1_fo2tq")
+nav_agent = NodePath("NavigationAgent2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t1x8i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mrfw0")
+
+[node name="Buttet_PlayerCollision" type="Area2D" parent="."]
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttet_PlayerCollision"]
+shape = SubResource("CircleShape2D_kky1j")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="body_entered" from="Buttet_PlayerCollision" to="." method="_on_buttet_player_collision_body_entered"]

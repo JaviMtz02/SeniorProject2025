@@ -1,5 +1,10 @@
-res://Scenes/Minigames/Checker Game/checker_flip.tscn
+res://Scenes/Minigames/Lab Attack/lab_attack.tscn
 res://Scenes/Minigames/PicturePuzzle/GlowShader.gdshader
+res://Scenes/Minigames/Lab Attack/gunner.tscn
+res://Scenes/Minigames/Lab Attack/mob_1.tscn
 res://Scenes/Lab Level/Green Guard/walk_state.gd
-res://Scenes/Minigames/Checker Game/checker.gd
-res://Scenes/Minigames/Checker Game/checker_flip.gd
+res://Scenes/Minigames/Lab Attack/mob_2.tscn
+res://Scenes/Minigames/Lab Attack/mob_2.gd
+res://Scenes/Minigames/Lab Attack/mob_spawner.gd
+res://Scenes/Minigames/Lab Attack/mob_3.gd
+res://Scenes/Minigames/Lab Attack/mob_3.tscn

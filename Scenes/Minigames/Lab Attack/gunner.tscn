@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1sqjx6vwixsu"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/gunner.gd" id="1_42vvq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpg42"]
+size = Vector2(10, 23)
+
+[node name="Gunner" type="CharacterBody2D" node_paths=PackedStringArray("texture", "bullet_pos", "timer")]
+script = ExtResource("1_42vvq")
+texture = NodePath("Sprite2D")
+bullet_pos = NodePath("BulletPos")
+timer = NodePath("Timer")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_vpg42")
+
+[node name="BulletPos" type="Node2D" parent="."]
+position = Vector2(9, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
