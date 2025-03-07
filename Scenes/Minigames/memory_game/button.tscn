@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4cb684h2ymqn"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/memory_game/button.gd" id="1_5whjo"]
+[ext_resource type="Texture2D" uid="uid://dhyh51oqoys6v" path="res://Scenes/Minigames/memory_game/tmpTextures/blank.png" id="1_yy00l"]
+[ext_resource type="AudioStream" uid="uid://534jib2jiam0" path="res://Scenes/Minigames/memory_game/tmpTextures/613410__josheb_policarpio__button-7.wav" id="2_ewkrj"]
+
+[node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 16.0
+offset_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_5whjo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ewkrj")
+volume_db = -10.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_yy00l")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
