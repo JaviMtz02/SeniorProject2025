@@ -1,0 +1,211 @@
+[gd_scene load_steps=11 format=3 uid="uid://b0ns82rf6wud8"]
+
+[ext_resource type="Texture2D" uid="uid://corn7wj6qmye2" path="res://Assets/Sprites/Background/Clouds/Clouds 8/1.png" id="1_mo8yl"]
+[ext_resource type="Script" path="res://Scripts/join_screen.gd" id="1_vhd3k"]
+[ext_resource type="Texture2D" uid="uid://bvmqik02pdpgj" path="res://Assets/Sprites/Background/Clouds/Clouds 8/2.png" id="2_qyvdq"]
+[ext_resource type="Texture2D" uid="uid://chliwl0sgpf12" path="res://Assets/Sprites/Background/Clouds/Clouds 8/5.png" id="3_gt517"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_aa6th"]
+[ext_resource type="Script" path="res://Scripts/player_list.gd" id="5_nfeik"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="6_mbh6h"]
+
+[sub_resource type="Animation" id="Animation_566g3"]
+resource_name = "Fade in & out"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 0.353553, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0509804), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_305ht"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38n2j"]
+_data = {
+"Fade in & out": SubResource("Animation_566g3"),
+"RESET": SubResource("Animation_305ht")
+}
+
+[node name="JoinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_vhd3k")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_mo8yl")
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_qyvdq")
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_gt517")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -219.0
+offset_right = 79.5
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_aa6th")
+theme_override_font_sizes/font_size = 100
+text = "Join"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player List" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -11.0
+offset_right = 64.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 220
+alignment = 1
+script = ExtResource("5_nfeik")
+
+[node name="Player1" type="VBoxContainer" parent="Player List"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player List/Player1"]
+layout_mode = 2
+text = "Player 1"
+
+[node name="Player2" type="VBoxContainer" parent="Player List"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player List/Player2"]
+layout_mode = 2
+text = "Player 2"
+
+[node name="Player3" type="VBoxContainer" parent="Player List"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player List/Player3"]
+layout_mode = 2
+text = "Player 3"
+
+[node name="Player4" type="VBoxContainer" parent="Player List"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player List/Player4"]
+layout_mode = 2
+text = "Player 4"
+
+[node name="Press Start" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 162.0
+offset_right = 200.0
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_mbh6h")
+theme_override_font_sizes/font_size = 16
+text = "Press A to Join"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Press Start"]
+libraries = {
+"": SubResource("AnimationLibrary_38n2j")
+}
+autoplay = "Fade in & out"
+
+[node name="Press Start2" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 218.0
+offset_right = 200.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_mbh6h")
+theme_override_font_sizes/font_size = 16
+text = "Press Start/+/Enter to Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Press Start2"]
+libraries = {
+"": SubResource("AnimationLibrary_38n2j")
+}
+autoplay = "Fade in & out"

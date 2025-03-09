@@ -158,6 +158,7 @@ shape = SubResource("RectangleShape2D_w1me5")
 zoom = Vector2(4, 4)
 
 [node name="Control" type="Control" parent="Camera2D"]
+z_index = 99
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5

@@ -3,7 +3,7 @@ extends Control
 @onready var house_level = preload("res://Scenes/House Level/house.tscn") as PackedScene
 @onready var museum_level = preload("res://Scenes/Museum Level/museum.tscn") as PackedScene
 @onready var lab_level = preload("res://Scenes/Lab Level/lab_level.tscn") as PackedScene
-var main_menu := "res://Scenes/Menus/start_menu.tscn"
+const PLAY_MENU := "res://Scenes/Menus/play_menu.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,4 +19,4 @@ func _on_lab_pressed() -> void:
 	get_tree().change_scene_to_packed(lab_level)
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file(main_menu)
+	get_tree().change_scene_to_file(PLAY_MENU)

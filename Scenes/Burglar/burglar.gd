@@ -10,10 +10,9 @@ extends CharacterBody2D
 @export var inventory_label: Label
 @export var time_label: Label
 @export var level_node: Node2D # dynamically stores levels
-
+@export var door: Area2D
 
 @onready var timer: Timer = $Timer
-@onready var door: Area2D = $"../Door"
 
 var curr_inventory_size: int = 0 # Checks to see if the burglar has not surpassed the bounds of what the inventory allows
 var curr_loot: Area2D = null # When we're near loot, we can get its details with this variable
@@ -22,6 +21,15 @@ var value_accu: int = 0 # current value of loot obtained, this resets to zero wh
 var time_seconds: int
 var time_minutes: int
 var near_door: bool = false
+
+var player: int
+var input: DeviceInput
+
+func init(player_num: int):
+	player = player_num
+	input = DeviceInput.new(PlayerManager.player_data[player_num].device)
+	$StateMachine/Idle.input = input
+	$StateMachine/Walk.input = input
 
 func _ready() -> void:
 	if level_node == null:
@@ -50,7 +58,6 @@ func _ready() -> void:
 		loot.connect("burglar_away", Callable(self, "_on_burglar_away"))
 #
 func _process(_delta: float) -> void:
-	
 	if near_door and Input.is_action_just_pressed("deposit"): # If you're near the door then you can deposit your loot
 		level_node.deposit_loot(value_accu, inventory.size())      # That way you can pick up more, 
 		inventory.clear()
@@ -60,7 +67,7 @@ func _process(_delta: float) -> void:
 		inventory_label.text = "0/" + str(inventory_space)
 		
 	# If the character is currently around loot and it pressed the 't' key, try to pick it up
-	if curr_loot != null and Input.is_action_just_pressed("take_loot"):
+	if curr_loot != null and input.is_action_just_pressed("take_loot"):
 		try_pick_up_loot(curr_loot)
 	#
 		#

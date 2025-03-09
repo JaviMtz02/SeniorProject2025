@@ -23,9 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="19_on312"]
 [ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="20_pjwmv"]
 [ext_resource type="PackedScene" uid="uid://sdns7q1mfc6t" path="res://Scenes/House Level/Dog/dog.tscn" id="21_3vikf"]
-[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="22_6ob7k"]
 [ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot Scenes/ball.tscn" id="23_iwso7"]
 [ext_resource type="PackedScene" uid="uid://dassywovt6r47" path="res://Scenes/House Level/Loot Scenes/phone.tscn" id="23_lub5n"]
+[ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="24_4vfu0"]
 [ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="24_lfu3r"]
 [ext_resource type="PackedScene" uid="uid://cjrpelqwlam1x" path="res://Scenes/House Level/Loot Scenes/vase.tscn" id="25_dgrcy"]
 [ext_resource type="PackedScene" uid="uid://cp5auh0nsunp6" path="res://Scenes/House Level/Loot Scenes/kachow.tscn" id="26_fqyn1"]
@@ -10409,8 +10409,8 @@ navigation_polygon = SubResource("NavigationPolygon_r1ddd")
 [node name="Dog" parent="DogLogic" instance=ExtResource("21_3vikf")]
 position = Vector2(194, 740)
 
-[node name="Burglar" parent="." instance=ExtResource("22_6ob7k")]
-position = Vector2(-96, 832)
+[node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("24_4vfu0")]
+door = NodePath("../Door")
 
 [node name="Loot" type="Node" parent="."]
 

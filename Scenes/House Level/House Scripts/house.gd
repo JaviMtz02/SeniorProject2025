@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var loot: Node = $Loot
 @onready var coins: Node = $Coins
-@onready var burglar: CharacterBody2D = $Burglar
+# All players are kept here
+@onready var players: Node2D = $Players
 
 var max_loot: int = 0
 var total_value: int = 0

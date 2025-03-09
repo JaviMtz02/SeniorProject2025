@@ -1,5 +1,6 @@
 extends NodeState
 
+var input: DeviceInput
 @export var burglar: CharacterBody2D
 @export var anim_sprite: AnimatedSprite2D
 @export var loot_interaction: Area2D
@@ -25,7 +26,7 @@ func _on_exit() -> void:
 	burglar.velocity = Vector2.ZERO
 	
 func get_input():
-	var direction = Input.get_vector("left", "right", "up", "down")
+	var direction = input.get_vector("left", "right", "up", "down")
 	burglar.velocity = direction * speed
 	if direction != Vector2.ZERO:
 		if abs(direction.x) > abs(direction.y): # Horizontal movement

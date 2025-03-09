@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://je1dre1ywoaj" path="res://Assets/Sprites/Nature/objects.png" id="7_nmcje"]
 [ext_resource type="Texture2D" uid="uid://cagjgr87o0dp4" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png" id="9_tfhnb"]
 [ext_resource type="PackedScene" uid="uid://dwyseg08pilxd" path="res://Scenes/Museum Level/Guard/guard.tscn" id="13_x1mcs"]
-[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="14_8dy78"]
 [ext_resource type="PackedScene" uid="uid://dice2umpg6y62" path="res://Scenes/Museum Level/Loot Scenes/antique.tscn" id="14_hli1t"]
 [ext_resource type="PackedScene" uid="uid://dky444q5cjswa" path="res://Scenes/Museum Level/Loot Scenes/antique_2.tscn" id="15_jm2vv"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_tt1tv"]
@@ -63,6 +62,7 @@
 [ext_resource type="PackedScene" uid="uid://cxmi4elwfthhd" path="res://Scenes/Museum Level/Loot Scenes/scroll.tscn" id="58_q7xq7"]
 [ext_resource type="PackedScene" uid="uid://cu215lf7exnsv" path="res://Scenes/Museum Level/Loot Scenes/art_2.tscn" id="58_tsuaq"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="59_ikusx"]
+[ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="63_2355q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysar5"]
 texture = ExtResource("1_a1que")
@@ -10505,12 +10505,13 @@ position = Vector2(-1352, 69)
 [node name="Coin86" parent="Coins" instance=ExtResource("59_ikusx")]
 position = Vector2(-921, 69)
 
-[node name="Burglar" parent="." instance=ExtResource("14_8dy78")]
-position = Vector2(-242, 581)
-
 [node name="Door" parent="." instance=ExtResource("15_tt1tv")]
 position = Vector2(-238, 611)
 scale = Vector2(5, 1)
+
+[node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("63_2355q")]
+position = Vector2(-239, 590)
+door = NodePath("../Door")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 1

@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://dlk1ortsb4pyu" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/18_Jail_16x16.png" id="10_q1lkt"]
 [ext_resource type="Texture2D" uid="uid://cdo52i5n77k4c" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png" id="11_lhdv1"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="13_ffvti"]
-[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="13_jjmv2"]
 [ext_resource type="PackedScene" uid="uid://bxwr7q0mpyrrw" path="res://Scenes/Lab Level/Red Guard/red_guard.tscn" id="14_pybaw"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_txdqp"]
 [ext_resource type="PackedScene" uid="uid://bd17uo0wesown" path="res://Scenes/Lab Level/Green Guard/green_guard.tscn" id="16_3p2fa"]
@@ -46,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://cglrds5ieh6i" path="res://Scenes/Museum Level/Loot Scenes/frog_2.tscn" id="41_yndoa"]
 [ext_resource type="PackedScene" uid="uid://lwrvkckh5b75" path="res://Scenes/Museum Level/Loot Scenes/antique_3.tscn" id="42_kvvin"]
 [ext_resource type="PackedScene" uid="uid://cju68344motmd" path="res://Scenes/Museum Level/Loot Scenes/antique_5.tscn" id="43_l7q7v"]
+[ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="46_js8yq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpxap"]
 texture = ExtResource("1_grgwg")
@@ -9394,8 +9394,9 @@ z_index = 1
 position = Vector2(12, 290)
 scale = Vector2(2, 1)
 
-[node name="Burglar" parent="." instance=ExtResource("13_jjmv2")]
-position = Vector2(5, 262)
+[node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("46_js8yq")]
+position = Vector2(8, 269)
+door = NodePath("../Door")
 
 [node name="ShadowEffect" type="ColorRect" parent="."]
 z_index = 1
