@@ -7,8 +7,6 @@ var speed: float
 @export var player: Node2D
 @export var nav_agent: NavigationAgent2D
 
-signal player_hit
-
 func _ready() -> void:
 	speed = randf_range(min_speed, max_speed)
 	if player:
@@ -31,3 +29,5 @@ func _on_buttet_player_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("killzone"):
 		queue_free()
 		body.queue_free()
+	elif body.is_in_group("blocks"):
+		queue_free()

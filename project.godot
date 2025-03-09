@@ -38,6 +38,7 @@ lab_path=""
 blocks=""
 ground=""
 killzone=""
+enemy_interaction=""
 
 [input]
 

@@ -5,6 +5,7 @@ extends Node2D
 @export var enemy_scene3: PackedScene
 @export var player: Node2D
 @export var spawn_area: Rect2
+@export var safe_zone: Rect2
 
 var min_spawn_time: float = 0.5
 var max_spawn_time: float = 1.5
@@ -31,6 +32,10 @@ func spawn_enemy() -> void:
 	spawn_enemy()
 	
 func get_random_spawn_position() -> Vector2:
-	var x = randf_range(spawn_area.position.x, spawn_area.end.x)
-	var y = randf_range(spawn_area.position.y, spawn_area.end.y)
-	return Vector2(x,y)
+	var spawn_pos: Vector2
+	while true:
+		spawn_pos = Vector2(randf_range(spawn_area.position.x, spawn_area.end.x), randf_range(spawn_area.position.y, spawn_area.end.y))
+		if not safe_zone.has_point(spawn_pos):
+			break;
+	
+	return spawn_pos

@@ -1,10 +1,3 @@
-res://Scenes/Minigames/Lab Attack/lab_attack.tscn
-res://Scenes/Minigames/PicturePuzzle/GlowShader.gdshader
-res://Scenes/Minigames/Lab Attack/gunner.tscn
-res://Scenes/Minigames/Lab Attack/mob_1.tscn
+res://Scenes/Minigames/Memory Game/memory_game.tscn
 res://Scenes/Lab Level/Green Guard/walk_state.gd
-res://Scenes/Minigames/Lab Attack/mob_2.tscn
-res://Scenes/Minigames/Lab Attack/mob_2.gd
-res://Scenes/Minigames/Lab Attack/mob_spawner.gd
-res://Scenes/Minigames/Lab Attack/mob_3.gd
-res://Scenes/Minigames/Lab Attack/mob_3.tscn
+res://Scenes/Minigames/Memory Game/memory_game.gd

@@ -10,7 +10,6 @@ var speed: float
 var zig_zag_timer: float = 0.5
 var zig_zag_direction: float = 1.0
 
-signal player_hit
 
 func _ready() -> void:
 	speed = randf_range(min_speed, max_speed)
@@ -35,10 +34,9 @@ func make_path() -> void:
 	nav_agent.target_position = player.global_position
 	
 
-
-
-
 func _on_buttet_player_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("killzone"):
 		queue_free()
 		body.queue_free()
+	elif body.is_in_group("blocks"):
+		queue_free()

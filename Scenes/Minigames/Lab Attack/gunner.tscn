@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1sqjx6vwixsu"]
+[gd_scene load_steps=5 format=3 uid="uid://b1sqjx6vwixsu"]
 
 [ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/gunner.gd" id="1_42vvq"]
+[ext_resource type="Texture2D" uid="uid://c51b2nlmqjtvl" path="res://Assets/Sprites/Minigame Sprites/green_orb.png" id="2_hmw6t"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpg42"]
-size = Vector2(10, 23)
+[sub_resource type="CircleShape2D" id="CircleShape2D_qtt86"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mkm2q"]
 
 [node name="Gunner" type="CharacterBody2D" node_paths=PackedStringArray("texture", "bullet_pos", "timer")]
 script = ExtResource("1_42vvq")
@@ -12,14 +15,25 @@ bullet_pos = NodePath("BulletPos")
 timer = NodePath("Timer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+rotation = 1.5708
+texture = ExtResource("2_hmw6t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_vpg42")
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_qtt86")
 
 [node name="BulletPos" type="Node2D" parent="."]
-position = Vector2(9, 0)
+position = Vector2(16, -2)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.15
 one_shot = true
+
+[node name="MobDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MobDetection"]
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_mkm2q")
+
+[connection signal="area_entered" from="MobDetection" to="." method="_on_mob_detection_area_entered"]

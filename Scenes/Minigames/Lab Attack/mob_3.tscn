@@ -10,6 +10,7 @@ radius = 9.0
 radius = 12.0
 
 [node name="Mob3" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent")]
+motion_mode = 1
 script = ExtResource("1_uomvs")
 nav_agent = NodePath("NavigationAgent2D")
 
@@ -22,7 +23,7 @@ texture = ExtResource("1_y3r7d")
 position = Vector2(6, 1)
 shape = SubResource("CircleShape2D_2bsxi")
 
-[node name="Buttet_PlayerCollision" type="Area2D" parent="."]
+[node name="Buttet_PlayerCollision" type="Area2D" parent="." groups=["enemy_interaction"]]
 position = Vector2(7, 0)
 collision_mask = 8
 

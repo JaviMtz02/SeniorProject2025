@@ -10,6 +10,7 @@ radius = 13.0384
 
 [node name="Mob1" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent")]
 collision_mask = 8
+motion_mode = 1
 script = ExtResource("1_fo2tq")
 nav_agent = NodePath("NavigationAgent2D")
 
@@ -19,7 +20,7 @@ texture = ExtResource("1_t1x8i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mrfw0")
 
-[node name="Buttet_PlayerCollision" type="Area2D" parent="."]
+[node name="Buttet_PlayerCollision" type="Area2D" parent="." groups=["enemy_interaction"]]
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttet_PlayerCollision"]

@@ -11,7 +11,6 @@ var change_time: float = 0.5
 var time_elapsed: float = 0.0
 var random_offset: Vector2 = Vector2.ZERO
 
-signal player_hit
 
 func _ready() -> void:
 	speed = randf_range(min_speed, max_speed)
@@ -40,3 +39,5 @@ func _on_buttet_player_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("killzone"):
 		queue_free()
 		body.queue_free()
+	elif body.is_in_group("blocks"):
+		queue_free()
