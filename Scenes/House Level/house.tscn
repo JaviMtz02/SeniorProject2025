@@ -10604,6 +10604,7 @@ position = Vector2(151, 837)
 position = Vector2(-94, 851)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
 offset_left = -909.0
 offset_top = -130.0
 offset_right = 975.0

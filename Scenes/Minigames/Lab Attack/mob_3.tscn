@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://rpubrgqkv3f4"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/mob_3.gd" id="1_uomvs"]
+[ext_resource type="Texture2D" uid="uid://cpiw1jkudwr4g" path="res://Assets/Sprites/Minigame Sprites/mask2.png" id="1_y3r7d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2bsxi"]
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_561iq"]
+radius = 12.0
+
+[node name="Mob3" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent")]
+motion_mode = 1
+script = ExtResource("1_uomvs")
+nav_agent = NodePath("NavigationAgent2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, 2)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_y3r7d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 1)
+shape = SubResource("CircleShape2D_2bsxi")
+
+[node name="Buttet_PlayerCollision" type="Area2D" parent="." groups=["enemy_interaction"]]
+position = Vector2(7, 0)
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttet_PlayerCollision"]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_561iq")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="body_entered" from="Buttet_PlayerCollision" to="." method="_on_buttet_player_collision_body_entered"]

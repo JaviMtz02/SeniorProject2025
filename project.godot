@@ -47,6 +47,7 @@ lab_path=""
 blocks=""
 ground=""
 killzone=""
+enemy_interaction=""
 
 [input]
 
@@ -122,6 +123,7 @@ start={
 2d_physics/layer_1="Walls_Layer"
 2d_physics/layer_2="Loot Layer"
 2d_physics/layer_3="Loot_interaction"
+2d_physics/layer_4="MobCollisions"
 
 [rendering]
 
