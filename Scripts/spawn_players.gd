@@ -19,6 +19,7 @@ func spawn_player(player: int):
 	var device = PlayerManager.get_player_device(player)
 	player_node.init(player)
 	player_node.door = door
+	player_node.level_node = get_parent()
 
 	# add the player to the tree
 	add_child(player_node)
