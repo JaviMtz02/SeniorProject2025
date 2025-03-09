@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://hftuyg5t2xrx"]
+
+[ext_resource type="Script" path="res://Mini-Games/tic_tac_toe/handler.gd" id="1_mt842"]
+[ext_resource type="PackedScene" uid="uid://skvaaoqiuaj7" path="res://Mini-Games/tic_tac_toe/button.tscn" id="2_w5r2a"]
+
+[node name="tic_tac_toe" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_mt842")
+ai_accuracy = 0.75
+
+[node name="Cells" type="GridContainer" parent="."]
+offset_left = 568.0
+offset_top = 109.0
+offset_right = 760.0
+offset_bottom = 301.0
+scale = Vector2(2, 2)
+columns = 3
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 260.0
+offset_right = 306.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 61
+text = "You are"
+
+[node name="icon" parent="Label" instance=ExtResource("2_w5r2a")]
+offset_left = 230.0
+offset_top = 19.0
+offset_right = 294.0
+offset_bottom = 83.0
+
+[node name="ai_wait" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="ai_wait" to="." method="_on_ai_wait_timeout"]
