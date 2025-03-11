@@ -1,0 +1,158 @@
+[gd_scene load_steps=17 format=3 uid="uid://dl0js7or6hf1p"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Rock Paper Scissors/options.gd" id="1_8waia"]
+[ext_resource type="Texture2D" uid="uid://beaiaewbs4vw0" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rock.png" id="1_fgjvs"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.gd" id="1_qf2pm"]
+[ext_resource type="Texture2D" uid="uid://dd2oh3gr1nhd2" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/paper.png" id="2_bh02k"]
+[ext_resource type="Texture2D" uid="uid://cfh8b00ef5emi" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rock_dark.png" id="2_wufny"]
+[ext_resource type="Texture2D" uid="uid://bik1c2o2q213u" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rock_light.png" id="3_p0o7v"]
+[ext_resource type="Texture2D" uid="uid://bbur28la3yrvb" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/scissors.png" id="3_qoxg4"]
+[ext_resource type="Texture2D" uid="uid://ccvm7psj32h5y" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/paper_dark.png" id="5_1kswr"]
+[ext_resource type="Texture2D" uid="uid://crkltxh4yuv4h" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/paper_light.png" id="6_emp34"]
+[ext_resource type="Texture2D" uid="uid://bctp3sx3sktd1" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/scissors_dark.png" id="8_x0ev1"]
+[ext_resource type="Texture2D" uid="uid://7uux64tbjsqg" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/scissors_light.png" id="9_n2ydw"]
+[ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/minus.png" id="10_k07sa"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="11_3efbx"]
+[ext_resource type="Texture2D" uid="uid://5myvri6b1qme" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/circle.png" id="12_udijb"]
+[ext_resource type="Texture2D" uid="uid://dy45df3qvjflj" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/burglar_head.png" id="13_wi0ib"]
+[ext_resource type="Texture2D" uid="uid://b260stepjk6ep" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/bum_head.png" id="14_jgu82"]
+
+[node name="RockPaperScissors" type="Node2D" node_paths=PackedStringArray("player_games_won_label", "ai_games_won_label")]
+script = ExtResource("1_qf2pm")
+player_games_won_label = NodePath("Decoration/PlayerGamesWon")
+ai_games_won_label = NodePath("Decoration/AiGamesWon")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -112.0
+offset_top = -81.0
+offset_right = 131.0
+offset_bottom = 99.0
+color = Color(0.529412, 0.807843, 0.921569, 1)
+
+[node name="Options" type="Control" parent="." node_paths=PackedStringArray("ai_choice_texture", "player_choice_texture", "rock_button", "paper_button", "scissors_button")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8waia")
+ai_choice_texture = NodePath("../AiChoice")
+player_choice_texture = NodePath("../PlayerChose")
+textures = Array[Texture2D]([ExtResource("1_fgjvs"), ExtResource("2_bh02k"), ExtResource("3_qoxg4")])
+rock_button = NodePath("Rock")
+paper_button = NodePath("Paper")
+scissors_button = NodePath("Scissors")
+
+[node name="Rock" type="TextureButton" parent="Options"]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 59.0
+offset_right = -20.0
+offset_bottom = 75.0
+texture_normal = ExtResource("1_fgjvs")
+texture_pressed = ExtResource("2_wufny")
+texture_hover = ExtResource("3_p0o7v")
+
+[node name="Paper" type="TextureButton" parent="Options"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 76.0
+texture_normal = ExtResource("2_bh02k")
+texture_pressed = ExtResource("5_1kswr")
+texture_hover = ExtResource("6_emp34")
+
+[node name="Scissors" type="TextureButton" parent="Options"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 18.0
+offset_bottom = 76.0
+texture_normal = ExtResource("3_qoxg4")
+texture_pressed = ExtResource("8_x0ev1")
+texture_hover = ExtResource("9_n2ydw")
+
+[node name="PlayerChose" type="Sprite2D" parent="."]
+position = Vector2(-75, 12)
+scale = Vector2(0.732, 1)
+texture = ExtResource("10_k07sa")
+
+[node name="AiChoice" type="Sprite2D" parent="."]
+position = Vector2(85, 12)
+scale = Vector2(0.82, 1)
+texture = ExtResource("10_k07sa")
+
+[node name="Decoration" type="Node" parent="."]
+
+[node name="PlayerGamesWon" type="Label" parent="Decoration"]
+offset_left = -100.0
+offset_top = -32.0
+offset_right = -52.0
+offset_bottom = -9.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_3efbx")
+theme_override_font_sizes/font_size = 8
+text = "Games
+Won: 0"
+
+[node name="AiGamesWon" type="Label" parent="Decoration"]
+offset_left = 71.0
+offset_top = -32.0
+offset_right = 119.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_3efbx")
+theme_override_font_sizes/font_size = 8
+text = "Games 
+Won: 0"
+
+[node name="PlayerChose" type="Label" parent="Decoration"]
+offset_left = -100.0
+offset_top = 44.0
+offset_right = -28.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_3efbx")
+theme_override_font_sizes/font_size = 8
+text = "You Chose"
+
+[node name="AiChose" type="Label" parent="Decoration"]
+offset_left = 43.0
+offset_top = 44.0
+offset_right = 115.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_3efbx")
+theme_override_font_sizes/font_size = 8
+text = "Bum Chose"
+
+[node name="Circle" type="Sprite2D" parent="Decoration"]
+z_index = -1
+position = Vector2(-26, 66)
+texture = ExtResource("12_udijb")
+
+[node name="Circle2" type="Sprite2D" parent="Decoration"]
+z_index = -1
+position = Vector2(12, 64)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("12_udijb")
+
+[node name="Circle3" type="Sprite2D" parent="Decoration"]
+z_index = -1
+position = Vector2(50, 67)
+texture = ExtResource("12_udijb")
+
+[node name="BurglarHead" type="Sprite2D" parent="Decoration"]
+position = Vector2(-80, -49)
+scale = Vector2(2.32813, 2.25)
+texture = ExtResource("13_wi0ib")
+
+[node name="BumHead" type="Sprite2D" parent="Decoration"]
+position = Vector2(93, -53)
+scale = Vector2(2.54688, 2.75)
+texture = ExtResource("14_jgu82")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8, 8)
+zoom = Vector2(5, 5)

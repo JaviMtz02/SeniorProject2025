@@ -12,6 +12,7 @@ signal game_won
 signal game_lost
 
 func _ready() -> void:
+	print("helo!")
 	spawn_block()
 	
 func spawn_block() -> void:
@@ -36,8 +37,6 @@ func on_null_space() -> void:
 
 func check_game() -> void:
 	if items_caught >= 10:
-		print("you won")
 		game_won.emit()
 	elif tries_left <= 0:
-		print("boohoo")
 		game_lost.emit()

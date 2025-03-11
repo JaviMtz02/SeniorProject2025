@@ -1,3 +1,23 @@
+res://Scenes/Minigames/Checker Game/main_screen.tscn
+res://Scenes/Minigames/Catch Items/main_screen.gd
+res://Scenes/Minigames/Catch Items/main_screen.tscn
+res://Scenes/Minigames/Checker Game/checker_flip.tscn
+res://Scenes/Minigames/Checker Game/checker_flip.gd
+res://Scenes/Minigames/Coin Matching/main_screen.tscn
+res://Scenes/Minigames/Coin Matching/coin_matching.tscn
+res://Scenes/Minigames/Door Game/main_screen.tscn
+res://Scenes/Minigames/Door Game/monty_hall_door_game.tscn
+res://Scenes/Minigames/Lab Attack/lab_attack.tscn
+res://Scenes/Minigames/Lab Attack/main_screen.tscn
+res://Scenes/Minigames/Maze Game/maze_game.tscn
+res://Scenes/Minigames/Maze Game/main_screen.tscn
 res://Scenes/Minigames/Memory Game/memory_game.tscn
-res://Scenes/Lab Level/Green Guard/walk_state.gd
-res://Scenes/Minigames/Memory Game/memory_game.gd
+res://Scenes/Minigames/Memory Game/main_screen.tscn
+res://Scenes/Minigames/Plinko/main_screen.tscn
+res://Scenes/Minigames/Plinko/plinko.tscn
+res://Scenes/Minigames/Rock Paper Scissors/main_screen.tscn
+res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.tscn
+res://Scenes/Minigames/Shuffle Game/main_screen.tscn
+res://Scenes/Minigames/Shuffle Game/shuffle_game.tscn
+res://Scenes/Minigames/Stacking Blocks/main_screen.tscn
+res://Scenes/Minigames/Stacking Blocks/stacking_blocks.tscn

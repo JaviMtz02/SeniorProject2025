@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmhge748b37y5"]
+
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_1ro1n"]
+[ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_34qvp"]
+[ext_resource type="Texture2D" uid="uid://cakorcpxo6qfg" path="res://Assets/Sprites/Minigame Sprites/Memory Game/memory_game.png" id="2_bxq1g"]
+[ext_resource type="PackedScene" uid="uid://dshiic14vk4gk" path="res://Scenes/Minigames/Memory Game/memory_game.tscn" id="2_m1ktm"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_34qvp")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_m1ktm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 142.0
+offset_top = -14.0
+offset_right = 890.0
+offset_bottom = 508.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 258.0
+offset_top = 29.0
+offset_right = 757.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("1_1ro1n")
+theme_override_font_sizes/font_size = 64
+text = "Glowing Butterflies"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 191.0
+offset_top = 95.0
+offset_right = 579.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 20
+text = "Test out your memory with glowing butterflies! A pattern of glowing butterflies will play and it's up to you to click on them according to the order that they glowed. Get all 5 patterns correct and win!"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 191.0
+offset_top = 278.0
+offset_right = 849.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 20
+text = "Each butterfly's shadow will glow yellow. Pay close attention as the glow can be faint and go by quickly. Once the pattern is done. Click on the butterflies in the order they glowed. Game ends when you get all 5 patterns correct or you get one wrong.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(716, 184)
+scale = Vector2(0.184783, 0.185664)
+texture = ExtResource("2_bxq1g")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 466.0
+offset_top = 436.0
+offset_right = 595.0
+offset_bottom = 478.0
+theme_override_fonts/font = ExtResource("1_1ro1n")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(521, 244)
+zoom = Vector2(1.6, 1.6)

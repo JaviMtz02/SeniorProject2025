@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpd3ffp1lyhyv"]
+
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_mghdk"]
+[ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_vn7jb"]
+[ext_resource type="PackedScene" uid="uid://dl0js7or6hf1p" path="res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.tscn" id="2_v8dxf"]
+[ext_resource type="Texture2D" uid="uid://c1ijrnydans4u" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rps.png" id="2_vtu3f"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_vn7jb")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_v8dxf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 168.0
+offset_top = 4.0
+offset_right = 940.0
+offset_bottom = 544.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 38.0
+offset_right = 791.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("1_mghdk")
+theme_override_font_sizes/font_size = 64
+text = "Rock-Paper-Scissors"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 245.0
+offset_top = 104.0
+offset_right = 504.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 20
+text = "The bum challenges you to a best of 9 rock-paper-scissors game! Humiliate him by beating him in this classic game. "
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 245.0
+offset_top = 339.0
+offset_right = 826.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 20
+text = "For each round, simply choose the option you want to go with and after that, the bum will follow. Game ends when either you or the bum reaches 5 games won.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(673, 226)
+scale = Vector2(0.262653, 0.286709)
+texture = ExtResource("2_vtu3f")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 465.0
+offset_top = 465.0
+offset_right = 594.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("1_mghdk")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(549, 266)
+zoom = Vector2(1.6, 1.6)

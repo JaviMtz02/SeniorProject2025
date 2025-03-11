@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://br6l26bgk4a3y"]
+
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_1djkn"]
+[ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_6ic30"]
+[ext_resource type="Texture2D" uid="uid://cpunm5pdhtmua" path="res://Assets/Sprites/Minigame Sprites/Lab Attack/lab_attack.png" id="2_1owrk"]
+[ext_resource type="PackedScene" uid="uid://bopyieiq5rs5a" path="res://Scenes/Minigames/Lab Attack/lab_attack.tscn" id="2_bbqnm"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_6ic30")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_bbqnm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 773.0
+offset_bottom = 530.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 225.0
+offset_right = 489.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("1_1djkn")
+theme_override_font_sizes/font_size = 64
+text = "Lab Attack"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 74.0
+offset_right = 480.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 20
+text = "Survive for 30 seconds against lab creations gone rogue! Three kinds of creepy creations have escaped containment and want revenge on you the Lab Geek! Can you survive or will they have their revenge?"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 252.0
+offset_right = 731.0
+offset_bottom = 353.0
+theme_override_font_sizes/font_size = 20
+text = "You are located at the center of the lab. Move your mouse in any direction and click/hold on the position of any creepy creation coming at you. These things can spawn close to you so watch out! You have 30 seconds to fend them off with 10 lives available.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(600.625, 166)
+scale = Vector2(0.168711, 0.174442)
+texture = ExtResource("2_1owrk")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 289.0
+offset_top = 413.0
+offset_right = 418.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("1_1djkn")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(373, 248)
+zoom = Vector2(1.5, 1.5)
+
+[node name="Note" type="Label" parent="."]
+offset_left = -9.0
+offset_top = 420.0
+offset_right = 154.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 20
+text = "This game is hard! But it's doable :D"
+horizontal_alignment = 1
+autowrap_mode = 3

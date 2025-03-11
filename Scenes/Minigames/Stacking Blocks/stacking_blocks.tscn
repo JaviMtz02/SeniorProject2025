@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bm33mydth7cuc"]
 
-[ext_resource type="Texture2D" uid="uid://dwxklhh4wbwtv" path="res://Assets/Sprites/Minigame Sprites/Floor.png" id="1_eby7s"]
+[ext_resource type="Texture2D" uid="uid://dwxklhh4wbwtv" path="res://Assets/Sprites/Minigame Sprites/Stack Blocks/Floor.png" id="1_eby7s"]
 [ext_resource type="Script" path="res://Scenes/Minigames/Stacking Blocks/stacking_blocks.gd" id="1_velmj"]
 [ext_resource type="PackedScene" uid="uid://cjv0iampk6oiw" path="res://Scenes/Minigames/Stacking Blocks/block.tscn" id="2_2ts0c"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_kttpm"]

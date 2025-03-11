@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8tuiccs8pmtu"]
+
+[ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_1lmdf"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_sbkla"]
+[ext_resource type="Texture2D" uid="uid://bwc0mflpjbui5" path="res://Assets/Sprites/Minigame Sprites/Door Game/door_game.png" id="2_nqu7g"]
+[ext_resource type="PackedScene" uid="uid://cv6dotef4pmo" path="res://Scenes/Minigames/Door Game/monty_hall_door_game.tscn" id="2_r171b"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_1lmdf")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_r171b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 942.0
+offset_bottom = 689.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 251.0
+offset_top = 84.0
+offset_right = 734.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_sbkla")
+theme_override_font_sizes/font_size = 64
+text = "Monty Hall Problem"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 155.0
+offset_top = 145.0
+offset_right = 511.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 20
+text = "Can you best this classic problem? In this spin of the monty hall problem each door will contain a chance to move to the next door, a chance to go back a door, and a game ending result.
+Make it all the way to the 5th door to win!"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 147.0
+offset_top = 416.0
+offset_right = 846.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 20
+text = "To open a door simply click on one of the three doors. The green arrow moves you to the next set of doors, the minus sign brings you back a set, and encountering the Blue Lab Geek will end your game. The game ends when you reach the 5th set of doors or encounter the Lab Geek.
+Press 'START' when you're ready."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(675.625, 282.063)
+scale = Vector2(0.220722, 0.274181)
+texture = ExtResource("2_nqu7g")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 421.0
+offset_top = 582.0
+offset_right = 550.0
+offset_bottom = 624.0
+theme_override_fonts/font = ExtResource("1_sbkla")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(490, 346)
+zoom = Vector2(1.3, 1.3)

@@ -1,21 +1,22 @@
-res://Scenes/Minigames/Lab Attack
-res://Scenes/Minigames/Maze Game
-res://Assets/Sprites/Characters
-res://Scenes/Minigames/Memory Game
-res://Scenes/Minigames/Sliding Pattern Matching
-res://Scenes/Minigames/Minesweeper
+res://Scenes/Minigames/Stacking Blocks
 res://Scenes/Minigames/Shuffle Game
-res://Assets/Sprites/Minigame Sprites
-res://Scenes/Minigames/Catch Items
-res://Scenes/Minigames/Coin Matching
-res://Assets/Sprites/Loot Sprites
+res://Scenes/Minigames/Rock Paper Scissors
 res://Scenes/Minigames/Plinko
+res://Scenes/Minigames/Memory Game
+res://Scenes/Minigames/Maze Game
+res://Scenes/Minigames/Lab Attack
+res://Scenes/Minigames/Door Game
+res://Scenes/Minigames/Coin Matching
+res://Scenes/Minigames/Checker Game
+res://Scenes/Minigames/Catch Items
+res://Scenes/Minigames/Sliding Puzzle
+res://Assets/Sprites/Minigame Sprites
+res://Assets/Sprites/Characters
+res://Scenes/Minigames/Minesweeper
+res://Assets/Sprites/Loot Sprites
 res://Scenes/Minigames
 res://Scenes/Lab Level/Loot Scenes
 res://Scenes/Lab Level/Lab Guard
 res://Scenes/Lab Level/Blue Guard
 res://Scenes/Lab Level/Red Guard
 res://Scenes/Lab Level/Green Guard
-res://Scenes/Museum Level
-res://Scenes/Museum Level/Loot Scenes
-res://Scenes/Museum Level/Guard

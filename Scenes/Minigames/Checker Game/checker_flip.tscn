@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scenes/Minigames/Checker Game/checker.gd" id="1_2rjud"]
 [ext_resource type="Texture2D" uid="uid://cmy27nb0meg71" path="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="1_ffhkp"]
 [ext_resource type="Script" path="res://Scenes/Minigames/Checker Game/checker_flip.gd" id="1_rlgsw"]
-[ext_resource type="Texture2D" uid="uid://d7uqa28e75xn" path="res://Assets/Sprites/Minigame Sprites/flipped.png" id="2_5rx63"]
-[ext_resource type="Texture2D" uid="uid://boqaqnfcitwfa" path="res://Assets/Sprites/Minigame Sprites/unflipped.png" id="3_b3bdu"]
+[ext_resource type="Texture2D" uid="uid://d7uqa28e75xn" path="res://Assets/Sprites/Minigame Sprites/Checker Game/flipped.png" id="2_5rx63"]
+[ext_resource type="Texture2D" uid="uid://boqaqnfcitwfa" path="res://Assets/Sprites/Minigame Sprites/Checker Game/unflipped.png" id="3_b3bdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c65en"]
 texture = ExtResource("1_ffhkp")

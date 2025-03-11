@@ -2,6 +2,8 @@ extends Node2D
 
 @export var checkers: Array[Node2D] = []
 
+signal game_won
+
 func _ready() -> void:
 	for checker in checkers:
 		checker.checker_toggled.connect(_on_checker_toggled)
