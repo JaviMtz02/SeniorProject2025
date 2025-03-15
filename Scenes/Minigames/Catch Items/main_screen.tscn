@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c2nwjg08xw2qq" path="res://Assets/Sprites/Minigame Sprites/Catch Items/bum.png" id="3_hcf2t"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(429, 391)
 script = ExtResource("1_ulhwb")
 start_game = NodePath("Control/Button")
 minigame_scene = ExtResource("2_s27sh")
@@ -16,6 +17,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 0
@@ -24,6 +26,7 @@ offset_top = -179.0
 offset_right = 434.0
 offset_bottom = 178.0
 color = Color(0.0271681, 2.08948e-05, 0.129179, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="Control"]
 layout_mode = 0
@@ -34,6 +37,7 @@ offset_bottom = -103.0
 theme_override_fonts/font = ExtResource("1_y2n3o")
 theme_override_font_sizes/font_size = 64
 text = "Catch The Items"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
@@ -44,6 +48,7 @@ offset_bottom = 18.0
 theme_override_font_sizes/font_size = 20
 text = "Catch the falling items the bum is throwing! Don't let more than 5 items fall or else you'll lose the game!"
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
@@ -55,6 +60,7 @@ theme_override_fonts/font = ExtResource("1_y2n3o")
 theme_override_font_sizes/font_size = 32
 text = "START"
 icon_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="HowToPlay" type="Label" parent="Control"]
 layout_mode = 0
@@ -66,6 +72,7 @@ theme_override_font_sizes/font_size = 20
 text = "Slide your mouse to catch the Items
 Press 'Start' when you're ready to begin."
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="GameTexture" type="Sprite2D" parent="."]
 position = Vector2(318, -36)

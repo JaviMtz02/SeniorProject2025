@@ -11,6 +11,8 @@ absorbent = true
 size = Vector2(28.3333, 25)
 
 [node name="Block" type="RigidBody2D" node_paths=PackedStringArray("block") groups=["blocks"]]
+collision_layer = 128
+collision_mask = 128
 physics_material_override = SubResource("PhysicsMaterial_ff3hg")
 gravity_scale = 1.2
 contact_monitor = true
@@ -28,5 +30,7 @@ texture = ExtResource("1_ucsa1")
 position = Vector2(2.5, -2.5)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_pu4pw")
+
+[node name="BlockLanded" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

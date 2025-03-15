@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dibwlioludvdb"
+path="res://.godot/imported/Ka Ching.wav-3e9f2c12227ff3b8047263d1b863880e.sample"
+
+[deps]
+
+source_file="res://Sounds/Ka Ching.wav"
+dest_files=["res://.godot/imported/Ka Ching.wav-3e9f2c12227ff3b8047263d1b863880e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

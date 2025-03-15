@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bb310uweykmhn" path="res://Assets/Sprites/Minigame Sprites/Stack Blocks/stack_blocks.png" id="2_t7r7x"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(80, 100)
 script = ExtResource("1_28fv8")
 start_game = NodePath("Button")
 minigame_scene = ExtResource("2_p1r3a")

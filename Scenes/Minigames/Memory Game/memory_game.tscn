@@ -446,6 +446,7 @@ texture = ExtResource("2_u3jib")
 sources/0 = SubResource("TileSetAtlasSource_tkec7")
 
 [node name="MemoryGame" type="Node2D"]
+position = Vector2(500, 300)
 script = ExtResource("1_v4aqd")
 
 [node name="BG" type="TileMapLayer" parent="."]

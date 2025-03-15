@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://b260stepjk6ep" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/bum_head.png" id="14_jgu82"]
 
 [node name="RockPaperScissors" type="Node2D" node_paths=PackedStringArray("player_games_won_label", "ai_games_won_label")]
+position = Vector2(400, 300)
 script = ExtResource("1_qf2pm")
 player_games_won_label = NodePath("Decoration/PlayerGamesWon")
 ai_games_won_label = NodePath("Decoration/AiGamesWon")
@@ -86,10 +87,10 @@ texture = ExtResource("10_k07sa")
 [node name="Decoration" type="Node" parent="."]
 
 [node name="PlayerGamesWon" type="Label" parent="Decoration"]
-offset_left = -100.0
-offset_top = -32.0
-offset_right = -52.0
-offset_bottom = -9.0
+offset_left = 300.25
+offset_top = 269.0
+offset_right = 348.25
+offset_bottom = 292.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_3efbx")
 theme_override_font_sizes/font_size = 8
@@ -97,10 +98,10 @@ text = "Games
 Won: 0"
 
 [node name="AiGamesWon" type="Label" parent="Decoration"]
-offset_left = 71.0
-offset_top = -32.0
-offset_right = 119.0
-offset_bottom = -13.0
+offset_left = 471.25
+offset_top = 269.0
+offset_right = 519.25
+offset_bottom = 288.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_3efbx")
 theme_override_font_sizes/font_size = 8
@@ -108,20 +109,20 @@ text = "Games
 Won: 0"
 
 [node name="PlayerChose" type="Label" parent="Decoration"]
-offset_left = -100.0
-offset_top = 44.0
-offset_right = -28.0
-offset_bottom = 52.0
+offset_left = 300.25
+offset_top = 345.0
+offset_right = 372.25
+offset_bottom = 353.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_3efbx")
 theme_override_font_sizes/font_size = 8
 text = "You Chose"
 
 [node name="AiChose" type="Label" parent="Decoration"]
-offset_left = 43.0
-offset_top = 44.0
-offset_right = 115.0
-offset_bottom = 52.0
+offset_left = 443.25
+offset_top = 345.0
+offset_right = 515.25
+offset_bottom = 353.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_3efbx")
 theme_override_font_sizes/font_size = 8
@@ -129,27 +130,27 @@ text = "Bum Chose"
 
 [node name="Circle" type="Sprite2D" parent="Decoration"]
 z_index = -1
-position = Vector2(-26, 66)
+position = Vector2(374.25, 367)
 texture = ExtResource("12_udijb")
 
 [node name="Circle2" type="Sprite2D" parent="Decoration"]
 z_index = -1
-position = Vector2(12, 64)
+position = Vector2(412.25, 365)
 scale = Vector2(1.21875, 1.21875)
 texture = ExtResource("12_udijb")
 
 [node name="Circle3" type="Sprite2D" parent="Decoration"]
 z_index = -1
-position = Vector2(50, 67)
+position = Vector2(450.25, 368)
 texture = ExtResource("12_udijb")
 
 [node name="BurglarHead" type="Sprite2D" parent="Decoration"]
-position = Vector2(-80, -49)
+position = Vector2(320.25, 252)
 scale = Vector2(2.32813, 2.25)
 texture = ExtResource("13_wi0ib")
 
 [node name="BumHead" type="Sprite2D" parent="Decoration"]
-position = Vector2(93, -53)
+position = Vector2(493.25, 248)
 scale = Vector2(2.54688, 2.75)
 texture = ExtResource("14_jgu82")
 

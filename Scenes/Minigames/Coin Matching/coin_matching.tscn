@@ -444,6 +444,7 @@ texture = ExtResource("3_q7q5k")
 sources/0 = SubResource("TileSetAtlasSource_85j54")
 
 [node name="CoinMatching" type="Node2D" node_paths=PackedStringArray("game_manager", "attempts_label")]
+position = Vector2(400, 250)
 script = ExtResource("1_xyl8i")
 coin_pattern = ExtResource("2_hxidk")
 game_manager = NodePath(".")

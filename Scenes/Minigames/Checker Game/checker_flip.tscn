@@ -556,6 +556,7 @@ animations = [{
 }]
 
 [node name="CheckerFlip" type="Node2D" node_paths=PackedStringArray("checkers")]
+position = Vector2(500, 400)
 script = ExtResource("1_rlgsw")
 checkers = [NodePath("Checker1"), NodePath("Checker2"), NodePath("Checker3"), NodePath("Checker4"), NodePath("Checker5")]
 

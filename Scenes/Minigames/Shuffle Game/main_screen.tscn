@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cfcxp8blmd5ba" path="res://Scenes/Minigames/Shuffle Game/shuffle_game.tscn" id="2_i7xw1"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(212, 121)
 script = ExtResource("1_mjnfn")
 start_game = NodePath("Button")
 minigame_scene = ExtResource("2_i7xw1")
@@ -16,6 +17,7 @@ offset_top = 12.0
 offset_right = 791.0
 offset_bottom = 550.0
 color = Color(0.027451, 0, 0.129412, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="."]
 offset_left = 242.0
@@ -25,6 +27,7 @@ offset_bottom = 118.0
 theme_override_fonts/font = ExtResource("1_oittm")
 theme_override_font_sizes/font_size = 64
 text = "Find the Frog"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 119.0
@@ -34,6 +37,7 @@ offset_bottom = 273.0
 theme_override_font_sizes/font_size = 20
 text = "Can you find the frog after the vases have been shuffled? Test your coordination skills with this confounding minigame! It's easier than it looks (trust us :D)"
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="HowToPlay" type="Label" parent="."]
 offset_left = 119.0
@@ -45,6 +49,7 @@ text = "Wait after the vases have finished shuffling before choosing the vase yo
 Press 'START' when you're ready"
 horizontal_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="GameTexture" type="Sprite2D" parent="."]
 position = Vector2(572, 213)
@@ -59,6 +64,7 @@ offset_bottom = 513.0
 theme_override_fonts/font = ExtResource("1_oittm")
 theme_override_font_sizes/font_size = 32
 text = "START"
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(412, 279)

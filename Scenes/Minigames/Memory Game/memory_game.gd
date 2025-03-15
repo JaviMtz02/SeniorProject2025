@@ -8,6 +8,9 @@ var is_player_turn: bool = false
 var button_map = {}
 var rounds: int = 0
 
+signal game_won
+signal game_lost
+
 func _ready() -> void:
 	button_map = {
 	0: $Buttons/ButtonA/Button1,
@@ -50,7 +53,8 @@ func _on_button_pressed(button_index) -> void:
 	if is_player_turn:
 		player_input.append(button_index)
 		if player_input[player_input.size() - 1] != pattern[player_input.size() - 1]:
-			print("you lose!")
+			game_lost.emit()
+			queue_free()
 		if player_input.size() == pattern.size():
 			await get_tree().create_timer(1.0).timeout
 			start_next_round()
@@ -61,4 +65,5 @@ func start_next_round() -> void:
 		add_to_pattern()
 		rounds += 1
 	else:
-		print("you won!")
+		game_won.emit()
+		queue_free()

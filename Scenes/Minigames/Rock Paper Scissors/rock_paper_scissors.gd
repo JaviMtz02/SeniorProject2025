@@ -33,7 +33,9 @@ func _on_game_tied() -> void:
 func check_game() -> void:
 	if player_games_won == 5:
 		game_won.emit()
+		queue_free()
 	elif ai_games_won == 5:
 		game_lost.emit()
+		queue_free()
 		
 		

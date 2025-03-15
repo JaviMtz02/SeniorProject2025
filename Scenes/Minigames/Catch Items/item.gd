@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+@warning_ignore("narrowing_conversion")
+
 @export var item: RigidBody2D
 @export var item_textures: Sprite2D
 @export var direction_force: float = 300

@@ -16,7 +16,8 @@ func _ready() -> void:
 	add_child(idle_state_timer) # since we made the Timer, we need to add that node as a child of our scene
 	
 func _on_process(_delta: float) -> void:
-	pass
+	if dog.health <= 0:
+		transition.emit("Dead")
 
 func _on_physics_process(_delta: float) -> void:
 		if detector.is_colliding():
@@ -40,3 +41,10 @@ func _on_exit() -> void:
 
 func on_idle_state_timeout() -> void:
 	idle_state_timeout = true
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("killzone"):
+		var damage_source = area.get_parent()
+		var damage_val = damage_source.damage
+		dog.take_damage(damage_val)
+		transition.emit("Hurt")

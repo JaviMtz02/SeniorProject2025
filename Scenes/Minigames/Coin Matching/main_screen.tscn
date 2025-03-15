@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bbbi80x5vwvuu" path="res://Scenes/Minigames/Coin Matching/coin_matching.tscn" id="2_7rveb"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(277, 231)
 script = ExtResource("1_3i4jh")
 start_game = NodePath("Button")
 minigame_scene = ExtResource("2_7rveb")
@@ -16,6 +17,7 @@ offset_top = -11.0
 offset_right = 719.0
 offset_bottom = 483.0
 color = Color(0.027451, 0, 0.129412, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="."]
 offset_left = 157.0
@@ -25,6 +27,7 @@ offset_bottom = 88.0
 theme_override_fonts/font = ExtResource("1_3kiki")
 theme_override_font_sizes/font_size = 64
 text = "Coin Matching"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 64.0
@@ -34,6 +37,7 @@ offset_bottom = 231.0
 theme_override_font_sizes/font_size = 20
 text = "Match the coin pairs by their design. There are a total of 16 pairs you can make with a total of 8 attempts to make the pairs. "
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="HowToPlay" type="Label" parent="."]
 offset_left = 49.0
@@ -45,6 +49,7 @@ text = "To reveal a coin design simply click on a coin and it will flip over. Co
 Press 'START' when you're ready"
 horizontal_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="GameTexture" type="Sprite2D" parent="."]
 position = Vector2(519, 157)
@@ -59,6 +64,7 @@ offset_bottom = 412.0
 theme_override_fonts/font = ExtResource("1_3kiki")
 theme_override_font_sizes/font_size = 32
 text = "START"
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(335, 237)

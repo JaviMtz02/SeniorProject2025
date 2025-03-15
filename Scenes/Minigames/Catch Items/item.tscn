@@ -11,6 +11,8 @@ radius = 4.0
 height = 14.0
 
 [node name="Item" type="RigidBody2D" node_paths=PackedStringArray("item", "item_textures")]
+collision_layer = 128
+collision_mask = 128
 physics_material_override = SubResource("PhysicsMaterial_iaglx")
 contact_monitor = true
 max_contacts_reported = 1

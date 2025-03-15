@@ -39,6 +39,10 @@ blocks=""
 ground=""
 killzone=""
 enemy_interaction=""
+minigame_interaction=""
+doors=""
+burglar_camera=""
+coins=""
 
 [input]
 
@@ -96,6 +100,16 @@ pause_menu={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+attack={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+open_minigame={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":77,"key_label":0,"unicode":109,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -103,6 +117,8 @@ pause_menu={
 2d_physics/layer_2="Loot Layer"
 2d_physics/layer_3="Loot_interaction"
 2d_physics/layer_4="MobCollisions"
+2d_physics/layer_5="Door_Detection"
+2d_physics/layer_8="MinigameLayer"
 
 [rendering]
 

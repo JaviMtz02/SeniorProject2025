@@ -1,6 +1,5 @@
 extends Node2D
 
-signal game_results(winner: int) # -1 is lose, 0 is draw, 1 is win
 
 ## AI will choose to not make the optimal move (ex. 1/5 times)
 @export var ai_accuracy: float = 0.8
@@ -14,6 +13,9 @@ var game_over = false
 var winner = -1
 var player_turn = true if (randi() % 2 == 0) else false
 var x_or_o = randi() % 2
+
+signal game_won
+signal game_lost
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,20 +31,23 @@ func _ready() -> void:
 		icon.draw_o()
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not player_turn and $ai_wait.is_stopped():
 		$ai_wait.start()
 	if game_over:
-		print("Game Over")
+		#print("Game Over")
 		if winner == 1:
-			print("Player wins!")
-			game_results.emit(1)
+			#print("Player wins!")
+			game_won.emit()
+			queue_free()
 		elif winner == 2:
-			print("CPU wins!")
-			game_results.emit(-1)
+			#print("CPU wins!")
+			game_lost.emit()
+			queue_free()
 		else:
-			print("Draw!")
-			game_results.emit(0)
+			#print("Draw!")
+			game_lost.emit()
+			queue_free()
 		
 		set_process(false)
 

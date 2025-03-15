@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bm33mydth7cuc"]
+[gd_scene load_steps=9 format=3 uid="uid://bm33mydth7cuc"]
 
 [ext_resource type="Texture2D" uid="uid://dwxklhh4wbwtv" path="res://Assets/Sprites/Minigame Sprites/Stack Blocks/Floor.png" id="1_eby7s"]
 [ext_resource type="Script" path="res://Scenes/Minigames/Stacking Blocks/stacking_blocks.gd" id="1_velmj"]
 [ext_resource type="PackedScene" uid="uid://cjv0iampk6oiw" path="res://Scenes/Minigames/Stacking Blocks/block.tscn" id="2_2ts0c"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_kttpm"]
+[ext_resource type="AudioStream" uid="uid://dugwfc6oqurvk" path="res://Sounds/Powerup 2.wav" id="5_o6fts"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvktf"]
 size = Vector2(601, 17)
@@ -14,7 +15,6 @@ size = Vector2(601, 17)
 size = Vector2(606, 18)
 
 [node name="StackingBlocks" type="Node2D" node_paths=PackedStringArray("end_line")]
-position = Vector2(8, -968)
 script = ExtResource("1_velmj")
 block = ExtResource("2_2ts0c")
 end_line = NodePath("EndLine")
@@ -27,6 +27,8 @@ color = Color(0.122252, 0.122252, 0.122252, 1)
 
 [node name="Floor" type="StaticBody2D" parent="." groups=["ground"]]
 position = Vector2(546, 659)
+collision_layer = 128
+collision_mask = 128
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
@@ -40,6 +42,8 @@ shape = SubResource("RectangleShape2D_yvktf")
 
 [node name="EndLine" type="Area2D" parent="."]
 position = Vector2(269, 198)
+collision_layer = 128
+collision_mask = 128
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="EndLine"]
@@ -63,3 +67,6 @@ theme_override_fonts/font = ExtResource("4_kttpm")
 theme_override_font_sizes/font_size = 24
 text = "Blocks 
 Remaining: 10"
+
+[node name="StartGame" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_o6fts")

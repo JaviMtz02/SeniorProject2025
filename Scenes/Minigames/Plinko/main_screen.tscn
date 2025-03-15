@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://2sdjv0ypls8g" path="res://Scenes/Minigames/Plinko/plinko.tscn" id="2_20i37"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(80, 100)
 script = ExtResource("1_r2sqt")
 start_game = NodePath("Button")
 minigame_scene = ExtResource("2_20i37")
@@ -32,7 +33,7 @@ offset_top = 87.0
 offset_right = 530.0
 offset_bottom = 270.0
 theme_override_font_sizes/font_size = 20
-text = "In this classic game of Plinko, drop the balls to reach the required score of 1,500! Balls given will depend on the current level difficulty."
+text = "In this classic game of Plinko, drop the balls to reach the required score of 1,500! You have 5 balls to reach this score. Good Luck!"
 autowrap_mode = 3
 
 [node name="HowToPlay" type="Label" parent="."]
@@ -41,7 +42,7 @@ offset_top = 270.0
 offset_right = 764.0
 offset_bottom = 391.0
 theme_override_font_sizes/font_size = 20
-text = "To drop a ball simply press the down arrow key or 'D' key and watch the ball go! The game ends when you hit the required score or run out of balls.
+text = "To drop a ball simply press the down arrow key or 'D' key and watch the ball go! The game ends when you run out of balls.
 Press 'START' when you're ready"
 horizontal_alignment = 1
 autowrap_mode = 3

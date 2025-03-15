@@ -3,6 +3,7 @@ extends Node2D
 @export var item: PackedScene
 @export var attempts_left: Label
 @export var items_caught_label: Label
+@export var anim: AnimatedSprite2D
 
 var check_after_landing = false
 var tries_left: int = 5
@@ -12,12 +13,12 @@ signal game_won
 signal game_lost
 
 func _ready() -> void:
-	print("helo!")
 	spawn_block()
 	
 func spawn_block() -> void:
 	var item_obj = item.instantiate()
 	add_child(item_obj)
+	anim.play()
 	item_obj.null_space.connect(on_null_space)
 	item_obj.block_landed.connect(spawn_block)
 	items_caught += 1
@@ -29,6 +30,7 @@ func spawn_block() -> void:
 func on_null_space() -> void:
 	var item_obj = item.instantiate()
 	add_child(item_obj)
+	anim.play()
 	item_obj.block_landed.connect(spawn_block)
 	item_obj.null_space.connect(on_null_space)
 	tries_left -= 1
@@ -38,5 +40,7 @@ func on_null_space() -> void:
 func check_game() -> void:
 	if items_caught >= 10:
 		game_won.emit()
+		queue_free()
 	elif tries_left <= 0:
 		game_lost.emit()
+		queue_free()
