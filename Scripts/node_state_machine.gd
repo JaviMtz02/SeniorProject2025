@@ -2,6 +2,7 @@ class_name NodeStateMachine
 extends Node
 
 @export var initial_node_state : NodeState
+var last_direction: Vector2 = Vector2.ZERO
 
 var node_states : Dictionary = {}
 var curr_node_state : NodeState

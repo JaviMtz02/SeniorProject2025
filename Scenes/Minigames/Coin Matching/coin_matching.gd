@@ -17,7 +17,7 @@ func _ready() -> void:
 	for i in range(patterns.size()):
 		var coin = coin_pattern.instantiate()
 		coin.set_pattern(patterns[i])
-		coin.position = Vector2((i % 4) * 100, (i / 4) * 100)
+		coin.position = Vector2((i % 4) * 150, (i / 4) * 150)
 		game_manager.add_coin(coin)
 		add_child(coin)
 

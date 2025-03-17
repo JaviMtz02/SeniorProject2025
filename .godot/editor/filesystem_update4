@@ -1,19 +1,9 @@
-res://Scenes/Museum Level/minigame_door_museum_top.tscn
-res://Scenes/Minigames/Checker Game/checker_flip.gd
-res://Scenes/Minigames/Catch Items/catch_items.tscn
-res://Scenes/Minigames/Coin Matching/coin_matching.gd
-res://Scenes/Minigames/Memory Game/memory_game.gd
-res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.gd
-res://Scenes/Minigames/Checker Game/checker_flip.tscn
-res://Scenes/Minigames/Plinko/plinko.tscn
-res://Scenes/Minigames/Catch Items/catch_items.gd
-res://Scenes/Minigames/Coin Matching/coin_matching.tscn
-res://Scenes/Minigames/Memory Game/memory_game.tscn
-res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.tscn
-res://Scenes/Minigames/Catch Items/main_screen.tscn
-res://Scenes/Minigames/Checker Game/main_screen.tscn
-res://Scenes/Minigames/Coin Matching/main_screen.tscn
-res://Scenes/Minigames/Memory Game/main_screen.tscn
-res://Scenes/Minigames/Rock Paper Scissors/main_screen.tscn
-res://Scenes/Minigames/Shuffle Game/main_screen.tscn
+res://Scenes/Museum Level/Museum Scripts/minigame_door_museum_down.gd
+res://Scenes/Museum Level/Doors/minigame_door_museum_side.tscn
+res://Scenes/Museum Level/Museum Scripts/minigame_door_museum_side.gd
+res://Scenes/Museum Level/Museum Scripts/minigame_door_museum_top.gd
+res://Scenes/Museum Level/Guard/walk_state.gd
+res://Scenes/Museum Level/Doors/minigame_door_museum_down.tscn
+res://Scenes/Museum Level/Guard/guard.tscn
+res://Scenes/Museum Level/Guard/frozen_state.gd
 res://Scenes/Museum Level/museum.tscn

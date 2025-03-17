@@ -6,6 +6,7 @@ var drop_speed: float = 2.5
 var direction: int = 1 # direction to where block will move
 var dropped: bool = false
 var landed: bool = false
+var can_play: bool = false
 
 signal ball_landed
 
@@ -37,3 +38,5 @@ func _on_add_points(_area: Area2D):
 func _emit_landing_signal():
 	ball_landed.emit()
 	queue_free()
+	
+		

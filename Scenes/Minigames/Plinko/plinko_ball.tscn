@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dncc4fdhte7di"]
+[gd_scene load_steps=6 format=3 uid="uid://dncc4fdhte7di"]
 
 [ext_resource type="Texture2D" uid="uid://ddcokc1t8dh84" path="res://Assets/Sprites/Loot Sprites/Lab Loot/purple_orb.png" id="1_7vi5d"]
 [ext_resource type="Script" path="res://Scenes/Minigames/Plinko/plinko_ball.gd" id="1_k4k3u"]
+[ext_resource type="AudioStream" uid="uid://cnqx7hasrtt28" path="res://Sounds/Thud.wav" id="3_chxao"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a43q7"]
 bounce = 0.5
@@ -26,5 +27,8 @@ texture = ExtResource("1_7vi5d")
 position = Vector2(-3, -3)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_iybgh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_chxao")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -21,12 +21,12 @@ item = NodePath(".")
 item_textures = NodePath("ItemTextures")
 
 [node name="ItemTextures" type="Sprite2D" parent="."]
-scale = Vector2(3, 3)
+scale = Vector2(6, 6)
 texture = ExtResource("2_de4es")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, -3)
-scale = Vector2(3, 3)
+position = Vector2(-9, -7)
+scale = Vector2(6, 6)
 shape = SubResource("CapsuleShape2D_0i51b")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

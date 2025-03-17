@@ -20,7 +20,7 @@ func _ready() -> void:
 	
 	add_child(bark_timer)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_enter() -> void:

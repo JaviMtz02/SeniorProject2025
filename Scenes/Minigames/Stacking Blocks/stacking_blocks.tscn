@@ -21,8 +21,8 @@ end_line = NodePath("EndLine")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_right = 1153.0
-offset_bottom = 799.0
+offset_right = 1213.0
+offset_bottom = 855.0
 color = Color(0.122252, 0.122252, 0.122252, 1)
 
 [node name="Floor" type="StaticBody2D" parent="." groups=["ground"]]

@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dqv6rsbp81orx" path="res://Assets/Sprites/UI/burglar_bag.png" id="2_7c8ne"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8mu3d"]
-height = 48.0
+radius = 20.0
+height = 132.0
 
 [node name="Catcher" type="StaticBody2D" groups=["ground"]]
 position = Vector2(-15, -9)
@@ -14,11 +15,11 @@ script = ExtResource("1_banre")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.897092, 0.949932, 0.927705, 1)
-position = Vector2(36, 774.25)
-scale = Vector2(4, 3.051)
+position = Vector2(131, 698.533)
+scale = Vector2(9.9375, 7.78331)
 texture = ExtResource("2_7c8ne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["ground"]]
-position = Vector2(32, 765)
+position = Vector2(121, 672)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_8mu3d")

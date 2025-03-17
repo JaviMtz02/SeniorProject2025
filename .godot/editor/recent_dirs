@@ -1,5 +1,6 @@
 res://Assets/Sprites/Characters
 res://Scenes/Museum Level/Museum Scripts
+res://Scenes/Museum Level/Doors
 res://Scenes/Museum Level
 res://Assets/Sprites/animals/1 Dog
 res://Scenes/Minigames/tic_tac_toe
@@ -19,4 +20,3 @@ res://Scenes/Minigames/Coin Matching
 res://Scenes/Minigames/Checker Game
 res://Scenes/Minigames/Catch Items
 res://Scenes/Minigames/Sliding Puzzle
-res://Assets/Sprites/Minigame Sprites

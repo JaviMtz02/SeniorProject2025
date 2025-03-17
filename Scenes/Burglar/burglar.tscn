@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cn2v6r5xd2gqc"]
+[gd_scene load_steps=46 format=3 uid="uid://cn2v6r5xd2gqc"]
 
 [ext_resource type="Script" path="res://Scenes/Burglar/burglar.gd" id="1_ptfhq"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="2_0gd4x"]
@@ -195,6 +195,9 @@ size = Vector2(21, 28)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6teyy"]
 size = Vector2(30, 40)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf82g"]
+size = Vector2(13, 22)
+
 [node name="Burglar" type="CharacterBody2D" node_paths=PackedStringArray("burglar", "loot_interaction", "minigame_interaction", "take_loot_button", "deposit_button", "minigame_button", "value_label", "inventory_label", "time_label") groups=["Burglar", "minigame_interaction"]]
 collision_layer = 17
 collision_mask = 17
@@ -358,4 +361,11 @@ bus = &"SFX_normal"
 stream = ExtResource("19_bymvf")
 bus = &"SFX_lower"
 
+[node name="MobDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MobDetection"]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_mf82g")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="MobDetection" to="." method="_on_mob_detection_area_entered"]

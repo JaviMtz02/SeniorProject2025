@@ -34,7 +34,7 @@ func add_to_pattern() -> void:
 	play_sequence()
 	
 func play_sequence() -> void:
-	print(pattern)
+	#print(pattern)
 	is_player_turn = false
 	var hightlight_delay: float = 0.8
 	for i in range(pattern.size()):

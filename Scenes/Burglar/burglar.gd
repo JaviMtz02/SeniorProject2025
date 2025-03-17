@@ -16,7 +16,6 @@ extends CharacterBody2D
 @export var minigame_doors: Node
 
 @onready var timer: Timer = $Timer
-@onready var door: Area2D = $"../Door"
 
 var curr_inventory_size: int = 0 # Checks to see if the burglar has not surpassed the bounds of what the inventory allows
 var curr_loot: Area2D = null # When we're near loot, we can get its details with this variable
@@ -50,8 +49,9 @@ func _ready() -> void:
 	inventory_label.text = "0/" + str(inventory_space)
 	
 	# Connects corresponding loot signals and door signals for depositing collected loot
-	door.connect("deposit", Callable(self, "_on_deposit"))
-	door.connect("off_deposit", Callable(self, "_on_off_deposit"))
+	for door in get_tree().get_nodes_in_group("deposit_doors"):
+		door.connect("deposit", Callable(self, "_on_deposit"))
+		door.connect("off_deposit", Callable(self, "_on_off_deposit"))
 	
 	# Connects signals for minigames, each minigame is stored inside a door scene
 	for minigame_door in get_tree().get_nodes_in_group("doors"):
@@ -182,3 +182,7 @@ func decide_punishment() -> void:
 	elif option == 1:
 		time_seconds -= randi() % 16
 	
+
+func _on_mob_detection_area_entered(area: Area2D) -> void:
+	if area.is_in_group("enemy_interaction"):
+		decide_punishment()

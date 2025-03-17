@@ -19,78 +19,94 @@
 [ext_resource type="Texture2D" uid="uid://nqs2dfohao2y" path="res://Assets/Sprites/Minigame Sprites/Sliding Puzzle/empty_space.png" id="17_vi5ac"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p32b6"]
-size = Vector2(64, 64)
+size = Vector2(638, 640)
 
 [node name="Main" type="Area2D" node_paths=PackedStringArray("tiles")]
 script = ExtResource("1_bp226")
 tiles = [NodePath("Slices/Tile1"), NodePath("Slices/Tile2"), NodePath("Slices/Tile3"), NodePath("Slices/Tile4"), NodePath("Slices/Tile5"), NodePath("Slices/Tile6"), NodePath("Slices/Tile7"), NodePath("Slices/Tile8"), NodePath("Slices/Tile9"), NodePath("Slices/Tile10"), NodePath("Slices/Tile11"), NodePath("Slices/Tile12"), NodePath("Slices/Tile13"), NodePath("Slices/Tile14"), NodePath("Slices/Tile15"), NodePath("Slices/Tile16")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32, 32)
+position = Vector2(640, 440)
 shape = SubResource("RectangleShape2D_p32b6")
 
 [node name="Slices" type="Node" parent="."]
 
 [node name="Tile1" type="Sprite2D" parent="Slices"]
-position = Vector2(8, 8)
+position = Vector2(400, 200)
+scale = Vector2(10, 10)
 texture = ExtResource("1_sfv2m")
 
 [node name="Tile2" type="Sprite2D" parent="Slices"]
-position = Vector2(24, 8)
+position = Vector2(560, 200)
+scale = Vector2(10, 10)
 texture = ExtResource("2_v5agw")
 
 [node name="Tile3" type="Sprite2D" parent="Slices"]
-position = Vector2(40, 8)
+position = Vector2(720, 200)
+scale = Vector2(10, 10)
 texture = ExtResource("3_yg8gw")
 
 [node name="Tile4" type="Sprite2D" parent="Slices"]
-position = Vector2(56, 8)
+position = Vector2(880, 200)
+scale = Vector2(10, 10)
 texture = ExtResource("4_u7wki")
 
 [node name="Tile5" type="Sprite2D" parent="Slices"]
-position = Vector2(8, 24)
+position = Vector2(400, 360)
+scale = Vector2(10, 10)
 texture = ExtResource("5_1fcug")
 
 [node name="Tile6" type="Sprite2D" parent="Slices"]
-position = Vector2(24, 24)
+position = Vector2(560, 360)
+scale = Vector2(10, 10)
 texture = ExtResource("6_eh4y3")
 
 [node name="Tile7" type="Sprite2D" parent="Slices"]
-position = Vector2(40, 24)
+position = Vector2(720, 360)
+scale = Vector2(10, 10)
 texture = ExtResource("7_hkfvy")
 
 [node name="Tile8" type="Sprite2D" parent="Slices"]
-position = Vector2(56, 24)
+position = Vector2(880, 360)
+scale = Vector2(10, 10)
 texture = ExtResource("8_t2ebf")
 
 [node name="Tile9" type="Sprite2D" parent="Slices"]
-position = Vector2(8, 40)
+position = Vector2(400, 520)
+scale = Vector2(10, 10)
 texture = ExtResource("9_63uuh")
 
 [node name="Tile10" type="Sprite2D" parent="Slices"]
-position = Vector2(24, 40)
+position = Vector2(560, 520)
+scale = Vector2(10, 10)
 texture = ExtResource("10_34giq")
 
 [node name="Tile11" type="Sprite2D" parent="Slices"]
-position = Vector2(40, 40)
+position = Vector2(720, 520)
+scale = Vector2(10, 10)
 texture = ExtResource("11_7hfiu")
 
 [node name="Tile12" type="Sprite2D" parent="Slices"]
-position = Vector2(56, 40)
+position = Vector2(880, 520)
+scale = Vector2(10, 10)
 texture = ExtResource("12_5ag5c")
 
 [node name="Tile13" type="Sprite2D" parent="Slices"]
-position = Vector2(8, 56)
+position = Vector2(400, 680)
+scale = Vector2(10, 10)
 texture = ExtResource("13_bpwnx")
 
 [node name="Tile14" type="Sprite2D" parent="Slices"]
-position = Vector2(24, 56)
+position = Vector2(560, 680)
+scale = Vector2(10, 10)
 texture = ExtResource("14_p88tf")
 
 [node name="Tile15" type="Sprite2D" parent="Slices"]
-position = Vector2(40, 56)
+position = Vector2(720, 680)
+scale = Vector2(10, 10)
 texture = ExtResource("15_e2qvr")
 
 [node name="Tile16" type="Sprite2D" parent="Slices"]
-position = Vector2(56, 56)
+position = Vector2(880, 680)
+scale = Vector2(10, 10)
 texture = ExtResource("17_vi5ac")

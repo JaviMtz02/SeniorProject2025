@@ -1,0 +1,44 @@
+[gd_scene load_steps=14 format=3 uid="uid://brxasy1h2ujoa"]
+
+[ext_resource type="Texture2D" uid="uid://bcb82snyolxd3" path="res://Assets/Sprites/Items/minigame_door_down.png" id="1_usgmg"]
+[ext_resource type="Script" path="res://Scenes/Museum Level/Museum Scripts/minigame_door_museum_down.gd" id="1_xdrvw"]
+[ext_resource type="PackedScene" uid="uid://bks7qnyb4tear" path="res://Scenes/Minigames/Catch Items/main_screen.tscn" id="2_eqb8g"]
+[ext_resource type="PackedScene" uid="uid://dxkwahqljg2t1" path="res://Scenes/Minigames/Checker Game/main_screen.tscn" id="3_nrk8s"]
+[ext_resource type="PackedScene" uid="uid://cxhxw6hayka2q" path="res://Scenes/Minigames/Coin Matching/main_screen.tscn" id="4_r248p"]
+[ext_resource type="PackedScene" uid="uid://bmhge748b37y5" path="res://Scenes/Minigames/Memory Game/main_screen.tscn" id="5_nimtk"]
+[ext_resource type="PackedScene" uid="uid://bhydsxh27v0ug" path="res://Scenes/Minigames/Plinko/main_screen.tscn" id="6_2tyo2"]
+[ext_resource type="PackedScene" uid="uid://bpd3ffp1lyhyv" path="res://Scenes/Minigames/Rock Paper Scissors/main_screen.tscn" id="7_wq2u4"]
+[ext_resource type="PackedScene" uid="uid://de5pk7rj0682j" path="res://Scenes/Minigames/Stacking Blocks/main_screen.tscn" id="8_mkyxg"]
+[ext_resource type="PackedScene" uid="uid://dllpfcjatqqry" path="res://Scenes/Minigames/tic_tac_toe/main_screen.tscn" id="9_chwab"]
+[ext_resource type="AudioStream" uid="uid://cd4mx1y26i38q" path="res://Sounds/Punch.wav" id="11_kqsgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_065s2"]
+size = Vector2(48, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8p1oq"]
+size = Vector2(48, 44)
+
+[node name="MinigameDoorMuseumDown" type="StaticBody2D" node_paths=PackedStringArray("door_area") groups=["doors"]]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_xdrvw")
+minigames = Array[PackedScene]([ExtResource("2_eqb8g"), ExtResource("3_nrk8s"), ExtResource("4_r248p"), ExtResource("5_nimtk"), ExtResource("6_2tyo2"), ExtResource("7_wq2u4"), ExtResource("8_mkyxg"), ExtResource("9_chwab")])
+door_area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 8)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_usgmg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 20)
+shape = SubResource("RectangleShape2D_065s2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, 7)
+shape = SubResource("RectangleShape2D_8p1oq")
+
+[node name="DoorOpening" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_kqsgq")

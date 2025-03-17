@@ -5,13 +5,15 @@ extends NodeState
 @export var nav_agent: NavigationAgent2D
 @export var detector: RayCast2D
 @onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
-
 @export var min_speed: float = 20
 @export var max_speed: float = 30
 var speed: float
 
 
 func _ready() -> void:
+	for door in get_tree().get_nodes_in_group("doors"):
+		door.freeze.connect(_on_freeze_emitted)
+		
 	call_deferred("character_setup")
 	nav_agent.velocity_computed.connect(on_safe_velocity_computed)
 	
@@ -36,7 +38,10 @@ func _on_physics_process(_delta: float) -> void:
 		return
 		
 	var target_position: Vector2 = nav_agent.get_next_path_position()
-	var target_direction: Vector2 = guard.global_position.direction_to(target_position) 
+	var target_direction: Vector2 = guard.global_position.direction_to(target_position)
+	if target_direction != Vector2.ZERO:
+		get_parent().last_direction = target_direction
+		
 	var velocity: Vector2 = target_direction * speed
 	update_animation(target_direction)
 	update_detector(target_direction)
@@ -94,3 +99,13 @@ func update_detector(direction: Vector2) -> void:
 		var collider = detector.get_collider()
 		if collider == burglar:
 			transition.emit("FollowBurglar")
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("killzone"):
+		var damage_source = area.get_parent()
+		var damage_val = damage_source.damage
+		guard.take_damage(damage_val)
+		transition.emit("Hurt")
+
+func _on_freeze_emitted() -> void:
+	transition.emit("Frozen")

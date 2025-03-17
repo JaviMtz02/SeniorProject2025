@@ -43,6 +43,7 @@ minigame_interaction=""
 doors=""
 burglar_camera=""
 coins=""
+deposit_doors=""
 
 [input]
 

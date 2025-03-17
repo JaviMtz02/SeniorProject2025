@@ -74,7 +74,6 @@ func update_detector(direction: Vector2):
 	direction = direction.normalized()
 	detector.target_position = direction * 100 # long raycast because dog should have a good amount of vision
 	
-
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("killzone"):
 		var damage_source = area.get_parent()

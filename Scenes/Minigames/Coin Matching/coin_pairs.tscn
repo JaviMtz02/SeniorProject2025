@@ -105,6 +105,7 @@ animations = [{
 
 [node name="CoinPairs" type="Node2D" node_paths=PackedStringArray("anim", "pattern")]
 position = Vector2(104, 50)
+scale = Vector2(2, 2)
 script = ExtResource("1_x6dce")
 anim = NodePath("CoinFlipAnimation")
 pattern = NodePath("Patterns")
