@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy3p6hq0wija6"]
+
+[ext_resource type="Script" path="res://Scenes/Weapons/beaker_hit_box.gd" id="1_5mjk5"]
+[ext_resource type="Texture2D" uid="uid://vg6xdwbgtl88" path="res://Assets/Sprites/Loot Sprites/Lab Loot/mustard_flask.png" id="1_6yyc0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o3e7w"]
+radius = 4.24264
+height = 12.7279
+
+[node name="BeakerHitBox" type="Node2D" node_paths=PackedStringArray("timer", "hitbox")]
+script = ExtResource("1_5mjk5")
+timer = NodePath("Timer")
+hitbox = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.785398
+texture = ExtResource("1_6yyc0")
+
+[node name="Area2D" type="Area2D" parent="." groups=["mob_near"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_o3e7w")
+
+[node name="Timer" type="Timer" parent="."]

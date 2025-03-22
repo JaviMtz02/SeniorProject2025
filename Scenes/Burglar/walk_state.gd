@@ -7,15 +7,23 @@ extends NodeState
 @export var speed: float = 50.0
 @export var footsteps_sound: AudioStreamPlayer2D
 
+var push_force: float = 1.0
+
 var last_frame: int
 
 func _on_process(_delta: float) -> void:
 	get_input()
 	if Input.is_action_just_pressed("attack"):
 		transition.emit("Attack")
+	
 
 func _on_physics_process(_delta: float) -> void:
 	burglar.move_and_slide()
+	
+	for i in burglar.get_slide_collision_count():
+		var c = burglar.get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
 func  _on_next_transition() -> void:
 	pass

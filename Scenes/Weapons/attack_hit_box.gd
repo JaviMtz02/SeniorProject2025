@@ -23,6 +23,5 @@ func _process(delta: float) -> void:
 	rotation += rotation_speed * delta
 
 func _on_area_entered(area: Area2D) ->void:
-	if area.is_in_group("enemy_interaction"):
 		sound.play()
 		

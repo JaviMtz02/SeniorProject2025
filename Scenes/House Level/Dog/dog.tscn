@@ -289,6 +289,8 @@ position = Vector2(-1.25, 12.5)
 target_position = Vector2(56.25, 1.25)
 
 [node name="HitBox" type="Area2D" parent="." groups=["enemy_interaction"]]
+collision_layer = 64
+collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(3.75, 11.25)

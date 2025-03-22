@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cxs7u6wl8wsgg"]
+
+[node name="Throw Items" type="Node2D"]
+editor_description = "Burglar must choose the right angle and strenght to throw an item into a bag. After every turn, bag moves to a new location horizontally. Cannot miss more than 3 items"

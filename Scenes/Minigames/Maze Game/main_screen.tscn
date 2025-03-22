@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cbbqgfutbsrg1" path="res://Scenes/Minigames/Maze Game/maze_game.tscn" id="2_qpwhj"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(125, 125)
 script = ExtResource("1_hrfhh")
 start_game = NodePath("Button")
 minigame_scene = ExtResource("2_qpwhj")

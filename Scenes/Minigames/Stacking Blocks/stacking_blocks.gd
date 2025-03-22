@@ -13,7 +13,6 @@ func _ready() -> void:
 	$StartGame.play()
 	end_line.set_collision_layer_value(1, false)
 	for item in get_tree().get_nodes_in_group("blocks"):
-		print(item)
 		item.connect("block_landed", Callable(self, "check_collission"))
 	spawn_block()
 	

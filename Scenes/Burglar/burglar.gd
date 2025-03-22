@@ -63,6 +63,10 @@ func _ready() -> void:
 	for loot in get_tree().get_nodes_in_group("loot"):
 		loot.connect("burglar_nearby", Callable(self, "_on_burglar_nearby"))
 		loot.connect("burglar_away", Callable(self, "_on_burglar_away"))
+	
+	if level_node.level_name == "laboratory":
+		for interactable in get_tree().get_nodes_in_group("time_adders"):
+			interactable.connect("add_time", Callable(self, "_on_add_time"))
 #
 func _process(_delta: float) -> void:
 	if near_door and Input.is_action_just_pressed("deposit"): # If you're near the door then you can deposit your loot
@@ -184,5 +188,10 @@ func decide_punishment() -> void:
 	
 
 func _on_mob_detection_area_entered(area: Area2D) -> void:
-	if area.is_in_group("enemy_interaction"):
+	if area.is_in_group("mob_near"):
 		decide_punishment()
+
+
+# Time adder signal that adds time to the game!
+func _on_add_time() -> void:
+	time_minutes += 1

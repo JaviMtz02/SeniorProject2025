@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c47osnjea7sbv"]
+
+[node name="TraverseHallway" type="Node2D"]
+editor_description = "Burglar walks through hallway, The burglar cannot walk all in one go as doing so alerts the dog, there is a noise meter that goes up the more you move. Try to get to the end without the noise meter going up and before the time runs out!"

@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b7b5t"]
 radius = 2.82843
-height = 12.7279
+height = 16.9706
 
 [node name="ClubHitBox" type="Node2D" node_paths=PackedStringArray("timer", "hitbox", "sound")]
 script = ExtResource("1_8brn0")
@@ -18,9 +18,10 @@ sound = NodePath("WhackSound")
 texture = ExtResource("2_fgdyh")
 
 [node name="Area2D" type="Area2D" parent="." groups=["killzone"]]
+collision_layer = 64
+collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2, -2)
 rotation = 0.785398
 shape = SubResource("CapsuleShape2D_b7b5t")
 

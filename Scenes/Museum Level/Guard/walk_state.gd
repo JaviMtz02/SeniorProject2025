@@ -7,21 +7,28 @@ extends NodeState
 @onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
 @export var min_speed: float = 20
 @export var max_speed: float = 30
+@export var vision_cone: Polygon2D
+@onready var raycast_container: Node2D
 var speed: float
 
+const NUM_RAYS = 10
+const RAY_SPREAD = PI / 4
+const RAY_LENGTH = 75
 
 func _ready() -> void:
 	for door in get_tree().get_nodes_in_group("doors"):
 		door.freeze.connect(_on_freeze_emitted)
-		
+	
+	create_vision_rays()
 	call_deferred("character_setup")
 	nav_agent.velocity_computed.connect(on_safe_velocity_computed)
 	
 func character_setup() -> void:
 	await get_tree().physics_frame
-	set_moving_target()
+	call_deferred("set_moving_target")
 
 func set_moving_target() -> void:
+	randomize()
 	var target_pos: Vector2 = NavigationServer2D.map_get_random_point(nav_agent.get_navigation_map(), nav_agent.navigation_layers, false)
 	nav_agent.target_position = target_pos
 	speed = randf_range(min_speed, max_speed)
@@ -44,6 +51,7 @@ func _on_physics_process(_delta: float) -> void:
 		
 	var velocity: Vector2 = target_direction * speed
 	update_animation(target_direction)
+	update_vision_rays(target_direction)
 	update_detector(target_direction)
 	
 	
@@ -109,3 +117,28 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_freeze_emitted() -> void:
 	transition.emit("Frozen")
+
+func create_vision_rays() -> void:
+	raycast_container = Node2D.new()
+	guard.add_child.call_deferred(raycast_container)
+	
+	for i in range(NUM_RAYS):
+		var ray = RayCast2D.new()
+		ray.enabled = true
+		ray.target_position = Vector2(RAY_LENGTH, 0)
+		raycast_container.add_child(ray)
+
+func update_vision_rays(direction: Vector2) -> void:
+	var start_angle = direction.angle() - RAY_SPREAD / 2
+	var points = [Vector2.ZERO]
+	for i in range(NUM_RAYS):
+		var angle = start_angle + (i / float(NUM_RAYS - 1)) * RAY_SPREAD
+		var ray = raycast_container.get_child(i)
+		var dir = Vector2.RIGHT.rotated(angle) * RAY_LENGTH
+		
+		ray.target_position = dir
+		ray.force_raycast_update()
+		
+		var end_point = ray.get_collision_point() if ray.is_colliding() else guard.global_position + dir
+		points.append(end_point - guard.global_position)
+	vision_cone.polygon = points

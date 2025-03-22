@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bopyieiq5rs5a" path="res://Scenes/Minigames/Lab Attack/lab_attack.tscn" id="2_bbqnm"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(200, 125)
 script = ExtResource("1_6ic30")
 start_game = NodePath("Button")
 minigame_scene = ExtResource("2_bbqnm")
@@ -62,13 +63,3 @@ text = "START"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(373, 248)
 zoom = Vector2(1.5, 1.5)
-
-[node name="Note" type="Label" parent="."]
-offset_left = -9.0
-offset_top = 420.0
-offset_right = 154.0
-offset_bottom = 510.0
-theme_override_font_sizes/font_size = 20
-text = "This game is hard! But it's doable :D"
-horizontal_alignment = 1
-autowrap_mode = 3

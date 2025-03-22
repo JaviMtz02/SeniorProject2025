@@ -44,6 +44,8 @@ doors=""
 burglar_camera=""
 coins=""
 deposit_doors=""
+time_adders=""
+mob_near=""
 
 [input]
 
@@ -119,6 +121,8 @@ open_minigame={
 2d_physics/layer_3="Loot_interaction"
 2d_physics/layer_4="MobCollisions"
 2d_physics/layer_5="Door_Detection"
+2d_physics/layer_6="MovableObjects"
+2d_physics/layer_7="DamageLayer"
 2d_physics/layer_8="MinigameLayer"
 
 [rendering]

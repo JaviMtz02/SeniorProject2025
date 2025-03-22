@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cgfoq7eo31ul3"]
+
+[node name="Pong" type="Node2D"]
+editor_description = "Burglar plays against bum, first to 5 wins. Classic pong game"

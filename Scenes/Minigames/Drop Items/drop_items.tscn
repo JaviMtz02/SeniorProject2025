@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://g5yhbbwfrtnb"]
+
+[node name="DropItems" type="Node2D"]
+editor_description = "Burglar is on top of a building. A moving bag is below, burglar must pick up items and drop them at the correct time for the bag to get them, if burglar drops more than 3 items game ends"

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cv6dotef4pmo" path="res://Scenes/Minigames/Door Game/monty_hall_door_game.tscn" id="2_r171b"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(100, 50)
 script = ExtResource("1_1lmdf")
 start_game = NodePath("Button")
 minigame_scene = ExtResource("2_r171b")

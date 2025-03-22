@@ -7,11 +7,14 @@ extends NodeState
 @export var min_speed = 25
 @export var max_speed = 35
 
+@onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
 var speed: float
 
 # This guard will shoot at the burglar and take away health
 
 func _ready() -> void:
+	for door in get_tree().get_nodes_in_group("doors"):
+		door.freeze.connect(_on_freeze_emitted)
 	call_deferred("character_setup")
 	nav_agent.velocity_computed.connect(on_safe_velocity_computed)
 
@@ -25,7 +28,13 @@ func set_moving_target() -> void:
 	speed = randf_range(min_speed, max_speed)
 	
 func _on_process(_delta: float) -> void:
-	pass
+	if green_guard.health <= 0:
+		transition.emit("Dead")
+		
+	if detector.is_colliding():
+		var collider = detector.get_collider()
+		if collider == burglar:
+			transition.emit("Attack")
 
 func _on_physics_process(_delta: float) -> void:
 	if nav_agent.is_navigation_finished():
@@ -86,4 +95,14 @@ func update_detector(direction: Vector2) -> void:
 	if direction.length() == 0:
 		return
 	direction = direction.normalized()
-	detector.target_position = direction * 75
+	detector.target_position = direction * 100
+
+func _on_freeze_emitted() -> void:
+	transition.emit("Frozen")
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("killzone"):
+		var damage_source = area.get_parent()
+		var damage_val = damage_source.damage
+		green_guard.take_damage(damage_val)
+		transition.emit("Hurt")

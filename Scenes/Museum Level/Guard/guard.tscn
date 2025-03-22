@@ -397,12 +397,11 @@ animations = [{
 radius = 5.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vet41"]
-radius = 6.0
+radius = 9.0
 height = 26.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ssxe"]
-radius = 8.0
-height = 26.0
+height = 28.0
 
 [node name="Guard" type="CharacterBody2D" node_paths=PackedStringArray("surprised_texture")]
 motion_mode = 1
@@ -411,20 +410,28 @@ script = ExtResource("1_qknjc")
 surprised_texture = NodePath("Exclamation")
 metadata/_edit_group_ = true
 
+[node name="RayCastContainer" type="Node2D" parent="."]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_ld6fn")
-animation = &"left_right"
+animation = &"hurt_left_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
 shape = SubResource("CircleShape2D_xvhgc")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+simplify_path = true
 avoidance_enabled = true
-radius = 5.0
+radius = 15.0
+neighbor_distance = 4231.34
+debug_enabled = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="VisionCone" type="Polygon2D" parent="."]
+color = Color(1, 0.945098, 0.823529, 0.631373)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("2_r16lg")
@@ -435,14 +442,15 @@ script = ExtResource("3_cfqwd")
 guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector", "vision_cone")]
 script = ExtResource("4_4xrdr")
 guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
+vision_cone = NodePath("../../VisionCone")
 
-[node name="FollowBurglar" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "detector", "nav_agent", "anim", "sound", "surprised_texture", "burglar_detection")]
+[node name="FollowBurglar" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "detector", "nav_agent", "anim", "sound", "surprised_texture", "burglar_detection", "vision_cone")]
 script = ExtResource("5_4tvxb")
 guard = NodePath("../..")
 detector = NodePath("../../RayCast2D")
@@ -451,6 +459,7 @@ anim = NodePath("../../AnimatedSprite2D")
 sound = NodePath("../../SFX/Surprised")
 surprised_texture = NodePath("../../Exclamation")
 burglar_detection = NodePath("../../BurglarDetection")
+vision_cone = NodePath("../../VisionCone")
 
 [node name="Frozen" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector")]
 script = ExtResource("6_5iej3")
@@ -484,14 +493,15 @@ position = Vector2(1, -20)
 texture = ExtResource("10_u6qbj")
 
 [node name="HitBox" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, 1)
+position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_vet41")
 
 [node name="BurglarDetection" type="Area2D" parent="." groups=["enemy_interaction"]]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BurglarDetection"]
-visible = false
+position = Vector2(1, -1)
 shape = SubResource("CapsuleShape2D_6ssxe")

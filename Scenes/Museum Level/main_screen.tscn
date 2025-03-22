@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://cibcwqgqqplrc"]
+
+[ext_resource type="Script" path="res://Scenes/Museum Level/Museum Scripts/main_screen.gd" id="1_ls4k8"]
+[ext_resource type="PackedScene" uid="uid://dq5geasf1p7i0" path="res://Scenes/Museum Level/enter_passcode.tscn" id="2_2s5rr"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="3_yxsay"]
+[ext_resource type="Texture2D" uid="uid://b8wm15g8d22dd" path="res://Assets/keypad.png" id="4_g2kta"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(429, 0)
+script = ExtResource("1_ls4k8")
+start_game = NodePath("Control/Button")
+minigame_scene = ExtResource("2_2s5rr")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -219.0
+offset_top = 83.0
+offset_right = 542.0
+offset_bottom = 678.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 103.0
+offset_right = 322.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("3_yxsay")
+theme_override_font_sizes/font_size = 64
+text = "Enter the Code"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -172.0
+offset_top = 186.0
+offset_right = 226.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 20
+text = "Can you guess the 6 digit code? You probably cant! Look for the Bum inside the museum. Beat him in a game to get the code to access this room! Remember, even if you beat him, he will stop at nothing to trick you! So make sure to enter the code in the correct order!"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 597.0
+offset_right = 225.0
+offset_bottom = 639.0
+theme_override_fonts/font = ExtResource("3_yxsay")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="HowToPlay" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -95.0
+offset_top = 431.0
+offset_right = 425.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 20
+text = "To Play simply click on the buttons to enter the code. The green button enters the code and the red one deletes what you've entered. Door opens when you enter the correct code.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(374.125, 296)
+scale = Vector2(0.201788, 0.22449)
+texture = ExtResource("4_g2kta")

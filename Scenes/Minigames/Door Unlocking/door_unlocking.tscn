@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cjynsj6wgi1rc"]
+
+[node name="DoorUnlocking" type="Node2D"]
+editor_description = "You are the player and a door is locked. Press the button at the right time for the door to unlock and win the game!"

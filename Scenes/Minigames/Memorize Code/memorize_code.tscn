@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cn8mhc52wsken"]
+
+[node name="MemorizeCode" type="Node2D"]
+editor_description = "A 4 Digit code is briefly shown, you must type it into the keypad correctly. No do-overs, you must not make a mistake while typing it"
