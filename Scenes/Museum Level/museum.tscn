@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://i50wkd86wgwi"]
+[gd_scene load_steps=87 format=4 uid="uid://i50wkd86wgwi"]
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
 [ext_resource type="Script" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
@@ -63,6 +63,7 @@
 [ext_resource type="PackedScene" uid="uid://cu215lf7exnsv" path="res://Scenes/Museum Level/Loot Scenes/art_2.tscn" id="58_tsuaq"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="59_ikusx"]
 [ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="63_2355q"]
+[ext_resource type="PackedScene" uid="uid://bhvlwud37s80y" path="res://Scenes/multitarget_camera.tscn" id="63_n8kpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysar5"]
 texture = ExtResource("1_a1que")
@@ -10508,6 +10509,9 @@ position = Vector2(-921, 69)
 [node name="Door" parent="." instance=ExtResource("15_tt1tv")]
 position = Vector2(-238, 611)
 scale = Vector2(5, 1)
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("targets_parent_node") instance=ExtResource("63_n8kpi")]
+targets_parent_node = NodePath("../Players")
 
 [node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("63_2355q")]
 position = Vector2(-239, 590)

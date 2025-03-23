@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=4 uid="uid://f1i8qyoj157k"]
+[gd_scene load_steps=74 format=4 uid="uid://f1i8qyoj157k"]
 
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="1_grgwg"]
 [ext_resource type="Script" path="res://Scenes/Lab Level/lab.gd" id="1_jvsnw"]
@@ -45,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://cglrds5ieh6i" path="res://Scenes/Museum Level/Loot Scenes/frog_2.tscn" id="41_yndoa"]
 [ext_resource type="PackedScene" uid="uid://lwrvkckh5b75" path="res://Scenes/Museum Level/Loot Scenes/antique_3.tscn" id="42_kvvin"]
 [ext_resource type="PackedScene" uid="uid://cju68344motmd" path="res://Scenes/Museum Level/Loot Scenes/antique_5.tscn" id="43_l7q7v"]
+[ext_resource type="PackedScene" uid="uid://bhvlwud37s80y" path="res://Scenes/multitarget_camera.tscn" id="46_f57g5"]
 [ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="46_js8yq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpxap"]
@@ -9393,6 +9394,9 @@ collision_mask = 4
 z_index = 1
 position = Vector2(12, 290)
 scale = Vector2(2, 1)
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("targets_parent_node") instance=ExtResource("46_f57g5")]
+targets_parent_node = NodePath("../Players")
 
 [node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("46_js8yq")]
 position = Vector2(8, 269)

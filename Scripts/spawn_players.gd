@@ -1,5 +1,7 @@
 extends Node2D
 
+signal players_are_spawned
+
 @export var door: Area2D
 
 # map from player integer to the player node
@@ -8,6 +10,7 @@ var player_nodes = {}
 func _ready():
 	for player in PlayerManager.player_data:
 		spawn_player(player)
+	players_are_spawned.emit()
 
 func spawn_player(player: int):
 	# create the player node
