@@ -9543,7 +9543,7 @@ position = Vector2(-183, -607)
 navigation_polygon = SubResource("NavigationPolygon_51a5m")
 
 [node name="RedGuard2" parent="Red Guard/MainArea" instance=ExtResource("14_pybaw")]
-position = Vector2(10, -276)
+position = Vector2(9, -399)
 
 [node name="RedGuard3" parent="Red Guard/MainArea" instance=ExtResource("14_pybaw")]
 position = Vector2(2, -607)
@@ -9623,9 +9623,6 @@ position = Vector2(300, -70)
 
 [node name="Green Guard2" parent="Green Guard/HallwayArea" instance=ExtResource("16_3p2fa")]
 position = Vector2(957, -72)
-
-[node name="Green Guard3" parent="Green Guard/HallwayArea" instance=ExtResource("16_3p2fa")]
-position = Vector2(582, -75)
 
 [node name="Guard" type="Node" parent="."]
 
@@ -9759,12 +9756,12 @@ position = Vector2(-369, 123)
 toggled_door = NodePath("../../ToggableDoors/RedToBlue")
 
 [node name="RedToBlueDoor" parent="MinigameDoors" node_paths=PackedStringArray("toggled_door") instance=ExtResource("50_0nvk7")]
-position = Vector2(27, -194)
+position = Vector2(9, -194)
 scale = Vector2(1.24228, 0.986891)
 toggled_door = NodePath("../../ToggableDoors/BlueToRedToggleDoor")
 
 [node name="RedToGreenDoor" parent="MinigameDoors" node_paths=PackedStringArray("toggled_door") instance=ExtResource("51_8av67")]
-position = Vector2(181, -817)
+position = Vector2(153, -819)
 scale = Vector2(1.23017, 1.02722)
 toggled_door = NodePath("../../ToggableDoors/GreenToRed")
 
@@ -9777,7 +9774,7 @@ position = Vector2(156, -482)
 scale = Vector2(0.837759, 1.00208)
 
 [node name="LabDoor4" parent="MinigameDoors" instance=ExtResource("48_p4y8h")]
-position = Vector2(561, -785)
+position = Vector2(524, -786)
 scale = Vector2(0.830327, 1.00877)
 
 [node name="ToggableDoors" type="Node" parent="."]
@@ -9791,7 +9788,7 @@ position = Vector2(-396, 574)
 scale = Vector2(1, 1.62233)
 
 [node name="GreenToRed" parent="ToggableDoors" instance=ExtResource("54_10iag")]
-position = Vector2(1017, 8)
+position = Vector2(1017, -66)
 scale = Vector2(0.926012, 1.62456)
 
 [node name="Door" parent="." instance=ExtResource("15_txdqp")]
@@ -9801,7 +9798,7 @@ scale = Vector2(2, 1)
 
 [node name="Burglar" parent="." instance=ExtResource("13_jjmv2")]
 z_index = 1
-position = Vector2(536, -720)
+position = Vector2(7, 257)
 
 [node name="ShadowEffect" type="ColorRect" parent="."]
 z_index = 1
