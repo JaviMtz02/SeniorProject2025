@@ -17,7 +17,7 @@ func _ready() -> void:
 	for i in range(patterns.size()):
 		var coin = coin_pattern.instantiate()
 		coin.set_pattern(patterns[i])
-		coin.position = Vector2((i % 4) * 100, (i / 4) * 100)
+		coin.position = Vector2((i % 4) * 150, (i / 4) * 150)
 		game_manager.add_coin(coin)
 		add_child(coin)
 
@@ -34,7 +34,8 @@ func check_match(coin):
 		if coin1.card_pattern == coin2.card_pattern:
 			curr_matches += 1
 			if curr_matches == patterns.size() / 2:
-				game_won.emit() # add something here!
+				game_won.emit()
+				queue_free()
 			
 		else:
 			attempts -= 1
@@ -42,7 +43,8 @@ func check_match(coin):
 			coin1.reset()
 			coin2.reset()
 			if attempts == 0:
-				game_lost.emit() # add something here for losing the game
+				game_lost.emit()
+				queue_free()
 			
 		flipped_coins.clear()
 	attempts_label.text = "Attempts\nLeft: " + str(attempts)

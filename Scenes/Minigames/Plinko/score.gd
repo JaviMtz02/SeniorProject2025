@@ -1,8 +1,8 @@
 extends Area2D
 
 @export var score: int = 0 
-
 signal add_points(score: Area2D)
+@warning_ignore("unused_signal")
 
 func _ready() -> void:
 	connect("body_entered", Callable(self, "_on_body_entered"))

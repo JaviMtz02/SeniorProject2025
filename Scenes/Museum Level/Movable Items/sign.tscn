@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp5hmrvrnhus6"]
+
+[ext_resource type="Texture2D" uid="uid://dlgbv4no6hw5v" path="res://Assets/Sprites/Items/movable_wip.png" id="1_nwa3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_id411"]
+size = Vector2(30, 20)
+
+[node name="Sign" type="RigidBody2D"]
+collision_layer = 32
+gravity_scale = 0.0
+linear_damp = 3.0
+angular_damp = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nwa3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_id411")

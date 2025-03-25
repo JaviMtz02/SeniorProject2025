@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://bimihbio16anv"]
+
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_hrfhh"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_o55gq"]
+[ext_resource type="Texture2D" uid="uid://bcgeqy083ejpk" path="res://Assets/Sprites/Minigame Sprites/Maze Game/maze_game.png" id="2_fsr5k"]
+[ext_resource type="PackedScene" uid="uid://cbbqgfutbsrg1" path="res://Scenes/Minigames/Maze Game/maze_game.tscn" id="2_qpwhj"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(125, 125)
+script = ExtResource("1_hrfhh")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_qpwhj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 44.0
+offset_top = -5.0
+offset_right = 860.0
+offset_bottom = 544.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 282.0
+offset_top = 27.0
+offset_right = 631.0
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("1_o55gq")
+theme_override_font_sizes/font_size = 64
+text = "Escape the Lab"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 129.0
+offset_top = 93.0
+offset_right = 453.0
+offset_bottom = 307.0
+theme_override_font_sizes/font_size = 20
+text = "A loose creepy creation is currently chasing you around your lab! This creation can pass through walls and is determined to get you! Can you reach the portal orb inside the lab before it catches you?"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 129.0
+offset_top = 341.0
+offset_right = 768.0
+offset_bottom = 493.0
+theme_override_font_sizes/font_size = 20
+text = "Move around with WASD or arrow keys. Find the portal orb in the lab before the creepy creation catches you. Game ends when you reach the orb or you get caught.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(618.875, 216.5)
+scale = Vector2(0.208655, 0.239308)
+texture = ExtResource("2_fsr5k")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 475.0
+offset_right = 505.0
+offset_bottom = 517.0
+theme_override_fonts/font = ExtResource("1_o55gq")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(453, 271)
+zoom = Vector2(1.5, 1.5)

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://drvfhfd0x1tm7"]
+
+[ext_resource type="Texture2D" uid="uid://h6mqngmovu2o" path="res://Assets/Sprites/Loot Sprites/House Loot/vase.png" id="1_cew2i"]
+[ext_resource type="Script" uid="uid://cdk8giggyttfq" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_g676p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3y4aw"]
+radius = 22.2036
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rhl7q"]
+radius = 26.4764
+
+[node name="Item5" type="RigidBody2D" node_paths=PackedStringArray("item", "pickup_area") groups=["blocks"]]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_g676p")
+item = NodePath(".")
+pickup_area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_cew2i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -7)
+shape = SubResource("CircleShape2D_3y4aw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5, -7)
+shape = SubResource("CircleShape2D_rhl7q")

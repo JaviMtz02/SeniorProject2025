@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5x14yqg4be5w"]
 
 [ext_resource type="Texture2D" uid="uid://c42ysesdulons" path="res://Assets/Sprites/Loot Sprites/House Loot/artifact.png" id="1_ntwjb"]
-[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_wttcu"]
+[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_wttcu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2386"]
 size = Vector2(26, 26)

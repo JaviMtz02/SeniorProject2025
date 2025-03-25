@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4oby0peepha0"]
+
+[ext_resource type="Script" uid="uid://dmtwsqe2jutvb" path="res://Scenes/Museum Level/Movable Items/movable_loot.gd" id="1_i7baf"]
+[ext_resource type="Texture2D" uid="uid://bw3rrhw7m2xmp" path="res://Assets/Sprites/Items/drawer_base.png" id="2_g8cpi"]
+[ext_resource type="Texture2D" uid="uid://cphc2xfucapin" path="res://Assets/Sprites/Items/drawer_top.png" id="3_poefi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icevf"]
+size = Vector2(27, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dewr"]
+size = Vector2(32, 49)
+
+[node name="Drawer" type="RigidBody2D"]
+gravity_scale = 0.0
+linear_velocity = Vector2(5.5, 0)
+linear_damp = 5.5
+angular_damp = 5.5
+script = ExtResource("1_i7baf")
+value = 25
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_g8cpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 6)
+shape = SubResource("RectangleShape2D_icevf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_4dewr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-1, -8)
+texture = ExtResource("3_poefi")

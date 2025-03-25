@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxjiy2rui6gky"]
+
+[ext_resource type="Script" uid="uid://dnitr6quugy0i" path="res://Scenes/Minigames/Throw Items/item.gd" id="1_hb6tn"]
+[ext_resource type="Texture2D" uid="uid://ltxld305xmx5" path="res://Assets/Sprites/Loot Sprites/Museum Loot/antique3.png" id="2_t1ds3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trl7e"]
+size = Vector2(21, 48)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_046f4"]
+radius = 16.0
+height = 54.0
+
+[node name="Item" type="RigidBody2D" node_paths=PackedStringArray("bag_detection")]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_hb6tn")
+bag_detection = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_t1ds3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -6)
+shape = SubResource("RectangleShape2D_trl7e")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8, -7)
+shape = SubResource("CapsuleShape2D_046f4")

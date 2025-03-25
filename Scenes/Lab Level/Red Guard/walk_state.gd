@@ -6,12 +6,17 @@ extends NodeState
 @export var detector: RayCast2D
 @export var min_speed = 20
 @export var max_speed = 30
+@export var emote: Sprite2D
+
+@onready var burglar = get_tree().get_first_node_in_group("Burglar")
 
 var speed: float
 
 # This guard should have a lot of hitpoints, will be added later, if he catches you he should do a lot of damage
 
 func _ready() -> void:
+	for door in get_tree().get_nodes_in_group("doors"):
+		door.freeze.connect(_on_freeze_emitted)
 	call_deferred("character_setup")
 	nav_agent.velocity_computed.connect(on_safe_velocity_computed)
 
@@ -25,7 +30,13 @@ func set_moving_target() -> void:
 	speed = randf_range(min_speed, max_speed)
 	
 func _on_process(_delta: float) -> void:
-	pass
+	if red_guard.health <= 0:
+		transition.emit("Dead")
+		
+	if detector.is_colliding():
+		var collider = detector.get_collider()
+		if collider == burglar:
+			transition.emit("FollowBurglar")
 
 func _on_physics_process(_delta: float) -> void:
 	if nav_agent.is_navigation_finished():
@@ -37,7 +48,6 @@ func _on_physics_process(_delta: float) -> void:
 	var velocity: Vector2 = target_direction * speed
 	update_animation(target_direction)
 	update_detector(target_direction)
-	
 	
 	if nav_agent.avoidance_enabled:
 		nav_agent.velocity = velocity
@@ -87,3 +97,18 @@ func update_detector(direction: Vector2) -> void:
 		return
 	direction = direction.normalized()
 	detector.target_position = direction * 75
+	detector.force_raycast_update()
+
+
+func _on_freeze_emitted() -> void:
+	transition.emit("Frozen")
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("killzone"):
+		var damage_source = area.get_parent()
+		var damage_val = damage_source.damage
+		red_guard.take_damage(damage_val)
+		emote.show()
+		max_speed += 3
+		# add some sound here with an await, after that the emote goes away
+		emote.hide()

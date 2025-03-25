@@ -1,14 +1,17 @@
-[gd_scene load_steps=32 format=3 uid="uid://sdns7q1mfc6t"]
+[gd_scene load_steps=40 format=3 uid="uid://sdns7q1mfc6t"]
 
+[ext_resource type="Script" uid="uid://b3f5g33678lyn" path="res://Scenes/House Level/Dog/dog.gd" id="1_a8i3j"]
 [ext_resource type="Texture2D" uid="uid://r4dmsd5wykkm" path="res://Assets/Sprites/animals/1 Dog/Death.png" id="2_7lm3c"]
 [ext_resource type="Texture2D" uid="uid://bq80qwvus62wc" path="res://Assets/Sprites/animals/1 Dog/Attack.png" id="3_hhmpc"]
 [ext_resource type="Texture2D" uid="uid://cbne8awjvvy01" path="res://Assets/Sprites/animals/1 Dog/Hurt.png" id="4_pqt0o"]
 [ext_resource type="Texture2D" uid="uid://c210sh51qtimu" path="res://Assets/Sprites/animals/1 Dog/Idle.png" id="5_d4dmd"]
 [ext_resource type="Texture2D" uid="uid://7akku86tit8h" path="res://Assets/Sprites/animals/1 Dog/Walk.png" id="6_se4hr"]
-[ext_resource type="Script" path="res://Scripts/node_state_machine.gd" id="7_w7wig"]
-[ext_resource type="Script" path="res://Scenes/House Level/Dog/walk_state.gd" id="8_e48on"]
-[ext_resource type="Script" path="res://Scenes/House Level/Dog/idle_state.gd" id="8_u5xtk"]
-[ext_resource type="Script" path="res://Scenes/House Level/Dog/bark_state.gd" id="9_0d7xg"]
+[ext_resource type="Script" uid="uid://bxcigjd04gmd7" path="res://Scripts/node_state_machine.gd" id="7_w7wig"]
+[ext_resource type="Script" uid="uid://cm7o1cy7qtiem" path="res://Scenes/House Level/Dog/walk_state.gd" id="8_e48on"]
+[ext_resource type="Script" uid="uid://dptvtkv44n1ds" path="res://Scenes/House Level/Dog/idle_state.gd" id="8_u5xtk"]
+[ext_resource type="Script" uid="uid://cd8nsiytjel03" path="res://Scenes/House Level/Dog/bark_state.gd" id="9_0d7xg"]
+[ext_resource type="Script" uid="uid://bb4ycxair3hv1" path="res://Scenes/House Level/Dog/hurt_state.gd" id="10_brke5"]
+[ext_resource type="Script" uid="uid://c5e331uwfa1tr" path="res://Scenes/House Level/Dog/dead_state.gd" id="12_2v3e8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33wmv"]
 atlas = ExtResource("3_hhmpc")
@@ -24,6 +27,22 @@ region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tqh02"]
 atlas = ExtResource("3_hhmpc")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liocc"]
+atlas = ExtResource("2_7lm3c")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bi3r"]
+atlas = ExtResource("2_7lm3c")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cguo"]
+atlas = ExtResource("2_7lm3c")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aems"]
+atlas = ExtResource("2_7lm3c")
 region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5av4y"]
@@ -111,6 +130,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_liocc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bi3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cguo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aems")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5av4y")
 }, {
 "duration": 1.0,
@@ -118,7 +154,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hurt",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -181,18 +217,25 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_di87t"]
 size = Vector2(17, 6.5)
 
-[node name="Dog" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12coq"]
+
+[node name="Dog" type="CharacterBody2D" groups=["enemy_interaction"]]
 z_index = 1
 position = Vector2(6, -11)
 scale = Vector2(0.8, 0.8)
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_a8i3j")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3.5, 3.5)
 scale = Vector2(0.854167, 0.854167)
 sprite_frames = SubResource("SpriteFrames_6fd0c")
-animation = &"walk"
+animation = &"dead"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 13)
@@ -227,6 +270,31 @@ anim_sprite = NodePath("../../AnimatedSprite2D")
 nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
 
+[node name="Hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("dog", "anim_sprite", "detector", "nav_agent")]
+script = ExtResource("10_brke5")
+dog = NodePath("../..")
+anim_sprite = NodePath("../../AnimatedSprite2D")
+detector = NodePath("../../RayCast2D")
+nav_agent = NodePath("../../NavigationAgent2D")
+
+[node name="Dead" type="Node" parent="StateMachine" node_paths=PackedStringArray("dog", "anim_sprite", "nav_agent", "detector")]
+script = ExtResource("12_2v3e8")
+dog = NodePath("../..")
+anim_sprite = NodePath("../../AnimatedSprite2D")
+nav_agent = NodePath("../../NavigationAgent2D")
+detector = NodePath("../../RayCast2D")
+
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(-1.25, 12.5)
 target_position = Vector2(56.25, 1.25)
+
+[node name="HitBox" type="Area2D" parent="." groups=["enemy_interaction"]]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(3.75, 11.25)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_12coq")
+
+[node name="SFX" type="Node" parent="."]

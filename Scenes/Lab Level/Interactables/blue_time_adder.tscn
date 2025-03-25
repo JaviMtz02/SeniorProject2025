@@ -1,0 +1,161 @@
+[gd_scene load_steps=22 format=3 uid="uid://dd6r4g7hmikqn"]
+
+[ext_resource type="Texture2D" uid="uid://b5h2syfpqetk0" path="res://Assets/Sprites/Items/blue_time_adder.png" id="1_br7a7"]
+[ext_resource type="Script" uid="uid://brreyhxf8gjdw" path="res://Scenes/Lab Level/Lab Scripts/blue_time_adder.gd" id="1_jf0nq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i17fl"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(210, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r78lh"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(0, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebi7f"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(30, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frymk"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(60, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45y6s"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(90, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn1fu"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(120, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqckr"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(150, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yceit"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(180, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1la8"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(210, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmika"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(210, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2oa2d"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(180, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i47dp"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(150, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1d6t"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(120, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggb0g"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(90, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym7ub"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(60, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6wbd"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(30, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfuj8"]
+atlas = ExtResource("1_br7a7")
+region = Rect2(0, 0, 30, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dprgm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i17fl")
+}],
+"loop": true,
+"name": &"ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r78lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebi7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frymk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45y6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn1fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqckr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yceit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1la8")
+}],
+"loop": false,
+"name": &"recharge",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmika")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2oa2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i47dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1d6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggb0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym7ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6wbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfuj8")
+}],
+"loop": false,
+"name": &"shut_down",
+"speed": 11.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_45hdr"]
+radius = 12.0
+
+[node name="BlueTimeAdder" type="Area2D" node_paths=PackedStringArray("anim") groups=["time_adders"]]
+script = ExtResource("1_jf0nq")
+anim = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dprgm")
+animation = &"ready"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_45hdr")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

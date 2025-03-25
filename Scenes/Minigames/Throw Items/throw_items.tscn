@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxs7u6wl8wsgg"]
+
+[ext_resource type="PackedScene" uid="uid://mrgqiamb7fr8" path="res://Scenes/Minigames/Throw Items/thrower.tscn" id="1_g2fe7"]
+[ext_resource type="Script" uid="uid://nuitfytgcwdh" path="res://Scenes/Minigames/Throw Items/throw_items.gd" id="1_imtbi"]
+[ext_resource type="PackedScene" uid="uid://lt6i5pbat1gk" path="res://Scenes/Minigames/Throw Items/bag.tscn" id="2_q3pmo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o0f24"]
+distance = -371.0
+
+[node name="ThrowItems" type="Node2D"]
+editor_description = "Burglar must choose the right angle and strenght to throw an item into a bag. After every turn, bag moves to a new location horizontally. Cannot miss more than 3 items"
+script = ExtResource("1_imtbi")
+
+[node name="Thrower" parent="." instance=ExtResource("1_g2fe7")]
+position = Vector2(152, 601)
+
+[node name="BurglarReactions" type="AnimatedSprite2D" parent="."]
+
+[node name="Bag" parent="." instance=ExtResource("2_q3pmo")]
+position = Vector2(1018, 590)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["killzone"]]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(566, 380)
+shape = SubResource("WorldBoundaryShape2D_o0f24")

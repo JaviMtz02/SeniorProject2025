@@ -1,0 +1,36 @@
+[gd_scene load_steps=13 format=3 uid="uid://b7b2jtmvha80x"]
+
+[ext_resource type="Texture2D" uid="uid://rnm3rxrkx8nq" path="res://Assets/Sprites/Items/door_top_red_to_blue.png" id="1_uu5bd"]
+[ext_resource type="Script" uid="uid://cxh203xxvjvpb" path="res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd" id="1_uxatp"]
+[ext_resource type="PackedScene" uid="uid://dxkwahqljg2t1" path="res://Scenes/Minigames/Checker Game/main_screen.tscn" id="2_f3pm3"]
+[ext_resource type="PackedScene" uid="uid://cxhxw6hayka2q" path="res://Scenes/Minigames/Coin Matching/main_screen.tscn" id="3_pcoa6"]
+[ext_resource type="PackedScene" uid="uid://c8tuiccs8pmtu" path="res://Scenes/Minigames/Door Game/main_screen.tscn" id="4_y05j3"]
+[ext_resource type="PackedScene" uid="uid://br6l26bgk4a3y" path="res://Scenes/Minigames/Lab Attack/main_screen.tscn" id="5_v6p8q"]
+[ext_resource type="PackedScene" uid="uid://bimihbio16anv" path="res://Scenes/Minigames/Maze Game/main_screen.tscn" id="6_eg0vi"]
+[ext_resource type="PackedScene" uid="uid://bhydsxh27v0ug" path="res://Scenes/Minigames/Plinko/main_screen.tscn" id="7_eil0k"]
+[ext_resource type="PackedScene" uid="uid://de5pk7rj0682j" path="res://Scenes/Minigames/Stacking Blocks/main_screen.tscn" id="8_tn2jf"]
+[ext_resource type="PackedScene" uid="uid://dllpfcjatqqry" path="res://Scenes/Minigames/tic_tac_toe/main_screen.tscn" id="9_iskjx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n01l0"]
+size = Vector2(39, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lj3cv"]
+size = Vector2(39, 42)
+
+[node name="RedToBlueDoor" type="StaticBody2D" node_paths=PackedStringArray("door_area") groups=["doors"]]
+script = ExtResource("1_uxatp")
+minigames = Array[PackedScene]([ExtResource("2_f3pm3"), ExtResource("3_pcoa6"), ExtResource("4_y05j3"), ExtResource("5_v6p8q"), ExtResource("6_eg0vi"), ExtResource("7_eil0k"), ExtResource("8_tn2jf"), ExtResource("9_iskjx")])
+door_area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uu5bd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -12.5)
+shape = SubResource("RectangleShape2D_n01l0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -3)
+shape = SubResource("RectangleShape2D_lj3cv")

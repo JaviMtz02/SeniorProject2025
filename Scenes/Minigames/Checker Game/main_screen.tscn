@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxkwahqljg2t1"]
+
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_s8b5m"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_uqnip"]
+[ext_resource type="PackedScene" uid="uid://cj73o4fonmdn2" path="res://Scenes/Minigames/Checker Game/checker_flip.tscn" id="2_ivpc8"]
+[ext_resource type="Texture2D" uid="uid://btmpvpad5ltr4" path="res://Assets/Sprites/Minigame Sprites/Checker Game/checker_flip.png" id="2_os6b0"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(374, 210)
+script = ExtResource("1_s8b5m")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_ivpc8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -109.0
+offset_top = -16.0
+offset_right = 550.0
+offset_bottom = 436.0
+color = Color(0.027451, 0, 0.129412, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_uqnip")
+theme_override_font_sizes/font_size = 64
+text = "Flip the Checkers"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -18.0
+offset_top = 64.0
+offset_right = 244.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 20
+text = "Flip all checkers over to their black side! Each checker will flip one or two other checkers over. Can you solve this puzzle?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = -17.0
+offset_top = 221.0
+offset_right = 447.0
+offset_bottom = 297.0
+theme_override_font_sizes/font_size = 20
+text = "Click on a checker to flip it to see what checkers are affected. The game ends once all checkers are flipped to their black side.
+Press 'Start' whenever you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(362, 137)
+scale = Vector2(0.119777, 0.148683)
+texture = ExtResource("2_os6b0")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 157.0
+offset_top = 362.0
+offset_right = 286.0
+offset_bottom = 404.0
+theme_override_fonts/font = ExtResource("1_uqnip")
+theme_override_font_sizes/font_size = 32
+text = "START"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(215, 210)
+zoom = Vector2(1.8, 1.8)

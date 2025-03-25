@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn2xmxdchbu0h"]
+
+[ext_resource type="Texture2D" uid="uid://76clbsyi25bm" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase4.png" id="1_ikob8"]
+[ext_resource type="Script" uid="uid://cdk8giggyttfq" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_yehm6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bf1s0"]
+radius = 12.0
+height = 50.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxg2a"]
+radius = 18.0
+height = 50.0
+
+[node name="Item2" type="RigidBody2D" node_paths=PackedStringArray("item", "pickup_area") groups=["blocks"]]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_yehm6")
+item = NodePath(".")
+pickup_area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_ikob8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_bf1s0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_gxg2a")

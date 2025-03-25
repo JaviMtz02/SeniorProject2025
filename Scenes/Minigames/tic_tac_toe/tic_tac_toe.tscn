@@ -1,12 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://hftuyg5t2xrx"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/tic_tac_toe/handler.gd" id="1_mt842"]
+[ext_resource type="Script" uid="uid://dbecribl5sya4" path="res://Scenes/Minigames/tic_tac_toe/handler.gd" id="1_mt842"]
 [ext_resource type="PackedScene" uid="uid://skvaaoqiuaj7" path="res://Scenes/Minigames/tic_tac_toe/button.tscn" id="2_w5r2a"]
 
 [node name="tic_tac_toe" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_mt842")
 ai_accuracy = 0.75
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1190.0
+offset_bottom = 836.0
+color = Color(0.10748, 0.10748, 0.10748, 1)
 
 [node name="Cells" type="GridContainer" parent="."]
 offset_left = 568.0

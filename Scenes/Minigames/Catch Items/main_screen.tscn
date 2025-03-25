@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://bks7qnyb4tear"]
+
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_ulhwb"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_y2n3o"]
+[ext_resource type="Texture2D" uid="uid://ddrxqdogb0klo" path="res://Assets/Sprites/Minigame Sprites/Catch Items/catchitems.png" id="2_fkh6m"]
+[ext_resource type="PackedScene" uid="uid://dncegkb073c1d" path="res://Scenes/Minigames/Catch Items/catch_items.tscn" id="2_s27sh"]
+[ext_resource type="Texture2D" uid="uid://c2nwjg08xw2qq" path="res://Assets/Sprites/Minigame Sprites/Catch Items/bum.png" id="3_hcf2t"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+position = Vector2(429, 391)
+script = ExtResource("1_ulhwb")
+start_game = NodePath("Control/Button")
+minigame_scene = ExtResource("2_s27sh")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -77.0
+offset_top = -179.0
+offset_right = 434.0
+offset_bottom = 178.0
+color = Color(0.0271681, 2.08948e-05, 0.129179, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -169.0
+offset_right = 350.0
+offset_bottom = -103.0
+theme_override_fonts/font = ExtResource("1_y2n3o")
+theme_override_font_sizes/font_size = 64
+text = "Catch The Items"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -103.0
+offset_right = 222.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 20
+text = "Catch the falling items the bum is throwing! Don't let more than 5 items fall or else you'll lose the game!"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 112.0
+offset_right = 242.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("1_y2n3o")
+theme_override_font_sizes/font_size = 32
+text = "START"
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HowToPlay" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 33.0
+offset_right = 378.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 20
+text = "Slide your mouse to catch the Items
+Press 'Start' when you're ready to begin."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GameTexture" type="Sprite2D" parent="."]
+position = Vector2(318, -36)
+scale = Vector2(0.158775, 0.172208)
+texture = ExtResource("2_fkh6m")
+
+[node name="BumTexture" type="Sprite2D" parent="."]
+position = Vector2(318, -28)
+scale = Vector2(1.90625, 2.0625)
+texture = ExtResource("3_hcf2t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(179, -1)
+zoom = Vector2(2.25, 2.25)

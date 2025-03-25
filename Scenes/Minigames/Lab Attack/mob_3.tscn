@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://rpubrgqkv3f4"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/mob_3.gd" id="1_uomvs"]
-[ext_resource type="Texture2D" uid="uid://cpiw1jkudwr4g" path="res://Assets/Sprites/Minigame Sprites/mask2.png" id="1_y3r7d"]
+[ext_resource type="Script" uid="uid://c1kipa7rp5k24" path="res://Scenes/Minigames/Lab Attack/mob_3.gd" id="1_uomvs"]
+[ext_resource type="Texture2D" uid="uid://cpiw1jkudwr4g" path="res://Assets/Sprites/Minigame Sprites/Lab Attack/mask2.png" id="1_y3r7d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2bsxi"]
 radius = 9.0

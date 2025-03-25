@@ -10,6 +10,8 @@ var ball_index: int = 0
 var shuffling: bool = true
 var vases = []
 
+signal game_won
+signal game_lost
 func _ready():
 	anim_player.play("RESET")
 	vases = vase_container.get_children()
@@ -24,7 +26,7 @@ func start_game() -> void:
 	var chosen_vase = vases.pick_random()
 	var target_pos = chosen_vase.global_position
 	ball_index = vases.find(chosen_vase)
-	ball.position = target_pos - Vector2(0, 20)
+	ball.position = target_pos - Vector2(0, 250)
 	
 	tween = create_tween()
 	tween.tween_property(ball, "global_position", target_pos, 0.8).set_trans(Tween.TRANS_QUAD)
@@ -47,11 +49,13 @@ func reveal_cup(index) -> void:
 	shuffling = true
 	var vase = vases[index]
 	tween = create_tween()
-	tween.tween_property(vase, "position", vase.position + Vector2(0, 10), 0.5)
+	tween.tween_property(vase, "position", vase.position + Vector2(0, 40), 0.5)
 	await tween.finished
 	ball.visible = true
 	
 	if index == ball_index:
-		print("you Won")
+		game_won.emit()
+		queue_free()
 	else:
-		print("you lost!")
+		game_lost.emit()
+		queue_free()

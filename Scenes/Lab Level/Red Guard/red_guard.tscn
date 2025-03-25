@@ -1,9 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://bxwr7q0mpyrrw"]
+[gd_scene load_steps=36 format=3 uid="uid://bxwr7q0mpyrrw"]
 
 [ext_resource type="Texture2D" uid="uid://cj6s3lqpdatx7" path="res://Assets/Sprites/Characters/Red_Lab_Guard.png" id="1_aejxo"]
-[ext_resource type="Script" path="res://Scripts/node_state_machine.gd" id="2_yl0la"]
-[ext_resource type="Script" path="res://Scenes/Lab Level/Red Guard/idle_state.gd" id="3_64eu3"]
-[ext_resource type="Script" path="res://Scenes/Lab Level/Red Guard/walk_state.gd" id="4_dehnw"]
+[ext_resource type="Script" uid="uid://21jyyckaup6j" path="res://Scenes/Lab Level/Red Guard/red_guard.gd" id="1_xvphh"]
+[ext_resource type="Script" uid="uid://bxcigjd04gmd7" path="res://Scripts/node_state_machine.gd" id="2_yl0la"]
+[ext_resource type="Script" uid="uid://c8jnethwxfm0m" path="res://Scenes/Lab Level/Red Guard/idle_state.gd" id="3_64eu3"]
+[ext_resource type="Texture2D" uid="uid://bfb7gwas3jv31" path="res://Assets/Sprites/Characters/Red_Lab_Guard_dead.png" id="3_mbios"]
+[ext_resource type="Script" uid="uid://bugsi7f0yeumx" path="res://Scenes/Lab Level/Red Guard/walk_state.gd" id="4_dehnw"]
+[ext_resource type="Script" uid="uid://8xssalf862wa" path="res://Scenes/Lab Level/Red Guard/frozen_state.gd" id="5_odeq3"]
+[ext_resource type="Script" uid="uid://d4ctiiaw8p7hx" path="res://Scenes/Lab Level/Red Guard/follow_burglar_state.gd" id="6_xg3yt"]
+[ext_resource type="Script" uid="uid://baukx5s33l22h" path="res://Scenes/Lab Level/Red Guard/dead_state.gd" id="8_1qavp"]
+[ext_resource type="Texture2D" uid="uid://kawayol40m2s" path="res://Assets/Sprites/UI/knife.png" id="8_dvggu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fiujg"]
 atlas = ExtResource("1_aejxo")
@@ -16,6 +22,58 @@ region = Rect2(60, 0, 20, 26)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dr83y"]
 atlas = ExtResource("1_aejxo")
 region = Rect2(80, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lk78"]
+atlas = ExtResource("3_mbios")
+region = Rect2(0, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggk01"]
+atlas = ExtResource("3_mbios")
+region = Rect2(20, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue6p4"]
+atlas = ExtResource("3_mbios")
+region = Rect2(40, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7431"]
+atlas = ExtResource("3_mbios")
+region = Rect2(60, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdin1"]
+atlas = ExtResource("3_mbios")
+region = Rect2(80, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsqeq"]
+atlas = ExtResource("3_mbios")
+region = Rect2(100, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yatfg"]
+atlas = ExtResource("3_mbios")
+region = Rect2(120, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lyyb"]
+atlas = ExtResource("3_mbios")
+region = Rect2(140, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8xop"]
+atlas = ExtResource("3_mbios")
+region = Rect2(160, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr6vv"]
+atlas = ExtResource("3_mbios")
+region = Rect2(180, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g0pi"]
+atlas = ExtResource("3_mbios")
+region = Rect2(200, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us8g3"]
+atlas = ExtResource("3_mbios")
+region = Rect2(220, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffwe5"]
+atlas = ExtResource("3_mbios")
+region = Rect2(240, 0, 20, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1s1x"]
 atlas = ExtResource("1_aejxo")
@@ -55,6 +113,50 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8lk78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggk01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue6p4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7431")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdin1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsqeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yatfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lyyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8xop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr6vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g0pi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_us8g3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffwe5")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_x1s1x")
 }, {
 "duration": 1.0,
@@ -82,33 +184,90 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_p2si2"]
 radius = 5.0
 
-[node name="RedGuard" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wew4b"]
+size = Vector2(22, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx86t"]
+size = Vector2(20, 23)
+
+[node name="RedGuard" type="CharacterBody2D" node_paths=PackedStringArray("emote") groups=["mob_near"]]
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_xvphh")
+emote = NodePath("AngryEmote")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aws62")
-animation = &"forward"
+animation = &"dead"
+frame = 12
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_p2si2")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+simplify_path = true
 avoidance_enabled = true
+radius = 20.0
+debug_enabled = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="BurglarDetection" type="Area2D" parent="." groups=["mob_near"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BurglarDetection"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_wew4b")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("2_yl0la")
 initial_node_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("red_guard", "anim")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("red_guard", "anim", "emote")]
 script = ExtResource("3_64eu3")
 red_guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
+emote = NodePath("../../AngryEmote")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("red_guard", "anim", "nav_agent", "detector")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("red_guard", "anim", "nav_agent", "detector", "emote")]
 script = ExtResource("4_dehnw")
 red_guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
+emote = NodePath("../../AngryEmote")
+
+[node name="Frozen" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector")]
+script = ExtResource("5_odeq3")
+guard = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+nav_agent = NodePath("../../NavigationAgent2D")
+detector = NodePath("../../RayCast2D")
+
+[node name="FollowBurglar" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "detector", "nav_agent", "anim", "burglar_detection")]
+script = ExtResource("6_xg3yt")
+guard = NodePath("../..")
+detector = NodePath("../../RayCast2D")
+nav_agent = NodePath("../../NavigationAgent2D")
+anim = NodePath("../../AnimatedSprite2D")
+burglar_detection = NodePath("../../BurglarDetection")
+
+[node name="Dead" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector")]
+script = ExtResource("8_1qavp")
+guard = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+nav_agent = NodePath("../../NavigationAgent2D")
+detector = NodePath("../../RayCast2D")
+
+[node name="HitBox" type="Area2D" parent="." groups=["enemy_interaction"]]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_bx86t")
+
+[node name="AngryEmote" type="Sprite2D" parent="."]
+position = Vector2(2, -16)
+texture = ExtResource("8_dvggu")

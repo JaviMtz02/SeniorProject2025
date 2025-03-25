@@ -4,6 +4,7 @@ extends NodeState
 @export var anim: AnimatedSprite2D
 @export var idle_state_timer: Timer = Timer.new()
 @export var idle_state_time_interval: float = 2.0
+@export var emote: Sprite2D
 
 var idle_state_timeout: bool = false
 
@@ -13,7 +14,8 @@ func _ready() -> void:
 	add_child(idle_state_timer)
 	
 func _on_process(_delta: float) -> void:
-	pass
+	if red_guard.health <= 0:
+		transition.emit("Dead")
 
 func _on_physics_process(_delta: float) -> void:
 	pass
@@ -32,3 +34,12 @@ func _on_exit() -> void:
 
 func on_idle_state_timeout() -> void:
 	idle_state_timeout = true
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("killzone"):
+		var damage_source = area.get_parent()
+		var damage_val = damage_source.damage
+		red_guard.take_damage(damage_val)
+		emote.show()
+		# add some sound here with an await, after that the emote goes away
+		emote.hide()
