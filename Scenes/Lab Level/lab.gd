@@ -12,7 +12,6 @@ var minigames_won = 0 # Used to add up the amount of minigames won
 
 @export var level_time_seconds = 59
 @export var level_time_minutes = 3
-@export var level_name: String = "laboratory"
 
 func _ready() -> void:
 	# This gets the amount of scenens in the loot and coins node, this will be useful for 

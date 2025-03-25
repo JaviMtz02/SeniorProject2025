@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://hw2i2iai6qvy"]
 
-[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_7upi5"]
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_7upi5"]
 [ext_resource type="Texture2D" uid="uid://syq7q4eymy3j" path="res://Assets/Sprites/Loot Sprites/Museum Loot/frog.png" id="2_41cr3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1e6n"]

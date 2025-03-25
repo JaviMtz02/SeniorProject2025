@@ -4,21 +4,15 @@ extends NodeState
 @export var anim: AnimatedSprite2D
 @export var nav_agent: NavigationAgent2D
 @export var detector: RayCast2D
-@export var min_speed = 25
-@export var max_speed = 30
-
-@onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
+@export var min_speed = 40
+@export var max_speed = 60
 
 var speed: float
 
 # This guard will be faster than the burglar
 
 func _ready() -> void:
-	
-	for door in get_tree().get_nodes_in_group("doors"):
-		door.freeze.connect(_on_freeze_emitted)
 	call_deferred("character_setup")
-
 	nav_agent.velocity_computed.connect(on_safe_velocity_computed)
 
 func character_setup() -> void:
@@ -31,12 +25,9 @@ func set_moving_target() -> void:
 	speed = randf_range(min_speed, max_speed)
 	
 func _on_process(_delta: float) -> void:
-	if detector.is_colliding():
-		var collider = detector.get_collider()
-		if collider == burglar:
-			transition.emit("FollowBurglar")
+	pass
 
-func _on_physics_process(delta: float) -> void:
+func _on_physics_process(_delta: float) -> void:
 	if nav_agent.is_navigation_finished():
 		set_moving_target()
 		return
@@ -44,14 +35,9 @@ func _on_physics_process(delta: float) -> void:
 	var target_position: Vector2 = nav_agent.get_next_path_position()
 	var target_direction: Vector2 = blue_guard.global_position.direction_to(target_position) 
 	var velocity: Vector2 = target_direction * speed
-	var distance_to_target = blue_guard.global_position.distance_to(target_position)
-	
-	if distance_to_target < speed * delta:
-		blue_guard.global_position = target_position
-		return
-		
 	update_animation(target_direction)
 	update_detector(target_direction)
+	
 	
 	if nav_agent.avoidance_enabled:
 		nav_agent.velocity = velocity
@@ -72,9 +58,8 @@ func _on_exit() -> void:
 	blue_guard.velocity = Vector2.ZERO
 
 func on_safe_velocity_computed(safe_velocity: Vector2) -> void:
-	if nav_agent.avoidance_enabled:
-		blue_guard.velocity = safe_velocity
-		blue_guard.move_and_slide()
+	blue_guard.velocity = safe_velocity
+	blue_guard.move_and_slide()
 
 func update_animation(direction: Vector2):
 	if direction.length() == 0:
@@ -102,13 +87,3 @@ func update_detector(direction: Vector2) -> void:
 		return
 	direction = direction.normalized()
 	detector.target_position = direction * 75
-
-func _on_freeze_emitted() -> void:
-	transition.emit("Frozen")
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("killzone"):
-		var damage_source = area.get_parent()
-		var damage_val = damage_source.damage
-		blue_guard.take_damage(damage_val)
-		transition.emit("Hurt")

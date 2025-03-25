@@ -1,15 +1,15 @@
 [gd_scene load_steps=24 format=3 uid="uid://b1vo7f3a8rlsk"]
 
 [ext_resource type="Texture2D" uid="uid://crilyuqbwxm4y" path="res://Assets/Sprites/Loot Sprites/coin.png" id="1_dl146"]
-[ext_resource type="Script" uid="uid://8pjgkm50iqfg" path="res://Scenes/Minigames/Coin Matching/coin_pairs.gd" id="1_x6dce"]
-[ext_resource type="Texture2D" uid="uid://bqiya75s6jdex" path="res://Assets/Sprites/Minigame Sprites/Door Game/drop.png" id="2_n06hu"]
-[ext_resource type="Texture2D" uid="uid://dvfwprji0mn38" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/exclamation.png" id="3_ciauq"]
-[ext_resource type="Texture2D" uid="uid://bc1vy1ic4f7n4" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/heart.png" id="4_jkxrf"]
-[ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/minus.png" id="5_xf08g"]
-[ext_resource type="Texture2D" uid="uid://ckitu6gtftx3m" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/money_sign.png" id="6_23om0"]
-[ext_resource type="Texture2D" uid="uid://b6x40k8gpimmq" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/moon.png" id="7_q8ypu"]
-[ext_resource type="Texture2D" uid="uid://blhiq2uor4hin" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/note.png" id="8_yd610"]
-[ext_resource type="Texture2D" uid="uid://cwrci0kagjaid" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/hammer.png" id="9_k7a6k"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Coin Matching/coin_pairs.gd" id="1_x6dce"]
+[ext_resource type="Texture2D" uid="uid://bqiya75s6jdex" path="res://Assets/Sprites/Minigame Sprites/drop.png" id="2_n06hu"]
+[ext_resource type="Texture2D" uid="uid://dvfwprji0mn38" path="res://Assets/Sprites/Minigame Sprites/exclamation.png" id="3_ciauq"]
+[ext_resource type="Texture2D" uid="uid://bc1vy1ic4f7n4" path="res://Assets/Sprites/Minigame Sprites/heart.png" id="4_jkxrf"]
+[ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/minus.png" id="5_xf08g"]
+[ext_resource type="Texture2D" uid="uid://ckitu6gtftx3m" path="res://Assets/Sprites/Minigame Sprites/money_sign.png" id="6_23om0"]
+[ext_resource type="Texture2D" uid="uid://b6x40k8gpimmq" path="res://Assets/Sprites/Minigame Sprites/moon.png" id="7_q8ypu"]
+[ext_resource type="Texture2D" uid="uid://blhiq2uor4hin" path="res://Assets/Sprites/Minigame Sprites/note.png" id="8_yd610"]
+[ext_resource type="Texture2D" uid="uid://cwrci0kagjaid" path="res://Assets/Sprites/Minigame Sprites/hammer.png" id="9_k7a6k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amus5"]
 atlas = ExtResource("1_dl146")
@@ -105,7 +105,6 @@ animations = [{
 
 [node name="CoinPairs" type="Node2D" node_paths=PackedStringArray("anim", "pattern")]
 position = Vector2(104, 50)
-scale = Vector2(2, 2)
 script = ExtResource("1_x6dce")
 anim = NodePath("CoinFlipAnimation")
 pattern = NodePath("Patterns")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ck3hjbqo3uc5y"]
 
-[ext_resource type="Script" uid="uid://cb8tky8euilir" path="res://Scenes/Minigames/Catch Items/item.gd" id="1_602f1"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Catch Items/item.gd" id="1_602f1"]
 [ext_resource type="Texture2D" uid="uid://1qx4kwe5lq6b" path="res://Assets/Sprites/Loot Sprites/Museum Loot/antique5.png" id="2_de4es"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iaglx"]
@@ -11,8 +11,6 @@ radius = 4.0
 height = 14.0
 
 [node name="Item" type="RigidBody2D" node_paths=PackedStringArray("item", "item_textures")]
-collision_layer = 128
-collision_mask = 128
 physics_material_override = SubResource("PhysicsMaterial_iaglx")
 contact_monitor = true
 max_contacts_reported = 1
@@ -21,12 +19,12 @@ item = NodePath(".")
 item_textures = NodePath("ItemTextures")
 
 [node name="ItemTextures" type="Sprite2D" parent="."]
-scale = Vector2(6, 6)
+scale = Vector2(3, 3)
 texture = ExtResource("2_de4es")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9, -7)
-scale = Vector2(6, 6)
+position = Vector2(-4, -3)
+scale = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_0i51b")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://skvaaoqiuaj7"]
 
-[ext_resource type="Script" uid="uid://dbqgcbpp2eqmo" path="res://Scenes/Minigames/tic_tac_toe/button.gd" id="1_figii"]
+[ext_resource type="Script" path="res://Scenes/Minigames/tic_tac_toe/button.gd" id="1_figii"]
 [ext_resource type="Texture2D" uid="uid://cq3yvgs65xps6" path="res://Scenes/Minigames/tic_tac_toe/tmpTextures/blank.png" id="1_hri60"]
 
 [node name="button" type="Control"]

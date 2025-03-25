@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://biwenw5uto8dd"]
 
-[ext_resource type="Script" uid="uid://sr2u0vaeldrc" path="res://Scenes/Minigames/Maze Game/lab_geek.gd" id="1_onq6h"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Maze Game/lab_geek.gd" id="1_onq6h"]
 [ext_resource type="Texture2D" uid="uid://cj6s3lqpdatx7" path="res://Assets/Sprites/Characters/Red_Lab_Guard.png" id="1_tf411"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37hly"]

@@ -1,10 +1,8 @@
 extends RigidBody2D
 
-@warning_ignore("narrowing_conversion")
-
 @export var item: RigidBody2D
 @export var item_textures: Sprite2D
-@export var direction_force: float = 500
+@export var direction_force: float = 300
 var dropped: bool = false
 var landed: bool = false
 var drop_speed: float = 2.5
@@ -43,9 +41,9 @@ func _on_body_entered(body: Node) -> void:
 		call_deferred("_emit_null_signal")
 		
 func apply_random_movement() -> void:
-	item.gravity_scale = randi_range(4,7)
+	item.gravity_scale = randi_range(1, 1.9)
 	item.rotation = randi_range(-PI, PI)
-	item.position = Vector2(randi_range(100, 900), 300)
+	item.position = Vector2(randi_range(300, 700), 300)
 	var speed = randf_range(150, 400)
 	var random_angle = randf_range(-PI / 6, PI)
 	linear_velocity = Vector2(cos(random_angle) * speed, speed)

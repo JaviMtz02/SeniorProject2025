@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Burglar Game"
-run/main_scene="res://Scenes/Menus/start_menu.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://Scenes/Menus/splash_screen.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -49,13 +49,6 @@ blocks=""
 ground=""
 killzone=""
 enemy_interaction=""
-minigame_interaction=""
-doors=""
-burglar_camera=""
-coins=""
-deposit_doors=""
-time_adders=""
-mob_near=""
 
 [input]
 
@@ -113,14 +106,6 @@ pause={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
-attack={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
-]
-}
-open_minigame={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":77,"key_label":0,"unicode":109,"location":0,"echo":false,"script":null)
 join={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
@@ -140,10 +125,6 @@ start={
 2d_physics/layer_2="Loot Layer"
 2d_physics/layer_3="Loot_interaction"
 2d_physics/layer_4="MobCollisions"
-2d_physics/layer_5="Door_Detection"
-2d_physics/layer_6="MovableObjects"
-2d_physics/layer_7="DamageLayer"
-2d_physics/layer_8="MinigameLayer"
 
 [rendering]
 

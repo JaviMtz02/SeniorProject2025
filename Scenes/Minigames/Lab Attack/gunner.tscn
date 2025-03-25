@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1sqjx6vwixsu"]
 
-[ext_resource type="Script" uid="uid://cpdkx3nqclym0" path="res://Scenes/Minigames/Lab Attack/gunner.gd" id="1_42vvq"]
-[ext_resource type="Texture2D" uid="uid://c51b2nlmqjtvl" path="res://Assets/Sprites/Minigame Sprites/Lab Attack/green_orb.png" id="2_hmw6t"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/gunner.gd" id="1_42vvq"]
+[ext_resource type="Texture2D" uid="uid://c51b2nlmqjtvl" path="res://Assets/Sprites/Minigame Sprites/green_orb.png" id="2_hmw6t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtt86"]
 radius = 8.0

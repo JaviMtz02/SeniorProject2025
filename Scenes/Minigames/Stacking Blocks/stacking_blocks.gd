@@ -5,14 +5,12 @@ extends Node2D
 @export var end_line: Area2D
 var check_after_landing = false
 var blocks_available:int = 10
-
 signal game_won
-signal game_lost
 
 func _ready() -> void:
-	$StartGame.play()
 	end_line.set_collision_layer_value(1, false)
 	for item in get_tree().get_nodes_in_group("blocks"):
+		print(item)
 		item.connect("block_landed", Callable(self, "check_collission"))
 	spawn_block()
 	
@@ -36,10 +34,6 @@ func check_collission() -> void:
 	
 	await get_tree().process_frame
 	if end_line.has_overlapping_bodies():
-		game_won.emit()
-		queue_free()
-	elif blocks_available == 0:
-		game_lost.emit()
-		queue_free()
+		print("AHHH") # need to add win section that shows you won, will be added once minigame is integrated into game
 	else:
 		disable_collission()

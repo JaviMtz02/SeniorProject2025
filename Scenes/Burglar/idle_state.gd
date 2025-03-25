@@ -7,12 +7,7 @@ var input: DeviceInput
 var last_frame: int
 
 func _on_process(_delta: float) -> void:
-	if not burglar.input_enabled:
-		return
-		
-	if Input.is_action_just_pressed("attack"):
-		transition.emit("Attack")
-	elif is_moving():
+	if is_moving():
 		transition.emit("Walk")
 
 func _on_physics_process(_delta: float) -> void:

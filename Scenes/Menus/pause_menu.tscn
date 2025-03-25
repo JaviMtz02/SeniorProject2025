@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dphs7mmyn8ocp"]
 
-[ext_resource type="Script" uid="uid://bb17ta8hiowpr" path="res://Scripts/pause_menu.gd" id="1_2k71d"]
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_2k71d"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_k0or1"]
-[ext_resource type="Shader" uid="uid://7idnd075edh8" path="res://Scenes/Menus/pause_menu.gdshader" id="1_lcbae"]
+[ext_resource type="Shader" path="res://Scenes/Menus/pause_menu.gdshader" id="1_lcbae"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h6i1i"]
 shader = ExtResource("1_lcbae")
@@ -67,8 +67,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ekf4n"]
 _data = {
-&"RESET": SubResource("Animation_hyvgk"),
-&"blur": SubResource("Animation_6xd5b")
+"RESET": SubResource("Animation_hyvgk"),
+"blur": SubResource("Animation_6xd5b")
 }
 
 [node name="PauseMenu" type="Control"]

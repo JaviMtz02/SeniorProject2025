@@ -8,9 +8,6 @@ var is_player_turn: bool = false
 var button_map = {}
 var rounds: int = 0
 
-signal game_won
-signal game_lost
-
 func _ready() -> void:
 	button_map = {
 	0: $Buttons/ButtonA/Button1,
@@ -34,7 +31,7 @@ func add_to_pattern() -> void:
 	play_sequence()
 	
 func play_sequence() -> void:
-	#print(pattern)
+	print(pattern)
 	is_player_turn = false
 	var hightlight_delay: float = 0.8
 	for i in range(pattern.size()):
@@ -53,8 +50,7 @@ func _on_button_pressed(button_index) -> void:
 	if is_player_turn:
 		player_input.append(button_index)
 		if player_input[player_input.size() - 1] != pattern[player_input.size() - 1]:
-			game_lost.emit()
-			queue_free()
+			print("you lose!")
 		if player_input.size() == pattern.size():
 			await get_tree().create_timer(1.0).timeout
 			start_next_round()
@@ -65,5 +61,4 @@ func start_next_round() -> void:
 		add_to_pattern()
 		rounds += 1
 	else:
-		game_won.emit()
-		queue_free()
+		print("you won!")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8nd77vc1jxpq"]
 
-[ext_resource type="Script" uid="uid://dnu2wnq1a5vku" path="res://Scenes/Lab Level/Lab Scripts/purple_orb.gd" id="1_vc2we"]
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_ucr2v"]
 [ext_resource type="Texture2D" uid="uid://ddcokc1t8dh84" path="res://Assets/Sprites/Loot Sprites/Lab Loot/purple_orb.png" id="2_85kgw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_esmc0"]
@@ -9,9 +9,9 @@ radius = 7.07107
 [node name="PurpleOrb" type="Area2D" groups=["loot"]]
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_vc2we")
-value = 300.0
-inventory_space_req = 200.0
+script = ExtResource("1_ucr2v")
+value = 500.0
+inventory_space_req = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_85kgw")

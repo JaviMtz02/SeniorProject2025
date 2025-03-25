@@ -3,19 +3,17 @@ extends NodeState
 @export var blue_guard: CharacterBody2D
 @export var anim: AnimatedSprite2D
 @export var idle_state_timer: Timer = Timer.new()
-@export var idle_state_time_interval: float = 1.0
+@export var idle_state_time_interval: float = 2.0
 
 var idle_state_timeout: bool = false
 
 func _ready() -> void:
-	
 	idle_state_timer.wait_time = idle_state_time_interval
 	idle_state_timer.timeout.connect(on_idle_state_timeout)
 	add_child(idle_state_timer)
 	
 func _on_process(_delta: float) -> void:
-	if blue_guard.health <= 0:
-		transition.emit("Dead")
+	pass
 
 func _on_physics_process(_delta: float) -> void:
 	pass
@@ -34,10 +32,3 @@ func _on_exit() -> void:
 
 func on_idle_state_timeout() -> void:
 	idle_state_timeout = true
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("killzone"):
-		var damage_source = area.get_parent()
-		var damage_val = damage_source.damage
-		blue_guard.take_damage(damage_val)
-		transition.emit("Hurt")

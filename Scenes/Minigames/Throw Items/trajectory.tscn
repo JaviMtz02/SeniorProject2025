@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://drcapy8gd7mjh"]
-
-[ext_resource type="Texture2D" uid="uid://dsfwl0a85rbhp" path="res://Assets/Sprites/Minigame Sprites/trajectory_point.png" id="1_0d4nr"]
-
-[node name="Trajectory" type="Sprite2D"]
-position = Vector2(3.25, 4.25)
-scale = Vector2(0.492188, 0.460938)
-texture = ExtResource("1_0d4nr")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2qcqw4p5a3xk"]
 
-[ext_resource type="Texture2D" uid="uid://c04chnt5blok4" path="res://Assets/Sprites/Minigame Sprites/Maze Game/chaser.png" id="1_igokl"]
-[ext_resource type="Script" uid="uid://bf8708xkugylr" path="res://Scenes/Minigames/Maze Game/chaser.gd" id="1_s18ll"]
+[ext_resource type="Texture2D" uid="uid://c04chnt5blok4" path="res://Assets/Sprites/Minigame Sprites/chaser.png" id="1_igokl"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Maze Game/chaser.gd" id="1_s18ll"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y1c45"]
 radius = 8.0

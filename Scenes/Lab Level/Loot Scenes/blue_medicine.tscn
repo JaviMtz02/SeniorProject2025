@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://beggil6hqn02g"]
 
-[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_7g7o1"]
+[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_7g7o1"]
 [ext_resource type="Texture2D" uid="uid://cf26mpsyfirf5" path="res://Assets/Sprites/Loot Sprites/Lab Loot/blue_medicine.png" id="2_4o5rr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0o0fa"]

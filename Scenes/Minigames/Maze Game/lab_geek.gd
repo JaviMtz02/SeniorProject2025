@@ -2,13 +2,10 @@ extends CharacterBody2D
 
 # Signal gets sent out when a player collides with an enemy
 
-@export var speed: float = 200.0
+@export var speed = 50.0
 @export var anim: AnimatedSprite2D
 @export var chaser: CharacterBody2D
 @export var orb: Area2D
-
-signal orb_collected
-signal caught
 
 # continuosly gets input for direction
 func get_input():
@@ -38,9 +35,9 @@ func _physics_process(_delta):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == chaser:
-		caught.emit()
+		print("You lost!")
 		
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area == orb:
-		orb_collected.emit()
+		print("You win")

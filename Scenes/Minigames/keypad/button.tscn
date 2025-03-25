@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://teyudodgmh4q"]
 
-[ext_resource type="Script" uid="uid://dx4xnh46ka8i3" path="res://Scenes/Minigames/keypad/button.gd" id="1_i0m5v"]
+[ext_resource type="Script" path="res://Scenes/Minigames/keypad/button.gd" id="1_i0m5v"]
 [ext_resource type="FontFile" uid="uid://bh04sida6rhmo" path="res://Scenes/Minigames/keypad/tmpTextures/PixelOperator8.ttf" id="3_k2c8c"]
 [ext_resource type="Texture2D" uid="uid://dhyh51oqoys6v" path="res://Scenes/Minigames/memory_game/tmpTextures/blank.png" id="3_mmso0"]
 [ext_resource type="AudioStream" uid="uid://g4polmege6wp" path="res://Scenes/Minigames/keypad/tmpTextures/477633__joao_janz__heater-fan-snap-button-1_6.wav" id="4_hcqdq"]

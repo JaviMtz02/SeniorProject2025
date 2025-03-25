@@ -13,8 +13,7 @@ func _ready() -> void:
 	add_child(idle_state_timer)
 	
 func _on_process(_delta: float) -> void:
-	if green_guard.health <= 0:
-		transition.emit("Dead")
+	pass
 
 func _on_physics_process(_delta: float) -> void:
 	pass
@@ -33,10 +32,3 @@ func _on_exit() -> void:
 
 func on_idle_state_timeout() -> void:
 	idle_state_timeout = true
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("killzone"):
-		var damage_source = area.get_parent()
-		var damage_val = damage_source.damage
-		green_guard.take_damage(damage_val)
-		transition.emit("Hurt")

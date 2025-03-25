@@ -2,8 +2,6 @@ class_name NodeStateMachineBurglar # remember to rename classes otherwise you'll
 extends Node
 
 @export var initial_node_state : NodeState
-var last_direction: Vector2 = Vector2.ZERO
-
 var node_states : Dictionary = {}
 var curr_node_state : NodeState
 var curr_node_state_name : String

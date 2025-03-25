@@ -6,12 +6,11 @@ var drop_speed: float = 2.5
 var direction: int = 1 # direction to where block will move
 var dropped: bool = false
 var landed: bool = false
-var can_play: bool = false
 
 signal ball_landed
 
 func _ready():
-	ball.position = Vector2(550, 465)
+	ball.position = Vector2(550, 437)
 	for score in get_tree().get_nodes_in_group("ground"):
 		score.connect("add_points", Callable(self, "_on_add_points"))
 	ball.freeze = true
@@ -29,7 +28,7 @@ func _process(_delta) -> void:
 		linear_velocity = Vector2(0, drop_speed)
 		dropped = true
 
-func _on_add_points(_area: Area2D):
+func _on_add_points(area: Area2D):
 	if not landed:
 		ball.physics_material_override.bounce = 0
 		call_deferred("_emit_landing_signal")
@@ -38,5 +37,3 @@ func _on_add_points(_area: Area2D):
 func _emit_landing_signal():
 	ball_landed.emit()
 	queue_free()
-	
-		
