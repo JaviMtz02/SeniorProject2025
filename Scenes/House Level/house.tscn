@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Tileset_16x16_16.png" id="1_848k0"]
 [ext_resource type="Script" path="res://Scenes/House Level/House Scripts/house.gd" id="1_dvkor"]
+[ext_resource type="PackedScene" uid="uid://r506psreloaw" path="res://Scenes/ui.tscn" id="2_3ikve"]
 [ext_resource type="PackedScene" uid="uid://dphs7mmyn8ocp" path="res://Scenes/Menus/pause_menu.tscn" id="2_6ymqc"]
 [ext_resource type="Texture2D" uid="uid://1gu1ovhdruwk" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png" id="2_7pkew"]
 [ext_resource type="Texture2D" uid="uid://b50pnmg6jjcb6" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/12_Kitchen_16x16.png" id="3_xco4q"]
@@ -23,9 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="19_on312"]
 [ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="20_pjwmv"]
 [ext_resource type="PackedScene" uid="uid://sdns7q1mfc6t" path="res://Scenes/House Level/Dog/dog.tscn" id="21_3vikf"]
-[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="22_6ob7k"]
 [ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot Scenes/ball.tscn" id="23_iwso7"]
 [ext_resource type="PackedScene" uid="uid://dassywovt6r47" path="res://Scenes/House Level/Loot Scenes/phone.tscn" id="23_lub5n"]
+[ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="24_4vfu0"]
+[ext_resource type="PackedScene" uid="uid://bhvlwud37s80y" path="res://Scenes/multitarget_camera.tscn" id="24_j17vr"]
 [ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="24_lfu3r"]
 [ext_resource type="PackedScene" uid="uid://cjrpelqwlam1x" path="res://Scenes/House Level/Loot Scenes/vase.tscn" id="25_dgrcy"]
 [ext_resource type="PackedScene" uid="uid://cp5auh0nsunp6" path="res://Scenes/House Level/Loot Scenes/kachow.tscn" id="26_fqyn1"]
@@ -10437,6 +10439,8 @@ agent_radius = 15.0
 [node name="House" type="Node2D"]
 script = ExtResource("1_dvkor")
 
+[node name="UI" parent="." instance=ExtResource("2_3ikve")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_6ymqc")]
@@ -10481,6 +10485,16 @@ navigation_polygon = SubResource("NavigationPolygon_r1ddd")
 [node name="Dog" parent="DogLogic" instance=ExtResource("21_3vikf")]
 position = Vector2(194, 740)
 
+<<<<<<< HEAD
+=======
+[node name="Camera2D" parent="." node_paths=PackedStringArray("targets_parent_node") instance=ExtResource("24_j17vr")]
+targets_parent_node = NodePath("../Players")
+
+[node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("24_4vfu0")]
+position = Vector2(-97, 832)
+door = NodePath("../Door")
+
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 [node name="Loot" type="Node" parent="."]
 
 [node name="Phone" parent="Loot" groups=["loot"] instance=ExtResource("23_lub5n")]

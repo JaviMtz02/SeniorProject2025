@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=101 format=4 uid="uid://i50wkd86wgwi"]
+=======
+[gd_scene load_steps=87 format=4 uid="uid://i50wkd86wgwi"]
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
 [ext_resource type="Script" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
@@ -15,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://je1dre1ywoaj" path="res://Assets/Sprites/Nature/objects.png" id="7_nmcje"]
 [ext_resource type="Texture2D" uid="uid://cagjgr87o0dp4" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png" id="9_tfhnb"]
 [ext_resource type="PackedScene" uid="uid://dwyseg08pilxd" path="res://Scenes/Museum Level/Guard/guard.tscn" id="13_x1mcs"]
-[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="14_8dy78"]
 [ext_resource type="PackedScene" uid="uid://dice2umpg6y62" path="res://Scenes/Museum Level/Loot Scenes/antique.tscn" id="14_hli1t"]
 [ext_resource type="PackedScene" uid="uid://dky444q5cjswa" path="res://Scenes/Museum Level/Loot Scenes/antique_2.tscn" id="15_jm2vv"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_tt1tv"]
@@ -63,6 +66,7 @@
 [ext_resource type="PackedScene" uid="uid://cxmi4elwfthhd" path="res://Scenes/Museum Level/Loot Scenes/scroll.tscn" id="58_q7xq7"]
 [ext_resource type="PackedScene" uid="uid://cu215lf7exnsv" path="res://Scenes/Museum Level/Loot Scenes/art_2.tscn" id="58_tsuaq"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="59_ikusx"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://frb0t0q7uplf" path="res://Scenes/Museum Level/Doors/minigame_door_museum_top.tscn" id="64_yqu0f"]
 [ext_resource type="PackedScene" uid="uid://brxasy1h2ujoa" path="res://Scenes/Museum Level/Doors/minigame_door_museum_down.tscn" id="65_eyw68"]
 [ext_resource type="PackedScene" uid="uid://8ccgsxyrbo8l" path="res://Scenes/Museum Level/Doors/minigame_door_museum_side.tscn" id="66_bhj46"]
@@ -72,6 +76,10 @@
 [ext_resource type="PackedScene" uid="uid://c183d1xkw57w3" path="res://Scenes/Museum Level/Movable Items/dinosaur.tscn" id="69_i6u7w"]
 [ext_resource type="PackedScene" uid="uid://c4oby0peepha0" path="res://Scenes/Museum Level/Movable Items/drawer.tscn" id="70_w0q5j"]
 [ext_resource type="PackedScene" uid="uid://dgpbd33niiko0" path="res://Scenes/Museum Level/bum.tscn" id="71_r1p8x"]
+=======
+[ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="63_2355q"]
+[ext_resource type="PackedScene" uid="uid://bhvlwud37s80y" path="res://Scenes/multitarget_camera.tscn" id="63_n8kpi"]
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysar5"]
 texture = ExtResource("1_a1que")
@@ -10619,6 +10627,7 @@ position = Vector2(-721, -107)
 [node name="Guard5" parent="GuardNavigation/GuardsGeneral/NavigationRegion2D" instance=ExtResource("13_x1mcs")]
 position = Vector2(-315, 357)
 
+<<<<<<< HEAD
 [node name="Burglar" parent="." instance=ExtResource("14_8dy78")]
 z_index = 1
 position = Vector2(-244, 578)
@@ -10726,3 +10735,23 @@ position = Vector2(484, 264)
 
 [node name="Bum" parent="." instance=ExtResource("71_r1p8x")]
 position = Vector2(446, 589)
+=======
+[node name="Door" parent="." instance=ExtResource("15_tt1tv")]
+position = Vector2(-238, 611)
+scale = Vector2(5, 1)
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("targets_parent_node") instance=ExtResource("63_n8kpi")]
+targets_parent_node = NodePath("../Players")
+
+[node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("63_2355q")]
+position = Vector2(-239, 590)
+door = NodePath("../Door")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -1998.0
+offset_top = -826.0
+offset_right = 1238.0
+offset_bottom = 1119.0
+color = Color(0.294118, 0.239216, 0.376471, 0.47451)
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418

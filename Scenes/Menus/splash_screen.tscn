@@ -1,0 +1,150 @@
+[gd_scene load_steps=10 format=3 uid="uid://df15y0i4vgpw8"]
+
+[ext_resource type="Texture2D" uid="uid://b8qba0nqe70y7" path="res://Assets/Sprites/Background/Clouds/Clouds 7/1.png" id="1_hytem"]
+[ext_resource type="Script" path="res://Scripts/splash_screen.gd" id="1_pkhqj"]
+[ext_resource type="Texture2D" uid="uid://u4e6xmqn1mae" path="res://Assets/Sprites/Background/Clouds/Clouds 7/3.png" id="2_21pon"]
+[ext_resource type="Texture2D" uid="uid://cc4yhgiepjq48" path="res://Assets/Sprites/Background/Clouds/Clouds 7/4.png" id="3_6xx64"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_auiwt"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="5_ijyq0"]
+
+[sub_resource type="Animation" id="Animation_566g3"]
+resource_name = "Fade in & out"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 0.353553, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0509804), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_305ht"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38n2j"]
+_data = {
+"Fade in & out": SubResource("Animation_566g3"),
+"RESET": SubResource("Animation_305ht")
+}
+
+[node name="SplashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_pkhqj")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_hytem")
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_21pon")
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_6xx64")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 180
+
+[node name="Divider" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_auiwt")
+theme_override_font_sizes/font_size = 100
+text = "Out of Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Divider2" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider3" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider4" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Press Start" type="Label" parent="MarginContainer/VBoxContainer2"]
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_ijyq0")
+theme_override_font_sizes/font_size = 16
+text = "Press A or Space to Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/VBoxContainer2/Press Start"]
+libraries = {
+"": SubResource("AnimationLibrary_38n2j")
+}
+autoplay = "Fade in & out"

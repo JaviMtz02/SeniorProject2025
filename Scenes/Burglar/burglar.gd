@@ -13,19 +13,35 @@ extends CharacterBody2D
 @export var inventory_label: Label
 @export var time_label: Label
 @export var level_node: Node2D # dynamically stores levels
+<<<<<<< HEAD
 @export var minigame_doors: Node
 
 @onready var timer: Timer = $Timer
+=======
+@export var door: Area2D
+
+@onready var timer: Timer = $Timer
+@onready var inventory_bar: TextureProgressBar = $UI/InventoryBar
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 var curr_inventory_size: int = 0 # Checks to see if the burglar has not surpassed the bounds of what the inventory allows
 var curr_loot: Area2D = null # When we're near loot, we can get its details with this variable
-var inventory: Array = [] # This is to know how many single pieces of loot were obtained, Could probably do this with a variable
+var inventory: Array = [] # This is to know how many single pieces of loot were obtained, Could probably do this with a variable. Currently only stores <Freed Object>
 var value_accu: int = 0 # current value of loot obtained, this resets to zero when deposited
 var time_seconds: int
 var time_minutes: int
 var near_door: bool = false
 var input_enabled: bool = true
 var minigames_won: int = 0
+
+var player: int
+var input: DeviceInput
+
+func init(player_num: int):
+	player = player_num
+	input = DeviceInput.new(PlayerManager.player_data[player_num].device)
+	$StateMachine/Idle.input = input
+	$StateMachine/Walk.input = input
 
 func _ready() -> void:
 	if level_node == null:
@@ -47,6 +63,7 @@ func _ready() -> void:
 	
 	# This should get modified when we add different items that the burglar can purchase to increase inventory
 	inventory_label.text = "0/" + str(inventory_space)
+	inventory_bar.max_value = inventory_space
 	
 	# Connects corresponding loot signals and door signals for depositing collected loot
 	for door in get_tree().get_nodes_in_group("deposit_doors"):
@@ -69,19 +86,35 @@ func _ready() -> void:
 			interactable.connect("add_time", Callable(self, "_on_add_time"))
 #
 func _process(_delta: float) -> void:
+<<<<<<< HEAD
 	if near_door and Input.is_action_just_pressed("deposit"): # If you're near the door then you can deposit your loot
 		$SFX/Deposit.play()
+=======
+	# Update UI (just the inventory for now)
+	update_UI()
+		
+	if near_door and input.is_action_just_pressed("deposit"): # If you're near the door then you can deposit your loot
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 		level_node.deposit_loot(value_accu, inventory.size())      # That way you can pick up more, 
 		inventory.clear()
+		GameManager.add_money(value_accu)
 		value_accu = 0
 		curr_inventory_size = 0
 		value_label.text = str(value_accu)
 		inventory_label.text = "0/" + str(inventory_space)
 		
 	# If the character is currently around loot and it pressed the 't' key, try to pick it up
-	if curr_loot != null and Input.is_action_just_pressed("take_loot"):
+	if curr_loot != null and input.is_action_just_pressed("take_loot"):
 		try_pick_up_loot(curr_loot)
+<<<<<<< HEAD
 
+=======
+	#
+
+## Update the UI. Ideally not in the _process() function but it'll do for now
+func update_UI():
+	inventory_bar.value = curr_inventory_size
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 func try_pick_up_loot(loot: Area2D) -> void:
 	# If the current inventory size is less than the total inventory space, and if those two are greater
@@ -108,7 +141,24 @@ func try_pick_up_loot(loot: Area2D) -> void:
 		loot.queue_free()
 		curr_loot = null
 	else:
+<<<<<<< HEAD
 		$SFX/CannotPickup.play() # if loot can't be picked up, a sound will play letting the player know that it can't be picked up
+=======
+		# Want to add some sound here that alerts you that you cant pick it up
+		print("Not enough space in inventory!")
+
+func _on_burglar_nearby(loot: Area2D, player_id: int): # Burglar enters the area of the loot and button that tells which button to press appears
+	if player_id == player:
+		curr_loot = loot
+		take_loot_button.show()
+		take_loot_button.play()
+
+func _on_burglar_away(_loot: Area2D, player_id: int): # If burglar is not in the area of loot then we cannot pick up any loot
+	if player_id == player:
+		curr_loot = null
+		take_loot_button.stop()
+		take_loot_button.hide()
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 # Function that decreases timer
 func _on_timer_timeout() -> void:
@@ -132,16 +182,18 @@ func _on_timer_timeout() -> void:
 ##################### INTERACTIBLE SIGNALS #####################################
 ## When signal is sent out, we are able to deposit our loot at the door
 ## The button specifying which button to press will appear
-func _on_deposit() -> void:
-	near_door = true
-	deposit_button.show()
-	deposit_button.play()
+func _on_deposit(player_id: int) -> void:
+	if player_id == player:
+		near_door = true
+		deposit_button.show()
+		deposit_button.play()
 #
 ## When we're away from the door, we will not be able to deposit, otherwise it'll break the game
-func _on_off_deposit() -> void:
-	near_door = false
-	deposit_button.hide()
-	deposit_button.hide()
+func _on_off_deposit(player_id: int) -> void:
+	if player_id == player:
+		near_door = false
+		deposit_button.hide()
+		deposit_button.hide()
 	
 	#  Burglar enters the area of the loot and button that tells which button to press appears
 func _on_burglar_nearby(loot: Area2D): 

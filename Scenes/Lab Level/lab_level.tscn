@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=89 format=4 uid="uid://f1i8qyoj157k"]
+=======
+[gd_scene load_steps=74 format=4 uid="uid://f1i8qyoj157k"]
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="1_grgwg"]
 [ext_resource type="Script" path="res://Scenes/Lab Level/lab.gd" id="1_jvsnw"]
@@ -14,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://dlk1ortsb4pyu" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/18_Jail_16x16.png" id="10_q1lkt"]
 [ext_resource type="Texture2D" uid="uid://cdo52i5n77k4c" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png" id="11_lhdv1"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="13_ffvti"]
-[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="13_jjmv2"]
 [ext_resource type="PackedScene" uid="uid://bxwr7q0mpyrrw" path="res://Scenes/Lab Level/Red Guard/red_guard.tscn" id="14_pybaw"]
 [ext_resource type="PackedScene" uid="uid://chmwasfruwwni" path="res://Scenes/Lab Level/Interactables/red_time_adder.tscn" id="15_tvf65"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_txdqp"]
@@ -48,6 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://cglrds5ieh6i" path="res://Scenes/Museum Level/Loot Scenes/frog_2.tscn" id="41_yndoa"]
 [ext_resource type="PackedScene" uid="uid://lwrvkckh5b75" path="res://Scenes/Museum Level/Loot Scenes/antique_3.tscn" id="42_kvvin"]
 [ext_resource type="PackedScene" uid="uid://cju68344motmd" path="res://Scenes/Museum Level/Loot Scenes/antique_5.tscn" id="43_l7q7v"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dd6r4g7hmikqn" path="res://Scenes/Lab Level/Interactables/blue_time_adder.tscn" id="45_6146t"]
 [ext_resource type="PackedScene" uid="uid://b400mfajsl547" path="res://Scenes/Lab Level/Interactables/lab_door.tscn" id="48_p4y8h"]
 [ext_resource type="PackedScene" uid="uid://cng2h2ntbo28c" path="res://Scenes/Lab Level/Interactables/blue_to_red_door.tscn" id="49_kyvau"]
@@ -57,6 +61,10 @@
 [ext_resource type="PackedScene" uid="uid://sdukqqsgckux" path="res://Scenes/Lab Level/Interactables/blue_to_red_toggle_door.tscn" id="53_l1up6"]
 [ext_resource type="PackedScene" uid="uid://uk1r2afjs701" path="res://Scenes/Lab Level/Interactables/green_to_red.tscn" id="54_10iag"]
 [ext_resource type="PackedScene" uid="uid://bbaht3pwcox0g" path="res://Scenes/Lab Level/Interactables/portal.tscn" id="57_cs6uk"]
+=======
+[ext_resource type="PackedScene" uid="uid://bhvlwud37s80y" path="res://Scenes/multitarget_camera.tscn" id="46_f57g5"]
+[ext_resource type="PackedScene" uid="uid://cdd0i3gjbd158" path="res://Scenes/player_spawn_point.tscn" id="46_js8yq"]
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpxap"]
 texture = ExtResource("1_grgwg")
@@ -9796,9 +9804,18 @@ z_index = 1
 position = Vector2(16, 291)
 scale = Vector2(2, 1)
 
+<<<<<<< HEAD
 [node name="Burglar" parent="." instance=ExtResource("13_jjmv2")]
 z_index = 1
 position = Vector2(7, 257)
+=======
+[node name="Camera2D" parent="." node_paths=PackedStringArray("targets_parent_node") instance=ExtResource("46_f57g5")]
+targets_parent_node = NodePath("../Players")
+
+[node name="Players" parent="." node_paths=PackedStringArray("door") instance=ExtResource("46_js8yq")]
+position = Vector2(8, 269)
+door = NodePath("../Door")
+>>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 [node name="ShadowEffect" type="ColorRect" parent="."]
 z_index = 1

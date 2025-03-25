@@ -18,8 +18,10 @@ func _ready() -> void:
 	
 func _on_area_entered(area: Area2D) -> void: 
 	if area.is_in_group("loot_interaction"):
-		emit_signal("burglar_nearby", self)
+		var player_id = area.get_parent().player
+		emit_signal("burglar_nearby", self, player_id)
 		
 func _on_area_exited(_area: Area2D) -> void:
-	emit_signal("burglar_away", self)
+	var player_id = _area.get_parent().player
+	emit_signal("burglar_away", self, player_id)
 		

@@ -1,5 +1,6 @@
 extends NodeState
 
+var input: DeviceInput
 @export var burglar: CharacterBody2D
 @export var anim_sprite: AnimatedSprite2D
 @export var loot_interaction: Area2D
@@ -21,7 +22,7 @@ func  _on_next_transition() -> void:
 	pass
 
 func is_moving() -> bool:
-	var direction = Input.get_vector("down", "left", "right", "up")
+	var direction = input.get_vector("down", "left", "right", "up")
 	return direction != Vector2.ZERO
 
 func _on_enter() -> void:
