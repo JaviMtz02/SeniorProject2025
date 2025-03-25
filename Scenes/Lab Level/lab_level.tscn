@@ -1,7 +1,7 @@
 [gd_scene load_steps=89 format=4 uid="uid://f1i8qyoj157k"]
 
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="1_grgwg"]
-[ext_resource type="Script" path="res://Scenes/Lab Level/lab.gd" id="1_jvsnw"]
+[ext_resource type="Script" uid="uid://ctrcexglbc7j2" path="res://Scenes/Lab Level/lab.gd" id="1_jvsnw"]
 [ext_resource type="Texture2D" uid="uid://bdrl03db17lgm" path="res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png" id="1_t2nat"]
 [ext_resource type="PackedScene" uid="uid://dphs7mmyn8ocp" path="res://Scenes/Menus/pause_menu.tscn" id="1_w125l"]
 [ext_resource type="Texture2D" uid="uid://csfvhdtyded2h" path="res://Assets/Sprites/Floors_Walls/blue_room.png" id="2_0q8xi"]
@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="13_jjmv2"]
 [ext_resource type="PackedScene" uid="uid://bxwr7q0mpyrrw" path="res://Scenes/Lab Level/Red Guard/red_guard.tscn" id="14_pybaw"]
 [ext_resource type="PackedScene" uid="uid://chmwasfruwwni" path="res://Scenes/Lab Level/Interactables/red_time_adder.tscn" id="15_tvf65"]
-[ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_txdqp"]
+[ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/House Level/door.tscn" id="15_txdqp"]
 [ext_resource type="PackedScene" uid="uid://bd17uo0wesown" path="res://Scenes/Lab Level/Green Guard/green_guard.tscn" id="16_3p2fa"]
 [ext_resource type="PackedScene" uid="uid://clthap6kcidbf" path="res://Scenes/Lab Level/Interactables/green_time_adder.tscn" id="16_rlwkg"]
 [ext_resource type="PackedScene" uid="uid://bg7fofw2p6tku" path="res://Scenes/Lab Level/Blue Guard/blue_guard.tscn" id="17_uca5v"]

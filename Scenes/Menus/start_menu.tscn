@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://ck718meym8xx3"]
 
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="1_00e0p"]
-[ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_jbod3"]
+[ext_resource type="Script" uid="uid://ccr4twfr0lsj6" path="res://Scripts/start_menu.gd" id="1_jbod3"]
 [ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="2_xcop4"]
 [ext_resource type="Texture2D" uid="uid://dvergsij0vrm0" path="res://Assets/Sprites/Background/Clouds/Clouds 3/4.png" id="3_2rjp5"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_osx4t"]
-[ext_resource type="Script" path="res://Scripts/grab_focus.gd" id="6_k7472"]
+[ext_resource type="Script" uid="uid://ccb66rqkgn805" path="res://Scripts/grab_focus.gd" id="6_k7472"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3

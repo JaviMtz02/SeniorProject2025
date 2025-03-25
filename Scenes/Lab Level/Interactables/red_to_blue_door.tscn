@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://b7b2jtmvha80x"]
 
 [ext_resource type="Texture2D" uid="uid://rnm3rxrkx8nq" path="res://Assets/Sprites/Items/door_top_red_to_blue.png" id="1_uu5bd"]
-[ext_resource type="Script" path="res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd" id="1_uxatp"]
+[ext_resource type="Script" uid="uid://cxh203xxvjvpb" path="res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd" id="1_uxatp"]
 [ext_resource type="PackedScene" uid="uid://dxkwahqljg2t1" path="res://Scenes/Minigames/Checker Game/main_screen.tscn" id="2_f3pm3"]
 [ext_resource type="PackedScene" uid="uid://cxhxw6hayka2q" path="res://Scenes/Minigames/Coin Matching/main_screen.tscn" id="3_pcoa6"]
 [ext_resource type="PackedScene" uid="uid://c8tuiccs8pmtu" path="res://Scenes/Minigames/Door Game/main_screen.tscn" id="4_y05j3"]

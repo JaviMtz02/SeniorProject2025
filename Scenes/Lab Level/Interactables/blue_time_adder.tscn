@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://dd6r4g7hmikqn"]
 
 [ext_resource type="Texture2D" uid="uid://b5h2syfpqetk0" path="res://Assets/Sprites/Items/blue_time_adder.png" id="1_br7a7"]
-[ext_resource type="Script" path="res://Scenes/Lab Level/Lab Scripts/blue_time_adder.gd" id="1_jf0nq"]
+[ext_resource type="Script" uid="uid://brreyhxf8gjdw" path="res://Scenes/Lab Level/Lab Scripts/blue_time_adder.gd" id="1_jf0nq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i17fl"]
 atlas = ExtResource("1_br7a7")

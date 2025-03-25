@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bquuht2vh8v8c"]
 
-[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_ltyv2"]
+[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_ltyv2"]
 [ext_resource type="Texture2D" uid="uid://db7wckqf4cfp" path="res://Assets/Sprites/Loot Sprites/House Loot/book.png" id="1_wxaie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cc71x"]

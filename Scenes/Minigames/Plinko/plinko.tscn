@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=4 uid="uid://2sdjv0ypls8g"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Plinko/plinko.gd" id="1_jmk70"]
+[ext_resource type="Script" uid="uid://3pf5sgyjluao" path="res://Scenes/Minigames/Plinko/plinko.gd" id="1_jmk70"]
 [ext_resource type="Texture2D" uid="uid://cmy27nb0meg71" path="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="1_t84yr"]
 [ext_resource type="Texture2D" uid="uid://sws01duqclxx" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/10_Birthday_party_16x16.png" id="2_flkq0"]
 [ext_resource type="PackedScene" uid="uid://dncc4fdhte7di" path="res://Scenes/Minigames/Plinko/plinko_ball.tscn" id="3_3twxf"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_blasr"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Plinko/score.gd" id="6_mnht1"]
+[ext_resource type="Script" uid="uid://bpemglxn5w83l" path="res://Scenes/Minigames/Plinko/score.gd" id="6_mnht1"]
 [ext_resource type="Texture2D" uid="uid://cm8453c3loqc" path="res://Assets/Sprites/UI/door.png" id="7_6yjbk"]
 [ext_resource type="AudioStream" uid="uid://djdao1ebcnxv5" path="res://Sounds/Powerup.wav" id="8_km4dq"]
 

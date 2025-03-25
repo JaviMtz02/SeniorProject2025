@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjv0iampk6oiw"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Stacking Blocks/block.gd" id="1_n6dws"]
+[ext_resource type="Script" uid="uid://dxlxtwuy0igr4" path="res://Scenes/Minigames/Stacking Blocks/block.gd" id="1_n6dws"]
 [ext_resource type="Texture2D" uid="uid://duvgwsse1g6wr" path="res://Assets/Sprites/Loot Sprites/House Loot/kachow.png" id="1_ucsa1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ff3hg"]

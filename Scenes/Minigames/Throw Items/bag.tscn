@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://lt6i5pbat1gk"]
 
 [ext_resource type="Texture2D" uid="uid://dqv6rsbp81orx" path="res://Assets/Sprites/UI/burglar_bag.png" id="1_2f4um"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Throw Items/bag.gd" id="1_8lh01"]
+[ext_resource type="Script" uid="uid://b26ciras78sfx" path="res://Scenes/Minigames/Throw Items/bag.gd" id="1_8lh01"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ckh56"]
 radius = 15.0

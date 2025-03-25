@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://do25m6x0jqivt"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_oln1l"]
+[ext_resource type="Script" uid="uid://cdk8giggyttfq" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_oln1l"]
 [ext_resource type="Texture2D" uid="uid://bc47nf0o4k30u" path="res://Assets/Sprites/Loot Sprites/Lab Loot/rat.png" id="1_rpwwy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yui2m"]

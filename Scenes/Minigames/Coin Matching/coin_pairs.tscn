@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://b1vo7f3a8rlsk"]
 
 [ext_resource type="Texture2D" uid="uid://crilyuqbwxm4y" path="res://Assets/Sprites/Loot Sprites/coin.png" id="1_dl146"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Coin Matching/coin_pairs.gd" id="1_x6dce"]
+[ext_resource type="Script" uid="uid://8pjgkm50iqfg" path="res://Scenes/Minigames/Coin Matching/coin_pairs.gd" id="1_x6dce"]
 [ext_resource type="Texture2D" uid="uid://bqiya75s6jdex" path="res://Assets/Sprites/Minigame Sprites/Door Game/drop.png" id="2_n06hu"]
 [ext_resource type="Texture2D" uid="uid://dvfwprji0mn38" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/exclamation.png" id="3_ciauq"]
 [ext_resource type="Texture2D" uid="uid://bc1vy1ic4f7n4" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/heart.png" id="4_jkxrf"]

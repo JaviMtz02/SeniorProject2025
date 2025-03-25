@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxhxw6hayka2q"]
 
-[ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_3i4jh"]
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_3i4jh"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_3kiki"]
 [ext_resource type="Texture2D" uid="uid://jf4a2hfrjypi" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/coin_matching.png" id="2_6c5tp"]
 [ext_resource type="PackedScene" uid="uid://bbbi80x5vwvuu" path="res://Scenes/Minigames/Coin Matching/coin_matching.tscn" id="2_7rveb"]

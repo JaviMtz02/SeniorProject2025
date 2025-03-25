@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://cawa2la5qt1pb"]
 
 [ext_resource type="Texture2D" uid="uid://cgp32ob3x00b6" path="res://Assets/Sprites/Minigame Sprites/Door Game/blue_wall_large.png" id="1_gu1i0"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Door Game/door_game.gd" id="1_m7ltu"]
+[ext_resource type="Script" uid="uid://bwqytws6osvd7" path="res://Scenes/Minigames/Door Game/door_game.gd" id="1_m7ltu"]
 [ext_resource type="Texture2D" uid="uid://bdrl03db17lgm" path="res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png" id="2_8s43f"]
 [ext_resource type="PackedScene" uid="uid://bicl0nhyxgh5y" path="res://Scenes/Minigames/Door Game/door.tscn" id="4_bjfxb"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="5_odt1a"]

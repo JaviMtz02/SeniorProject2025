@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://fboehgvtxbd1"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/keypad/handler.gd" id="1_pj5mk"]
+[ext_resource type="Script" uid="uid://cykyyd4ambyy" path="res://Scenes/Minigames/keypad/handler.gd" id="1_pj5mk"]
 [ext_resource type="FontFile" uid="uid://bh04sida6rhmo" path="res://Scenes/Minigames/keypad/tmpTextures/PixelOperator8.ttf" id="2_0uwh3"]
 [ext_resource type="Texture2D" uid="uid://25fnproq0e41" path="res://Scenes/Minigames/keypad/tmpTextures/sticky_note.png" id="2_6g2oi"]
 

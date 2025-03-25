@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://mrgqiamb7fr8"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Throw Items/thrower.gd" id="1_1j2io"]
+[ext_resource type="Script" uid="uid://bxnvpondbrbia" path="res://Scenes/Minigames/Throw Items/thrower.gd" id="1_1j2io"]
 [ext_resource type="Texture2D" uid="uid://dpdj23r5bh2f6" path="res://Assets/Sprites/Minigame Sprites/red_orb.png" id="1_pv8g2"]
 [ext_resource type="PackedScene" uid="uid://bxjiy2rui6gky" path="res://Scenes/Minigames/Throw Items/item.tscn" id="2_hewqe"]
 [ext_resource type="PackedScene" uid="uid://drcapy8gd7mjh" path="res://Scenes/Minigames/Throw Items/trajectory.tscn" id="3_bvcir"]

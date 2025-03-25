@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://chmwasfruwwni"]
 
-[ext_resource type="Script" path="res://Scenes/Lab Level/Lab Scripts/red_time_adder.gd" id="1_p74uf"]
+[ext_resource type="Script" uid="uid://vmlbieoy6g7l" path="res://Scenes/Lab Level/Lab Scripts/red_time_adder.gd" id="1_p74uf"]
 [ext_resource type="Texture2D" uid="uid://c6afeolprmppq" path="res://Assets/Sprites/Items/red_time_adder.png" id="2_w8f1n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuwkw"]

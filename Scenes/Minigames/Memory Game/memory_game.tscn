@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://dshiic14vk4gk"]
 
 [ext_resource type="Texture2D" uid="uid://chv57f5aynskh" path="res://Assets/Sprites/Loot Sprites/Museum Loot/butterfly.png" id="1_gqjoh"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Memory Game/memory_game.gd" id="1_v4aqd"]
+[ext_resource type="Script" uid="uid://cnpr4ccolwwkn" path="res://Scenes/Minigames/Memory Game/memory_game.gd" id="1_v4aqd"]
 [ext_resource type="Texture2D" uid="uid://bjkf4qcwxi2as" path="res://Assets/Sprites/Loot Sprites/Museum Loot/butterfly3.png" id="2_grfb3"]
 [ext_resource type="Texture2D" uid="uid://cmy27nb0meg71" path="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="2_u3jib"]
 [ext_resource type="Texture2D" uid="uid://bhoahlt5mh2oy" path="res://Assets/Sprites/Loot Sprites/Museum Loot/butterfly2.png" id="3_33wgu"]

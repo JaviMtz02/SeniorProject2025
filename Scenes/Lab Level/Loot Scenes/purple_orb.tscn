@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8nd77vc1jxpq"]
 
-[ext_resource type="Script" path="res://Scenes/Lab Level/Lab Scripts/purple_orb.gd" id="1_vc2we"]
+[ext_resource type="Script" uid="uid://dnu2wnq1a5vku" path="res://Scenes/Lab Level/Lab Scripts/purple_orb.gd" id="1_vc2we"]
 [ext_resource type="Texture2D" uid="uid://ddcokc1t8dh84" path="res://Assets/Sprites/Loot Sprites/Lab Loot/purple_orb.png" id="2_85kgw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_esmc0"]

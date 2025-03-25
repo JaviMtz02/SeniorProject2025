@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxs7u6wl8wsgg"]
 
 [ext_resource type="PackedScene" uid="uid://mrgqiamb7fr8" path="res://Scenes/Minigames/Throw Items/thrower.tscn" id="1_g2fe7"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Throw Items/throw_items.gd" id="1_imtbi"]
+[ext_resource type="Script" uid="uid://nuitfytgcwdh" path="res://Scenes/Minigames/Throw Items/throw_items.gd" id="1_imtbi"]
 [ext_resource type="PackedScene" uid="uid://lt6i5pbat1gk" path="res://Scenes/Minigames/Throw Items/bag.tscn" id="2_q3pmo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o0f24"]

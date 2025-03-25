@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b7n2468oeulka"]
 
-[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_b3aet"]
+[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_b3aet"]
 [ext_resource type="Texture2D" uid="uid://crilyuqbwxm4y" path="res://Assets/Sprites/Loot Sprites/coin.png" id="1_v2eny"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qvuxe"]

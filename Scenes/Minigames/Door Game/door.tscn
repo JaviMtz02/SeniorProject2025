@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://bicl0nhyxgh5y"]
 
 [ext_resource type="Texture2D" uid="uid://7hix2h66hukc" path="res://Assets/Sprites/Minigame Sprites/Door Game/23_MIlitary_Base_Dormitory_Door_2_32x32.png" id="1_11o26"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Door Game/door.gd" id="1_xcnci"]
+[ext_resource type="Script" uid="uid://ddyn65eud4vb3" path="res://Scenes/Minigames/Door Game/door.gd" id="1_xcnci"]
 [ext_resource type="Texture2D" uid="uid://0vhn51fmy0w4" path="res://Assets/Sprites/Minigame Sprites/Door Game/blue_lab_guy.png" id="2_h2hr0"]
 [ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/minus.png" id="3_ia5tq"]
 [ext_resource type="Texture2D" uid="uid://cc7sndphtd7he" path="res://Assets/Sprites/Minigame Sprites/Door Game/pass.png" id="3_ky8ul"]

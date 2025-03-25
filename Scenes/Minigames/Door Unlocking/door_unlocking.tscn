@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cjynsj6wgi1rc"]
 
 [ext_resource type="Texture2D" uid="uid://114qeqjqss66" path="res://Assets/Sprites/Minigame Sprites/wall.png" id="1_dfkc2"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Door Unlocking/door_unlocking.gd" id="1_ikik7"]
+[ext_resource type="Script" uid="uid://cdver5blh7ui0" path="res://Scenes/Minigames/Door Unlocking/door_unlocking.gd" id="1_ikik7"]
 [ext_resource type="Texture2D" uid="uid://pdt15ub83g4i" path="res://Assets/Sprites/Items/house_door.png" id="2_1vaw6"]
 [ext_resource type="Texture2D" uid="uid://b465f3b2n8un6" path="res://Assets/Sprites/Minigame Sprites/wood_floor.png" id="2_72fvr"]
 [ext_resource type="Texture2D" uid="uid://cllncmfdc7r3y" path="res://Assets/Sprites/Minigame Sprites/pointer.png" id="5_0uew5"]

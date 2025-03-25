@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ngnpvabttus6"]
 
 [ext_resource type="Texture2D" uid="uid://c46km2s4dvlqy" path="res://Assets/Sprites/Loot Sprites/House Loot/art3.png" id="1_mwwub"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_nhao7"]
+[ext_resource type="Script" uid="uid://cdk8giggyttfq" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_nhao7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cb5v"]
 size = Vector2(45, 48.5)

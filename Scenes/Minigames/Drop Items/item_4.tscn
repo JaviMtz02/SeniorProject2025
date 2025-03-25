@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://busgaxtxheb15"]
 
 [ext_resource type="Texture2D" uid="uid://c684plho1vxbm" path="res://Assets/Sprites/Loot Sprites/House Loot/nutcracker.png" id="1_hh47t"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_jdaam"]
+[ext_resource type="Script" uid="uid://cdk8giggyttfq" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_jdaam"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72qua"]
 size = Vector2(33, 87)

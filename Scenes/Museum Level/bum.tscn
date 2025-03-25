@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dgpbd33niiko0"]
 
-[ext_resource type="Script" path="res://Scenes/Museum Level/Museum Scripts/bum.gd" id="1_kieay"]
+[ext_resource type="Script" uid="uid://dbd5a71wh38ab" path="res://Scenes/Museum Level/Museum Scripts/bum.gd" id="1_kieay"]
 [ext_resource type="Texture2D" uid="uid://ntkvput7fdgj" path="res://Assets/Sprites/Items/bum_back.png" id="1_momwm"]
 [ext_resource type="PackedScene" uid="uid://bibhujedq7lyh" path="res://Scenes/Minigames/Shuffle Game/main_screen.tscn" id="2_oloqg"]
 [ext_resource type="Texture2D" uid="uid://dnx8pbs7y8q5w" path="res://Assets/Sprites/UI/minigame_button.png" id="3_a6vsg"]

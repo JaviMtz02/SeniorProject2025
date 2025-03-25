@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bt7fb4dsrtpem"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/bag.gd" id="1_bw6p4"]
+[ext_resource type="Script" uid="uid://r6rwjemeapvx" path="res://Scenes/Minigames/Drop Items/bag.gd" id="1_bw6p4"]
 [ext_resource type="Texture2D" uid="uid://dqv6rsbp81orx" path="res://Assets/Sprites/UI/burglar_bag.png" id="1_lgv6t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t451k"]

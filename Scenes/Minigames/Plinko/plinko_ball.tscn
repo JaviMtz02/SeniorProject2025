@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dncc4fdhte7di"]
 
 [ext_resource type="Texture2D" uid="uid://ddcokc1t8dh84" path="res://Assets/Sprites/Loot Sprites/Lab Loot/purple_orb.png" id="1_7vi5d"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Plinko/plinko_ball.gd" id="1_k4k3u"]
+[ext_resource type="Script" uid="uid://bayxdu4md4hkv" path="res://Scenes/Minigames/Plinko/plinko_ball.gd" id="1_k4k3u"]
 [ext_resource type="AudioStream" uid="uid://cnqx7hasrtt28" path="res://Sounds/Thud.wav" id="3_chxao"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a43q7"]

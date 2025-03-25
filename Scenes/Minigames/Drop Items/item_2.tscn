@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dn2xmxdchbu0h"]
 
 [ext_resource type="Texture2D" uid="uid://76clbsyi25bm" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase4.png" id="1_ikob8"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_yehm6"]
+[ext_resource type="Script" uid="uid://cdk8giggyttfq" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_yehm6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bf1s0"]
 radius = 12.0

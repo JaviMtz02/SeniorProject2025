@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dym0nl5x237rc"]
 
-[ext_resource type="Script" path="res://Scripts/level_select.gd" id="1_5xiyy"]
+[ext_resource type="Script" uid="uid://wudic21014jv" path="res://Scripts/level_select.gd" id="1_5xiyy"]
 [ext_resource type="Texture2D" uid="uid://bsxxuyvd1yrbx" path="res://Assets/Sprites/Background/Clouds/Clouds 2/1.png" id="1_r1hh2"]
 [ext_resource type="Texture2D" uid="uid://dhgvtps06akor" path="res://Assets/Sprites/Background/Clouds/Clouds 2/2.png" id="2_m2bc3"]
 [ext_resource type="Texture2D" uid="uid://bveml21jya4c4" path="res://Assets/Sprites/Background/Clouds/Clouds 2/3.png" id="3_xuw7u"]
 [ext_resource type="Texture2D" uid="uid://3j22at14ldao" path="res://Assets/Sprites/Background/Clouds/Clouds 2/4.png" id="4_g2q18"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_8ijpj"]
-[ext_resource type="Script" path="res://Scripts/grab_focus.gd" id="7_k3gi6"]
+[ext_resource type="Script" uid="uid://ccb66rqkgn805" path="res://Scripts/grab_focus.gd" id="7_k3gi6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dyf1r"]
 

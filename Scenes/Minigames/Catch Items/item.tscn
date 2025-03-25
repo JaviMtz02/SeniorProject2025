@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ck3hjbqo3uc5y"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Catch Items/item.gd" id="1_602f1"]
+[ext_resource type="Script" uid="uid://cb8tky8euilir" path="res://Scenes/Minigames/Catch Items/item.gd" id="1_602f1"]
 [ext_resource type="Texture2D" uid="uid://1qx4kwe5lq6b" path="res://Assets/Sprites/Loot Sprites/Museum Loot/antique5.png" id="2_de4es"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iaglx"]

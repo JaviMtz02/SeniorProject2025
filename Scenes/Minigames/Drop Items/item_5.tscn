@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://drvfhfd0x1tm7"]
 
 [ext_resource type="Texture2D" uid="uid://h6mqngmovu2o" path="res://Assets/Sprites/Loot Sprites/House Loot/vase.png" id="1_cew2i"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_g676p"]
+[ext_resource type="Script" uid="uid://cdk8giggyttfq" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_g676p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3y4aw"]
 radius = 22.2036

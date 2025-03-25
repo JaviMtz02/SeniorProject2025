@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://diq1x7lcjvob1"]
 
 [ext_resource type="Texture2D" uid="uid://tv5ulhnkqcwp" path="res://Assets/Sprites/Minigame Sprites/Lab Attack/blast.png" id="1_flsdu"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/bullet.gd" id="1_ucst4"]
+[ext_resource type="Script" uid="uid://bm104emjojkws" path="res://Scenes/Minigames/Lab Attack/bullet.gd" id="1_ucst4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwaly"]
 size = Vector2(7, 3)

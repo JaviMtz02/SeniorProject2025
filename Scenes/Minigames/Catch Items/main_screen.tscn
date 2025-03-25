@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bks7qnyb4tear"]
 
-[ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_ulhwb"]
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_ulhwb"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_y2n3o"]
 [ext_resource type="Texture2D" uid="uid://ddrxqdogb0klo" path="res://Assets/Sprites/Minigame Sprites/Catch Items/catchitems.png" id="2_fkh6m"]
 [ext_resource type="PackedScene" uid="uid://dncegkb073c1d" path="res://Scenes/Minigames/Catch Items/catch_items.tscn" id="2_s27sh"]

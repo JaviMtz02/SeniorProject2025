@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=4 uid="uid://cfcxp8blmd5ba"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Shuffle Game/shuffle_game.gd" id="1_2sub4"]
+[ext_resource type="Script" uid="uid://dboat1yqxtnpf" path="res://Scenes/Minigames/Shuffle Game/shuffle_game.gd" id="1_2sub4"]
 [ext_resource type="Texture2D" uid="uid://76clbsyi25bm" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase4.png" id="2_10fsa"]
 [ext_resource type="Texture2D" uid="uid://cmy27nb0meg71" path="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="2_ch7s8"]
 [ext_resource type="Texture2D" uid="uid://473jt4uoojn3" path="res://Assets/Sprites/Loot Sprites/Museum Loot/frog2.png" id="3_icevo"]
@@ -524,8 +524,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ncixv"]
 _data = {
-"RESET": SubResource("Animation_xne73"),
-"shuffle": SubResource("Animation_f725r")
+&"RESET": SubResource("Animation_xne73"),
+&"shuffle": SubResource("Animation_f725r")
 }
 
 [node name="ShuffleGame" type="Node2D" node_paths=PackedStringArray("vase_container", "vase_buttons", "ball", "anim_player")]
