@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c183d1xkw57w3"]
 
 [ext_resource type="Texture2D" uid="uid://cvstovp8jqic3" path="res://Assets/Sprites/Items/dino_base.png" id="1_qstrc"]
-[ext_resource type="Script" path="res://Scenes/Museum Level/Movable Items/movable_loot.gd" id="1_yg325"]
+[ext_resource type="Script" uid="uid://dmtwsqe2jutvb" path="res://Scenes/Museum Level/Movable Items/movable_loot.gd" id="1_yg325"]
 [ext_resource type="Texture2D" uid="uid://rx75w4b172ro" path="res://Assets/Sprites/Items/dino_top.png" id="2_os5mf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8v8eh"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://oo7cdda6ms30"]
 
-[ext_resource type="Script" path="res://Scenes/Museum Level/Museum Scripts/office_door.gd" id="1_8chc6"]
+[ext_resource type="Script" uid="uid://bnljhvgf15jn6" path="res://Scenes/Museum Level/Museum Scripts/office_door.gd" id="1_8chc6"]
 [ext_resource type="Texture2D" uid="uid://pdt15ub83g4i" path="res://Assets/Sprites/Items/house_door.png" id="1_vrhc7"]
 [ext_resource type="PackedScene" uid="uid://cibcwqgqqplrc" path="res://Scenes/Museum Level/main_screen.tscn" id="2_6vxga"]
 

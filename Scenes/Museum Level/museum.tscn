@@ -5,7 +5,7 @@
 >>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
-[ext_resource type="Script" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
+[ext_resource type="Script" uid="uid://bxuxdnau45sj" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
 [ext_resource type="Texture2D" uid="uid://bc6ir33pyso0t" path="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_1_layer_1_16x16.png" id="1_a1que"]
 [ext_resource type="Texture2D" uid="uid://bl31iuobainjl" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_3_layer_1.png" id="2_16h7c"]
 [ext_resource type="Texture2D" uid="uid://bxp4a53sfd770" path="res://Assets/Sprites/Exteriors/Modern_Exteriors_RTU_2_layer_1_16x16.png" id="2_hriux"]
@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dwyseg08pilxd" path="res://Scenes/Museum Level/Guard/guard.tscn" id="13_x1mcs"]
 [ext_resource type="PackedScene" uid="uid://dice2umpg6y62" path="res://Scenes/Museum Level/Loot Scenes/antique.tscn" id="14_hli1t"]
 [ext_resource type="PackedScene" uid="uid://dky444q5cjswa" path="res://Scenes/Museum Level/Loot Scenes/antique_2.tscn" id="15_jm2vv"]
-[ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_tt1tv"]
+[ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/House Level/door.tscn" id="15_tt1tv"]
 [ext_resource type="PackedScene" uid="uid://lwrvkckh5b75" path="res://Scenes/Museum Level/Loot Scenes/antique_3.tscn" id="16_4yynd"]
 [ext_resource type="PackedScene" uid="uid://dpm5om5qnbvlu" path="res://Scenes/Museum Level/Loot Scenes/antique_4.tscn" id="17_1bxy6"]
 [ext_resource type="PackedScene" uid="uid://cju68344motmd" path="res://Scenes/Museum Level/Loot Scenes/antique_5.tscn" id="18_wr2te"]
@@ -60,7 +60,7 @@
 [ext_resource type="PackedScene" uid="uid://ugont15y8ehc" path="res://Scenes/Museum Level/Loot Scenes/souvenir.tscn" id="52_dpjoc"]
 [ext_resource type="PackedScene" uid="uid://dab5loaacdbjv" path="res://Scenes/Museum Level/Loot Scenes/souvenir_5.tscn" id="53_xdkha"]
 [ext_resource type="PackedScene" uid="uid://bbyqwx88ihyeo" path="res://Scenes/Museum Level/Loot Scenes/souvenir_4.tscn" id="54_6xop6"]
-[ext_resource type="Script" path="res://Scenes/House Level/House Scripts/loot.gd" id="55_kdo4x"]
+[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="55_kdo4x"]
 [ext_resource type="PackedScene" uid="uid://d2wguhfxepus1" path="res://Scenes/Museum Level/Loot Scenes/souvenir_3.tscn" id="56_ydr80"]
 [ext_resource type="PackedScene" uid="uid://bx34pb3cc502l" path="res://Scenes/Museum Level/Loot Scenes/souvenir_2.tscn" id="57_7tgaq"]
 [ext_resource type="PackedScene" uid="uid://cxmi4elwfthhd" path="res://Scenes/Museum Level/Loot Scenes/scroll.tscn" id="58_q7xq7"]

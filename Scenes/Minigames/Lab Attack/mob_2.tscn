@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://41jakpvsbk10"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Lab Attack/mob_2.gd" id="1_1t4u0"]
+[ext_resource type="Script" uid="uid://bbn38vlfv7ski" path="res://Scenes/Minigames/Lab Attack/mob_2.gd" id="1_1t4u0"]
 [ext_resource type="Texture2D" uid="uid://tb8nwuxgg0cn" path="res://Assets/Sprites/Minigame Sprites/Lab Attack/mask.png" id="1_q6i4m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k5tjr"]

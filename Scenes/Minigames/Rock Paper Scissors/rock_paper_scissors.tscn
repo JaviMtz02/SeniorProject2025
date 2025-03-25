@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://dl0js7or6hf1p"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Rock Paper Scissors/options.gd" id="1_8waia"]
+[ext_resource type="Script" uid="uid://bk12ul8m4m88" path="res://Scenes/Minigames/Rock Paper Scissors/options.gd" id="1_8waia"]
 [ext_resource type="Texture2D" uid="uid://beaiaewbs4vw0" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rock.png" id="1_fgjvs"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.gd" id="1_qf2pm"]
+[ext_resource type="Script" uid="uid://bc6k4vpx24i7y" path="res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.gd" id="1_qf2pm"]
 [ext_resource type="Texture2D" uid="uid://dd2oh3gr1nhd2" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/paper.png" id="2_bh02k"]
 [ext_resource type="Texture2D" uid="uid://cfh8b00ef5emi" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rock_dark.png" id="2_wufny"]
 [ext_resource type="Texture2D" uid="uid://bik1c2o2q213u" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rock_light.png" id="3_p0o7v"]

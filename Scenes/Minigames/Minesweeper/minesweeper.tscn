@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://kitjpx5a6s76"]
-
-[node name="Minesweeper" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]

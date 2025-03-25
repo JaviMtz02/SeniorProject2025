@@ -1,20 +1,20 @@
 extends Node2D
 
-signal game_results
+
+
 
 ## Best to stick to squares
 @export var num_buttons: int = 9
 ## Number of squares that have to be selected
-@export var sequence_length: int = 4
+@export var sequence_length: int = 6
 ## In seconds
 @export var speed: float = 1.0
 
 const BUTTON = preload("res://Scenes/Minigames/memory_game/button.tscn")
 @onready var grid_container: GridContainer = $GridContainer
-@onready var camera_2d: Camera2D = $Camera2D
 
 var game_over: bool = false
-var game_won: bool = false
+var _game_won: bool = false
 var player_turn: bool = false
 var playing_sequence: bool = false
 var stopping_process: bool = false
@@ -22,11 +22,13 @@ var sequence: Array = []
 var sub_sequence_length: int = 1
 var sub_sequence_selected: Array = []
 
+signal game_won
+signal game_lost
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var target_size = 16 * sqrt(num_buttons)
 	grid_container.size = Vector2(target_size, target_size)
-	camera_2d.position = grid_container.position + grid_container.size / 2
 	for i in range(num_buttons):
 		var button = BUTTON.instantiate()
 		button.INDEX = i
@@ -44,11 +46,11 @@ func stop_process() -> void:
 func _process(_delta: float) -> void:
 	if game_over && not stopping_process:
 		if game_won:
-			print("You win")
-			game_results.emit(1)
+			game_won.emit()
+			queue_free()
 		else:
-			print("You lose")
-			game_results.emit(-1)
+			game_lost.emit()
+			queue_free()
 		stopping_process = true
 		stop_process()
 	if player_turn == false and playing_sequence == false and not game_over:
@@ -80,7 +82,7 @@ func _on_Button_click(button) -> void:
 		if sub_sequence_selected.size() == sub_sequence_length:
 			if sub_sequence_length == sequence_length:
 				player_turn = false
-				game_won = true
+				_game_won = true
 				game_over = true
 			else:
 				sub_sequence_length += 1

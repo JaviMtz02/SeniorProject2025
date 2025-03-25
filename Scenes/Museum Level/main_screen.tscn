@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cibcwqgqqplrc"]
 
-[ext_resource type="Script" path="res://Scenes/Museum Level/Museum Scripts/main_screen.gd" id="1_ls4k8"]
+[ext_resource type="Script" uid="uid://ba1oh1ad0ho4b" path="res://Scenes/Museum Level/Museum Scripts/main_screen.gd" id="1_ls4k8"]
 [ext_resource type="PackedScene" uid="uid://dq5geasf1p7i0" path="res://Scenes/Museum Level/enter_passcode.tscn" id="2_2s5rr"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="3_yxsay"]
 [ext_resource type="Texture2D" uid="uid://b8wm15g8d22dd" path="res://Assets/keypad.png" id="4_g2kta"]

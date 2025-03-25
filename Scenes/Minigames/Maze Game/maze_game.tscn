@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=4 uid="uid://cbbqgfutbsrg1"]
 
 [ext_resource type="Texture2D" uid="uid://dory2820k1hcs" path="res://Assets/Sprites/Floors_Walls/red_room.png" id="1_elep1"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Maze Game/game_manager.gd" id="1_td5jc"]
+[ext_resource type="Script" uid="uid://bbftwoihdbb7m" path="res://Scenes/Minigames/Maze Game/game_manager.gd" id="1_td5jc"]
 [ext_resource type="Texture2D" uid="uid://bdrl03db17lgm" path="res://Assets/Sprites/Floors_Walls/Room_Builder_Office_16x16.png" id="2_dp2le"]
 [ext_resource type="PackedScene" uid="uid://biwenw5uto8dd" path="res://Scenes/Minigames/Maze Game/lab_geek.tscn" id="3_tvqe0"]
 [ext_resource type="PackedScene" uid="uid://d2qcqw4p5a3xk" path="res://Scenes/Minigames/Maze Game/chaser.tscn" id="3_v275t"]

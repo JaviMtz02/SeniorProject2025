@@ -1,29 +1,21 @@
-<<<<<<< HEAD
-[gd_scene load_steps=46 format=3 uid="uid://cn2v6r5xd2gqc"]
-=======
 [gd_scene load_steps=31 format=3 uid="uid://cn2v6r5xd2gqc"]
->>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
-
-[ext_resource type="Script" path="res://Scenes/Burglar/burglar.gd" id="1_ptfhq"]
+[ext_resource type="Script" uid="uid://bl1651linae2o" path="res://Scenes/Burglar/burglar.gd" id="1_ptfhq"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="2_0gd4x"]
-[ext_resource type="Script" path="res://Scripts/node_state_machine_burglar.gd" id="2_umsxp"]
+[ext_resource type="Script" uid="uid://bhq6pva1puq8n" path="res://Scripts/node_state_machine_burglar.gd" id="2_umsxp"]
 [ext_resource type="Texture2D" uid="uid://d1aol6vhtr806" path="res://Assets/Sprites/Characters/throw_item.png" id="3_fveah"]
-[ext_resource type="Script" path="res://Scenes/Burglar/idle_state.gd" id="3_j7vaf"]
+[ext_resource type="Script" uid="uid://tr5x5wh4j5ch" path="res://Scenes/Burglar/idle_state.gd" id="3_j7vaf"]
 [ext_resource type="Texture2D" uid="uid://d3ewjndjta6yq" path="res://Assets/Sprites/UI/key_press.png" id="3_k8n02"]
 [ext_resource type="Texture2D" uid="uid://dnrr4p76plfnk" path="res://Assets/Sprites/UI/value.png" id="3_ojelb"]
 [ext_resource type="Texture2D" uid="uid://dqv6rsbp81orx" path="res://Assets/Sprites/UI/burglar_bag.png" id="3_rpoaa"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://dqnjske0x2kc1" path="res://Assets/Sprites/Characters/throw_item_front.png" id="3_svuoq"]
-=======
 [ext_resource type="Texture2D" uid="uid://c0ajhrfy7rkqn" path="res://Assets/Sprites/UI/inventoryUnder.png" id="3_uyjl5"]
->>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
-[ext_resource type="Script" path="res://Scenes/Burglar/walk_state.gd" id="3_y1n7j"]
+[ext_resource type="Script" uid="uid://c8celtbs7u0vd" path="res://Scenes/Burglar/walk_state.gd" id="3_y1n7j"]
 [ext_resource type="Texture2D" uid="uid://b72hc7cxt17rf" path="res://Assets/Sprites/UI/inventoryProgress.png" id="4_3fye1"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_wekip"]
 [ext_resource type="Texture2D" uid="uid://y3p2ifslo6c3" path="res://Assets/Sprites/UI/Time.png" id="7_4d1p6"]
 [ext_resource type="Texture2D" uid="uid://c5xwsdwgf1sgh" path="res://Assets/Sprites/UI/deposit_key.png" id="8_7a7yh"]
 [ext_resource type="Texture2D" uid="uid://dnx8pbs7y8q5w" path="res://Assets/Sprites/UI/minigame_button.png" id="9_5r1v8"]
-[ext_resource type="Script" path="res://Scenes/Burglar/attack_state.gd" id="12_y5cjk"]
+[ext_resource type="Script" uid="uid://b3268acbr1nw3" path="res://Scenes/Burglar/attack_state.gd" id="12_y5cjk"]
 [ext_resource type="PackedScene" uid="uid://cwdbh3e7j7ub7" path="res://Scenes/Weapons/attack_hit_box.tscn" id="13_hfou0"]
 [ext_resource type="AudioStream" uid="uid://be432nr74ksbi" path="res://Sounds/coin.wav" id="15_rempi"]
 [ext_resource type="AudioStream" uid="uid://de7gl1u1p6qnk" path="res://Sounds/jump.wav" id="16_lqxk2"]
@@ -213,15 +205,10 @@ collision_mask = 49
 script = ExtResource("1_ptfhq")
 burglar = NodePath(".")
 loot_interaction = NodePath("LootInteraction")
-<<<<<<< HEAD
 minigame_interaction = NodePath("MinigameInteraction")
-take_loot_button = NodePath("Camera2D/Control/TakeLootButton")
-deposit_button = NodePath("Camera2D/Control/DepositButton")
 minigame_button = NodePath("Camera2D/Control/MinigameButton")
-=======
 take_loot_button = NodePath("UI/TakeLootButton")
 deposit_button = NodePath("UI/DepositButton")
->>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 value_label = NodePath("Camera2D/Control/ValueLabel")
 inventory_label = NodePath("Camera2D/Control/InventorySpaceLabel")
 time_label = NodePath("Camera2D/Control/TimeLabel")
@@ -234,9 +221,7 @@ animation = &"forward"
 position = Vector2(1, 2.5)
 shape = SubResource("RectangleShape2D_w1me5")
 
-<<<<<<< HEAD
 [node name="Camera2D" type="Camera2D" parent="." groups=["burglar_camera"]]
-=======
 [node name="UI" type="Control" parent="."]
 z_index = 99
 layout_mode = 3
@@ -275,7 +260,6 @@ frame_progress = 0.388927
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
->>>>>>> a03a642c978d21c5e6fbffaac2be47d4dcd9c418
 zoom = Vector2(4, 4)
 
 [node name="Control" type="Control" parent="Camera2D"]

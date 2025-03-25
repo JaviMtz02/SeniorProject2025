@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://brxasy1h2ujoa"]
 
 [ext_resource type="Texture2D" uid="uid://bcb82snyolxd3" path="res://Assets/Sprites/Items/minigame_door_down.png" id="1_usgmg"]
-[ext_resource type="Script" path="res://Scenes/Museum Level/Museum Scripts/minigame_door_museum_down.gd" id="1_xdrvw"]
+[ext_resource type="Script" uid="uid://crx4aany5ry8x" path="res://Scenes/Museum Level/Museum Scripts/minigame_door_museum_down.gd" id="1_xdrvw"]
 [ext_resource type="PackedScene" uid="uid://bks7qnyb4tear" path="res://Scenes/Minigames/Catch Items/main_screen.tscn" id="2_eqb8g"]
 [ext_resource type="PackedScene" uid="uid://dxkwahqljg2t1" path="res://Scenes/Minigames/Checker Game/main_screen.tscn" id="3_nrk8s"]
 [ext_resource type="PackedScene" uid="uid://cxhxw6hayka2q" path="res://Scenes/Minigames/Coin Matching/main_screen.tscn" id="4_r248p"]

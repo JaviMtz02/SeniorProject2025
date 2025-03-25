@@ -1,0 +1,150 @@
+[gd_scene load_steps=23 format=3 uid="uid://bicl0nhyxgh5y"]
+
+[ext_resource type="Texture2D" uid="uid://7hix2h66hukc" path="res://Assets/Sprites/Minigame Sprites/Door Game/23_MIlitary_Base_Dormitory_Door_2_32x32.png" id="1_11o26"]
+[ext_resource type="Script" uid="uid://ddyn65eud4vb3" path="res://Scenes/Minigames/Door Game/door.gd" id="1_xcnci"]
+[ext_resource type="Texture2D" uid="uid://0vhn51fmy0w4" path="res://Assets/Sprites/Minigame Sprites/Door Game/blue_lab_guy.png" id="2_h2hr0"]
+[ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/minus.png" id="3_ia5tq"]
+[ext_resource type="Texture2D" uid="uid://cc7sndphtd7he" path="res://Assets/Sprites/Minigame Sprites/Door Game/pass.png" id="3_ky8ul"]
+[ext_resource type="Texture2D" uid="uid://bqiya75s6jdex" path="res://Assets/Sprites/Minigame Sprites/Door Game/drop.png" id="6_fgxs1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssr7f"]
+atlas = ExtResource("1_11o26")
+region = Rect2(448, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuo0j"]
+atlas = ExtResource("1_11o26")
+region = Rect2(512, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6cn8"]
+atlas = ExtResource("1_11o26")
+region = Rect2(576, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s82l6"]
+atlas = ExtResource("1_11o26")
+region = Rect2(640, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foy1i"]
+atlas = ExtResource("1_11o26")
+region = Rect2(704, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26cce"]
+atlas = ExtResource("1_11o26")
+region = Rect2(768, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct781"]
+atlas = ExtResource("1_11o26")
+region = Rect2(832, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6y06f"]
+atlas = ExtResource("1_11o26")
+region = Rect2(0, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi8cx"]
+atlas = ExtResource("1_11o26")
+region = Rect2(64, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqoxt"]
+atlas = ExtResource("1_11o26")
+region = Rect2(128, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lgsa"]
+atlas = ExtResource("1_11o26")
+region = Rect2(192, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbxo2"]
+atlas = ExtResource("1_11o26")
+region = Rect2(256, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t23g0"]
+atlas = ExtResource("1_11o26")
+region = Rect2(320, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xp28k"]
+atlas = ExtResource("1_11o26")
+region = Rect2(384, 0, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hn3l7"]
+atlas = ExtResource("1_11o26")
+region = Rect2(448, 0, 64, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7wr0g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssr7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuo0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6cn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s82l6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foy1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26cce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct781")
+}],
+"loop": false,
+"name": &"door_close",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6y06f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi8cx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqoxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lgsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbxo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t23g0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp28k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hn3l7")
+}],
+"loop": false,
+"name": &"door_open",
+"speed": 9.0
+}]
+
+[node name="Door" type="Node2D" node_paths=PackedStringArray("button", "result", "anim")]
+script = ExtResource("1_xcnci")
+button = NodePath("Button")
+outcome_textures = Array[Texture2D]([ExtResource("2_h2hr0"), ExtResource("3_ky8ul"), ExtResource("3_ia5tq")])
+result = NodePath("Sprite2D")
+anim = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7wr0g")
+animation = &"door_close"
+frame = 6
+frame_progress = 1.0
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -32.0
+offset_top = -21.0
+offset_right = 30.0
+offset_bottom = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 4)
+texture = ExtResource("6_fgxs1")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=4 uid="uid://dncegkb073c1d"]
 
 [ext_resource type="PackedScene" uid="uid://bk52cy1k7pumc" path="res://Scenes/Minigames/Catch Items/catcher.tscn" id="1_5txr2"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Catch Items/catch_items.gd" id="1_i2rr2"]
+[ext_resource type="Script" uid="uid://defv2kwa17h5m" path="res://Scenes/Minigames/Catch Items/catch_items.gd" id="1_i2rr2"]
 [ext_resource type="PackedScene" uid="uid://ck3hjbqo3uc5y" path="res://Scenes/Minigames/Catch Items/item.tscn" id="2_k7d2b"]
 [ext_resource type="Texture2D" uid="uid://vfdyumnbofib" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_entrance_layer_1.png" id="3_c3q11"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="5_s1qd7"]

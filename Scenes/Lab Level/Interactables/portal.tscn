@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://bbaht3pwcox0g"]
 
-[ext_resource type="Script" path="res://Scenes/Lab Level/Lab Scripts/portal.gd" id="1_ea4go"]
+[ext_resource type="Script" uid="uid://bikhlqbnvxg5j" path="res://Scenes/Lab Level/Lab Scripts/portal.gd" id="1_ea4go"]
 [ext_resource type="Texture2D" uid="uid://b1qc51yxh01ty" path="res://Assets/Sprites/Items/Purple Portal Sprite Sheet.png" id="1_gp7hm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_va4xk"]

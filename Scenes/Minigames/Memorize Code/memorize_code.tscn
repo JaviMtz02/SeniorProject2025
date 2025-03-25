@@ -1,4 +1,192 @@
-[gd_scene format=3 uid="uid://cn8mhc52wsken"]
+[gd_scene load_steps=40 format=3 uid="uid://cn8mhc52wsken"]
+
+[ext_resource type="Script" uid="uid://bvfu1bmo4bnse" path="res://Scenes/Minigames/Memorize Code/memorize_code.gd" id="1_2jbl6"]
+[ext_resource type="Texture2D" uid="uid://dm33cnnomvr3m" path="res://Assets/Sprites/UI/Buttons/button_one_normal.png" id="1_yhsau"]
+[ext_resource type="Texture2D" uid="uid://d61iouojb8oc" path="res://Assets/Sprites/UI/Buttons/button_one_dark.png" id="2_1ki2e"]
+[ext_resource type="Texture2D" uid="uid://ca5iu18ukj8b3" path="res://Assets/Sprites/UI/Buttons/button_one_light.png" id="3_ugjmy"]
+[ext_resource type="Texture2D" uid="uid://l36osulfrx2b" path="res://Assets/Sprites/UI/Buttons/button_two_normal.png" id="4_n1c8b"]
+[ext_resource type="Texture2D" uid="uid://haevde4oit" path="res://Assets/Sprites/UI/Buttons/button_two_dark.png" id="5_5dyav"]
+[ext_resource type="Texture2D" uid="uid://b3u422w1vs27s" path="res://Assets/Sprites/UI/Buttons/button_two_light.png" id="6_3qpvq"]
+[ext_resource type="Texture2D" uid="uid://co1n8g80k4unl" path="res://Assets/Sprites/UI/Buttons/button_three_normal.png" id="7_1s26w"]
+[ext_resource type="Texture2D" uid="uid://ddyhkfmcsrrtj" path="res://Assets/Sprites/UI/Buttons/button_three_dark.png" id="8_g1gm0"]
+[ext_resource type="Texture2D" uid="uid://ruil3r28ewcc" path="res://Assets/Sprites/UI/Buttons/button_three_light.png" id="9_6kdiq"]
+[ext_resource type="Texture2D" uid="uid://bt5r7x5oi27ca" path="res://Assets/Sprites/UI/Buttons/button_four_normal.png" id="10_mbk74"]
+[ext_resource type="Texture2D" uid="uid://vgdjfjrr0vrl" path="res://Assets/Sprites/UI/Buttons/button_four_dark.png" id="11_p73ab"]
+[ext_resource type="Texture2D" uid="uid://rqni2r1waf1o" path="res://Assets/Sprites/UI/Buttons/button_four_light.png" id="12_v7noh"]
+[ext_resource type="Texture2D" uid="uid://bw747sj7iquis" path="res://Assets/Sprites/UI/Buttons/button_five_normal.png" id="13_ayptc"]
+[ext_resource type="Texture2D" uid="uid://dmc47nouw3dm7" path="res://Assets/Sprites/UI/Buttons/button_five_dark.png" id="14_2ip7n"]
+[ext_resource type="Texture2D" uid="uid://b6102nr7q7i7s" path="res://Assets/Sprites/UI/Buttons/button_five_light.png" id="15_jnj7e"]
+[ext_resource type="Texture2D" uid="uid://vfis4eb2q0nw" path="res://Assets/Sprites/UI/Buttons/button_six_normal.png" id="16_nbxwb"]
+[ext_resource type="Texture2D" uid="uid://cce1mkplru3nq" path="res://Assets/Sprites/UI/Buttons/button_six_dark.png" id="17_1c4qn"]
+[ext_resource type="Texture2D" uid="uid://cghaw1245swuw" path="res://Assets/Sprites/UI/Buttons/button_six_light.png" id="18_qjv3f"]
+[ext_resource type="Texture2D" uid="uid://h8og1vacw4fp" path="res://Assets/Sprites/UI/Buttons/button_seven_normal.png" id="19_4ppuf"]
+[ext_resource type="Texture2D" uid="uid://d4d7r57cw8mil" path="res://Assets/Sprites/UI/Buttons/button_seven_dark.png" id="20_w6j7u"]
+[ext_resource type="Texture2D" uid="uid://uqb4qgyu7bpo" path="res://Assets/Sprites/UI/Buttons/button_seven_light.png" id="21_5cx41"]
+[ext_resource type="Texture2D" uid="uid://d1nn4iypt5rk3" path="res://Assets/Sprites/UI/Buttons/button_eight_normal.png" id="22_tamwg"]
+[ext_resource type="Texture2D" uid="uid://ctfl2x45qt8tr" path="res://Assets/Sprites/UI/Buttons/button_eight_dark.png" id="23_1h73e"]
+[ext_resource type="Texture2D" uid="uid://ll3nc6envwsy" path="res://Assets/Sprites/UI/Buttons/button_eight_light.png" id="24_srk6h"]
+[ext_resource type="Texture2D" uid="uid://bnlygern7nwrj" path="res://Assets/Sprites/UI/Buttons/button_nine_normal.png" id="25_b7pq1"]
+[ext_resource type="Texture2D" uid="uid://dks263jyqch1m" path="res://Assets/Sprites/UI/Buttons/button_nine_dark.png" id="26_kynen"]
+[ext_resource type="Texture2D" uid="uid://d4monwuf2ofsh" path="res://Assets/Sprites/UI/Buttons/button_nine_light.png" id="27_pow4d"]
+[ext_resource type="Texture2D" uid="uid://mr6u4fj8w5he" path="res://Assets/Sprites/UI/Buttons/button_zero_normal.png" id="28_pd0l2"]
+[ext_resource type="Texture2D" uid="uid://d0i248xlo0etq" path="res://Assets/Sprites/UI/Buttons/button_zero_dark.png" id="29_pvjvt"]
+[ext_resource type="Texture2D" uid="uid://ddqopiy432n5u" path="res://Assets/Sprites/UI/Buttons/button_zero_light.png" id="30_lo0s6"]
+[ext_resource type="Texture2D" uid="uid://bjoqwm6tbcro8" path="res://Assets/Sprites/UI/Buttons/button_clear_normal.png" id="31_67fc6"]
+[ext_resource type="Texture2D" uid="uid://dyigdtsxvcf02" path="res://Assets/Sprites/UI/Buttons/button_clear_dark.png" id="32_wssna"]
+[ext_resource type="Texture2D" uid="uid://c3qdrtr8cvhah" path="res://Assets/Sprites/UI/Buttons/button_clear_light.png" id="33_elq6r"]
+[ext_resource type="Texture2D" uid="uid://l0ydxmok18em" path="res://Assets/Sprites/UI/Buttons/button_enter_normal.png" id="34_5tms8"]
+[ext_resource type="Texture2D" uid="uid://x6phuj1csr3b" path="res://Assets/Sprites/UI/Buttons/button_enter_dark.png" id="35_r715x"]
+[ext_resource type="Texture2D" uid="uid://bpqcl0a4b5mrk" path="res://Assets/Sprites/UI/Buttons/button_enter_light.png" id="36_nknpm"]
+[ext_resource type="Texture2D" uid="uid://dhyh51oqoys6v" path="res://Scenes/Minigames/memory_game/tmpTextures/blank.png" id="38_xk3y1"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="39_rl1q7"]
 
 [node name="MemorizeCode" type="Node2D"]
 editor_description = "A 4 Digit code is briefly shown, you must type it into the keypad correctly. No do-overs, you must not make a mistake while typing it"
+script = ExtResource("1_2jbl6")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 800.0
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="KeyPadBG" type="ColorRect" parent="."]
+offset_left = 267.0
+offset_top = 218.0
+offset_right = 849.0
+offset_bottom = 781.0
+color = Color(0.273873, 0.273873, 0.273873, 1)
+
+[node name="CodeArea" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 1088.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -83.0
+offset_top = 77.0
+offset_right = -43.0
+offset_bottom = 117.0
+
+[node name="GridContainer" type="GridContainer" parent="Buttons"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 158.0
+offset_right = 501.0
+offset_bottom = 234.0
+scale = Vector2(7, 7)
+columns = 3
+
+[node name="TextureButton1" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_yhsau")
+texture_pressed = ExtResource("2_1ki2e")
+texture_hover = ExtResource("3_ugjmy")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_n1c8b")
+texture_pressed = ExtResource("5_5dyav")
+texture_hover = ExtResource("6_3qpvq")
+
+[node name="TextureButton3" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_1s26w")
+texture_pressed = ExtResource("8_g1gm0")
+texture_hover = ExtResource("9_6kdiq")
+
+[node name="TextureButton4" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_mbk74")
+texture_pressed = ExtResource("11_p73ab")
+texture_hover = ExtResource("12_v7noh")
+
+[node name="TextureButton5" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("13_ayptc")
+texture_pressed = ExtResource("14_2ip7n")
+texture_hover = ExtResource("15_jnj7e")
+
+[node name="TextureButton6" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("16_nbxwb")
+texture_pressed = ExtResource("17_1c4qn")
+texture_hover = ExtResource("18_qjv3f")
+
+[node name="TextureButton7" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("19_4ppuf")
+texture_pressed = ExtResource("20_w6j7u")
+texture_hover = ExtResource("21_5cx41")
+
+[node name="TextureButton8" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("22_tamwg")
+texture_pressed = ExtResource("23_1h73e")
+texture_hover = ExtResource("24_srk6h")
+
+[node name="TextureButton9" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("25_b7pq1")
+texture_pressed = ExtResource("26_kynen")
+texture_hover = ExtResource("27_pow4d")
+
+[node name="TextureButton0" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("28_pd0l2")
+texture_pressed = ExtResource("29_pvjvt")
+texture_hover = ExtResource("30_lo0s6")
+stretch_mode = 0
+
+[node name="ButtonClear" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("31_67fc6")
+texture_pressed = ExtResource("32_wssna")
+texture_hover = ExtResource("33_elq6r")
+
+[node name="ButtonEnter" type="TextureButton" parent="Buttons/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("34_5tms8")
+texture_pressed = ExtResource("35_r715x")
+texture_hover = ExtResource("36_nknpm")
+
+[node name="CodeBG" type="Sprite2D" parent="."]
+position = Vector2(560, 400)
+scale = Vector2(50, 50)
+texture = ExtResource("38_xk3y1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 398.0
+offset_top = 180.0
+offset_right = 798.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("39_rl1q7")
+theme_override_font_sizes/font_size = 80
+text = "Code:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CodeLabel" type="Label" parent="."]
+offset_left = 417.0
+offset_top = 375.0
+offset_right = 737.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("39_rl1q7")
+theme_override_font_sizes/font_size = 80
+text = "0000"
+
+[node name="CodeDisplay" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 39.0
+offset_right = 1073.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0.549776, 0.10325, 0, 1)
+theme_override_fonts/font = ExtResource("39_rl1q7")
+theme_override_font_sizes/font_size = 80
+vertical_alignment = 1
