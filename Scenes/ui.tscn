@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://r506psreloaw"]
+
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_xn0lg"]
+[ext_resource type="Texture2D" uid="uid://y3p2ifslo6c3" path="res://Assets/Sprites/UI/Time.png" id="2_oo1du"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="3_cs328"]
+[ext_resource type="Texture2D" uid="uid://dnrr4p76plfnk" path="res://Assets/Sprites/UI/value.png" id="4_7ft7m"]
+
+[node name="UI" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_xn0lg")
+
+[node name="TimeIcon" type="Sprite2D" parent="."]
+position = Vector2(39, 42.4667)
+scale = Vector2(2.3125, 2.46667)
+texture = ExtResource("2_oo1du")
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 28.0
+offset_right = 301.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("3_cs328")
+theme_override_font_sizes/font_size = 32
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="MoneyIcon" type="Sprite2D" parent="."]
+position = Vector2(41, 136)
+scale = Vector2(3.1275, 2.70102)
+texture = ExtResource("4_7ft7m")
+
+[node name="MoneyLabel" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 114.0
+offset_right = 173.0
+offset_bottom = 146.0
+theme_override_fonts/font = ExtResource("3_cs328")
+theme_override_font_sizes/font_size = 32
+text = "0"

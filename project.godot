@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 MultiplayerInput="*res://addons/multiplayer_input/multiplayer_input.gd"
 PlayerManager="*res://Scripts/player_manager.gd"
+GameManager="*res://Scripts/game_manager.gd"
 
 [display]
 

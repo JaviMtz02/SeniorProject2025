@@ -20,6 +20,7 @@ func join(device: int):
 		# initialize default player data here
 		player_data[player] = {
 			"device": device,
+			"inventory": [],
 		}
 		player_joined.emit(player)
 

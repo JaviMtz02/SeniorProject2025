@@ -13,10 +13,11 @@ extends CharacterBody2D
 @export var door: Area2D
 
 @onready var timer: Timer = $Timer
+@onready var inventory_bar: TextureProgressBar = $UI/InventoryBar
 
 var curr_inventory_size: int = 0 # Checks to see if the burglar has not surpassed the bounds of what the inventory allows
 var curr_loot: Area2D = null # When we're near loot, we can get its details with this variable
-var inventory: Array = [] # This is to know how many single pieces of loot were obtained, Could probably do this with a variable
+var inventory: Array = [] # This is to know how many single pieces of loot were obtained, Could probably do this with a variable. Currently only stores <Freed Object>
 var value_accu: int = 0 # current value of loot obtained, this resets to zero when deposited
 var time_seconds: int
 var time_minutes: int
@@ -49,6 +50,7 @@ func _ready() -> void:
 	
 	# This should get modified when we add different items that the burglar can purchase to increase inventory
 	inventory_label.text = "0/" + str(inventory_space)
+	inventory_bar.max_value = inventory_space
 	
 	# Connects corresponding loot signals and door signals
 	door.connect("deposit", Callable(self, "_on_deposit"))
@@ -58,9 +60,13 @@ func _ready() -> void:
 		loot.connect("burglar_away", Callable(self, "_on_burglar_away"))
 #
 func _process(_delta: float) -> void:
-	if near_door and Input.is_action_just_pressed("deposit"): # If you're near the door then you can deposit your loot
+	# Update UI (just the inventory for now)
+	update_UI()
+		
+	if near_door and input.is_action_just_pressed("deposit"): # If you're near the door then you can deposit your loot
 		level_node.deposit_loot(value_accu, inventory.size())      # That way you can pick up more, 
 		inventory.clear()
+		GameManager.add_money(value_accu)
 		value_accu = 0
 		curr_inventory_size = 0
 		value_label.text = str(value_accu)
@@ -70,7 +76,11 @@ func _process(_delta: float) -> void:
 	if curr_loot != null and input.is_action_just_pressed("take_loot"):
 		try_pick_up_loot(curr_loot)
 	#
-		#
+
+## Update the UI. Ideally not in the _process() function but it'll do for now
+func update_UI():
+	inventory_bar.value = curr_inventory_size
+
 func try_pick_up_loot(loot: Area2D) -> void:
 	if curr_inventory_size <= inventory_space and (inventory_space - curr_inventory_size) >= loot.inventory_space_req:
 		curr_inventory_size += loot.inventory_space_req
@@ -85,17 +95,17 @@ func try_pick_up_loot(loot: Area2D) -> void:
 		# Want to add some sound here that alerts you that you cant pick it up
 		print("Not enough space in inventory!")
 
-#
-func _on_burglar_nearby(loot: Area2D): # Burglar enters the area of the loot and button that tells which button to press appears
-	curr_loot = loot
-	take_loot_button.show()
-	take_loot_button.play()
+func _on_burglar_nearby(loot: Area2D, player_id: int): # Burglar enters the area of the loot and button that tells which button to press appears
+	if player_id == player:
+		curr_loot = loot
+		take_loot_button.show()
+		take_loot_button.play()
 
-func _on_burglar_away(_loot: Area2D): # If burglar is not in the area of loot then we cannot pick up any loot
-	curr_loot = null
-	take_loot_button.stop()
-	take_loot_button.hide()
-	
+func _on_burglar_away(_loot: Area2D, player_id: int): # If burglar is not in the area of loot then we cannot pick up any loot
+	if player_id == player:
+		curr_loot = null
+		take_loot_button.stop()
+		take_loot_button.hide()
 
 func _on_timer_timeout() -> void:
 	if time_seconds > 0:
@@ -115,14 +125,16 @@ func _on_timer_timeout() -> void:
 #
 ## When signal is sent out, we are able to deposit our loot at the door
 ## The button specifying which button to press will appear
-func _on_deposit() -> void:
-	near_door = true
-	deposit_button.show()
-	deposit_button.play()
+func _on_deposit(player_id: int) -> void:
+	if player_id == player:
+		near_door = true
+		deposit_button.show()
+		deposit_button.play()
 #
 ## When we're away from the door, we will not be able to deposit, otherwise it'll break the game
-func _on_off_deposit() -> void:
-	near_door = false
-	deposit_button.hide()
-	deposit_button.hide()
+func _on_off_deposit(player_id: int) -> void:
+	if player_id == player:
+		near_door = false
+		deposit_button.hide()
+		deposit_button.hide()
 	

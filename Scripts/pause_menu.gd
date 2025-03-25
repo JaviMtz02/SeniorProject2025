@@ -55,11 +55,13 @@ func _on_exit_pressed() -> void:
 	'''
 	if paused:
 		$AnimationPlayer.stop()
+		GameManager.set_game_active(false)
 		# Use change_scene_to_file instead
 		get_tree().change_scene_to_file(exit_game_path)
 
 func _on_quit_pressed() -> void:
 	if paused:
+		GameManager.set_game_active(false)
 		get_tree().quit()
 
 func someone_wants_to_pause() -> bool:

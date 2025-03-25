@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cn2v6r5xd2gqc"]
+[gd_scene load_steps=31 format=3 uid="uid://cn2v6r5xd2gqc"]
 
 [ext_resource type="Script" path="res://Scenes/Burglar/burglar.gd" id="1_ptfhq"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="2_0gd4x"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://d3ewjndjta6yq" path="res://Assets/Sprites/UI/key_press.png" id="3_k8n02"]
 [ext_resource type="Texture2D" uid="uid://dnrr4p76plfnk" path="res://Assets/Sprites/UI/value.png" id="3_ojelb"]
 [ext_resource type="Texture2D" uid="uid://dqv6rsbp81orx" path="res://Assets/Sprites/UI/burglar_bag.png" id="3_rpoaa"]
+[ext_resource type="Texture2D" uid="uid://c0ajhrfy7rkqn" path="res://Assets/Sprites/UI/inventoryUnder.png" id="3_uyjl5"]
 [ext_resource type="Script" path="res://Scenes/Burglar/walk_state.gd" id="3_y1n7j"]
+[ext_resource type="Texture2D" uid="uid://b72hc7cxt17rf" path="res://Assets/Sprites/UI/inventoryProgress.png" id="4_3fye1"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_wekip"]
 [ext_resource type="Texture2D" uid="uid://y3p2ifslo6c3" path="res://Assets/Sprites/UI/Time.png" id="7_4d1p6"]
 [ext_resource type="Texture2D" uid="uid://c5xwsdwgf1sgh" path="res://Assets/Sprites/UI/deposit_key.png" id="8_7a7yh"]
@@ -140,8 +142,8 @@ size = Vector2(21, 28)
 script = ExtResource("1_ptfhq")
 burglar = NodePath(".")
 loot_interaction = NodePath("LootInteraction")
-take_loot_button = NodePath("Camera2D/Control/TakeLootButton")
-deposit_button = NodePath("Camera2D/Control/DepositButton")
+take_loot_button = NodePath("UI/TakeLootButton")
+deposit_button = NodePath("UI/DepositButton")
 value_label = NodePath("Camera2D/Control/ValueLabel")
 inventory_label = NodePath("Camera2D/Control/InventorySpaceLabel")
 time_label = NodePath("Camera2D/Control/TimeLabel")
@@ -154,7 +156,44 @@ animation = &"forward"
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_w1me5")
 
+[node name="UI" type="Control" parent="."]
+z_index = 99
+layout_mode = 3
+anchors_preset = 0
+
+[node name="InventoryBar" type="TextureProgressBar" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -17.0
+offset_right = 14.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_under = ExtResource("3_uyjl5")
+texture_progress = ExtResource("4_3fye1")
+
+[node name="TakeLootButton" type="AnimatedSprite2D" parent="UI"]
+position = Vector2(-1, -21)
+sprite_frames = SubResource("SpriteFrames_bpkr4")
+animation = &"take_loot"
+autoplay = "take_loot"
+frame = 1
+frame_progress = 0.271632
+
+[node name="DepositButton" type="AnimatedSprite2D" parent="UI"]
+position = Vector2(-1, -21)
+sprite_frames = SubResource("SpriteFrames_l54x5")
+autoplay = "default"
+frame = 1
+frame_progress = 0.388927
+
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 zoom = Vector2(4, 4)
 
 [node name="Control" type="Control" parent="Camera2D"]

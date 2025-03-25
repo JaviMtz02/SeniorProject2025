@@ -13,9 +13,13 @@ var targets = []
 @onready var screen_size = get_viewport_rect().size
 
 func _ready():
+		
 	await targets_parent_node.players_are_spawned
 	for target in targets_parent_node.get_children():
 		add_target(target)
+
+func _process(delta: float):
+	update_camera_pos()
 
 func add_target(t):
 	if not t in targets:
@@ -27,10 +31,10 @@ func remove_target(t):
 
 # Make sure to use global_position since most of their positions are based off their parent node. 
 # This is especially important for the players in the Players: Node2D node.
-func _process(delta: float):
+func update_camera_pos():
 	if !targets:
 		return
-	
+
 	# Find the center position of all targets
 	var p = Vector2.ZERO
 	for target in targets:

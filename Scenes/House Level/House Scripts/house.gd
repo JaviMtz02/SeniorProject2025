@@ -14,6 +14,7 @@ var minigames_won = 0 # Used to add up the amount of minigames won
 @export var level_time_minutes = 4
 
 func _ready() -> void:
+	GameManager.set_game_active(true)
 	# This gets the amount of scenens in the loot and coins node, this will be useful for 
 	# the achievement system that I (Javi) want to incorporate
 	max_loot = loot.get_children().size() + coins.get_children().size()
