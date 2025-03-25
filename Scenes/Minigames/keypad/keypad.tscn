@@ -7,31 +7,37 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pj5mk")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(116, 62)
-zoom = Vector2(4, 4)
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 800.0
+color = Color(0.0589529, 0.0212428, 0.129311, 1)
 
 [node name="keypad" type="GridContainer" parent="."]
-offset_right = 96.0
-offset_bottom = 128.0
+offset_left = 154.0
+offset_top = 87.0
+offset_right = 250.0
+offset_bottom = 215.0
+scale = Vector2(5, 5)
 columns = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="sticky_note" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 144.0
-offset_top = 34.0
-offset_right = 219.0
-offset_bottom = 98.0
+offset_left = 734.0
+offset_top = 255.0
+offset_right = 809.0
+offset_bottom = 319.0
+scale = Vector2(5, 5)
 texture = ExtResource("2_6g2oi")
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="code" type="Label" parent="sticky_note"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 23.0
-offset_right = 74.0
-offset_bottom = 43.0
+offset_left = -20.25
+offset_top = 15.5
+offset_right = 91.75
+offset_bottom = 47.5
 theme_override_colors/font_color = Color(0.259294, 0.259294, 0.259294, 1)
 theme_override_fonts/font = ExtResource("2_0uwh3")
 theme_override_font_sizes/font_size = 16
@@ -40,11 +46,20 @@ horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
-offset_left = 138.0
-offset_top = 10.0
-offset_right = 228.0
-offset_bottom = 30.0
+offset_left = 700.0
+offset_top = 127.0
+offset_right = 1150.0
+offset_bottom = 207.0
 theme_override_fonts/font = ExtResource("2_0uwh3")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 80
 text = "Guess!!"
 horizontal_alignment = 1
+
+[node name="TriesLabel" type="Label" parent="."]
+offset_left = 700.0
+offset_top = 617.0
+offset_right = 1092.0
+offset_bottom = 681.0
+theme_override_fonts/font = ExtResource("2_0uwh3")
+theme_override_font_sizes/font_size = 64
+text = "Tries: 3"

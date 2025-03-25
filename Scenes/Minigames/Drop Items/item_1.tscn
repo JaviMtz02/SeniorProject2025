@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ngnpvabttus6"]
+
+[ext_resource type="Texture2D" uid="uid://c46km2s4dvlqy" path="res://Assets/Sprites/Loot Sprites/House Loot/art3.png" id="1_mwwub"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_nhao7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cb5v"]
+size = Vector2(45, 48.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpt3a"]
+size = Vector2(17, 18)
+
+[node name="Item1" type="RigidBody2D" node_paths=PackedStringArray("item", "pickup_area") groups=["blocks"]]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_nhao7")
+item = NodePath(".")
+pickup_area = NodePath("PickUpArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 2.5)
+scale = Vector2(3, 3)
+texture = ExtResource("1_mwwub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -6.75)
+shape = SubResource("RectangleShape2D_7cb5v")
+
+[node name="PickUpArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
+position = Vector2(-0.5, -3)
+shape = SubResource("RectangleShape2D_jpt3a")

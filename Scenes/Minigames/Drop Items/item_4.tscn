@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://busgaxtxheb15"]
+
+[ext_resource type="Texture2D" uid="uid://c684plho1vxbm" path="res://Assets/Sprites/Loot Sprites/House Loot/nutcracker.png" id="1_hh47t"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Drop Items/item_1.gd" id="1_jdaam"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72qua"]
+size = Vector2(33, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n07mt"]
+size = Vector2(39, 93)
+
+[node name="Item4" type="RigidBody2D" node_paths=PackedStringArray("item", "pickup_area") groups=["blocks"]]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_jdaam")
+item = NodePath(".")
+pickup_area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_hh47t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_72qua")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_n07mt")

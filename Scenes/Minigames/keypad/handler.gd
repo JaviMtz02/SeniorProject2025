@@ -1,26 +1,27 @@
 extends Node2D
 
-signal game_results
 
 @export var CODE_LENGTH:int = 4
 
 const BUTTON = preload("res://Scenes/Minigames/keypad/button.tscn")
 @onready var grid_container: GridContainer = $keypad
-@onready var camera_2d: Camera2D = $Camera2D
 @onready var code_label: Label = $sticky_note/code
+@onready var tries_label: Label = $TriesLabel
+
 
 var code:Array
 var disabled_code_num_index:int
 var button_array:Array = []
-
+var tries: int = 3
 var game_over: bool = false
 var player_current_guess: Array = []
+
+signal game_won
+signal game_lost
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	grid_container.size = Vector2(32*3, 32*4)
-	print(grid_container.size)
-	camera_2d.position = grid_container.position + Vector2(grid_container.size.x, grid_container.size.y / 2)
 	# Buttons 1-9
 	for i in range(1, 10):
 		var button = BUTTON.instantiate()
@@ -59,9 +60,21 @@ func _on_Button_click(button):
 		button.blink(true)
 		if player_current_guess.size() == CODE_LENGTH:
 			if player_current_guess == code:
+				game_won.emit()
+				queue_free()
 				print("You win")
 				game_over = true
 	else:
-		player_current_guess.clear()
-		for item in button_array:
-			item.blink(false)
+		if tries > 0:
+			player_current_guess.clear()
+			tries -= 1
+			for item in button_array:
+				item.blink(false)
+			update_tries()
+		else:
+			game_lost.emit()
+			queue_free()
+			print("you lost!")
+
+func update_tries() -> void:
+	tries_label.text = "Tries: " + str(tries)

@@ -1,0 +1,9 @@
+res://Scenes/Minigames/Throw Items/thrower.gd
+res://Scenes/Minigames/Throw Items/throw_items.tscn
+res://Scenes/Minigames/Throw Items/item.tscn
+res://Scenes/Minigames/Throw Items/thrower.tscn
+res://Scenes/Minigames/Throw Items/trajectory.tscn
+res://Scenes/Minigames/Throw Items/item.gd
+res://Scenes/Minigames/Throw Items/bag.tscn
+res://Scenes/Minigames/Throw Items/bag.gd
+res://Scenes/Minigames/Throw Items/throw_items.gd

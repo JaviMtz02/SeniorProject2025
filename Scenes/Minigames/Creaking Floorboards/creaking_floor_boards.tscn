@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://0kms2hj04o18"]
-
-[node name="CreakingFloorBoards" type="Node2D"]
-editor_description = "Player must get to the end while choosing the correct board to walk on. One board is completely safe the other while snap and the game ends. Kinda like squid game!"

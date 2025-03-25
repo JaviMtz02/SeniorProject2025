@@ -1,4 +1,79 @@
-[gd_scene format=3 uid="uid://cjynsj6wgi1rc"]
+[gd_scene load_steps=10 format=3 uid="uid://cjynsj6wgi1rc"]
 
-[node name="DoorUnlocking" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://114qeqjqss66" path="res://Assets/Sprites/Minigame Sprites/wall.png" id="1_dfkc2"]
+[ext_resource type="Script" path="res://Scenes/Minigames/Door Unlocking/door_unlocking.gd" id="1_ikik7"]
+[ext_resource type="Texture2D" uid="uid://pdt15ub83g4i" path="res://Assets/Sprites/Items/house_door.png" id="2_1vaw6"]
+[ext_resource type="Texture2D" uid="uid://b465f3b2n8un6" path="res://Assets/Sprites/Minigame Sprites/wood_floor.png" id="2_72fvr"]
+[ext_resource type="Texture2D" uid="uid://cllncmfdc7r3y" path="res://Assets/Sprites/Minigame Sprites/pointer.png" id="5_0uew5"]
+[ext_resource type="Texture2D" uid="uid://d17xhqsrsh53a" path="res://Assets/Sprites/Minigame Sprites/red_bar.png" id="6_w7fin"]
+[ext_resource type="Texture2D" uid="uid://cbbjby8glgt6o" path="res://Assets/Sprites/Minigame Sprites/yello_bar.png" id="7_8347k"]
+[ext_resource type="Texture2D" uid="uid://da4cnfmwt5fj5" path="res://Assets/Sprites/Minigame Sprites/green_bar.png" id="8_o0kng"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="9_curnf"]
+
+[node name="DoorUnlocking" type="Node2D" node_paths=PackedStringArray("pointer", "bars")]
 editor_description = "You are the player and a door is locked. Press the button at the right time for the door to unlock and win the game!"
+script = ExtResource("1_ikik7")
+pointer = NodePath("Pointer")
+bars = [NodePath("Bars/RedLeft"), NodePath("Bars/YellowLeft"), NodePath("Bars/Green"), NodePath("Bars/YellowRight"), NodePath("Bars/RedRight")]
+
+[node name="Wall" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 615.0
+texture = ExtResource("1_dfkc2")
+
+[node name="Floor" type="TextureRect" parent="."]
+offset_top = 615.0
+offset_right = 1151.0
+offset_bottom = 800.0
+texture = ExtResource("2_72fvr")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(576, 375)
+scale = Vector2(10, 15)
+texture = ExtResource("2_1vaw6")
+
+[node name="NightEffect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 800.0
+color = Color(0.168627, 0.184314, 0.466667, 0.392157)
+
+[node name="Pointer" type="Sprite2D" parent="."]
+position = Vector2(563, 611)
+texture = ExtResource("5_0uew5")
+
+[node name="Bars" type="Node2D" parent="."]
+
+[node name="RedLeft" type="Sprite2D" parent="Bars"]
+position = Vector2(204.5, 700)
+scale = Vector2(1.345, 1)
+texture = ExtResource("6_w7fin")
+
+[node name="YellowLeft" type="Sprite2D" parent="Bars"]
+position = Vector2(431, 700)
+scale = Vector2(0.92, 1)
+texture = ExtResource("7_8347k")
+
+[node name="Green" type="Sprite2D" parent="Bars"]
+position = Vector2(566, 700)
+scale = Vector2(0.43, 1)
+texture = ExtResource("8_o0kng")
+
+[node name="YellowRight" type="Sprite2D" parent="Bars"]
+position = Vector2(703, 700)
+scale = Vector2(0.94, 1)
+texture = ExtResource("7_8347k")
+
+[node name="RedRight" type="Sprite2D" parent="Bars"]
+position = Vector2(933.5, 700)
+scale = Vector2(1.365, 1)
+texture = ExtResource("6_w7fin")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 26.0
+offset_right = 522.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_curnf")
+theme_override_font_sizes/font_size = 64
+text = "Tries Left: 3"

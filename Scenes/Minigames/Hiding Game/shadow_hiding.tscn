@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://cxbmuw311vk67"]
-
-[node name="ShadowHiding" type="Node2D"]
-editor_description = "Burglar must go behind bushes or walls while guards walk by. Must get to the end without getting caught or time running out!"
