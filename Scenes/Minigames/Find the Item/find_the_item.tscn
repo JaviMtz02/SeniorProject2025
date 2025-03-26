@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://dpnnjm8kwa5rd"]
-
-[node name="FindTheItem" type="Node2D"]
-
-[node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color(0, 0, 0.00392157, 1)
-self_modulate = Color(0, 0, 0, 1)
-offset_right = 1152.0
-offset_bottom = 800.0
