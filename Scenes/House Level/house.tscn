@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://dthi565027qtm"]
+[gd_scene load_steps=68 format=4 uid="uid://dthi565027qtm"]
 
 [ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Tileset_16x16_16.png" id="1_848k0"]
 [ext_resource type="Script" uid="uid://b61exlu2om48x" path="res://Scenes/House Level/House Scripts/house.gd" id="1_dvkor"]
@@ -23,8 +23,10 @@
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="19_on312"]
 [ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="20_pjwmv"]
 [ext_resource type="PackedScene" uid="uid://sdns7q1mfc6t" path="res://Scenes/House Level/Dog/dog.tscn" id="21_3vikf"]
+[ext_resource type="PackedScene" uid="uid://bh6shsucsajsq" path="res://Scenes/all_spawner.tscn" id="23_atr7s"]
 [ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot Scenes/ball.tscn" id="23_iwso7"]
 [ext_resource type="PackedScene" uid="uid://dassywovt6r47" path="res://Scenes/House Level/Loot Scenes/phone.tscn" id="23_lub5n"]
+[ext_resource type="PackedScene" uid="uid://ixlsim578ps" path="res://Scenes/spawnable.tscn" id="24_5ryl1"]
 [ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="24_lfu3r"]
 [ext_resource type="PackedScene" uid="uid://cjrpelqwlam1x" path="res://Scenes/House Level/Loot Scenes/vase.tscn" id="25_dgrcy"]
 [ext_resource type="PackedScene" uid="uid://cp5auh0nsunp6" path="res://Scenes/House Level/Loot Scenes/kachow.tscn" id="26_fqyn1"]
@@ -39,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://bi4ro7popdrb" path="res://Scenes/House Level/Loot Scenes/skateboard.tscn" id="35_g50dt"]
 [ext_resource type="PackedScene" uid="uid://b8wd6wgu55o4x" path="res://Scenes/House Level/Loot Scenes/trophy.tscn" id="37_lryl0"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="39_xe4ym"]
+[ext_resource type="PackedScene" uid="uid://8k1qyskunxey" path="res://Scenes/player_spawn_point.tscn" id="40_gaq4g"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="41_fdx47"]
 [ext_resource type="PackedScene" uid="uid://isyhl85rrp48" path="res://Scenes/House Level/minigame_door_house.tscn" id="42_8nuk2"]
 [ext_resource type="AudioStream" uid="uid://cwjdn1w21su5g" path="res://Sounds/warm-evening-outdoors.mp3" id="43_og0ok"]
@@ -10471,206 +10474,226 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AADs/xMACgAKAA0AAADs/xQACgAKAA4AAADs/xUACgAKAA8AAADt/xMACgALAA0AAADt/xQACgALAA4AAADt/xUACgALAA8AAAAJACsACgABABwAAAAJACwACgABAB0AAAAKACsACgACABwAAAAKACwACgACAB0AAAALACsACgADABwAAAALACwACgADAB0AAAAMACsACgABABwAAAAMACwACgABAB0AAAANACsACgACABwAAAANACwACgACAB0AAAAOACsACgADABwAAAAOACwACgADAB0AAAAHAC0ACgAJACAAAAAHAC4ACgAJACEAAAAHAC8ACgAJACIAAAAIAC0ACgAKACAAAAAIAC4ACgAKACEAAAAIAC8ACgAKACIAAAAPAC0ACgAHACAAAAAPAC4ACgAHACEAAAAPAC8ACgAHACIAAAAQAC0ACgAIACAAAAAQAC4ACgAIACEAAAAQAC8ACgAIACIAAAADACkADAAPAA4AAAADACoADAAPAA8AAAAJAC4ACwAEABsAAAAJAC8ACwADABwAAAAJADAACwADABwAAAAJADEACwAEABwAAAAKAC4ACwADABsAAAAKAC8ACwAFAB0AAAAKADAACwAFAB0AAAALAC4ACwADABsAAAALAC8ACwAFAB0AAAALADAACwAFAB0AAAAMAC4ACwADABsAAAAMAC8ACwAFAB0AAAAMADAACwAFAB0AAAANAC4ACwADABsAAAANAC8ACwAFAB0AAAANADAACwAFAB0AAAANADEACwAEAB0AAAAOAC4ACwAFABsAAAAOAC8ACwADAB0AAAAOADAACwADAB0AAAAOADEACwAFABwAAAD8/y4ADgAAAAUAAAD8/y8ADgAAAAYAAAD8/zAADgAAAAcAAAD9/y4ADgABAAUAAAD9/y8ADgABAAYAAAD9/zAADgABAAcAAAD+/y4ADgACAAUAAAD+/y8ADgACAAYAAAD+/zAADgACAAcAAAD//y4ADgADAAUAAAD//y8ADgADAAYAAAD//zAADgADAAcAAAAAAC0ACwAFAA0AAAAAAC4ACwAFAA4AAAAAAC8ACwAFAA0AAAAAADAACwAFAA4AAAD7/y0ACwAGAAsAAAD7/y4ACwAGAAwAAAD7/y8ACwAGAAsAAAD7/zAACwAGAAwAAAANABsAEAAaAAIAAAANABwAEAAaAAIAAAAQABsAEAAaAAIAAAAQABwAEAAaAAIAAAD3/zQAEAAaAAIAAAD8/zQAEAAaAAIAAAAHACwAEAAaAAMAAADw/ysAEAAMAAAAAAD2/xwAEQABACoAAAD2/x0AEQABACsAAAANACMAEQABACoAAAANACQAEQABACsAAADr/y4AEQABACoAAADr/y8AEQABACsAAADw/zIAEQABACoAAADw/zMAEQABACsAAAD7/x4AEQAEAF0AAAD7/x8AEQAEAF4AAAD6/yEAEQAIAF4AAAD7/yEAEQAJAF4AAAABACAAEQALAFwAAAD7/xoAEQAFAF8AAAD7/xsAEQAFAGAAAAD//xoAEgAGAAoAAAD//xsAEgAGAAsAAAAAABoAEgAHAAoAAAAAABsAEgAHAAsAAAABABoAEgAIAAoAAAABABsAEgAIAAsAAAACABkAEgABABIAAAACABoAEgABABMAAAADABkAEgACABIAAAADABoAEgACABMAAAACAB0AEgAGABYAAAACAB4AEgAGABcAAAADAB0AEgAHABYAAAADAB4AEgAHABcAAAD5/xoAEgAIABgAAAD5/xsAEgAIABkAAAD5/xwAEgAIABoAAAD6/xoAEgAJABgAAAD6/xsAEgAJABkAAAD6/xwAEgAJABoAAADp/xoAEgAIABQAAADp/xsAEgAIABUAAADp/xwAEgAIABYAAADp/x0AEgAIABcAAADq/xoAEgAJABQAAADq/xsAEgAJABUAAADq/xwAEgAJABYAAADq/x0AEgAJABcAAADt/xoAEgAAAGYAAADt/xsAEgAAAGcAAADu/xoAEgABAGYAAADu/xsAEgABAGcAAADv/xoAEgACAGYAAADv/xsAEgACAGcAAAD5/yAAEgALAFkAAAD5/yEAEgALAFoAAADt/xkAEgAAAGUAAADu/xkAEgABAGUAAADv/xkAEgACAGUAAAD9/x4ADgAJAAoAAAD9/x8ADgAJAAsAAAD+/x4ADgAKAAoAAAD+/x8ADgAKAAsAAAD0/xkADgALAEMAAAD0/xoADgALAEQAAAD0/xsADgALAEUAAAARACIADgAMAEMAAAARACMADgAMAEQAAAARACQADgAMAEUAAAASACMADgANAEYAAAASACQADgANAEcAAAD1/xoADgANAEYAAAD1/xsADgANAEcAAAAOACIADgAPAEIAAAAOACMADgAPAEMAAADx/y8ADgAOAD8AAADx/zAADgAOAEAAAAAIADAADgAOAD8AAAAIADEADgAOAEAAAAAPADAADgAOAD8AAAAPADEADgAOAEAAAAD6/xMADgAMADsAAAD6/xQADgAMADwAAAD5/xMADgAMADsAAAD5/xQADgAMADwAAAD4/xMADgAMADsAAAD4/xQADgAMADwAAAD3/xMADgAMADsAAAD3/xQADgAMADwAAAANABIADgACADYAAAANABMADgACADcAAAAOABIADgADADYAAAAOABMADgADADcAAAAKACMADgALAEYAAAAKACQADgALAEcAAAALACMADgAMAEYAAAALACQADgAMAEcAAAAQACkACwADACEAAAAQACoACwADACIAAAAQACsACwADACMAAADw/xwACgALACEAAADw/x0ACgALACIAAADx/xwACgAMACEAAADx/x0ACgAMACIAAAD+/ykACgAKABgAAAD+/yoACgAKABkAAAD+/ysACgAKABoAAAD//ykACgALABgAAAD//yoACgALABkAAAD//ysACgALABoAAAARACcAEwAOAC8AAAARACgAEwAOADAAAAASACcAEwAPAC8AAAASACgAEwAPADAAAAAFABkAEwAMAAkAAAAFABoAEwAMAAoAAAAFABsAEwAMAAsAAAAGABkAEwANAAkAAAAGABoAEwANAAoAAAAGABsAEwANAAsAAAAHABkAEwAMAAAAAAAHABoAEwAMAAEAAAAHABsAEwAMAAIAAAAIABkAEwANAAAAAAAIABoAEwANAAEAAAAIABsAEwANAAIAAAAJABsAEwAOAAEAAAAJABwAEwAOAAIAAAAKABsAEwAPAAEAAAAKABwAEwAPAAIAAAAKACUAEwAMAAMAAAAKACYAEwAMAAQAAAALACUAEwANAAMAAAALACYAEwANAAQAAAAQACUAEwAMAAMAAAAQACYAEwAMAAQAAAARACUAEwANAAMAAAARACYAEwANAAQAAAAQACQAEwABAAYAAAAQACgAEwAJAAoAAADp/ykAEwAOAAkAAADp/yoAEwAOAAoAAADp/ysAEwAOAAsAAADq/ykAEwAPAAkAAADq/yoAEwAPAAoAAADq/ysAEwAPAAsAAAD3/x4AEwAJACEAAAD3/x8AEwAJACIAAAD3/yAAEwAGACMAAAD4/zEAFQAJACwAAAD4/zIAFQAJAC0AAAD4/zMAFQAJAC4AAAD5/zEAFQAKACwAAAD5/zIAFQAKAC0AAAD5/zMAFQAKAC4AAAD6/zEAFQALACwAAAD6/zIAFQALAC0AAAD6/zMAFQALAC4AAAD7/zEAFQAMACwAAAD7/zIAFQAMAC0AAAD7/zMAFQAMAC4AAAAHABMACgAFABEAAAAHABQACgAFABIAAAAHABUACgAFABMAAAAIABMACgAGABEAAAAIABQACgAGABIAAAAIABUACgAGABMAAAASABcACgALABEAAAASABYACgALABAAAAASABQACgALABAAAAASABUACgALABEAAAD2/yIACgAKABYAAAD2/yMACgAKABcAAAD3/yIACgALABYAAAD3/yMACgALABcAAADs/yIACgAAACAAAADs/yMACgAAACEAAADp/yEAEgAEAEkAAADq/yEAEgAFAEkAAAD9/xsAEgAHAEsAAAD5/x4AEgAHAEwAAADz/yoAEgAJAFcAAADz/ysAEgAJAFgAAAD0/yoAEgAKAFcAAAD0/ysAEgAKAFgAAADt/yoAEgAIAEkAAADt/ysAEgAIAEoAAADq/yIADAAJAB0AAADq/yMADAAJAB4AAADq/yQADAAJAB8AAADp/yUADAACAB8AAADp/yYADAACACAAAADp/ycADAACACEAAAD9/zMADAAAADYAAAD9/zQADAAAADcAAAD2/zMADAAAADYAAAD2/zQADAAAADcAAAD5/yIADAAGABgAAAD5/yMADAAGABkAAAD5/yQADAAGABoAAAD6/yIADAAHABgAAAD6/yMADAAHABkAAAD6/yQADAAHABoAAADt/zIACwAKABgAAADt/zMACwAKABkAAADt/zEACwAKABcAAADu/zIACwAIAAsAAADu/zMACwAIAAwAAADv/zIACwALACAAAADv/zMACwALACEAAADp/zIACwAEAAYAAADp/zMACwAEAAcAAADq/zIACwAFAAYAAADq/zMACwAFAAcAAADr/zIACwAGAAYAAADr/zMACwAGAAcAAADs/zIACwAEAAYAAADs/zMACwAEAAcAAAADADAAEQALAF8AAAADADEAEQALAGAAAAAEADAAEQAMAF8AAAAEADEAEQAMAGAAAADx/xMACgAMAA8AAADx/xQACgAMABAAAADx/xUACgAMABEAAADy/xMACgANAA8AAADy/xQACgANABAAAADy/xUACgANABEAAAAPABQACgAIAAwAAAAPABUACgAIAA0AAAAQABQACgAJAAwAAAAQABUACgAJAA0AAADr/xQAEAAYAAcAAADr/xUAEAAYAAgAAADp/xcAEAAYAAcAAADp/xgAEAAYAAgAAADv/xcAEAAYAAcAAADv/xgAEAAYAAgAAAD0/xYAEAAYAAcAAAD0/xcAEAAYAAgAAAD1/xMAEAAYAAcAAAD1/xQAEAAYAAgAAAAMABcAEAAYAAcAAAAMABgAEAAYAAgAAAAMABMAEAAYAAcAAAAMABQAEAAYAAgAAAAFABYAEAAYAAcAAAAFABcAEAAYAAgAAAABABcAEAAYAAcAAAABABgAEAAYAAgAAAD//xMAEAAYAAcAAAD//xQAEAAYAAgAAAD4/xcAEAAYAAcAAAD4/xgAEAAYAAgAAAABAB8AEQALAFsAAADt/yYAEgAHAEMAAADt/ycAEgAHAEQAAADu/yYAEgAJAEMAAADu/ycAEgAJAEQAAADv/yYAEgAJAEMAAADv/ycAEgAJAEQAAADw/yYAEgAJAEMAAADw/ycAEgAJAEQAAADx/yYAEgAJAEMAAADx/ycAEgAJAEQAAADy/yYAEgAJAEMAAADy/ycAEgAJAEQAAADz/yYAEgAJAEMAAADz/ycAEgAJAEQAAAD0/yYAEgAJAEMAAAD0/ycAEgAJAEQAAAD1/yYAEgAJAEMAAAD1/ycAEgAJAEQAAAD2/yYAEgAJAEMAAAD2/ycAEgAJAEQAAAD3/yYAEgAJAEMAAAD3/ycAEgAJAEQAAAD4/yYAEgAJAEMAAAD4/ycAEgAJAEQAAAD5/yYAEgAJAEMAAAD5/ycAEgAJAEQAAAD6/yYAEgAJAEMAAAD6/ycAEgAJAEQAAAD7/yYAEgAJAEMAAAD7/ycAEgAJAEQAAAD8/yYAEgAJAEMAAAD8/ycAEgAJAEQAAAD9/yYAEgAJAEMAAAD9/ycAEgAJAEQAAAD+/yYAEgAJAEMAAAD+/ycAEgAJAEQAAAD//yYAEgAJAEMAAAD//ycAEgAJAEQAAAAAACYAEgAJAEMAAAAAACcAEgAJAEQAAAABACYAEgAJAEMAAAABACcAEgAJAEQAAAACACYAEgAJAEMAAAACACcAEgAJAEQAAAADACYAEgAJAEMAAAADACcAEgAJAEQAAAAEACYAEgAJAEMAAAAEACcAEgAJAEQAAAAFACYAEgAIAEMAAAAFACcAEgAIAEQAAADt/x0AEgAEAAYAAADu/x0AEgAFAAYAAADs/x4AEgADAAcAAADs/x8AEgADAAgAAADs/yAAEgADAAkAAADt/x4AEgAEAAcAAADt/x8AEgAEAAgAAADt/yAAEgAEAAkAAADu/x4AEgAFAAcAAADu/x8AEgAFAAgAAADu/yAAEgAFAAkAAADv/x4AEgAGAAcAAADv/x8AEgAGAAgAAADv/yAAEgAGAAkAAAAOAB4ACwAAABsAAAANAB4ACwAAABsAAAAMAB4ACwAAABsAAAALAB4ACwAAABsAAAAKAB4ACwAAABsAAAAJAB4ACwAAABsAAAAIAB4ACwAAABsAAAAHAB4ACwABABsAAAAHAB8ACwAAABwAAAAHACAACwABABwAAAAIACAACwABAB0AAAAJACAACwABAB0AAAAKACAACwABAB0AAAALACAACwABAB0AAAAMACAACwABAB0AAAANACAACwABAB0AAAAOACAACwABAB0AAAAPACAACwABAB0AAAAQACAACwABAB0AAAARACAACwACABwAAAARAB4ACwACABsAAAAPAB4ACwAAABsAAAAQAB4ACwAAABsAAAARAB8ACwAAAB0AAAAQAB8ACwACAB0AAAAPAB8ACwACAB0AAAAOAB8ACwACAB0AAAANAB8ACwACAB0AAAAMAB8ACwACAB0AAAALAB8ACwACAB0AAAAKAB8ACwACAB0AAAAJAB8ACwACAB0AAAAIAB8ACwACAB0AAAAKADEACwAEAB0AAAALADEACwAEAB0AAAAMADEACwAEAB0AAAA=")
 tile_set = SubResource("TileSet_ooseh")
 
-[node name="DogLogic" type="Node" parent="."]
+[node name="Dog" parent="." instance=ExtResource("23_atr7s")]
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="DogLogic" groups=["navigation_polygon_source_geometry_group"]]
+[node name="Dog" parent="Dog" instance=ExtResource("24_5ryl1")]
+position = Vector2(191, 765)
+object_to_spawn = ExtResource("21_3vikf")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Dog" groups=["navigation_polygon_source_geometry_group"]]
 z_as_relative = false
 navigation_polygon = SubResource("NavigationPolygon_r1ddd")
 
-[node name="Dog" parent="DogLogic" instance=ExtResource("21_3vikf")]
-position = Vector2(194, 740)
+[node name="Loot" parent="." instance=ExtResource("23_atr7s")]
 
-[node name="Loot" type="Node" parent="."]
-
-[node name="Phone" parent="Loot" groups=["loot"] instance=ExtResource("23_lub5n")]
-z_index = 1
+[node name="Phone" parent="Loot" instance=ExtResource("24_5ryl1")]
 position = Vector2(-353, 532)
-script = ExtResource("24_lfu3r")
-value = 2.0
-inventory_space_req = 6.0
+object_to_spawn = ExtResource("23_lub5n")
 
-[node name="Ball" parent="Loot" instance=ExtResource("23_iwso7")]
+[node name="Ball" parent="Loot" instance=ExtResource("24_5ryl1")]
+position = Vector2(-137, 516)
+object_to_spawn = ExtResource("23_iwso7")
+
+[node name="Loot_old" type="Node" parent="."]
+
+[node name="Ball" parent="Loot_old" instance=ExtResource("23_iwso7")]
 z_index = 1
 position = Vector2(-137, 516)
 
-[node name="Vase" parent="Loot" groups=["loot"] instance=ExtResource("25_dgrcy")]
+[node name="Vase" parent="Loot_old" groups=["loot"] instance=ExtResource("25_dgrcy")]
 position = Vector2(-186, 347)
 script = ExtResource("24_lfu3r")
 value = 7.0
 inventory_space_req = 6.0
 
-[node name="Kachow" parent="Loot" groups=["loot"] instance=ExtResource("26_fqyn1")]
+[node name="Kachow" parent="Loot_old" groups=["loot"] instance=ExtResource("26_fqyn1")]
 position = Vector2(-38, 416)
 script = ExtResource("24_lfu3r")
 value = 10.0
 inventory_space_req = 1.0
 
-[node name="Artifact" parent="Loot" instance=ExtResource("27_arj0y")]
+[node name="Artifact" parent="Loot_old" instance=ExtResource("27_arj0y")]
 position = Vector2(-33, 751)
 value = 8.0
 inventory_space_req = 5.0
 
-[node name="Keyboard" parent="Loot" groups=["loot"] instance=ExtResource("28_dxgwq")]
+[node name="Keyboard" parent="Loot_old" groups=["loot"] instance=ExtResource("28_dxgwq")]
 position = Vector2(91, 690)
 script = ExtResource("24_lfu3r")
 value = 25.0
 inventory_space_req = 15.0
 
-[node name="Book" parent="Loot" groups=["loot"] instance=ExtResource("29_ewlil")]
+[node name="Book" parent="Loot_old" groups=["loot"] instance=ExtResource("29_ewlil")]
 position = Vector2(145, 385)
 
-[node name="Art2" parent="Loot" groups=["loot"] instance=ExtResource("30_g8sa4")]
+[node name="Art2" parent="Loot_old" groups=["loot"] instance=ExtResource("30_g8sa4")]
 position = Vector2(-61, 668)
 
-[node name="Art" parent="Loot" instance=ExtResource("31_ayuub")]
+[node name="Art" parent="Loot_old" instance=ExtResource("31_ayuub")]
 position = Vector2(-54, 564)
 
-[node name="Art3" parent="Loot" groups=["loot"] instance=ExtResource("32_2jcoy")]
+[node name="Art3" parent="Loot_old" groups=["loot"] instance=ExtResource("32_2jcoy")]
 position = Vector2(-187, 564)
 script = ExtResource("24_lfu3r")
 value = 9.0
 inventory_space_req = 4.0
 
-[node name="Art4" parent="Loot" groups=["loot"] instance=ExtResource("33_lwjgl")]
+[node name="Art4" parent="Loot_old" groups=["loot"] instance=ExtResource("33_lwjgl")]
 position = Vector2(-156, 676)
 script = ExtResource("24_lfu3r")
 value = 1.0
 inventory_space_req = 5.0
 
-[node name="Robot" parent="Loot" groups=["loot"] instance=ExtResource("34_765gb")]
+[node name="Robot" parent="Loot_old" groups=["loot"] instance=ExtResource("34_765gb")]
 position = Vector2(-322, 385)
 script = ExtResource("24_lfu3r")
 value = 2.0
 inventory_space_req = 7.0
 
-[node name="Skateboard" parent="Loot" groups=["loot"] instance=ExtResource("35_g50dt")]
+[node name="Skateboard" parent="Loot_old" groups=["loot"] instance=ExtResource("35_g50dt")]
 position = Vector2(278, 387)
 script = ExtResource("24_lfu3r")
 value = 5.0
 inventory_space_req = 10.0
 
-[node name="Trophy" parent="Loot" groups=["loot"] instance=ExtResource("37_lryl0")]
+[node name="Trophy" parent="Loot_old" groups=["loot"] instance=ExtResource("37_lryl0")]
 position = Vector2(-42, 329)
 script = ExtResource("24_lfu3r")
 value = 10.0
 
-[node name="Vase2" parent="Loot" groups=["loot"] instance=ExtResource("25_dgrcy")]
+[node name="Vase2" parent="Loot_old" groups=["loot"] instance=ExtResource("25_dgrcy")]
 position = Vector2(-9, 393)
 script = ExtResource("24_lfu3r")
 value = 8.0
 inventory_space_req = 3.0
 
-[node name="Players" type="Node2D" parent="."]
+[node name="Coins" parent="." instance=ExtResource("23_atr7s")]
 
-[node name="Coins" type="Node" parent="."]
+[node name="Coin" parent="Coins" instance=ExtResource("24_5ryl1")]
+position = Vector2(-98, 776)
+object_to_spawn = ExtResource("39_xe4ym")
 
-[node name="Coin2" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coins_old" type="Node" parent="."]
+
+[node name="Coin2" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-295, 710)
 
-[node name="Coin" parent="Coins" instance=ExtResource("39_xe4ym")]
-position = Vector2(-98, 776)
-
-[node name="Coin3" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin3" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-249, 712)
 
-[node name="Coin4" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin4" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-273, 697)
 
-[node name="Coin5" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin5" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-349, 709)
 
-[node name="Coin6" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin6" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-354, 787)
 
-[node name="Coin7" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin7" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-353, 838)
 
-[node name="Coin8" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin8" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-264, 839)
 
-[node name="Coin9" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin9" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(168, 766)
 
-[node name="Coin10" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin10" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(217, 766)
 
-[node name="Coin11" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin11" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-21, 807)
 
-[node name="Coin12" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin12" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(116, 812)
 
-[node name="Coin13" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin13" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(260, 814)
 
-[node name="Coin14" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin14" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(281, 709)
 
-[node name="Coin15" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin15" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(195, 609)
 
-[node name="Coin16" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin16" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(241, 590)
 
-[node name="Coin17" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin17" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(242, 645)
 
-[node name="Coin18" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin18" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-293, 622)
 
-[node name="Coin19" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin19" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-232, 622)
 
-[node name="Coin20" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin20" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-115, 621)
 
-[node name="Coin21" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin21" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-10, 622)
 
-[node name="Coin22" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin22" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(115, 623)
 
-[node name="Coin23" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin23" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-56, 457)
 
-[node name="Coin24" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin24" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-9, 536)
 
-[node name="Coin25" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin25" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-167, 451)
 
-[node name="Coin26" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin26" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-288, 496)
 
-[node name="Coin27" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin27" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-233, 535)
 
-[node name="Coin28" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin28" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(271, 499)
 
-[node name="Coin29" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin29" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(139, 500)
 
-[node name="Coin30" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin30" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(242, 372)
 
-[node name="Coin31" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin31" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(173, 346)
 
-[node name="Coin32" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin32" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-227, 386)
 
-[node name="Coin33" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin33" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(-62, 358)
 
-[node name="Coin34" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin34" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(41, 356)
 
-[node name="Coin35" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin35" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(190, 816)
 
-[node name="Coin36" parent="Coins" instance=ExtResource("39_xe4ym")]
+[node name="Coin36" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(63, 729)
+
+[node name="MinigameDoors" type="Node" parent="."]
+
+[node name="MinigameDoorHouse" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
+position = Vector2(-240, 530)
+
+[node name="MinigameDoorHouse3" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
+position = Vector2(240, 386)
+
+[node name="MinigameDoorHouse2" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
+position = Vector2(-16, 530)
+
+[node name="PlayerSpawnPoint" parent="." node_paths=PackedStringArray("minigame_door") instance=ExtResource("40_gaq4g")]
+position = Vector2(-96, 810)
+minigame_door = NodePath("../MinigameDoors")
 
 [node name="Door" parent="." instance=ExtResource("41_fdx47")]
 position = Vector2(-94, 851)
@@ -10683,17 +10706,6 @@ offset_top = -122.0
 offset_right = 1021.0
 offset_bottom = 1180.0
 color = Color(0.168627, 0.184314, 0.466667, 0.392157)
-
-[node name="MinigameDoors" type="Node" parent="."]
-
-[node name="MinigameDoorHouse" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
-position = Vector2(-240, 530)
-
-[node name="MinigameDoorHouse3" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
-position = Vector2(240, 386)
-
-[node name="MinigameDoorHouse2" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
-position = Vector2(-16, 530)
 
 [node name="MinigameLayer" type="CanvasLayer" parent="." groups=["burglar_camera"]]
 

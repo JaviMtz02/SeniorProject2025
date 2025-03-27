@@ -27,9 +27,10 @@ var near_door: bool = false
 var input_enabled: bool = true
 var minigames_won: int = 0
 
-var player_id = -1
-
 func _ready() -> void:
+	if MultiplayerManager.is_multiplayer() and int(name) != multiplayer.get_unique_id():
+		$StateMachine.process_mode = Node.PROCESS_MODE_DISABLED
+	
 	if level_node == null:
 		level_node = get_parent().get_parent()
 		

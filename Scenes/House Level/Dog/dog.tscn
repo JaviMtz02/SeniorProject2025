@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://sdns7q1mfc6t"]
+[gd_scene load_steps=41 format=3 uid="uid://sdns7q1mfc6t"]
 
 [ext_resource type="Script" uid="uid://b3f5g33678lyn" path="res://Scenes/House Level/Dog/dog.gd" id="1_a8i3j"]
 [ext_resource type="Texture2D" uid="uid://r4dmsd5wykkm" path="res://Assets/Sprites/animals/1 Dog/Death.png" id="2_7lm3c"]
@@ -219,26 +219,33 @@ size = Vector2(17, 6.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12coq"]
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rs27m"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("NavigationAgent2D:target_position")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("StateMachine/Bark:bark_duration")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
 [node name="Dog" type="CharacterBody2D" groups=["enemy_interaction"]]
 z_index = 1
-position = Vector2(6, -11)
-scale = Vector2(0.8, 0.8)
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_a8i3j")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3.5, 3.5)
+position = Vector2(0.500008, -7.49999)
 scale = Vector2(0.854167, 0.854167)
 sprite_frames = SubResource("SpriteFrames_6fd0c")
-animation = &"dead"
+animation = &"hurt"
 autoplay = "idle"
-frame = 3
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13)
+position = Vector2(-2.99999, 2.00001)
 shape = SubResource("RectangleShape2D_di87t")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -285,10 +292,11 @@ nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-1.25, 12.5)
+position = Vector2(-4.24999, 1.50001)
 target_position = Vector2(56.25, 1.25)
 
 [node name="HitBox" type="Area2D" parent="." groups=["enemy_interaction"]]
+position = Vector2(-2.99999, -11)
 collision_layer = 64
 collision_mask = 64
 
@@ -298,3 +306,6 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_12coq")
 
 [node name="SFX" type="Node" parent="."]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_rs27m")

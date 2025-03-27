@@ -25,8 +25,8 @@ func _ready() -> void:
 	multiplayer.connection_failed.connect(_on_connected_fail)
 	multiplayer.server_disconnected.connect(_on_server_disconnected)
 
-func is_multiplayer():
-	return multiplayer.multiplayer_peer != null
+func is_multiplayer() -> bool:
+	return multiplayer.multiplayer_peer != null and not multiplayer.multiplayer_peer is OfflineMultiplayerPeer
 
 func is_host():
 	return multiplayer.is_server()
