@@ -27,13 +27,15 @@ var near_door: bool = false
 var input_enabled: bool = true
 var minigames_won: int = 0
 
+var player_id = -1
+
 func _ready() -> void:
 	if level_node == null:
-		level_node = get_parent()
+		level_node = get_parent().get_parent()
 		
 	# Get level settings
-	if get_parent().has_method("get_level_data"):
-		var level_data = get_parent().get_level_data()
+	if level_node.has_method("get_level_data"):
+		var level_data = level_node.get_level_data()
 		time_minutes = level_data["time_minutes"]
 		time_seconds = level_data["time_seconds"]
 		

@@ -1,22 +1,18 @@
 extends Control
 
-@onready var house_level = preload("res://Scenes/House Level/house.tscn") as PackedScene
-@onready var museum_level = preload("res://Scenes/Museum Level/museum.tscn") as PackedScene
-@onready var lab_level = preload("res://Scenes/Lab Level/lab_level.tscn") as PackedScene
-var main_menu := "res://Scenes/Menus/start_menu.tscn"
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+const HOUSE_LEVEL: String = "res://Scenes/House Level/house.tscn"
+const MUSEUM_LEVEL: String = "res://Scenes/Museum Level/museum.tscn"
+const LAB_LEVEL: String = "res://Scenes/Lab Level/lab_level.tscn"
+const PLAY_MENU: String= "res://Scenes/Menus/play_menu.tscn"
 
 func _on_house_pressed() -> void:
-	get_tree().change_scene_to_packed(house_level)
+	MultiplayerManager.load_game.rpc(HOUSE_LEVEL)
 
 func _on_museum_pressed() -> void:
-	get_tree().change_scene_to_packed(museum_level)
+	MultiplayerManager.load_game.rpc(MUSEUM_LEVEL)
 
 func _on_lab_pressed() -> void:
-	get_tree().change_scene_to_packed(lab_level)
+	MultiplayerManager.load_game.rpc(LAB_LEVEL)
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file(main_menu)
+	get_tree().change_scene_to_file(PLAY_MENU)
