@@ -120,14 +120,14 @@ func ai_move():
 		return
 	player_turn = true
 	
-func check_winner(board, real=true):
+func check_winner(inBoard, real=true):
 	var winning_combinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 	for combination in winning_combinations:
-		if board[combination[0]] == 0 or board[combination[1]] == 0 or board[combination[2]] == 0:
+		if inBoard[combination[0]] == 0 or inBoard[combination[1]] == 0 or inBoard[combination[2]] == 0:
 			continue
-		if int(board[combination[0]]) == int(board[combination[1]]) and int(board[combination[1]]) == int(board[combination[2]]):
+		if int(inBoard[combination[0]]) == int(inBoard[combination[1]]) and int(inBoard[combination[1]]) == int(inBoard[combination[2]]):
 			if real:
-				winner = board[combination[0]]
+				winner = inBoard[combination[0]]
 			return true
 	return false
 

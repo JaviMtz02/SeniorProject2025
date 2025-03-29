@@ -99,6 +99,9 @@ animations = [{
 radius = 5.0
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_jgi06"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Coin" type="Area2D" groups=["coins", "loot"]]
 collision_layer = 2

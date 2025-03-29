@@ -5,6 +5,7 @@ signal player_connected
 signal player_disconnected
 signal server_disconnected
 signal connection_failed
+signal start_spawning
 
 # Default info
 @export var DEFAULT_IP_ADDRESS: String = "127.0.0.1"
@@ -121,6 +122,27 @@ func load_game(game_scene_path: String):
 func player_loaded():
 	if multiplayer.is_server():
 		players_loaded += 1
-		if players_loaded == players.size():
+		if players_loaded == players.size() or not is_multiplayer():
 			all_players_loaded.emit()
+			permission_to_spawn()
 			players_loaded = 0
+
+@rpc("authority", "call_local", "reliable")
+func permission_to_spawn():
+	start_spawning.emit()
+
+@rpc("call_local", "any_peer")
+func request_remove_item(item_path: NodePath):
+	if not is_multiplayer_authority():  # Ensure only the server processes this
+		return
+
+	var item = get_node_or_null(item_path)
+	if item:
+		item.queue_free()
+		remove_item_from_clients.rpc(item_path)
+
+@rpc("authority", "call_local", "reliable")
+func remove_item_from_clients(item_path: NodePath):
+	var item = get_node_or_null(item_path)
+	if item:
+		item.queue_free()

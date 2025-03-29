@@ -47,8 +47,8 @@ func _on_exit_pressed() -> void:
 		get_tree().change_scene_to_packed(exit_game)
 		'''
 		$AnimationPlayer.stop()
-		# Use change_scene_to_file instead
-		get_tree().change_scene_to_file(exit_game_path)
+		MultiplayerManager.load_game(exit_game_path)
+		MultiplayerManager.leave_game()
 
 func _on_quit_pressed() -> void:
 	if paused:

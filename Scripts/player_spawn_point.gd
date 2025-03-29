@@ -10,7 +10,6 @@ func _ready():
 			var player_to_add = BURGLAR.instantiate()
 			player_to_add.name = str(id)
 			player_to_add.set_multiplayer_authority(id)
-			player_to_add.add_to_group("Burglar")
 			add_child(player_to_add)
 	else:
 		var player_to_add = BURGLAR.instantiate()

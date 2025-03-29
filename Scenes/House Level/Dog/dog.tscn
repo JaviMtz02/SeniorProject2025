@@ -229,6 +229,9 @@ properties/1/replication_mode = 1
 properties/2/path = NodePath("StateMachine/Bark:bark_duration")
 properties/2/spawn = true
 properties/2/replication_mode = 1
+properties/3/path = NodePath("StateMachine/Walk:target_direction")
+properties/3/spawn = true
+properties/3/replication_mode = 1
 
 [node name="Dog" type="CharacterBody2D" groups=["enemy_interaction"]]
 z_index = 1
@@ -292,7 +295,6 @@ nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-4.24999, 1.50001)
 target_position = Vector2(56.25, 1.25)
 
 [node name="HitBox" type="Area2D" parent="." groups=["enemy_interaction"]]
