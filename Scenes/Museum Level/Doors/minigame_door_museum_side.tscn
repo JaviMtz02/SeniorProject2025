@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://8ccgsxyrbo8l"]
 
-[ext_resource type="Script" uid="uid://bakchautwggoo" path="res://Scenes/Museum Level/Museum Scripts/minigame_door_museum_side.gd" id="1_3a6tp"]
 [ext_resource type="Texture2D" uid="uid://dnbyf476mbb76" path="res://Assets/Sprites/Items/minigame_door_side.png" id="1_byjkw"]
+[ext_resource type="Script" uid="uid://crx4aany5ry8x" path="res://Scenes/Museum Level/Museum Scripts/minigame_door_museum.gd" id="1_e4oiu"]
 [ext_resource type="PackedScene" uid="uid://bks7qnyb4tear" path="res://Scenes/Minigames/Catch Items/main_screen.tscn" id="2_bd412"]
 [ext_resource type="PackedScene" uid="uid://dxkwahqljg2t1" path="res://Scenes/Minigames/Checker Game/main_screen.tscn" id="3_ansv8"]
 [ext_resource type="PackedScene" uid="uid://cxhxw6hayka2q" path="res://Scenes/Minigames/Coin Matching/main_screen.tscn" id="4_4hmdb"]
@@ -22,7 +22,7 @@ size = Vector2(5, 64)
 [node name="MinigameDoorMuseumSide" type="StaticBody2D" node_paths=PackedStringArray("door_area") groups=["doors"]]
 collision_layer = 16
 collision_mask = 16
-script = ExtResource("1_3a6tp")
+script = ExtResource("1_e4oiu")
 minigames = Array[PackedScene]([ExtResource("2_bd412"), ExtResource("3_ansv8"), ExtResource("4_4hmdb"), ExtResource("5_rke33"), ExtResource("6_u0op1"), ExtResource("7_qha7t"), ExtResource("8_j6jjx"), ExtResource("9_fpc1n")])
 door_area = NodePath("Area2D")
 

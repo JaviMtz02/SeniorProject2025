@@ -11,15 +11,9 @@ signal minigame_won
 signal minigame_lost
 signal freeze
 
-var by_door: bool = false
-
 func _ready() -> void:
 	door_area.area_entered.connect(_on_area_entered)
 	door_area.area_exited.connect(_on_area_exited)
-
-func _process(_delta: float) -> void:
-	if by_door and Input.is_action_just_pressed("open_minigame"):
-		open_minigame()
 		
 func open_minigame() -> void:
 	var index = randi() % minigames.size()
@@ -35,13 +29,13 @@ func open_minigame() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("minigame_interaction"):
-		by_door = true
 		near_minigame.emit()
+		area.get_parent().poi_nearby(self)
 		
-func _on_area_exited(_area: Area2D) -> void:
-	by_door = false
-	away_minigame.emit()
-
+func _on_area_exited(area: Area2D) -> void:
+	if area.is_in_group("minigame_interaction"):
+		away_minigame.emit()
+		area.get_parent().poi_leave(self)
 
 func _on_minigame_started(title_screen: Node2D) -> void:
 	freeze.emit()

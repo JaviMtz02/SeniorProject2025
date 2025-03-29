@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://cc1lmo3urbp40" path="res://Scenes/House Level/Loot Scenes/ball.tscn" id="23_iwso7"]
 [ext_resource type="PackedScene" uid="uid://dassywovt6r47" path="res://Scenes/House Level/Loot Scenes/phone.tscn" id="23_lub5n"]
 [ext_resource type="PackedScene" uid="uid://ixlsim578ps" path="res://Scenes/spawnable.tscn" id="24_5ryl1"]
-[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="24_lfu3r"]
+[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scripts/loot.gd" id="24_lfu3r"]
 [ext_resource type="PackedScene" uid="uid://cjrpelqwlam1x" path="res://Scenes/House Level/Loot Scenes/vase.tscn" id="25_dgrcy"]
 [ext_resource type="PackedScene" uid="uid://cp5auh0nsunp6" path="res://Scenes/House Level/Loot Scenes/kachow.tscn" id="26_fqyn1"]
 [ext_resource type="PackedScene" uid="uid://c5x14yqg4be5w" path="res://Scenes/House Level/Loot Scenes/artifact.tscn" id="27_arj0y"]

@@ -16,10 +16,13 @@ func _ready() -> void:
 	connect("area_entered", Callable(self, "_on_area_entered"))
 	connect("area_exited", Callable(self, "_on_area_exited"))
 	
-func _on_area_entered(area: Area2D) -> void: 
+# area parameter is an Area2D that is a child of the one who is interacting
+func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loot_interaction"):
 		emit_signal("burglar_nearby", self)
+		area.get_parent().poi_nearby(self)
 		
-func _on_area_exited(_area: Area2D) -> void:
+		
+func _on_area_exited(area: Area2D) -> void:
 	emit_signal("burglar_away", self)
-		
+	area.get_parent().poi_leave(self)
