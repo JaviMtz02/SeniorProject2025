@@ -1,0 +1,283 @@
+[gd_scene load_steps=11 format=3 uid="uid://b01v8umk1qhnp"]
+
+[ext_resource type="Texture2D" uid="uid://h83yetvg60xb" path="res://Assets/Sprites/Items/heavy_sword.png" id="1_51x2n"]
+[ext_resource type="Script" uid="uid://bn483fo2j6cs8" path="res://Scripts/heavy_sword.gd" id="1_vkjjv"]
+[ext_resource type="PackedScene" uid="uid://b3wgqrwojcm2i" path="res://Scenes/Arcade Levels/hit_box.tscn" id="3_1xoud"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6obel"]
+radius = 6.0
+height = 24.0
+
+[sub_resource type="Animation" id="Animation_ga5oj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.523599]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pivot/Sprite2D/HitBox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6obel"]
+resource_name = "reset_stance_above"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(3.5, 1),
+"update": 0,
+"values": [Vector2(-8, -10), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(3.5, 1),
+"update": 0,
+"values": [-0.610865, -0.523599]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"attack_finished"],
+"method": &"emit_signal"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_1xoud"]
+resource_name = "reset_stance_below"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1333, 0.2667, 0.4333, 0.6333),
+"transitions": PackedFloat32Array(3, 1, 1, 2.5, 1),
+"update": 0,
+"values": [Vector2(-12, 13), Vector2(-4, 16), Vector2(8, 6), Vector2(0, -6), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1333, 0.2667, 0.4333, 0.6333),
+"transitions": PackedFloat32Array(3, 1, 1, 2.5, 1),
+"update": 0,
+"values": [3.83972, 3.14159, 1.5708, -0.610865, -0.523599]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"attack_started"],
+"method": &"emit_signal"
+}, {
+"args": [&"attack_finished"],
+"method": &"emit_signal"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_51x2n"]
+resource_name = "slash_down"
+length = 0.625
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3333, 0.4, 0.4667, 0.5333, 0.6),
+"transitions": PackedFloat32Array(3.5, 0.5, 0.5, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-8, -10), Vector2(0, -13), Vector2(11, 1), Vector2(0, 16), Vector2(-12, 13)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3333, 0.4, 0.4667, 0.5333, 0.6),
+"transitions": PackedFloat32Array(3.5, 0.5, 0.5, 1, 1, 1),
+"update": 0,
+"values": [-0.523599, -0.959931, 0.0, 1.5708, 3.14159, 3.83972]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.625),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"attack_started"],
+"method": &"emit_signal"
+}, {
+"args": [&"attack_finished"],
+"method": &"emit_signal"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pivot/Sprite2D/HitBox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_vkjjv"]
+resource_name = "slash_up"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667, 0.3667, 0.4667, 0.5667, 0.6333),
+"transitions": PackedFloat32Array(3.25, 0.75, 1, 0.5, 1, 1),
+"update": 0,
+"values": [Vector2(-12, 13), Vector2(-18, 18), Vector2(0, 16), Vector2(11, 1), Vector2(0, -13), Vector2(-8, -10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2667, 0.3667, 0.4667, 0.5667, 0.6333),
+"transitions": PackedFloat32Array(3.25, 0.75, 1, 0.5, 1, 1),
+"update": 0,
+"values": [3.83972, 4.27606, 3.14159, 1.5708, 0.0, -0.610865]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"attack_started"],
+"method": &"emit_signal"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pivot/Sprite2D/HitBox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2667, 0.6333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ga5oj"]
+_data = {
+&"RESET": SubResource("Animation_ga5oj"),
+&"reset_stance_above": SubResource("Animation_6obel"),
+&"reset_stance_below": SubResource("Animation_1xoud"),
+&"slash_down": SubResource("Animation_51x2n"),
+&"slash_up": SubResource("Animation_vkjjv")
+}
+
+[node name="HeavySword" type="Node2D"]
+script = ExtResource("1_vkjjv")
+metadata/_edit_lock_ = true
+
+[node name="Pivot" type="Marker2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot"]
+rotation = -0.523599
+texture = ExtResource("1_51x2n")
+offset = Vector2(0, -7)
+
+[node name="HitBox" parent="Pivot/Sprite2D" instance=ExtResource("3_1xoud")]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" parent="Pivot/Sprite2D/HitBox" index="0"]
+position = Vector2(0, -12)
+shape = SubResource("CapsuleShape2D_6obel")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ga5oj")
+}
+
+[editable path="Pivot/Sprite2D/HitBox"]

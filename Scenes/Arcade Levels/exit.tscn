@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://clpe2sjwyb6y2"]
+
+[ext_resource type="Script" uid="uid://bor8seesbjecv" path="res://Scripts/exit.gd" id="1_3hcar"]
+[ext_resource type="Texture2D" uid="uid://dftlltyqjch3" path="res://Assets/Sprites/Floors_Walls/castle_exit_stairs.png" id="1_4w8nt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hcar"]
+size = Vector2(28, 28)
+
+[node name="Exit" type="Area2D"]
+z_index = -1
+script = ExtResource("1_3hcar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_4w8nt")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_3hcar")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
