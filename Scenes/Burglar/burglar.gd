@@ -34,6 +34,7 @@ func _ready() -> void:
 	if MultiplayerManager.is_multiplayer() and int(name) != multiplayer.get_unique_id():
 		$StateMachine.process_mode = Node.PROCESS_MODE_DISABLED
 		$Camera2D/Control.visible = false
+		set_process_input(false)
 	
 	if level_node == null:
 		level_node = get_parent().get_parent()
@@ -104,6 +105,7 @@ func try_pick_up_loot(loot: Area2D) -> void:
 			loot.hide()
 			await $SFX/LootPickup.finished
 		loot.queue_free()
+		MultiplayerManager.request_remove_item.rpc(loot.get_path())
 		curr_loot = null
 	else:
 		$SFX/CannotPickup.play() # if loot can't be picked up, a sound will play letting the player know that it can't be picked up

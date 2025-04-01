@@ -62,7 +62,7 @@ func _on_minigame_won() -> void:
 	$DoorOpening.play()
 	hide()
 	await $DoorOpening.finished
-	queue_free() # door dissappears, burglar can enter and move again
+	MultiplayerManager.request_remove_item.rpc(get_path())
 	
 func _on_minigame_lost() -> void:
 	minigame_lost.emit() # door stays, burglar is penalized

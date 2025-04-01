@@ -131,14 +131,12 @@ func player_loaded():
 func permission_to_spawn():
 	start_spawning.emit()
 
-@rpc("call_local", "any_peer")
+@rpc("any_peer", "call_local")
 func request_remove_item(item_path: NodePath):
 	if not is_multiplayer_authority():  # Ensure only the server processes this
 		return
-
 	var item = get_node_or_null(item_path)
 	if item:
-		item.queue_free()
 		remove_item_from_clients.rpc(item_path)
 
 @rpc("authority", "call_local", "reliable")

@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc1lmo3urbp40"]
+[gd_scene load_steps=5 format=3 uid="uid://cc1lmo3urbp40"]
 
 [ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scripts/loot.gd" id="1_tta6m"]
 [ext_resource type="Texture2D" uid="uid://de2jecfb0u587" path="res://Assets/Sprites/Loot Sprites/House Loot/basketball.png" id="1_x01vi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_digss"]
 radius = 4.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_l2l4e"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Ball" type="Area2D" groups=["loot"]]
 collision_layer = 2
@@ -22,3 +27,6 @@ region_rect = Rect2(207.987, 420.175, 17.0089, 21.583)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_digss")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." groups=["loot"]]
+replication_config = SubResource("SceneReplicationConfig_l2l4e")

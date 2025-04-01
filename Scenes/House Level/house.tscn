@@ -10683,20 +10683,23 @@ position = Vector2(190, 816)
 [node name="Coin36" parent="Coins_old" instance=ExtResource("39_xe4ym")]
 position = Vector2(63, 729)
 
-[node name="MinigameDoors" type="Node" parent="."]
+[node name="MinigameDoors" parent="." instance=ExtResource("23_atr7s")]
 
-[node name="MinigameDoorHouse" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
+[node name="MinigameDoor1" parent="MinigameDoors" instance=ExtResource("24_5ryl1")]
 position = Vector2(-240, 530)
+object_to_spawn = ExtResource("42_8nuk2")
 
-[node name="MinigameDoorHouse3" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
+[node name="MinigameDoors_old" type="Node" parent="."]
+
+[node name="MinigameDoorHouse3" parent="MinigameDoors_old" instance=ExtResource("42_8nuk2")]
 position = Vector2(240, 386)
 
-[node name="MinigameDoorHouse2" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
+[node name="MinigameDoorHouse2" parent="MinigameDoors_old" instance=ExtResource("42_8nuk2")]
 position = Vector2(-16, 530)
 
 [node name="PlayerSpawnPoint" parent="." node_paths=PackedStringArray("minigame_door") instance=ExtResource("40_gaq4g")]
 position = Vector2(-96, 810)
-minigame_door = NodePath("../MinigameDoors")
+minigame_door = NodePath("../MinigameDoors_old")
 
 [node name="Door" parent="." instance=ExtResource("41_fdx47")]
 position = Vector2(-94, 851)

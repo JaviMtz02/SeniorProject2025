@@ -18,11 +18,12 @@ func _ready() -> void:
 	
 # area parameter is an Area2D that is a child of the one who is interacting
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("loot_interaction"):
+	if area.is_in_group("loot_interaction") and int(area.get_parent().name) == multiplayer.get_unique_id():
+		print("huh")
 		emit_signal("burglar_nearby", self)
 		area.get_parent().poi_nearby(self)
 		
-		
 func _on_area_exited(area: Area2D) -> void:
-	emit_signal("burglar_away", self)
-	area.get_parent().poi_leave(self)
+	if area.is_in_group("loot_interaction") and int(area.get_parent().name) == multiplayer.get_unique_id():
+		emit_signal("burglar_away", self)
+		area.get_parent().poi_leave(self)
