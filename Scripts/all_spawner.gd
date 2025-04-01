@@ -1,5 +1,8 @@
 extends MultiplayerSpawner
 
+## 1.0 is 100%
+@export var chance_to_spawn: float = 1.0
+
 func _ready() -> void:
 	MultiplayerManager.start_spawning.connect(start_spawning)
 	for node in get_children():
@@ -17,10 +20,12 @@ func start_spawning():
 		# Spawnable class is Marker2D with PackedScene attached
 		if node is Spawnable:
 			if node.object_to_spawn:
-				# Only the server has to spawn stuff in
-				var object = node.object_to_spawn.instantiate()
-				object.position = node.position
-				add_child(object, true)
+				# Add chance
+				if chance_to_spawn >= randf():
+					# Only the server has to spawn stuff in
+					var object = node.object_to_spawn.instantiate()
+					object.position = node.position
+					add_child(object, true)
 				# We don't need the Marker2D anymore
 				node.queue_free()
 			else:
