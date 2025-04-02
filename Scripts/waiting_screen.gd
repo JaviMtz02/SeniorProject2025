@@ -5,14 +5,20 @@ const LEVEL_SELECT: String = "res://Scenes/Menus/level_select.tscn"
 
 @onready var players: Label = $MarginContainer/VBoxContainer/HBoxContainer/Players
 @onready var level_select: Button = $"MarginContainer/VBoxContainer/Level Select"
+@onready var local_ip: Label = $"Local IP"
 
 func _ready():
 	$AnimationPlayer.play("Waiting for Host...")
 	players.text = str(MultiplayerManager.players.keys())
+	
 	MultiplayerManager.player_connected.connect(player_joined)
 	MultiplayerManager.player_disconnected.connect(player_left)
 	if multiplayer.is_server():
 		level_select.visible = true
+		# This causes quite a bit of delay unfortunately. Fix if possible
+		local_ip.text = "Local IP: " + MultiplayerManager.get_local_ip()
+	else:
+		local_ip.hide()
 
 func back_pressed():
 	MultiplayerManager.leave_game()

@@ -151,6 +151,19 @@ visible = false
 layout_mode = 2
 text = "Level Select"
 
+[node name="Local IP" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -42.0
+offset_right = 1147.0
+offset_bottom = -19.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Local IP: localhost"
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
 z_index = 1
 layout_mode = 1

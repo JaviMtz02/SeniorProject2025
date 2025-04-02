@@ -260,6 +260,16 @@ theme_override_colors/font_color = Color(0.835294, 0, 0, 0)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 text = "Someone is already hosting on your network..."
 
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 2
+offset_left = 510.0
+offset_top = 506.0
+offset_right = 641.0
+offset_bottom = 542.0
+placeholder_text = "Enter Host IP"
+context_menu_enabled = false
+emoji_menu_enabled = false
+
 [connection signal="pressed" from="MarginContainer/Buttons/host" to="." method="host_select"]
 [connection signal="pressed" from="MarginContainer/Buttons/join" to="." method="join_select"]
 [connection signal="pressed" from="PanelContainer/back" to="." method="back_select"]

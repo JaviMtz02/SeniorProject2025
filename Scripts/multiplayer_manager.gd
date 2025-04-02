@@ -26,13 +26,22 @@ func _ready() -> void:
 	multiplayer.connection_failed.connect(_on_connected_fail)
 	multiplayer.server_disconnected.connect(_on_server_disconnected)
 
+func get_local_ip() -> String:
+	var addresses = IP.get_local_addresses()
+	var gateway = IP.resolve_hostname("router") # Attempts to get the gateway
+	
+	for ip in addresses:
+		if ip.begins_with("192.") or ip.begins_with("10.") or ip.begins_with("172."): # Private IP ranges
+			if gateway == "" or ip.is_valid_ip_address():
+				return ip
+	return "Not Found"
+
 func is_multiplayer() -> bool:
 	return multiplayer.multiplayer_peer != null and not multiplayer.multiplayer_peer is OfflineMultiplayerPeer
 
 func is_host():
 	return multiplayer.is_server()
 
-## Evaluate true if connection has been made
 func start_host():
 	var peer = ENetMultiplayerPeer.new()
 	peer.create_server(PORT, MAX_CLIENTS)
@@ -44,7 +53,6 @@ func start_host():
 	players[server_id] = player_info
 	player_connected.emit(server_id, player_info)
 
-## Evaluate true if connection has been made
 func start_client(address: String = ""):
 	var peer = ENetMultiplayerPeer.new()
 	if address.is_empty():
@@ -53,7 +61,7 @@ func start_client(address: String = ""):
 	multiplayer.multiplayer_peer = peer
 	
 func _stop_multiplayer() -> void:
-	multiplayer.multiplayer_peer = null
+	multiplayer.multiplayer_peer = OfflineMultiplayerPeer.new()
 	players.clear()
 
 func _on_player_connected(id: int) -> void:
@@ -85,22 +93,23 @@ func _on_connected_ok():
 	player_connected.emit(peer_id, player_info)
 
 func _on_connected_fail():
-	multiplayer.multiplayer_peer = null
+	multiplayer.multiplayer_peer = OfflineMultiplayerPeer.new()
 	connection_failed.emit()
 	print("Connection failed")
 
 func _on_server_disconnected():
-	multiplayer.multiplayer_peer = null
+	multiplayer.multiplayer_peer = OfflineMultiplayerPeer.new()
 	players.clear()
 	server_disconnected.emit()
 	print("Server disconnected")
 
+# Anyone can call this and it is sent to all peers reliably
 @rpc("any_peer", "reliable")
 func leave_game():
 	# Notify the server that this player is leaving
 	var player_id = multiplayer.get_unique_id()
 	if player_id <= 1:
-		# If the player is the host, stop the server
+		# If the player is the host, exit multiplayer mode
 		_stop_multiplayer()
 		print("Server stopped")
 		return

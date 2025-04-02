@@ -13,5 +13,5 @@ func _ready():
 			add_child(player_to_add)
 	else:
 		var player_to_add = BURGLAR.instantiate()
+		player_to_add.name = str(multiplayer.get_unique_id())
 		add_child(player_to_add)
-		is_multiplayer_authority()
