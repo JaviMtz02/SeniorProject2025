@@ -19,21 +19,29 @@ extends CharacterBody2D
 
 var curr_inventory_size: int = 0 # Checks to see if the burglar has not surpassed the bounds of what the inventory allows
 var curr_loot: Area2D = null # When we're near loot, we can get its details with this variable
+var curr_minigame: StaticBody2D = null
 var inventory: Array = [] # This is to know how many single pieces of loot were obtained, Could probably do this with a variable
 var value_accu: int = 0 # current value of loot obtained, this resets to zero when deposited
 var time_seconds: int
 var time_minutes: int
-var near_door: bool = false
+var near_deposit: bool = false
 var input_enabled: bool = true
+var in_minigame: bool = false
 var minigames_won: int = 0
 
 func _ready() -> void:
+	# TODO temporary fix
+	if MultiplayerManager.is_multiplayer() and int(name) != multiplayer.get_unique_id():
+		$StateMachine.process_mode = Node.PROCESS_MODE_DISABLED
+		$Camera2D/Control.visible = false
+		set_process_input(false)
+	
 	if level_node == null:
-		level_node = get_parent()
+		level_node = get_parent().get_parent()
 		
 	# Get level settings
-	if get_parent().has_method("get_level_data"):
-		var level_data = get_parent().get_level_data()
+	if level_node.has_method("get_level_data"):
+		var level_data = level_node.get_level_data()
 		time_minutes = level_data["time_minutes"]
 		time_seconds = level_data["time_seconds"]
 		
@@ -48,30 +56,15 @@ func _ready() -> void:
 	# This should get modified when we add different items that the burglar can purchase to increase inventory
 	inventory_label.text = "0/" + str(inventory_space)
 	
-	# Connects corresponding loot signals and door signals for depositing collected loot
-	for door in get_tree().get_nodes_in_group("deposit_doors"):
-		door.connect("deposit", Callable(self, "_on_deposit"))
-		door.connect("off_deposit", Callable(self, "_on_off_deposit"))
-	
-	# Connects signals for minigames, each minigame is stored inside a door scene
-	for minigame_door in get_tree().get_nodes_in_group("doors"):
-		minigame_door.connect("near_minigame", Callable(self, "_on_near_minigame"))
-		minigame_door.connect("away_minigame", Callable(self, "_on_away_minigame"))
-		minigame_door.connect("minigame_won", Callable(self, "_on_minigame_won"))
-		minigame_door.connect("minigame_lost", Callable(self, "_on_minigame_lost"))
-		
-	for loot in get_tree().get_nodes_in_group("loot"):
-		loot.connect("burglar_nearby", Callable(self, "_on_burglar_nearby"))
-		loot.connect("burglar_away", Callable(self, "_on_burglar_away"))
-	
 	if level_node.level_name == "laboratory":
 		for interactable in get_tree().get_nodes_in_group("time_adders"):
 			interactable.connect("add_time", Callable(self, "_on_add_time"))
-#
-func _process(_delta: float) -> void:
-	if near_door and Input.is_action_just_pressed("deposit"): # If you're near the door then you can deposit your loot
+
+# Input event isn't ran every frame. Don't use _process
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("deposit") and near_deposit: # If you're near the door then you can deposit your loot
 		$SFX/Deposit.play()
-		level_node.deposit_loot(value_accu, inventory.size())      # That way you can pick up more, 
+		level_node.deposit_loot(value_accu, inventory.size()) # That way you can pick up more, 
 		inventory.clear()
 		value_accu = 0
 		curr_inventory_size = 0
@@ -79,9 +72,14 @@ func _process(_delta: float) -> void:
 		inventory_label.text = "0/" + str(inventory_space)
 		
 	# If the character is currently around loot and it pressed the 't' key, try to pick it up
-	if curr_loot != null and Input.is_action_just_pressed("take_loot"):
+	if event.is_action_pressed("take_loot") and curr_loot != null:
 		try_pick_up_loot(curr_loot)
-
+		
+	if event.is_action_pressed("open_minigame") and curr_minigame != null and  in_minigame == false:
+		curr_minigame.open_minigame()
+		curr_minigame.minigame_won.connect(_on_minigame_won)
+		curr_minigame.minigame_lost.connect(_on_minigame_lost)
+		in_minigame = true
 
 func try_pick_up_loot(loot: Area2D) -> void:
 	# If the current inventory size is less than the total inventory space, and if those two are greater
@@ -91,6 +89,7 @@ func try_pick_up_loot(loot: Area2D) -> void:
 		curr_inventory_size += loot.inventory_space_req
 		inventory.append(loot)
 		value_accu += loot.value
+		poi_leave(loot)
 		
 		#UI updates
 		inventory_label.text = str(curr_inventory_size) + "/" + str(inventory_space)
@@ -106,6 +105,7 @@ func try_pick_up_loot(loot: Area2D) -> void:
 			loot.hide()
 			await $SFX/LootPickup.finished
 		loot.queue_free()
+		MultiplayerManager.request_remove_item.rpc(loot.get_path())
 		curr_loot = null
 	else:
 		$SFX/CannotPickup.play() # if loot can't be picked up, a sound will play letting the player know that it can't be picked up
@@ -132,36 +132,42 @@ func _on_timer_timeout() -> void:
 ##################### INTERACTIBLE SIGNALS #####################################
 ## When signal is sent out, we are able to deposit our loot at the door
 ## The button specifying which button to press will appear
-func _on_deposit() -> void:
-	near_door = true
-	deposit_button.show()
-	deposit_button.play()
-#
-## When we're away from the door, we will not be able to deposit, otherwise it'll break the game
-func _on_off_deposit() -> void:
-	near_door = false
-	deposit_button.hide()
-	deposit_button.hide()
-	
-	#  Burglar enters the area of the loot and button that tells which button to press appears
-func _on_burglar_nearby(loot: Area2D): 
-	curr_loot = loot
-	take_loot_button.show()
-	take_loot_button.play()
 
-func _on_burglar_away(_loot: Area2D): # If burglar is not in the area of loot then we cannot pick up any loot
-	curr_loot = null
-	take_loot_button.stop()
-	take_loot_button.hide()
+# Point of Interest = Loot, Doors, Deposit location
+# Most POI are Area2D but some minigasme doors are StaticBody2Dw
+func poi_nearby(poi) -> void:
+	# loot
+	if poi.is_in_group("loot"):
+		curr_loot = poi
+		take_loot_button.show()
+		take_loot_button.play()
+	# deposit door
+	elif poi.is_in_group("deposit_doors"):
+		near_deposit = true
+		deposit_button.show()
+		deposit_button.play()
+	# minigame door
+	elif poi.is_in_group("doors"):
+		curr_minigame = poi
+		minigame_button.show()
+		minigame_button.play()
 
-# Button to play minigame appears/disappears based off of the two functions below
-func _on_near_minigame() -> void:
-	minigame_button.show()
-	minigame_button.play()
-	
-func _on_away_minigame() -> void:
-	minigame_button.stop()
-	minigame_button.hide()
+func poi_leave(poi) -> void:
+	#loot
+	if poi.is_in_group("loot") and curr_loot == poi:
+		curr_loot = null
+		take_loot_button.stop()
+		take_loot_button.hide()
+	# deposit door
+	elif poi.is_in_group("deposit_doors"):
+		near_deposit = false
+		deposit_button.hide()
+		deposit_button.hide()
+	# minigame door
+	elif poi.is_in_group("doors") and curr_minigame == poi:
+		curr_minigame = null
+		minigame_button.stop()
+		minigame_button.hide()
 
 # This is for the stats at the end of the level
 # To achieve the star for perfect run on minigames, the player's minigames_won var should be
@@ -170,12 +176,14 @@ func _on_away_minigame() -> void:
 func _on_minigame_won() -> void:
 	minigames_won += 1
 	input_enabled = true
+	in_minigame = false
 	
 func _on_minigame_lost() -> void:
 	$SFX/CannotPickup.play()
 	minigames_won -= 1
 	input_enabled = true
 	decide_punishment()
+	in_minigame = false
 
 # If the player loses the game, then something bad must happen
 func decide_punishment() -> void:

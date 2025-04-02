@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqrlejjiiuoh0"]
+
+[ext_resource type="Texture2D" uid="uid://c4w3nbpw21oww" path="res://Assets/Sprites/Background/Clouds/Clouds 6/1.png" id="1_4ytoq"]
+[ext_resource type="Script" uid="uid://byplnel4aigrl" path="res://Scripts/play_menu.gd" id="1_6aycx"]
+[ext_resource type="Texture2D" uid="uid://83t3l5hbaghn" path="res://Assets/Sprites/Background/Clouds/Clouds 6/3.png" id="2_6aycx"]
+[ext_resource type="Texture2D" uid="uid://cyhf6av0pb4p4" path="res://Assets/Sprites/Background/Clouds/Clouds 6/4.png" id="3_0x5if"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_rqg54"]
+[ext_resource type="Script" uid="uid://ccb66rqkgn805" path="res://Scripts/grab_focus.gd" id="6_j21c0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwwmk"]
+
+[node name="PlayMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_6aycx")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_4ytoq")
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -89.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_6aycx")
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_0x5if")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 180
+
+[node name="Divider" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_rqg54")
+theme_override_font_sizes/font_size = 100
+text = "PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Divider2" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider3" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider4" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="singleplayer" type="Button" parent="MarginContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_rqg54")
+theme_override_font_sizes/font_size = 35
+text = "Singleplayer"
+script = ExtResource("6_j21c0")
+
+[node name="multiplayer" type="Button" parent="MarginContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_rqg54")
+theme_override_font_sizes/font_size = 35
+text = "Multiplayer"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -525.0
+offset_top = -362.0
+offset_right = -448.0
+offset_bottom = -315.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mwwmk")
+
+[node name="back" type="Button" parent="PanelContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_rqg54")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/singleplayer" to="." method="singleplayer_select"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/multiplayer" to="." method="multiplayer_select"]
+[connection signal="pressed" from="PanelContainer/back" to="." method="back_select"]

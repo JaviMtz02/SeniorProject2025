@@ -1,7 +1,6 @@
 extends StaticBody2D
 
 # holds scenes that will be randomly chosen!
-# Note: need to include tic-tac-toe here
 @export var minigames: Array[PackedScene] = [] 
 @export var door_area: Area2D
 
@@ -10,15 +9,9 @@ signal away_minigame
 signal minigame_won
 signal minigame_lost
 
-var by_door: bool = false
-
 func _ready() -> void:
 	door_area.area_entered.connect(_on_area_entered)
 	door_area.area_exited.connect(_on_area_exited)
-
-func _process(_delta: float) -> void:
-	if by_door and Input.is_action_just_pressed("open_minigame"):
-		open_minigame()
 		
 func open_minigame() -> void:
 	# Picks a random minigame from array that holds all of them
@@ -39,13 +32,13 @@ func open_minigame() -> void:
 # If game is won, door disappears, if not, it stays
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("minigame_interaction"):
-		by_door = true
 		near_minigame.emit()
+		area.get_parent().poi_nearby(self)
 		
-func _on_area_exited(_area: Area2D) -> void:
-	by_door = false
-	away_minigame.emit()
-
+func _on_area_exited(area: Area2D) -> void:
+	if area.is_in_group("minigame_interaction"):
+		away_minigame.emit()
+		area.get_parent().poi_leave(self)
 
 # When a minigame begins, it's added to the canvas layer and signals for game control are added
 # these signals are signals that each minigame has, minigames have their own methods of checking of when
@@ -69,7 +62,7 @@ func _on_minigame_won() -> void:
 	$DoorOpening.play()
 	hide()
 	await $DoorOpening.finished
-	queue_free() # door dissappears, burglar can enter and move again
+	MultiplayerManager.request_remove_item.rpc(get_path())
 	
 func _on_minigame_lost() -> void:
 	minigame_lost.emit() # door stays, burglar is penalized

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://do2prd6celgnr"]
 
-[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_8isfd"]
+[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scripts/loot.gd" id="1_8isfd"]
 [ext_resource type="Texture2D" uid="uid://f4i54vewmt87" path="res://Assets/Sprites/Loot Sprites/Museum Loot/fossil2.png" id="2_gev8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ceo"]

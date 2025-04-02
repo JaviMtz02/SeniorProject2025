@@ -13,39 +13,46 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func resume() -> void:
-	reset_focus()
-	$AnimationPlayer.play_backwards("blur")
-	paused = false
+	if paused:
+		reset_focus()
+		$AnimationPlayer.play_backwards("blur")
+		paused = false
 
 func pause() -> void:
 	$AnimationPlayer.play("blur")
 	paused = true
 
 func _on_back_pressed() -> void:
-	resume()
+	if paused:
+		resume()
 
 func _on_restart_pressed() -> void:
-	resume()
-	get_tree().reload_current_scene()
+	if paused:
+		resume()
+		get_tree().reload_current_scene()
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	if paused:
+		pass # Replace with function body.
 
 func _on_level_select_pressed() -> void:
-	get_tree().change_scene_to_file(level_select)
+	if paused:
+		get_tree().change_scene_to_file(level_select)
 
 func _on_exit_pressed() -> void:
-	'''
-	get_tree().paused = false
-	$AnimationPlayer.stop()  # Stop any current animations
-	get_tree().change_scene_to_packed(exit_game)
-	'''
-	$AnimationPlayer.stop()
-	# Use change_scene_to_file instead
-	get_tree().change_scene_to_file(exit_game_path)
+	if paused:
+		'''
+		get_tree().paused = false
+		$AnimationPlayer.stop()  # Stop any current animations
+		get_tree().change_scene_to_packed(exit_game)
+		'''
+		$AnimationPlayer.stop()
+		MultiplayerManager.load_game(exit_game_path)
+		MultiplayerManager.leave_game()
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	if paused:
+		get_tree().quit()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause_menu"):

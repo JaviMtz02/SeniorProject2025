@@ -11,15 +11,10 @@ signal minigame_won
 signal minigame_lost
 
 signal freeze
-var by_door: bool = false
 
 func _ready() -> void:
 	door_area.area_entered.connect(_on_area_entered)
 	door_area.area_exited.connect(_on_area_exited)
-
-func _process(_delta: float) -> void:
-	if by_door and Input.is_action_just_pressed("open_minigame"):
-		open_minigame()
 		
 func open_minigame() -> void:
 	# Picks a random minigame from array that holds all of them
@@ -34,19 +29,18 @@ func open_minigame() -> void:
 	
 	# The title screen for each minigame pops up, when the start button is clicked the minigame starts
 	if title_screen.has_method("_on_start_game_button_pressed"):
-		title_screen.start_game.pressed.connect(func(): _on_minigame_started(title_screen))
+		title_screen.start_game.pressed.connect(_on_minigame_started.bind(title_screen))
 
 # Door should detect burglar, and when burglar presses a key, minigame should begin
 # If game is won, door disappears, if not, it stays
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("minigame_interaction"):
-		by_door = true
 		near_minigame.emit()
+		area.get_parent().poi_nearby(self)
 		
-func _on_area_exited(_area: Area2D) -> void:
-	by_door = false
+func _on_area_exited(area: Area2D) -> void:
 	away_minigame.emit()
-
+	area.get_parent().poi_leave(self)
 
 # When a minigame begins, it's added to the canvas layer and signals for game control are added
 # these signals are signals that each minigame has, minigames have their own methods of checking of when

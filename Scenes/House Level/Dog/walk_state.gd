@@ -9,6 +9,7 @@ extends NodeState
 @export var min_speed: float = 15.0
 @export var max_speed: float = 30.0
 var speed: float
+var target_direction: Vector2
 
 func _ready() -> void:
 	call_deferred("character_setup") # call other functions after current frame has finsihed processing
@@ -33,7 +34,7 @@ func _on_physics_process(_delta: float) -> void:
 	
 		
 	var target_position: Vector2 = nav_agent.get_next_path_position()
-	var target_direction: Vector2 = dog.global_position.direction_to(target_position) # gets facing direction of character
+	target_direction = dog.global_position.direction_to(target_position) # gets facing direction of character
 	anim_sprite.flip_h = target_direction.x < 0 # easier way of saying if our character is pointing left, then flip the sprite as its default is looking right
 	var velocity: Vector2 = target_direction * speed
 	
@@ -41,7 +42,7 @@ func _on_physics_process(_delta: float) -> void:
 	
 	if detector.is_colliding():
 		var target = detector.get_collider()
-		if target and target.name == "Burglar": # Need to add burglar name
+		if target and target.is_in_group("Burglar"): # Need to add burglar name
 			transition.emit("Bark")
 			
 	if nav_agent.avoidance_enabled:
