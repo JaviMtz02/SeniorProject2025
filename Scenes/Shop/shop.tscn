@@ -1,0 +1,1375 @@
+[gd_scene load_steps=74 format=3 uid="uid://e4xf61urqhyu"]
+
+[ext_resource type="Script" uid="uid://b21wasrniq2ej" path="res://Scenes/Shop/shop.gd" id="1_kcc5r"]
+[ext_resource type="Texture2D" uid="uid://bbllbssa44ln" path="res://Assets/Sprites/UI/Loading Animation/Loading1.png" id="2_kcc5r"]
+[ext_resource type="Texture2D" uid="uid://bndur2m4tdm1c" path="res://Assets/Sprites/UI/Loading Animation/Loading2.png" id="3_xybqi"]
+[ext_resource type="Texture2D" uid="uid://cq6e6v3ybxf7t" path="res://Assets/Sprites/UI/Loading Animation/Loading3.png" id="4_cjwgl"]
+[ext_resource type="Texture2D" uid="uid://x6dyi4w82wxm" path="res://Assets/Sprites/UI/Loading Animation/Loading4.png" id="5_fsgtm"]
+[ext_resource type="Texture2D" uid="uid://pfjs22t83eji" path="res://Assets/Sprites/UI/Loading Animation/Loading5.png" id="6_oha7t"]
+[ext_resource type="Texture2D" uid="uid://0kagqhlyn114" path="res://Assets/Sprites/UI/Loading Animation/Loading6.png" id="7_ps16d"]
+[ext_resource type="Texture2D" uid="uid://b8aokbclj4o5p" path="res://Assets/Sprites/UI/Loading Animation/Loading7.png" id="8_m2v70"]
+[ext_resource type="Texture2D" uid="uid://x77bpu6c5j6q" path="res://Assets/Sprites/UI/Loading Animation/Loading8.png" id="9_wcnk8"]
+[ext_resource type="Texture2D" uid="uid://c1qnvx8s7nfji" path="res://Assets/Sprites/UI/Shop/shop_bg.png" id="10_cjwgl"]
+[ext_resource type="Texture2D" uid="uid://d2wdv3eichbrv" path="res://Assets/Sprites/UI/Shop/pointer.png" id="10_xybqi"]
+[ext_resource type="Texture2D" uid="uid://c3xi3aq8aueql" path="res://Assets/Sprites/UI/Shop/shop_decoration.png" id="11_pbhkr"]
+[ext_resource type="Texture2D" uid="uid://jmtvw3wjslu3" path="res://Assets/Sprites/UI/Shop/in_use_button.png" id="11_wcnk8"]
+[ext_resource type="Script" uid="uid://yn2yshfic6xj" path="res://Scenes/Shop/bag_layout.gd" id="12_33sfn"]
+[ext_resource type="Texture2D" uid="uid://dqv6rsbp81orx" path="res://Assets/Sprites/UI/burglar_bag.png" id="12_ps16d"]
+[ext_resource type="Texture2D" uid="uid://3c7x1h07qpm7" path="res://Assets/Sprites/UI/Shop/button.png" id="13_e3u78"]
+[ext_resource type="Texture2D" uid="uid://dunxm36rcdlht" path="res://Assets/Sprites/UI/Shop/unused_tab.png" id="13_m2v70"]
+[ext_resource type="Texture2D" uid="uid://cd2dfyhyie1hr" path="res://Assets/Sprites/UI/Shop/basic_shoe.png" id="13_wcnk8"]
+[ext_resource type="Texture2D" uid="uid://cf3lg78vbxh4r" path="res://Assets/Sprites/Items/4.png" id="14_wcnk8"]
+[ext_resource type="Texture2D" uid="uid://c4wyc5o1num5u" path="res://Assets/Sprites/UI/Shop/arrow.png" id="16_2t1f2"]
+[ext_resource type="Texture2D" uid="uid://bpnoe5o72dmjj" path="res://Assets/Sprites/UI/Shop/arrow_dark.png" id="17_t1yip"]
+[ext_resource type="Script" uid="uid://dmefulebu8k1" path="res://Scenes/Shop/weapons_layout.gd" id="18_0inpq"]
+[ext_resource type="Texture2D" uid="uid://iy8r5lkxf52o" path="res://Assets/Sprites/UI/Shop/arrow_light.png" id="18_33sfn"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="19_t1yip"]
+[ext_resource type="Script" uid="uid://clx7xl5rdmst4" path="res://Scenes/Shop/shoes_layout.gd" id="19_tknpo"]
+[ext_resource type="Texture2D" uid="uid://ojesct2rlf7k" path="res://Assets/Sprites/UI/Shop/buy_button.png" id="19_yn0sp"]
+[ext_resource type="Texture2D" uid="uid://chhr2pxg0oq78" path="res://Assets/Sprites/UI/Shop/buy_button_dark.png" id="20_qydip"]
+[ext_resource type="Texture2D" uid="uid://ci7g5qc378s35" path="res://Assets/Sprites/UI/Shop/buy_button_Light.png" id="21_wdfyn"]
+[ext_resource type="Texture2D" uid="uid://c6ixjm0hi3ni1" path="res://Assets/Sprites/UI/Shop/equip_button.png" id="22_gp0wy"]
+[ext_resource type="Texture2D" uid="uid://cardpj0yoyl8n" path="res://Assets/Sprites/UI/Shop/equip_button_dark.png" id="23_5veni"]
+[ext_resource type="Texture2D" uid="uid://dkjkgbl6wv6t0" path="res://Assets/Sprites/UI/Shop/equip_button_light.png" id="24_jkp36"]
+[ext_resource type="Texture2D" uid="uid://be3n01dwgycum" path="res://Assets/Sprites/UI/Shop/unequip_button.png" id="25_lrquv"]
+[ext_resource type="Texture2D" uid="uid://bwrbvc364n1l1" path="res://Assets/Sprites/UI/Shop/unequip_button_dark.png" id="26_csrq7"]
+[ext_resource type="Texture2D" uid="uid://b3frydkfy3tp6" path="res://Assets/Sprites/UI/Shop/unequip_button_light.png" id="27_11txg"]
+[ext_resource type="Texture2D" uid="uid://0kg0neguc0q6" path="res://Assets/Sprites/UI/Shop/info_button.png" id="28_qydip"]
+[ext_resource type="Texture2D" uid="uid://bo57apc0umitp" path="res://Assets/Sprites/UI/Shop/bigger_bag.png" id="29_tv2qa"]
+[ext_resource type="Texture2D" uid="uid://dqsdnonrbjp4v" path="res://Assets/Sprites/UI/Shop/Item Info/basic_bag.png" id="30_7ec4r"]
+[ext_resource type="Texture2D" uid="uid://btx21kcfa4pom" path="res://Assets/Sprites/UI/Shop/backpack.png" id="30_ku021"]
+[ext_resource type="Texture2D" uid="uid://cwhcf6d3b03l8" path="res://Assets/Sprites/UI/Shop/Item Info/backpack_info.png" id="30_wpjks"]
+[ext_resource type="Texture2D" uid="uid://biswgw0yv0q8t" path="res://Assets/Sprites/UI/Shop/duffle_bag.png" id="31_gxrn4"]
+[ext_resource type="Texture2D" uid="uid://1l6om4knbt16" path="res://Assets/Sprites/UI/Shop/Item Info/bbb.png" id="32_buy5q"]
+[ext_resource type="Texture2D" uid="uid://dqxm8562k8j50" path="res://Assets/Sprites/UI/Shop/santa_bag.png" id="32_l6buc"]
+[ext_resource type="Texture2D" uid="uid://4ntgmw2xhy6t" path="res://Assets/Sprites/UI/Shop/purse.png" id="33_pbhkr"]
+[ext_resource type="Texture2D" uid="uid://b1lu4y3d7gh0n" path="res://Assets/Sprites/Items/24.png" id="35_wpjks"]
+[ext_resource type="Texture2D" uid="uid://d3tvy2dqccamt" path="res://Assets/Sprites/UI/Shop/Item Info/dufflebag.png" id="36_8gca4"]
+[ext_resource type="Texture2D" uid="uid://fv6fwdqtuun3" path="res://Assets/Sprites/Items/20.png" id="36_bog2v"]
+[ext_resource type="Texture2D" uid="uid://dxl4k55yow1o3" path="res://Assets/Sprites/Items/18.png" id="37_emaaq"]
+[ext_resource type="Texture2D" uid="uid://bln37ns768qtp" path="res://Assets/Sprites/UI/Shop/Item Info/santa_bag.png" id="38_gff3h"]
+[ext_resource type="Texture2D" uid="uid://uuvigh1pjoop" path="res://Assets/Sprites/UI/Shop/worn_out_shoe.png" id="39_l6buc"]
+[ext_resource type="Texture2D" uid="uid://noso1srf2kru" path="res://Assets/Sprites/UI/Shop/running_shoe.png" id="40_pbhkr"]
+[ext_resource type="Texture2D" uid="uid://cvajck2nxq0h8" path="res://Assets/Sprites/UI/Shop/Item Info/witch_purse.png" id="40_tyggv"]
+[ext_resource type="Texture2D" uid="uid://dgx762uakxfn1" path="res://Assets/Sprites/UI/Shop/hedgehog_shoe.png" id="41_wpjks"]
+[ext_resource type="Texture2D" uid="uid://ofkcncoy6tbm" path="res://Assets/Sprites/UI/Shop/Item Info/stick.png" id="42_xnrj5"]
+[ext_resource type="Texture2D" uid="uid://b1gv55mf7rsx6" path="res://Assets/Sprites/UI/Shop/Item Info/sledgehammer.png" id="44_dq7b2"]
+[ext_resource type="Texture2D" uid="uid://tb4rw8q8bctf" path="res://Assets/Sprites/UI/Shop/Item Info/thorn_blade.png" id="46_dwhtv"]
+[ext_resource type="Texture2D" uid="uid://5rk6xj5npq7e" path="res://Assets/Sprites/UI/Shop/Item Info/mighty_sword.png" id="48_tdm8a"]
+[ext_resource type="Texture2D" uid="uid://cd0p665ukok61" path="res://Assets/Sprites/Items/stun_gun.png" id="49_8gca4"]
+[ext_resource type="Texture2D" uid="uid://o6rrr3wqc1g4" path="res://Assets/Sprites/UI/Shop/Item Info/stun_gun.png" id="49_byewl"]
+[ext_resource type="Texture2D" uid="uid://bihoucpqpqaef" path="res://Assets/Sprites/UI/Shop/Item Info/plasma_gun.png" id="50_gipkh"]
+[ext_resource type="Texture2D" uid="uid://bldoviv0rn5mp" path="res://Assets/Sprites/Items/plasma_gun.png" id="51_gff3h"]
+[ext_resource type="Texture2D" uid="uid://1mqajot4sse5" path="res://Assets/Sprites/UI/Shop/Item Info/worn_out_shoes.png" id="53_j3rhe"]
+[ext_resource type="Texture2D" uid="uid://ihmg6vuwl0cw" path="res://Assets/Sprites/UI/Shop/Item Info/burglar_ones.png" id="54_6d3gj"]
+[ext_resource type="Texture2D" uid="uid://1sko23pvy6aj" path="res://Assets/Sprites/UI/Shop/Item Info/running_shoes.png" id="56_p1wkc"]
+[ext_resource type="Texture2D" uid="uid://ypr65ng3et78" path="res://Assets/Sprites/UI/Shop/Item Info/hedgehog_shoes.png" id="58_w5ai8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3u78"]
+atlas = ExtResource("2_kcc5r")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e32fq"]
+atlas = ExtResource("3_xybqi")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t1f2"]
+atlas = ExtResource("4_cjwgl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1yip"]
+atlas = ExtResource("5_fsgtm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33sfn"]
+atlas = ExtResource("6_oha7t")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0inpq"]
+atlas = ExtResource("7_ps16d")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tknpo"]
+atlas = ExtResource("8_m2v70")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvgt3"]
+atlas = ExtResource("9_wcnk8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhep2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3u78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e32fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t1f2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1yip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33sfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0inpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tknpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvgt3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_kcc5r")
+
+[node name="InitialLayout" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 800.0
+
+[node name="ColorRect" type="ColorRect" parent="InitialLayout"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 800.0
+color = Color(0, 0, 0, 1)
+
+[node name="Loading" type="AnimatedSprite2D" parent="InitialLayout"]
+position = Vector2(576, 400)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_fhep2")
+
+[node name="ShopLayout" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 800.0
+
+[node name="ShopBG" type="TextureRect" parent="ShopLayout"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 800.0
+texture = ExtResource("10_cjwgl")
+
+[node name="Decoration" type="TextureRect" parent="ShopLayout"]
+modulate = Color(1, 1, 1, 0.054902)
+layout_mode = 0
+offset_left = 278.0
+offset_top = 246.0
+offset_right = 852.0
+offset_bottom = 732.0
+texture = ExtResource("11_pbhkr")
+
+[node name="Cash" type="Label" parent="ShopLayout"]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 82.0
+offset_right = 1050.0
+offset_bottom = 212.0
+theme_override_fonts/font = ExtResource("19_t1yip")
+theme_override_font_sizes/font_size = 128
+text = "0"
+
+[node name="BagLayout" type="Node2D" parent="ShopLayout" node_paths=PackedStringArray("to_weapons_button", "to_shoes_button")]
+script = ExtResource("12_33sfn")
+to_weapons_button = NodePath("Tabs/WeaponTab/Button")
+to_shoes_button = NodePath("Tabs/ShoeTab/Button")
+
+[node name="Tabs" type="Control" parent="ShopLayout/BagLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BagTab" type="TextureRect" parent="ShopLayout/BagLayout/Tabs"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 209.0
+offset_right = 674.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_wcnk8")
+metadata/_edit_group_ = true
+
+[node name="BagImg" type="TextureRect" parent="ShopLayout/BagLayout/Tabs/BagTab"]
+layout_mode = 0
+offset_left = 14.5
+offset_top = 2.0
+offset_right = 54.5
+offset_bottom = 42.0
+texture = ExtResource("12_ps16d")
+
+[node name="Button" type="Button" parent="ShopLayout/BagLayout/Tabs/BagTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="WeaponTab" type="TextureRect" parent="ShopLayout/BagLayout/Tabs"]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 209.0
+offset_right = 791.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_e3u78")
+metadata/_edit_group_ = true
+
+[node name="WeaponImg" type="TextureRect" parent="ShopLayout/BagLayout/Tabs/WeaponTab"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.6667
+offset_right = 50.0
+offset_bottom = 38.6667
+texture = ExtResource("14_wcnk8")
+
+[node name="Button" type="Button" parent="ShopLayout/BagLayout/Tabs/WeaponTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="ShoeTab" type="TextureRect" parent="ShopLayout/BagLayout/Tabs"]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 209.0
+offset_right = 908.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_e3u78")
+metadata/_edit_group_ = true
+
+[node name="ShoeImg" type="TextureRect" parent="ShopLayout/BagLayout/Tabs/ShoeTab"]
+layout_mode = 0
+offset_left = 15.3333
+offset_top = -6.66667
+offset_right = 79.3333
+offset_bottom = 57.3333
+texture = ExtResource("13_wcnk8")
+
+[node name="Button" type="Button" parent="ShopLayout/BagLayout/Tabs/ShoeTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="Items" type="Control" parent="ShopLayout/BagLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Item1" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 322.0
+offset_right = 246.0
+offset_bottom = 402.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 9.33333
+offset_top = 9.33333
+offset_right = 72.3333
+offset_bottom = 70.3333
+texture = ExtResource("12_ps16d")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("30_7ec4r")
+
+[node name="Item2" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 543.0
+offset_right = 246.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 9.33333
+offset_top = 6.66667
+offset_right = 72.3333
+offset_bottom = 71.6667
+texture = ExtResource("29_tv2qa")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("32_buy5q")
+
+[node name="Item3" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 322.0
+offset_right = 528.0
+offset_bottom = 402.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.6667
+offset_right = 72.0
+offset_bottom = 74.6667
+texture = ExtResource("30_ku021")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("30_wpjks")
+
+[node name="Item4" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 543.0
+offset_right = 531.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 12.6667
+offset_top = 16.6667
+offset_right = 84.6667
+offset_bottom = 80.6667
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("31_gxrn4")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("36_8gca4")
+
+[node name="Item5" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 328.0
+offset_right = 829.0
+offset_bottom = 408.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 12.6667
+offset_top = 12.6667
+offset_right = 76.6667
+offset_bottom = 76.6667
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("32_l6buc")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("38_gff3h")
+
+[node name="Item6" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 543.0
+offset_right = 829.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.33333
+offset_right = 72.0
+offset_bottom = 71.3333
+texture = ExtResource("33_pbhkr")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("40_tyggv")
+
+[node name="WeaponsLayout" type="Node2D" parent="ShopLayout" node_paths=PackedStringArray("to_bags_button", "to_shoes_button")]
+script = ExtResource("18_0inpq")
+to_bags_button = NodePath("Tabs/BagTab/Button")
+to_shoes_button = NodePath("Tabs/ShoeTab/Button")
+
+[node name="Tabs" type="Control" parent="ShopLayout/WeaponsLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BagTab" type="TextureRect" parent="ShopLayout/WeaponsLayout/Tabs"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 209.0
+offset_right = 674.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_e3u78")
+metadata/_edit_group_ = true
+
+[node name="BagImg" type="TextureRect" parent="ShopLayout/WeaponsLayout/Tabs/BagTab"]
+layout_mode = 0
+offset_left = 14.5
+offset_top = 2.0
+offset_right = 54.5
+offset_bottom = 42.0
+texture = ExtResource("12_ps16d")
+
+[node name="Button" type="Button" parent="ShopLayout/WeaponsLayout/Tabs/BagTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="WeaponTab" type="TextureRect" parent="ShopLayout/WeaponsLayout/Tabs"]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 209.0
+offset_right = 791.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_wcnk8")
+metadata/_edit_group_ = true
+
+[node name="WeaponImg" type="TextureRect" parent="ShopLayout/WeaponsLayout/Tabs/WeaponTab"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 9.33333
+offset_right = 50.0
+offset_bottom = 37.3333
+texture = ExtResource("14_wcnk8")
+
+[node name="Button" type="Button" parent="ShopLayout/WeaponsLayout/Tabs/WeaponTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="ShoeTab" type="TextureRect" parent="ShopLayout/WeaponsLayout/Tabs"]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 209.0
+offset_right = 908.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_e3u78")
+metadata/_edit_group_ = true
+
+[node name="ShoeImg" type="TextureRect" parent="ShopLayout/WeaponsLayout/Tabs/ShoeTab"]
+layout_mode = 0
+offset_left = 15.3333
+offset_top = -6.66667
+offset_right = 79.3333
+offset_bottom = 57.3333
+texture = ExtResource("13_wcnk8")
+
+[node name="Button" type="Button" parent="ShopLayout/WeaponsLayout/Tabs/ShoeTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="Items" type="Control" parent="ShopLayout/WeaponsLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Item1" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 322.0
+offset_right = 246.0
+offset_bottom = 402.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 17.3333
+offset_top = 16.6667
+offset_right = 57.3333
+offset_bottom = 56.6667
+texture = ExtResource("14_wcnk8")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("42_xnrj5")
+
+[node name="Item2" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 543.0
+offset_right = 246.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 17.3333
+offset_top = 21.3333
+offset_right = 57.3333
+offset_bottom = 61.3333
+texture = ExtResource("35_wpjks")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("44_dq7b2")
+
+[node name="Item3" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 322.0
+offset_right = 528.0
+offset_bottom = 402.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("36_bog2v")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("46_dwhtv")
+
+[node name="Item4" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 543.0
+offset_right = 531.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 21.3333
+offset_top = 18.0
+offset_right = 61.3333
+offset_bottom = 58.0
+texture = ExtResource("37_emaaq")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("48_tdm8a")
+
+[node name="Item5" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 328.0
+offset_right = 829.0
+offset_bottom = 408.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 12.6667
+offset_top = 12.6667
+offset_right = 66.6667
+offset_bottom = 67.6667
+texture = ExtResource("49_8gca4")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("49_byewl")
+
+[node name="Item6" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 543.0
+offset_right = 829.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.33333
+offset_right = 72.0
+offset_bottom = 73.3333
+texture = ExtResource("51_gff3h")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("50_gipkh")
+
+[node name="ShoesLayout" type="Node2D" parent="ShopLayout" node_paths=PackedStringArray("to_bags_button", "to_weapons_button")]
+script = ExtResource("19_tknpo")
+to_bags_button = NodePath("Tabs/BagTab/Button")
+to_weapons_button = NodePath("Tabs/WeaponTab/Button")
+
+[node name="Tabs" type="Control" parent="ShopLayout/ShoesLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BagTab" type="TextureRect" parent="ShopLayout/ShoesLayout/Tabs"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 209.0
+offset_right = 674.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_e3u78")
+metadata/_edit_group_ = true
+
+[node name="BagImg" type="TextureRect" parent="ShopLayout/ShoesLayout/Tabs/BagTab"]
+layout_mode = 0
+offset_left = 14.5
+offset_top = 2.0
+offset_right = 54.5
+offset_bottom = 42.0
+texture = ExtResource("12_ps16d")
+
+[node name="Button" type="Button" parent="ShopLayout/ShoesLayout/Tabs/BagTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="WeaponTab" type="TextureRect" parent="ShopLayout/ShoesLayout/Tabs"]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 209.0
+offset_right = 791.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_e3u78")
+metadata/_edit_group_ = true
+
+[node name="WeaponImg" type="TextureRect" parent="ShopLayout/ShoesLayout/Tabs/WeaponTab"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.6667
+offset_right = 50.0
+offset_bottom = 38.6667
+texture = ExtResource("14_wcnk8")
+
+[node name="Button" type="Button" parent="ShopLayout/ShoesLayout/Tabs/WeaponTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="ShoeTab" type="TextureRect" parent="ShopLayout/ShoesLayout/Tabs"]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 209.0
+offset_right = 908.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_wcnk8")
+metadata/_edit_group_ = true
+
+[node name="ShoeImg" type="TextureRect" parent="ShopLayout/ShoesLayout/Tabs/ShoeTab"]
+layout_mode = 0
+offset_left = 15.3333
+offset_top = -9.33333
+offset_right = 79.3333
+offset_bottom = 54.6667
+texture = ExtResource("13_wcnk8")
+
+[node name="Button" type="Button" parent="ShopLayout/ShoesLayout/Tabs/ShoeTab"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 40.0
+
+[node name="Items" type="Control" parent="ShopLayout/ShoesLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 179.0
+offset_top = 314.0
+offset_right = 570.0
+offset_bottom = 478.0
+scale = Vector2(2, 2)
+
+[node name="Item1" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+layout_mode = 2
+offset_right = 80.0
+offset_bottom = 80.0
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 18.5
+offset_right = 82.0
+offset_bottom = 82.5
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("39_l6buc")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("53_j3rhe")
+
+[node name="Item2" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+layout_mode = 2
+offset_top = 90.5
+offset_right = 80.0
+offset_bottom = 170.5
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 6.5
+offset_top = -10.5
+offset_right = 70.5
+offset_bottom = 53.5
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_wcnk8")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("54_6d3gj")
+
+[node name="Item3" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+layout_mode = 2
+offset_left = 222.5
+offset_right = 302.5
+offset_bottom = 80.0
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 27.0
+offset_right = 70.0
+offset_bottom = 63.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("40_pbhkr")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("56_p1wkc")
+
+[node name="Item4" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+layout_mode = 2
+offset_left = 222.5
+offset_top = 90.5
+offset_right = 302.5
+offset_bottom = 170.5
+texture = ExtResource("13_m2v70")
+
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 19.5
+offset_right = 64.0
+offset_bottom = 59.5
+texture = ExtResource("41_wpjks")
+
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("19_yn0sp")
+texture_pressed = ExtResource("20_qydip")
+texture_hover = ExtResource("21_wdfyn")
+
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("22_gp0wy")
+texture_pressed = ExtResource("23_5veni")
+texture_hover = ExtResource("24_jkp36")
+
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 46.0
+texture_normal = ExtResource("25_lrquv")
+texture_pressed = ExtResource("26_csrq7")
+texture_hover = ExtResource("27_11txg")
+
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+layout_mode = 0
+offset_left = 3.33333
+offset_top = 2.0
+offset_right = 51.3333
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("28_qydip")
+texture_hover = ExtResource("58_w5ai8")
+
+[node name="GoBackButton" type="TextureButton" parent="."]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 35.0
+offset_bottom = 61.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("16_2t1f2")
+texture_pressed = ExtResource("17_t1yip")
+texture_hover = ExtResource("18_33sfn")
+
+[node name="Pointer" type="Sprite2D" parent="."]
+position = Vector2(576, 400)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("10_xybqi")

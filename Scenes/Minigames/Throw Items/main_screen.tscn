@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc20sd71o8fvk"]
+
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_p8uhj"]
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_xbusb"]
+[ext_resource type="PackedScene" uid="uid://cxs7u6wl8wsgg" path="res://Scenes/Minigames/Throw Items/throw_items.tscn" id="2_3bmjh"]
+[ext_resource type="Texture2D" uid="uid://c741dote1bk1e" path="res://Assets/Sprites/Minigame Sprites/throw_items.png" id="2_rgiy2"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_xbusb")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_3bmjh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 121.0
+offset_top = 84.0
+offset_right = 1044.0
+offset_bottom = 728.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 354.0
+offset_top = 121.0
+offset_right = 730.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("1_p8uhj")
+theme_override_font_sizes/font_size = 64
+text = "Shoot the Items"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 215.0
+offset_top = 225.0
+offset_right = 604.0
+offset_bottom = 377.0
+theme_override_font_sizes/font_size = 20
+text = "Aim and shoot your way into victory by shooting items into the Burglar's bag! With precision, shoot five items into the bag to win!"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 215.0
+offset_top = 377.0
+offset_right = 608.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 20
+text = "To play, aim with your mouse and shoot with your spacebar. Where you mouse pointer lies in the game dictates the force that the item will shoot out, aswell as the angle at which it will shoot. The game ends when you've made 5 items in the bag or when you run out of tries.
+Press 'START' when you're ready"
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 609.0
+offset_top = 225.0
+offset_right = 953.0
+offset_bottom = 486.0
+texture = ExtResource("2_rgiy2")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 709.0
+offset_top = 552.0
+offset_right = 838.0
+offset_bottom = 594.0
+theme_override_fonts/font = ExtResource("1_p8uhj")
+theme_override_font_sizes/font_size = 32
+text = "START"

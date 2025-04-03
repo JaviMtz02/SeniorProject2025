@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://i37lgfcedlvb"]
+
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_01bwa"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_jbg8s"]
+[ext_resource type="PackedScene" uid="uid://d1giqgaabkhev" path="res://Scenes/Minigames/memory_game/memory_game.tscn" id="2_4488b"]
+[ext_resource type="Texture2D" uid="uid://btfmkpkqn606u" path="res://Assets/Sprites/Minigame Sprites/memory__game.png" id="2_ljf6o"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_01bwa")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_4488b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 151.0
+offset_top = 106.0
+offset_right = 1015.0
+offset_bottom = 708.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 298.0
+offset_top = 152.0
+offset_right = 854.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("1_jbg8s")
+theme_override_font_sizes/font_size = 64
+text = "Sequence Memorization"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 298.0
+offset_top = 239.0
+offset_right = 629.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 20
+text = "Test your memory skills by repeating the pattern being shown. For each turn, a button in the keypad will turn blue. Don't forget the order in which they turned color, or else you'll lose!"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 298.0
+offset_top = 434.0
+offset_right = 917.0
+offset_bottom = 586.0
+theme_override_font_sizes/font_size = 20
+text = "To play, click on the button after the sequence finishes playing. The sequence starts at 1 button and increases by one at each turn. Game ends when you complete all sequences or get 1 sequence incorrect.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 640.0
+offset_top = 239.0
+offset_right = 917.0
+offset_bottom = 434.0
+texture = ExtResource("2_ljf6o")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 548.0
+offset_top = 592.0
+offset_right = 677.0
+offset_bottom = 634.0
+theme_override_fonts/font = ExtResource("1_jbg8s")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(586, 409)
+zoom = Vector2(1.4, 1.4)

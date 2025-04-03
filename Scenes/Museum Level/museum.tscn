@@ -10619,12 +10619,19 @@ position = Vector2(-721, -107)
 [node name="Guard5" parent="GuardNavigation/GuardsGeneral/NavigationRegion2D" instance=ExtResource("13_x1mcs")]
 position = Vector2(-315, 357)
 
+<<<<<<< HEAD
+[node name="Burglar" parent="." instance=ExtResource("14_8dy78")]
+z_index = 1
+position = Vector2(-265, 544)
+
+=======
+>>>>>>> main
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 2
-offset_left = -2002.0
-offset_top = -833.0
-offset_right = 1234.0
-offset_bottom = 1112.0
+offset_left = -2001.0
+offset_top = -834.0
+offset_right = 1235.0
+offset_bottom = 1121.0
 color = Color(0.168627, 0.184314, 0.466667, 0.392157)
 
 [node name="Sounds" type="Node" parent="."]
