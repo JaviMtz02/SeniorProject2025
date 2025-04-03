@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://i50wkd86wgwi"]
+[gd_scene load_steps=100 format=4 uid="uid://cyol785xdr16c"]
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
 [ext_resource type="Script" uid="uid://bxuxdnau45sj" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://je1dre1ywoaj" path="res://Assets/Sprites/Nature/objects.png" id="7_nmcje"]
 [ext_resource type="Texture2D" uid="uid://cagjgr87o0dp4" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png" id="9_tfhnb"]
 [ext_resource type="PackedScene" uid="uid://dwyseg08pilxd" path="res://Scenes/Museum Level/Guard/guard.tscn" id="13_x1mcs"]
+[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="14_8dy78"]
 [ext_resource type="PackedScene" uid="uid://dice2umpg6y62" path="res://Scenes/Museum Level/Loot Scenes/antique.tscn" id="14_hli1t"]
 [ext_resource type="PackedScene" uid="uid://dky444q5cjswa" path="res://Scenes/Museum Level/Loot Scenes/antique_2.tscn" id="15_jm2vv"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_tt1tv"]
@@ -56,7 +57,6 @@
 [ext_resource type="PackedScene" uid="uid://ugont15y8ehc" path="res://Scenes/Museum Level/Loot Scenes/souvenir.tscn" id="52_dpjoc"]
 [ext_resource type="PackedScene" uid="uid://dab5loaacdbjv" path="res://Scenes/Museum Level/Loot Scenes/souvenir_5.tscn" id="53_xdkha"]
 [ext_resource type="PackedScene" uid="uid://bbyqwx88ihyeo" path="res://Scenes/Museum Level/Loot Scenes/souvenir_4.tscn" id="54_6xop6"]
-[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scripts/loot.gd" id="55_kdo4x"]
 [ext_resource type="PackedScene" uid="uid://d2wguhfxepus1" path="res://Scenes/Museum Level/Loot Scenes/souvenir_3.tscn" id="56_ydr80"]
 [ext_resource type="PackedScene" uid="uid://bx34pb3cc502l" path="res://Scenes/Museum Level/Loot Scenes/souvenir_2.tscn" id="57_7tgaq"]
 [ext_resource type="PackedScene" uid="uid://cxmi4elwfthhd" path="res://Scenes/Museum Level/Loot Scenes/scroll.tscn" id="58_q7xq7"]
@@ -71,7 +71,6 @@
 [ext_resource type="PackedScene" uid="uid://c183d1xkw57w3" path="res://Scenes/Museum Level/Movable Items/dinosaur.tscn" id="69_i6u7w"]
 [ext_resource type="PackedScene" uid="uid://c4oby0peepha0" path="res://Scenes/Museum Level/Movable Items/drawer.tscn" id="70_w0q5j"]
 [ext_resource type="PackedScene" uid="uid://dgpbd33niiko0" path="res://Scenes/Museum Level/bum.tscn" id="71_r1p8x"]
-[ext_resource type="PackedScene" uid="uid://8k1qyskunxey" path="res://Scenes/player_spawn_point.tscn" id="72_grlf4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysar5"]
 texture = ExtResource("1_a1que")
@@ -10185,7 +10184,6 @@ collision_mask = 4
 position = Vector2(6, 473)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("55_kdo4x")
 
 [node name="Souvenir3" parent="Loot" instance=ExtResource("56_ydr80")]
 position = Vector2(265, 473)
@@ -10261,7 +10259,6 @@ collision_mask = 4
 position = Vector2(-73, 570)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("55_kdo4x")
 
 [node name="Souvenir8" parent="Loot" groups=["loot"] instance=ExtResource("57_7tgaq")]
 position = Vector2(-72, 472)
@@ -10619,19 +10616,16 @@ position = Vector2(-721, -107)
 [node name="Guard5" parent="GuardNavigation/GuardsGeneral/NavigationRegion2D" instance=ExtResource("13_x1mcs")]
 position = Vector2(-315, 357)
 
-<<<<<<< HEAD
 [node name="Burglar" parent="." instance=ExtResource("14_8dy78")]
 z_index = 1
-position = Vector2(-265, 544)
+position = Vector2(-244, 578)
 
-=======
->>>>>>> main
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 2
-offset_left = -2001.0
-offset_top = -834.0
-offset_right = 1235.0
-offset_bottom = 1121.0
+offset_left = -2002.0
+offset_top = -833.0
+offset_right = 1234.0
+offset_bottom = 1112.0
 color = Color(0.168627, 0.184314, 0.466667, 0.392157)
 
 [node name="Sounds" type="Node" parent="."]
@@ -10729,6 +10723,3 @@ position = Vector2(484, 264)
 
 [node name="Bum" parent="." instance=ExtResource("71_r1p8x")]
 position = Vector2(446, 589)
-
-[node name="PlayerSpawnPoint" parent="." instance=ExtResource("72_grlf4")]
-position = Vector2(-241, 568)
