@@ -39,8 +39,9 @@ func _on_area_entered(area: Area2D) -> void:
 		area.get_parent().poi_nearby(self)
 		
 func _on_area_exited(area: Area2D) -> void:
-	away_minigame.emit()
-	area.get_parent().poi_leave(self)
+	if area.is_in_group("minigame_interaction"):
+		away_minigame.emit()
+		area.get_parent().poi_leave(self)
 
 # When a minigame begins, it's added to the canvas layer and signals for game control are added
 # these signals are signals that each minigame has, minigames have their own methods of checking of when
@@ -65,7 +66,7 @@ func _on_minigame_won() -> void:
 	$DoorOpening.play()
 	hide()
 	await $DoorOpening.finished
-	queue_free() # door dissappears, burglar can enter and move again
+	MultiplayerManager.request_remove_item.rpc(get_path()) # door dissappears, burglar can enter and move again
 	
 func _on_minigame_lost() -> void:
 	minigame_lost.emit() # door stays, burglar is penalized
