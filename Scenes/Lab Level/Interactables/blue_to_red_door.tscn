@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cng2h2ntbo28c"]
+[gd_scene load_steps=20 format=3 uid="uid://cng2h2ntbo28c"]
 
 [ext_resource type="Script" uid="uid://cxh203xxvjvpb" path="res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd" id="1_63n3r"]
 [ext_resource type="PackedScene" uid="uid://dxkwahqljg2t1" path="res://Scenes/Minigames/Checker Game/main_screen.tscn" id="2_w42ns"]
@@ -10,6 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://de5pk7rj0682j" path="res://Scenes/Minigames/Stacking Blocks/main_screen.tscn" id="8_kj6ap"]
 [ext_resource type="PackedScene" uid="uid://dllpfcjatqqry" path="res://Scenes/Minigames/tic_tac_toe/main_screen.tscn" id="9_vsnto"]
 [ext_resource type="Texture2D" uid="uid://6q56b0jvv7hm" path="res://Assets/Sprites/Items/door_blue_to_red.png" id="10_tnaac"]
+[ext_resource type="PackedScene" uid="uid://b3iw0n8le3pkv" path="res://Scenes/Minigames/Door Unlocking/main_screen.tscn" id="10_waxbv"]
+[ext_resource type="PackedScene" uid="uid://0hf2gpbiqaux" path="res://Scenes/Minigames/Drop Items/main_screen.tscn" id="11_6uxyl"]
+[ext_resource type="PackedScene" uid="uid://xv5u0owo36ok" path="res://Scenes/Minigames/Find the Item/main_screen.tscn" id="12_18byd"]
+[ext_resource type="PackedScene" uid="uid://dy1m3i5wp5iw4" path="res://Scenes/Minigames/keypad/main_screen.tscn" id="13_3q1wt"]
+[ext_resource type="PackedScene" uid="uid://dshcmh2afvovk" path="res://Scenes/Minigames/Memorize Code/main_screen.tscn" id="14_xats0"]
+[ext_resource type="PackedScene" uid="uid://i37lgfcedlvb" path="res://Scenes/Minigames/memory_game/main_screen.tscn" id="15_15kut"]
+[ext_resource type="PackedScene" uid="uid://cc20sd71o8fvk" path="res://Scenes/Minigames/Throw Items/main_screen.tscn" id="16_itr0n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv2dx"]
 size = Vector2(48, 23.5)
@@ -20,7 +27,7 @@ size = Vector2(50, 45.5)
 [node name="BlueToRedDoor" type="StaticBody2D" node_paths=PackedStringArray("door_area") groups=["doors"]]
 z_index = 1
 script = ExtResource("1_63n3r")
-minigames = Array[PackedScene]([ExtResource("2_w42ns"), ExtResource("3_6mla8"), ExtResource("4_wjqu4"), ExtResource("5_w0cix"), ExtResource("6_4dgti"), ExtResource("7_dtisd"), ExtResource("8_kj6ap"), ExtResource("9_vsnto")])
+minigames = Array[PackedScene]([ExtResource("2_w42ns"), ExtResource("3_6mla8"), ExtResource("4_wjqu4"), ExtResource("5_w0cix"), ExtResource("6_4dgti"), ExtResource("7_dtisd"), ExtResource("8_kj6ap"), ExtResource("9_vsnto"), ExtResource("10_waxbv"), ExtResource("11_6uxyl"), ExtResource("12_18byd"), ExtResource("13_3q1wt"), ExtResource("14_xats0"), ExtResource("15_15kut"), ExtResource("16_itr0n")])
 door_area = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
