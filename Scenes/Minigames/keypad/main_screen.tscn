@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy1m3i5wp5iw4"]
+
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_o01sf"]
+[ext_resource type="PackedScene" uid="uid://fboehgvtxbd1" path="res://Scenes/Minigames/keypad/keypad.tscn" id="2_svdly"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="3_1t5ao"]
+[ext_resource type="Texture2D" uid="uid://do4fax8q27tde" path="res://Assets/Sprites/Minigame Sprites/keypad_game.png" id="4_mdwa2"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_o01sf")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_svdly")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 130.0
+offset_top = 97.0
+offset_right = 1041.0
+offset_bottom = 693.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 276.0
+offset_top = 123.0
+offset_right = 875.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("3_1t5ao")
+theme_override_font_sizes/font_size = 64
+text = "Guess the Missing Number"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 214.0
+offset_top = 214.0
+offset_right = 619.0
+offset_bottom = 397.0
+theme_override_font_sizes/font_size = 20
+text = "Try to get the missing number in the sequence given! Enter the sequence as shown, for every x in the sequence, you must guess which number is the one that's missing. You have 3 tries to win! Trust your gut!"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 214.0
+offset_top = 464.0
+offset_right = 977.0
+offset_bottom = 591.0
+theme_override_font_sizes/font_size = 20
+text = "To play simply click on the button that you think is missing. A correct sequence of buttons will flash green whenever you click on one. An incorrect sequence flashes red. Game ends when you guess the correct number, or run out of attemps.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 632.0
+offset_top = 214.0
+offset_right = 973.0
+offset_bottom = 464.0
+texture = ExtResource("4_mdwa2")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 540.0
+offset_top = 622.0
+offset_right = 669.0
+offset_bottom = 664.0
+theme_override_fonts/font = ExtResource("3_1t5ao")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(581, 396)
+zoom = Vector2(1.4, 1.4)

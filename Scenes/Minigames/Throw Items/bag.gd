@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 			
 func pick_new_pos() -> void:
 	var random_offset = Vector2(
-		randf_range(450, 1050),
+		randf_range(700, 1050),
 		global_position.y
 	)
 	target_pos = random_offset

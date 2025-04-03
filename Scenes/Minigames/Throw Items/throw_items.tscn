@@ -1,8 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxs7u6wl8wsgg"]
+[gd_scene load_steps=16 format=3 uid="uid://cxs7u6wl8wsgg"]
 
 [ext_resource type="PackedScene" uid="uid://mrgqiamb7fr8" path="res://Scenes/Minigames/Throw Items/thrower.tscn" id="1_g2fe7"]
 [ext_resource type="Script" uid="uid://nuitfytgcwdh" path="res://Scenes/Minigames/Throw Items/throw_items.gd" id="1_imtbi"]
 [ext_resource type="PackedScene" uid="uid://lt6i5pbat1gk" path="res://Scenes/Minigames/Throw Items/bag.tscn" id="2_q3pmo"]
+[ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="2_wmcpd"]
+[ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="3_upava"]
+[ext_resource type="Texture2D" uid="uid://dvergsij0vrm0" path="res://Assets/Sprites/Background/Clouds/Clouds 3/4.png" id="4_0f741"]
+[ext_resource type="Texture2D" uid="uid://gs0ytgdwht3h" path="res://Assets/Sprites/Minigame Sprites/building_2.png" id="5_ikkcv"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="6_h38us"]
+[ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="7_h38us"]
+[ext_resource type="Texture2D" uid="uid://d1aol6vhtr806" path="res://Assets/Sprites/Characters/throw_item.png" id="8_10ixv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqskb"]
+atlas = ExtResource("7_h38us")
+region = Rect2(0, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox6ce"]
+atlas = ExtResource("8_10ixv")
+region = Rect2(0, 0, 20, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5bjj"]
+atlas = ExtResource("7_h38us")
+region = Rect2(0, 0, 20, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wkwio"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqskb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox6ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5bjj")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 5.0
+}]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o0f24"]
 distance = -371.0
@@ -11,10 +47,82 @@ distance = -371.0
 editor_description = "Burglar must choose the right angle and strenght to throw an item into a bag. After every turn, bag moves to a new location horizontally. Cannot miss more than 3 items"
 script = ExtResource("1_imtbi")
 
+[node name="Layout" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 800.0
+texture = ExtResource("2_wmcpd")
+
+[node name="TextureRect2" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 685.0
+texture = ExtResource("3_upava")
+
+[node name="TextureRect3" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_top = 352.0
+offset_right = 1155.0
+offset_bottom = 690.0
+texture = ExtResource("3_upava")
+
+[node name="TextureRect4" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_top = 388.0
+offset_right = 1155.0
+offset_bottom = 799.0
+texture = ExtResource("4_0f741")
+
+[node name="TextureRect5" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_left = -41.0
+offset_top = 590.0
+offset_right = 520.0
+offset_bottom = 1102.0
+texture = ExtResource("5_ikkcv")
+
+[node name="TextureRect6" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 590.0
+offset_right = 1632.0
+offset_bottom = 1102.0
+texture = ExtResource("5_ikkcv")
+
+[node name="ItemsInBag" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 40.0
+offset_right = 854.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("6_h38us")
+theme_override_font_sizes/font_size = 40
+text = "Items in Bag: 0"
+
+[node name="TriesLeft" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 92.0
+offset_right = 816.0
+offset_bottom = 132.0
+theme_override_fonts/font = ExtResource("6_h38us")
+theme_override_font_sizes/font_size = 40
+text = "Tries Left: 3"
+
 [node name="Thrower" parent="." instance=ExtResource("1_g2fe7")]
 position = Vector2(152, 601)
 
 [node name="BurglarReactions" type="AnimatedSprite2D" parent="."]
+position = Vector2(93, 565)
+scale = Vector2(-5, 5)
+sprite_frames = SubResource("SpriteFrames_wkwio")
+animation = &"shoot"
 
 [node name="Bag" parent="." instance=ExtResource("2_q3pmo")]
 position = Vector2(1018, 590)

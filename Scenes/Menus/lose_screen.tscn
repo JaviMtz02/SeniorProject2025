@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcahyk5b0wn4d"]
+
+[ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="1_23cbs"]
+[ext_resource type="Script" uid="uid://bcgmuspn217km" path="res://Scripts/lose_screen.gd" id="1_io8wc"]
+[ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="2_uutv8"]
+[ext_resource type="Texture2D" uid="uid://dvergsij0vrm0" path="res://Assets/Sprites/Background/Clouds/Clouds 3/4.png" id="3_io8wc"]
+[ext_resource type="Texture2D" uid="uid://bqfjimdcpjlgw" path="res://Assets/Sprites/UI/bg.png" id="5_d0ni1"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="6_fk1br"]
+[ext_resource type="Texture2D" uid="uid://47rr4h0pvgub" path="res://Assets/Sprites/UI/behind_bars.png" id="7_r1mx7"]
+
+[node name="LoseScreen" type="Node2D"]
+script = ExtResource("1_io8wc")
+msgs = Array[String](["How Embarassing...", "Maybe you should've tried harder", "At least you tried", "The Game isn't that hard", "You'll get there eventually", "What kind of Burglar are you?", "Consider changing careers", "Thought this would be easy for you", "Consider getting better", "Almost there! (not really)"])
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="BG"]
+scale = Vector2(2, 2.46914)
+texture = ExtResource("1_23cbs")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer"]
+position = Vector2(0, 103)
+scale = Vector2(2.00174, 1.7284)
+texture = ExtResource("2_uutv8")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer2"]
+position = Vector2(0, 277)
+scale = Vector2(2.00174, 1.6142)
+texture = ExtResource("2_uutv8")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="BG"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer3"]
+position = Vector2(0, 277)
+scale = Vector2(2.00174, 1.6142)
+texture = ExtResource("3_io8wc")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="ScreenLayout" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="ScreenLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 800.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="ScreenLayout/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -397.0
+offset_top = -313.0
+offset_right = 402.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_d0ni1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 208.0
+offset_right = 832.0
+offset_bottom = 608.0
+
+[node name="Divider" type="Control" parent="ScreenLayout/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Divider3" type="Control" parent="ScreenLayout/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScreenLayout/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_fk1br")
+theme_override_font_sizes/font_size = 128
+text = "You Lost!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScreenLayout/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_fk1br")
+theme_override_font_sizes/font_size = 32
+text = "Maybe you should've tried harder"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ScreenLayout/Control"]
+layout_mode = 2
+offset_left = 492.0
+offset_top = 373.0
+offset_right = 690.0
+offset_bottom = 551.0
+texture = ExtResource("7_r1mx7")
+
+[node name="Button" type="Button" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 551.0
+offset_right = 745.0
+offset_bottom = 625.0
+theme_override_fonts/font = ExtResource("6_fk1br")
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"

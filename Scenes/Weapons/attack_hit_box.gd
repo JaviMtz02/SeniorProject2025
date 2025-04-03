@@ -22,6 +22,6 @@ func _process(delta: float) -> void:
 	position += direction * attack_speed * delta
 	rotation += rotation_speed * delta
 
-func _on_area_entered(area: Area2D) ->void:
+func _on_area_entered(_area: Area2D) ->void:
 		sound.play()
 		

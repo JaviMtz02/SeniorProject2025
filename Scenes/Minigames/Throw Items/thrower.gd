@@ -3,6 +3,7 @@ extends Node2D
 @export var item: PackedScene
 @export var trajectory_point: PackedScene
 @export var spawn_pos: Node2D
+@onready var burglar: AnimatedSprite2D = $"../BurglarReactions"
 
 const NUMBER_OF_PROJECTILES := 7
 
@@ -28,6 +29,7 @@ func _process(_delta: float) -> void:
 		create_projectiles()
 		
 		if Input.is_action_just_pressed("attack"):
+			burglar.play("shoot")
 			var shot = item.instantiate()
 			get_parent().add_child(shot)
 			shot.in_bag.connect(_on_in_bag)

@@ -3,9 +3,11 @@ extends Node2D
 
 @onready var thrower: Node2D = $Thrower
 @onready var bag: CharacterBody2D = $Bag
+@onready var items_in_bag: Label = $Layout/ItemsInBag
+@onready var tries_left_label: Label = $Layout/TriesLeft
 
 var tries_left: int = 3
-var items: int = 5
+var items: int = 0
 
 signal game_won
 signal game_lost
@@ -19,7 +21,26 @@ func _ready() -> void:
 
 
 func _on_hit() -> void:
-	pass
+	items += 1
+	update_display()
+	check_game()
+	bag.pick_new_pos()
 
 func _on_no_hit() -> void:
-	pass
+	tries_left -= 1
+	update_display()
+	check_game()
+	
+func update_display() -> void:
+	tries_left_label.text = "Tries Left: " + str(tries_left)
+	items_in_bag.text = "Items in Bag: " + str(items)
+
+func check_game() -> void:
+	if items == 5:
+		game_won.emit()
+		print("you win!")
+		queue_free()
+	elif tries_left == 0:
+		game_lost.emit()
+		print("you lost")
+		queue_free()

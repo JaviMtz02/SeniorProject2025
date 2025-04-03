@@ -1,3 +1,667 @@
-[gd_scene format=3 uid="uid://djeaiebytgtoo"]
+[gd_scene load_steps=42 format=3 uid="uid://djeaiebytgtoo"]
 
-[node name="FindTheItem" type="Node2D"]
+[ext_resource type="Script" uid="uid://bjxtx7c2wmuby" path="res://Scenes/Minigames/Find the Item/find_the_item.gd" id="1_8hllc"]
+[ext_resource type="Texture2D" uid="uid://114qeqjqss66" path="res://Assets/Sprites/Minigame Sprites/wall.png" id="2_ht5v3"]
+[ext_resource type="Texture2D" uid="uid://dnoax8jwyg64m" path="res://Assets/Sprites/Minigame Sprites/shelf.png" id="3_57yqw"]
+[ext_resource type="Texture2D" uid="uid://b465f3b2n8un6" path="res://Assets/Sprites/Minigame Sprites/wood_floor.png" id="4_newgl"]
+[ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="5_q27jf"]
+[ext_resource type="Texture2D" uid="uid://c46km2s4dvlqy" path="res://Assets/Sprites/Loot Sprites/House Loot/art3.png" id="6_q27jf"]
+[ext_resource type="Texture2D" uid="uid://dxrjfn171mryq" path="res://Assets/Sprites/Minigame Sprites/flashlight_effect.png" id="6_yd1tg"]
+[ext_resource type="Texture2D" uid="uid://dyigdtsxvcf02" path="res://Assets/Sprites/UI/Buttons/button_clear_dark.png" id="7_57yqw"]
+[ext_resource type="Script" uid="uid://bnbmi4mxbmbbk" path="res://Scenes/Minigames/Find the Item/item.gd" id="7_yd1tg"]
+[ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/minus.png" id="8_newgl"]
+[ext_resource type="Texture2D" uid="uid://bc47nf0o4k30u" path="res://Assets/Sprites/Loot Sprites/Lab Loot/rat.png" id="8_yd1tg"]
+[ext_resource type="Texture2D" uid="uid://c684plho1vxbm" path="res://Assets/Sprites/Loot Sprites/House Loot/nutcracker.png" id="9_tvl8y"]
+[ext_resource type="Texture2D" uid="uid://bwxas2o8k887" path="res://Assets/Sprites/Loot Sprites/House Loot/keyboard.png" id="10_ii07q"]
+[ext_resource type="Texture2D" uid="uid://ctwotfy33huex" path="res://Assets/Sprites/Loot Sprites/House Loot/collectible1.png" id="11_k73v5"]
+[ext_resource type="Texture2D" uid="uid://h6mqngmovu2o" path="res://Assets/Sprites/Loot Sprites/House Loot/vase.png" id="12_yfpyq"]
+[ext_resource type="Texture2D" uid="uid://1i66a6evvr3e" path="res://Assets/Sprites/Loot Sprites/House Loot/trophy.png" id="13_2f6h1"]
+[ext_resource type="Texture2D" uid="uid://dw8u72n1r1bdn" path="res://Assets/Sprites/Loot Sprites/House Loot/computer.png" id="14_yajhf"]
+[ext_resource type="Texture2D" uid="uid://dem7rihwhrkbj" path="res://Assets/Sprites/Loot Sprites/Lab Loot/green_medicine.png" id="15_pi8py"]
+[ext_resource type="Texture2D" uid="uid://duvgwsse1g6wr" path="res://Assets/Sprites/Loot Sprites/House Loot/kachow.png" id="16_eqi06"]
+[ext_resource type="Texture2D" uid="uid://bqv3cs3ggjhk5" path="res://Assets/Sprites/Loot Sprites/House Loot/robot.png" id="17_m6roy"]
+[ext_resource type="Texture2D" uid="uid://ltxld305xmx5" path="res://Assets/Sprites/Loot Sprites/Museum Loot/antique3.png" id="18_fc82f"]
+[ext_resource type="Texture2D" uid="uid://cc5imdqsvig0m" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase6.png" id="19_c5tkj"]
+[ext_resource type="Texture2D" uid="uid://b1inej0p7bsms" path="res://Assets/Sprites/Loot Sprites/Museum Loot/starry_night.png" id="20_6o214"]
+[ext_resource type="Texture2D" uid="uid://cjsvq3diqf26h" path="res://Assets/Sprites/Loot Sprites/Museum Loot/dino_skull.png" id="21_hucwq"]
+[ext_resource type="Texture2D" uid="uid://kyikt2l4yefk" path="res://Assets/Sprites/Loot Sprites/Museum Loot/disk.png" id="22_pmv77"]
+[ext_resource type="Texture2D" uid="uid://4nehw5w1q38l" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase2.png" id="23_2dpk6"]
+[ext_resource type="Texture2D" uid="uid://cb22puw24uq2y" path="res://Assets/Sprites/Loot Sprites/Museum Loot/souvenir2.png" id="24_5o68f"]
+[ext_resource type="Texture2D" uid="uid://r25fruvxrqod" path="res://Assets/Sprites/Loot Sprites/Museum Loot/totem.png" id="25_83d3h"]
+[ext_resource type="Texture2D" uid="uid://syq7q4eymy3j" path="res://Assets/Sprites/Loot Sprites/Museum Loot/frog.png" id="26_fdecd"]
+[ext_resource type="Texture2D" uid="uid://exf7cf7prmuv" path="res://Assets/Sprites/Loot Sprites/Museum Loot/art.png" id="27_fdecd"]
+[ext_resource type="Texture2D" uid="uid://cf26mpsyfirf5" path="res://Assets/Sprites/Loot Sprites/Lab Loot/blue_medicine.png" id="28_56qaq"]
+[ext_resource type="Texture2D" uid="uid://de2jecfb0u587" path="res://Assets/Sprites/Loot Sprites/House Loot/basketball.png" id="29_ag7hu"]
+[ext_resource type="Texture2D" uid="uid://i2bevv3hojke" path="res://Assets/Sprites/Loot Sprites/Museum Loot/scroll.png" id="30_v43tp"]
+[ext_resource type="Texture2D" uid="uid://76clbsyi25bm" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase4.png" id="31_aeitl"]
+[ext_resource type="Texture2D" uid="uid://dittbwlgdex1s" path="res://Assets/Sprites/Loot Sprites/House Loot/collectible2.png" id="32_uw7cl"]
+[ext_resource type="Texture2D" uid="uid://c7la81jffchd4" path="res://Assets/Sprites/Loot Sprites/Museum Loot/mona_lisa.png" id="33_6v633"]
+[ext_resource type="Texture2D" uid="uid://1qx4kwe5lq6b" path="res://Assets/Sprites/Loot Sprites/Museum Loot/antique5.png" id="34_aeitl"]
+[ext_resource type="Texture2D" uid="uid://df0br60lsi3p" path="res://Assets/Sprites/Loot Sprites/Museum Loot/fossil3.png" id="35_uw7cl"]
+[ext_resource type="Texture2D" uid="uid://cxvir6pmae0mw" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase3.png" id="36_6v633"]
+[ext_resource type="Texture2D" uid="uid://db7wckqf4cfp" path="res://Assets/Sprites/Loot Sprites/House Loot/book.png" id="37_1jpmd"]
+[ext_resource type="Texture2D" uid="uid://dj45dt043atl0" path="res://Assets/Sprites/Loot Sprites/Museum Loot/disk2.png" id="38_uw7cl"]
+
+[node name="FindTheItem" type="Node2D" node_paths=PackedStringArray("flashlight", "items", "shadow", "background", "red_bg", "item_to_find", "label")]
+script = ExtResource("1_8hllc")
+flashlight = NodePath("Flashlight")
+items = NodePath("Items")
+shadow = NodePath("CanvasModulate")
+background = NodePath("InitialLayout/ColorRect")
+red_bg = NodePath("InitialLayout/TextureRect")
+item_to_find = NodePath("InitialLayout/Sprite2D")
+label = NodePath("InitialLayout/Label")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="Layout" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect3" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 665.0
+texture = ExtResource("2_ht5v3")
+
+[node name="TextureRect" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 153.0
+offset_right = 552.0
+offset_bottom = 665.0
+texture = ExtResource("3_57yqw")
+
+[node name="TextureRect2" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 153.0
+offset_right = 1128.0
+offset_bottom = 665.0
+texture = ExtResource("3_57yqw")
+
+[node name="TextureRect4" type="TextureRect" parent="Layout"]
+layout_mode = 0
+offset_top = 665.0
+offset_right = 1152.0
+offset_bottom = 800.0
+texture = ExtResource("4_newgl")
+
+[node name="TimeLeft" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 40.0
+offset_right = 924.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_q27jf")
+theme_override_font_sizes/font_size = 40
+text = "Time: 00:00"
+
+[node name="Items" type="Node" parent="."]
+
+[node name="Art1" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(138, 209)
+scale = Vector2(4, 4)
+texture = ExtResource("6_q27jf")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Art1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 5.0
+
+[node name="Rat" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(246, 185)
+scale = Vector2(4, 4)
+texture = ExtResource("8_yd1tg")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Rat"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 13.0
+offset_bottom = 11.0
+
+[node name="Nutcracker" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(337, 171)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("9_tvl8y")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Nutcracker"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -7.0
+offset_top = -14.0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="Keyboard" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(428, 204)
+scale = Vector2(5, 5)
+texture = ExtResource("10_ii07q")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Keyboard"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -11.0
+offset_top = -7.0
+offset_right = 13.0
+offset_bottom = 5.0
+
+[node name="Collectible1" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(127, 295)
+scale = Vector2(5, 5)
+texture = ExtResource("11_k73v5")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Collectible1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 14.0
+
+[node name="Vase1" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(221, 335)
+scale = Vector2(5, 5)
+texture = ExtResource("12_yfpyq")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Vase1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 5.0
+offset_bottom = 6.0
+
+[node name="Trophy" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(312, 325)
+scale = Vector2(5, 5)
+texture = ExtResource("13_2f6h1")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Trophy"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -5.0
+offset_top = -8.0
+offset_right = 4.0
+offset_bottom = 8.0
+
+[node name="Computer" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(418, 323)
+scale = Vector2(6, 6)
+texture = ExtResource("14_yajhf")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Computer"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 7.0
+
+[node name="GreenMedicine" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(132, 476)
+scale = Vector2(5, 5)
+texture = ExtResource("15_pi8py")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/GreenMedicine"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 6.0
+offset_bottom = 5.0
+
+[node name="Kachow" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(227, 458)
+scale = Vector2(6, 6)
+texture = ExtResource("16_eqi06")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Kachow"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 9.0
+offset_bottom = 7.0
+
+[node name="Robot" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(335, 449)
+scale = Vector2(4, 4)
+texture = ExtResource("17_m6roy")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Robot"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -7.0
+offset_top = -14.0
+offset_right = 8.0
+offset_bottom = 13.0
+
+[node name="Totem1" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(457, 481)
+scale = Vector2(4, 4)
+texture = ExtResource("18_fc82f")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Totem1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 2.0
+offset_bottom = 5.0
+
+[node name="Vase2" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(152, 576)
+scale = Vector2(5, 5)
+texture = ExtResource("19_c5tkj")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Vase2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -7.0
+offset_top = -9.0
+offset_right = 5.0
+offset_bottom = 9.0
+
+[node name="Art2" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(271, 577)
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("20_6o214")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Art2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -15.0
+offset_top = -12.0
+offset_right = 15.0
+offset_bottom = 12.0
+
+[node name="Dino" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(361, 594)
+scale = Vector2(4, 4)
+texture = ExtResource("21_hucwq")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Dino"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -6.0
+offset_top = -11.0
+offset_right = 9.0
+offset_bottom = 9.0
+
+[node name="Disk" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(449, 583)
+scale = Vector2(5, 5)
+texture = ExtResource("22_pmv77")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Disk"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 8.0
+offset_bottom = 6.0
+
+[node name="Vase3" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(728, 179)
+scale = Vector2(5, 5)
+texture = ExtResource("23_2dpk6")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Vase3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 7.0
+offset_bottom = 10.0
+
+[node name="Souvenir1" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(824, 200)
+scale = Vector2(5, 5)
+texture = ExtResource("24_5o68f")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Souvenir1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 7.0
+offset_bottom = 6.0
+
+[node name="Statue" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(924, 193)
+scale = Vector2(4, 4)
+texture = ExtResource("25_83d3h")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Statue"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -9.0
+offset_top = -17.0
+offset_right = 5.0
+offset_bottom = 9.0
+
+[node name="Frog" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(1049, 220)
+scale = Vector2(5, 5)
+texture = ExtResource("26_fdecd")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Frog"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -15.0
+offset_top = -7.0
+offset_right = -4.0
+offset_bottom = 2.0
+
+[node name="Art3" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(735, 321)
+scale = Vector2(4, 4)
+texture = ExtResource("27_fdecd")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Art3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -15.0
+offset_top = -11.0
+offset_right = 15.0
+offset_bottom = 11.0
+
+[node name="BlueMedicine" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(841, 336)
+scale = Vector2(5, 5)
+texture = ExtResource("28_56qaq")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/BlueMedicine"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 6.0
+
+[node name="Basketball" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(915, 340)
+scale = Vector2(5, 5)
+texture = ExtResource("29_ag7hu")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Basketball"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 5.0
+offset_bottom = 5.0
+
+[node name="Scroll" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(1016, 328)
+scale = Vector2(4, 4)
+texture = ExtResource("30_v43tp")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Scroll"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -13.0
+offset_top = -17.0
+offset_right = 12.0
+offset_bottom = 12.0
+
+[node name="Vase4" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(716, 461)
+scale = Vector2(5, 5)
+texture = ExtResource("31_aeitl")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Vase4"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -5.0
+offset_top = -9.0
+offset_right = 5.0
+offset_bottom = 8.0
+
+[node name="Collectible2" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(806, 431)
+scale = Vector2(5, 5)
+texture = ExtResource("32_uw7cl")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Collectible2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 14.0
+
+[node name="Art4" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(907, 456)
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("33_6v633")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Art4"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -12.0
+offset_top = -17.0
+offset_right = 14.0
+offset_bottom = 14.0
+
+[node name="Totem2" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(1027, 471)
+scale = Vector2(5, 5)
+texture = ExtResource("34_aeitl")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Totem2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -6.0
+offset_top = -8.0
+offset_right = 3.0
+offset_bottom = 6.0
+
+[node name="Fossil1" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(723, 591)
+scale = Vector2(5, 5)
+texture = ExtResource("35_uw7cl")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Fossil1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 10.0
+offset_bottom = 6.0
+
+[node name="Vase5" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(834, 585)
+scale = Vector2(4, 4)
+texture = ExtResource("36_6v633")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Vase5"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -5.0
+offset_top = -9.0
+offset_right = 5.0
+offset_bottom = 9.0
+
+[node name="Book" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(921, 591)
+scale = Vector2(5, 5)
+texture = ExtResource("37_1jpmd")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Book"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -6.0
+offset_top = -10.0
+offset_right = 6.0
+offset_bottom = 6.0
+
+[node name="Disk2" type="Sprite2D" parent="Items" node_paths=PackedStringArray("button", "item")]
+position = Vector2(1016, 591)
+scale = Vector2(5, 5)
+texture = ExtResource("38_uw7cl")
+script = ExtResource("7_yd1tg")
+button = NodePath("Button")
+item = NodePath(".")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Items/Disk2" node_paths=PackedStringArray("shortcut_context")]
+modulate = Color(1, 1, 1, 0)
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 6.0
+shortcut_context = NodePath(".")
+
+[node name="CountdownTimer" type="Timer" parent="."]
+
+[node name="Flashlight" type="PointLight2D" parent="."]
+position = Vector2(668, 250)
+scale = Vector2(2, 2)
+texture = ExtResource("6_yd1tg")
+
+[node name="InitialLayout" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="InitialLayout"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 800.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="InitialLayout"]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 256.0
+offset_right = 469.0
+offset_bottom = 296.0
+scale = Vector2(8, 8)
+texture = ExtResource("7_57yqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="InitialLayout"]
+position = Vector2(589, 450)
+scale = Vector2(4, 4)
+texture = ExtResource("8_newgl")
+
+[node name="Label" type="Label" parent="InitialLayout"]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 316.0
+offset_right = 777.0
+offset_bottom = 367.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_q27jf")
+theme_override_font_sizes/font_size = 24
+text = "Find the 
+Item:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3iw0n8le3pkv"]
+
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_2klbh"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_3ctgj"]
+[ext_resource type="PackedScene" uid="uid://cjynsj6wgi1rc" path="res://Scenes/Minigames/Door Unlocking/door_unlocking.tscn" id="2_rnwqe"]
+[ext_resource type="Texture2D" uid="uid://ir3rxesv743n" path="res://Assets/Sprites/Minigame Sprites/door_unlocking.png" id="2_ry5sd"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_2klbh")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_rnwqe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 155.0
+offset_top = 96.0
+offset_right = 1070.0
+offset_bottom = 712.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 444.0
+offset_top = 124.0
+offset_right = 807.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("1_3ctgj")
+theme_override_font_sizes/font_size = 64
+text = "Door Unlocking"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 207.0
+offset_top = 190.0
+offset_right = 634.0
+offset_bottom = 311.0
+theme_override_font_sizes/font_size = 20
+text = "Unlock the door by timing the pointer when it hits the green section of the bar. For every miss the pointer speeds up! So make sure to time it right."
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 207.0
+offset_top = 332.0
+offset_right = 625.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 20
+text = "Press the spacebar whenever you think you think your timing is right. The game ends when you manage to hit the spacebar when it's in the green bars area.
+Press 'START' when you're ready"
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 634.0
+offset_top = 190.0
+offset_right = 1011.0
+offset_bottom = 509.0
+texture = ExtResource("2_ry5sd")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 563.0
+offset_top = 537.0
+offset_right = 692.0
+offset_bottom = 579.0
+theme_override_fonts/font = ExtResource("1_3ctgj")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(616, 407)
+zoom = Vector2(1.3, 1.3)

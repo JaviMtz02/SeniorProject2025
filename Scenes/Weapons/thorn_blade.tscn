@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuilfcqobcnrx"]
+
+[ext_resource type="Texture2D" uid="uid://fv6fwdqtuun3" path="res://Assets/Sprites/Items/20.png" id="1_8y8fc"]
+[ext_resource type="Script" uid="uid://dp7t15ibfm01" path="res://Scenes/Weapons/attack_hit_box.gd" id="1_hpync"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hpync"]
+radius = 2.82843
+height = 21.2132
+
+[node name="ThornBlade" type="Node2D" node_paths=PackedStringArray("timer", "hitbox", "sound")]
+script = ExtResource("1_hpync")
+timer = NodePath("Timer")
+damage = 5
+hitbox = NodePath("Area2D")
+sound = NodePath("AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8y8fc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_hpync")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

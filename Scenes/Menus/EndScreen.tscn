@@ -1,0 +1,222 @@
+[gd_scene load_steps=18 format=3 uid="uid://dmoatjjldboop"]
+
+[ext_resource type="Texture2D" uid="uid://corn7wj6qmye2" path="res://Assets/Sprites/Background/Clouds/Clouds 8/1.png" id="1_5sxot"]
+[ext_resource type="Script" uid="uid://b2uf1x5jx24kg" path="res://Scripts/end_screen.gd" id="1_kp4rt"]
+[ext_resource type="Texture2D" uid="uid://ya8fwgu0bn34" path="res://Assets/Sprites/UI/level_complete_button.png" id="2_auwha"]
+[ext_resource type="Texture2D" uid="uid://bvmqik02pdpgj" path="res://Assets/Sprites/Background/Clouds/Clouds 8/2.png" id="2_kp4rt"]
+[ext_resource type="Texture2D" uid="uid://cng7i6xsg6g8t" path="res://Assets/Sprites/Background/Clouds/Clouds 8/3.png" id="3_6u27u"]
+[ext_resource type="Texture2D" uid="uid://fahp14mcgyh2" path="res://Assets/Sprites/UI/loot_complete_button.png" id="3_s3xli"]
+[ext_resource type="Texture2D" uid="uid://bomsth2vm3qj" path="res://Assets/Sprites/UI/minigame_complete_button.png" id="4_5jnic"]
+[ext_resource type="Texture2D" uid="uid://cb2uiu4377cnp" path="res://Assets/Sprites/Background/Clouds/Clouds 8/4.png" id="4_p7dp7"]
+[ext_resource type="Texture2D" uid="uid://chliwl0sgpf12" path="res://Assets/Sprites/Background/Clouds/Clouds 8/5.png" id="5_opsyh"]
+[ext_resource type="Texture2D" uid="uid://bqfjimdcpjlgw" path="res://Assets/Sprites/UI/bg.png" id="7_6u27u"]
+[ext_resource type="Texture2D" uid="uid://d1nu8swpkn7t1" path="res://Assets/Sprites/UI/level_button.png" id="8_0ko58"]
+[ext_resource type="Texture2D" uid="uid://bouq1ng776kip" path="res://Assets/Sprites/UI/loot_button.png" id="9_1bcx5"]
+[ext_resource type="Texture2D" uid="uid://dnx8pbs7y8q5w" path="res://Assets/Sprites/UI/minigame_button.png" id="10_jjwh6"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="11_1bcx5"]
+
+[sub_resource type="Animation" id="Animation_yn5fy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.01, 0.01)]
+}
+
+[sub_resource type="Animation" id="Animation_c80id"]
+resource_name = "end_screen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.01, 0.01), Vector2(0.05, 0.05), Vector2(0.1, 0.1), Vector2(0.3, 0.3), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.633333, 1.4, 1.76667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"show_achievements"
+}, {
+"args": [],
+"method": &"update_loot"
+}, {
+"args": [],
+"method": &"update_score"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ajnu"]
+_data = {
+&"RESET": SubResource("Animation_yn5fy"),
+&"end_screen": SubResource("Animation_c80id")
+}
+
+[node name="EndScreen" type="Node2D" node_paths=PackedStringArray("parallax_bg", "camera")]
+script = ExtResource("1_kp4rt")
+parallax_bg = NodePath("BG")
+camera = NodePath("Camera2D")
+completion_textures = Array[Texture2D]([ExtResource("2_auwha"), ExtResource("3_s3xli"), ExtResource("4_5jnic")])
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="BG"]
+scale = Vector2(2, 2.46914)
+texture = ExtResource("1_5sxot")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer"]
+scale = Vector2(2, 2.46914)
+texture = ExtResource("2_kp4rt")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer2"]
+scale = Vector2(2, 2.46914)
+texture = ExtResource("3_6u27u")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer3"]
+scale = Vector2(2, 2.46914)
+texture = ExtResource("4_p7dp7")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer4"]
+scale = Vector2(2, 2.46914)
+texture = ExtResource("5_opsyh")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="ScreenLayout" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="ScreenLayout"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 37.0
+offset_right = 87.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 93.0
+offset_right = 934.0
+offset_bottom = 718.0
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("7_6u27u")
+
+[node name="Level" type="Sprite2D" parent="ScreenLayout/Control"]
+position = Vector2(374, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("8_0ko58")
+
+[node name="Loot" type="Sprite2D" parent="ScreenLayout/Control"]
+position = Vector2(544, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("9_1bcx5")
+
+[node name="Minigame" type="Sprite2D" parent="ScreenLayout/Control"]
+position = Vector2(724, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("10_jjwh6")
+
+[node name="ColorRect" type="ColorRect" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 445.0
+offset_right = 803.0
+offset_bottom = 545.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 360.0
+offset_right = 793.0
+offset_bottom = 441.0
+theme_override_fonts/font = ExtResource("11_1bcx5")
+theme_override_font_sizes/font_size = 80
+text = "Level Complete!"
+
+[node name="Value" type="Label" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 493.0
+offset_right = 797.0
+offset_bottom = 559.0
+theme_override_fonts/font = ExtResource("11_1bcx5")
+theme_override_font_sizes/font_size = 64
+text = "Cash Obtained: 0"
+horizontal_alignment = 1
+
+[node name="LootObtained" type="Label" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 445.0
+offset_right = 797.0
+offset_bottom = 511.0
+theme_override_fonts/font = ExtResource("11_1bcx5")
+theme_override_font_sizes/font_size = 64
+text = "Loot Collected: 0"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ScreenLayout/Control"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 559.0
+offset_right = 720.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("11_1bcx5")
+theme_override_font_sizes/font_size = 64
+text = "Level Select"
+
+[node name="ScoreTimer" type="Timer" parent="ScreenLayout/Control"]
+wait_time = 0.005
+
+[node name="LootTimer" type="Timer" parent="ScreenLayout/Control"]
+wait_time = 0.005
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScreenLayout/Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_3ajnu")
+}
+
+[connection signal="timeout" from="ScreenLayout/Control/ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="ScreenLayout/Control/LootTimer" to="." method="_on_loot_timer_timeout"]
