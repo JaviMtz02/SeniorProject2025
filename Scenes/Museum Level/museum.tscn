@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://je1dre1ywoaj" path="res://Assets/Sprites/Nature/objects.png" id="7_nmcje"]
 [ext_resource type="Texture2D" uid="uid://cagjgr87o0dp4" path="res://Assets/Sprites/Furniture/Interiors/16x16/Theme_Sorter/Modern_Office_Shadowless_16x16.png" id="9_tfhnb"]
 [ext_resource type="PackedScene" uid="uid://dwyseg08pilxd" path="res://Scenes/Museum Level/Guard/guard.tscn" id="13_x1mcs"]
-[ext_resource type="PackedScene" uid="uid://cn2v6r5xd2gqc" path="res://Scenes/Burglar/burglar.tscn" id="14_8dy78"]
 [ext_resource type="PackedScene" uid="uid://dice2umpg6y62" path="res://Scenes/Museum Level/Loot Scenes/antique.tscn" id="14_hli1t"]
 [ext_resource type="PackedScene" uid="uid://dky444q5cjswa" path="res://Scenes/Museum Level/Loot Scenes/antique_2.tscn" id="15_jm2vv"]
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="15_tt1tv"]
@@ -62,6 +61,7 @@
 [ext_resource type="PackedScene" uid="uid://cxmi4elwfthhd" path="res://Scenes/Museum Level/Loot Scenes/scroll.tscn" id="58_q7xq7"]
 [ext_resource type="PackedScene" uid="uid://cu215lf7exnsv" path="res://Scenes/Museum Level/Loot Scenes/art_2.tscn" id="58_tsuaq"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="59_ikusx"]
+[ext_resource type="PackedScene" uid="uid://8k1qyskunxey" path="res://Scenes/player_spawn_point.tscn" id="61_ppi4i"]
 [ext_resource type="PackedScene" uid="uid://frb0t0q7uplf" path="res://Scenes/Museum Level/Doors/minigame_door_museum_top.tscn" id="64_yqu0f"]
 [ext_resource type="PackedScene" uid="uid://brxasy1h2ujoa" path="res://Scenes/Museum Level/Doors/minigame_door_museum_down.tscn" id="65_eyw68"]
 [ext_resource type="PackedScene" uid="uid://8ccgsxyrbo8l" path="res://Scenes/Museum Level/Doors/minigame_door_museum_side.tscn" id="66_bhj46"]
@@ -10616,8 +10616,7 @@ position = Vector2(-721, -107)
 [node name="Guard5" parent="GuardNavigation/GuardsGeneral/NavigationRegion2D" instance=ExtResource("13_x1mcs")]
 position = Vector2(-315, 357)
 
-[node name="Burglar" parent="." instance=ExtResource("14_8dy78")]
-z_index = 1
+[node name="PlayerSpawnPoint" parent="." instance=ExtResource("61_ppi4i")]
 position = Vector2(-244, 578)
 
 [node name="ColorRect" type="ColorRect" parent="."]

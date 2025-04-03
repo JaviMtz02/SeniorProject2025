@@ -7,9 +7,10 @@ func _ready() -> void:
 	if level_node == null:
 		level_node = get_tree().current_scene
 	for door in get_tree().get_nodes_in_group("deposit_doors"):
-		door.connect("deposit", Callable(self, "_on_deposit"))
+		door.deposit.connect(_on_deposit)
 
-func _on_deposit() -> void:
-	level_node.deposit_loot(value, 1)
-	# Play some sound here
-	queue_free()
+func _on_deposit(obj: RigidBody2D) -> void:
+	if obj == self:
+		level_node.deposit_loot(value, 1)
+		# Play some sound here
+		queue_free()

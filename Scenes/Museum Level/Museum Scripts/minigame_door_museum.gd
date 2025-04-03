@@ -16,10 +16,6 @@ var by_door: bool = false
 func _ready() -> void:
 	door_area.area_entered.connect(_on_area_entered)
 	door_area.area_exited.connect(_on_area_exited)
-
-func _process(_delta: float) -> void:
-	if by_door and Input.is_action_just_pressed("open_minigame"):
-		open_minigame()
 		
 func open_minigame() -> void:
 	# Picks a random minigame from array that holds all of them
@@ -42,10 +38,14 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("minigame_interaction"):
 		by_door = true
 		near_minigame.emit()
+		if area.get_parent().is_in_group("Burglar"):
+			area.get_parent().poi_nearby(self)
 		
-func _on_area_exited(_area: Area2D) -> void:
+func _on_area_exited(area: Area2D) -> void:
 	by_door = false
 	away_minigame.emit()
+	if area.get_parent().is_in_group("Burglar"):
+		area.get_parent().poi_leave(self)
 
 
 # When a minigame begins, it's added to the canvas layer and signals for game control are added
