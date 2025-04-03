@@ -1,10 +1,2 @@
-res://Scenes/Museum Level/Doors/minigame_door_museum_down.tscn
-res://Scenes/Museum Level/Doors/minigame_door_museum_side.tscn
-res://Scenes/Museum Level/Doors/minigame_door_museum_top.tscn
 res://Scenes/Menus/start_menu.tscn
-res://Scenes/Lab Level/lab_level.tscn
-res://Scenes/Lab Level/Interactables/lab_door.tscn
-res://Scenes/Lab Level/Interactables/blue_to_red_door.tscn
-res://Scenes/Lab Level/Interactables/red_to_blue_door.tscn
-res://Scenes/Lab Level/Interactables/red_to_green_door.tscn
 res://Scripts/all_spawner.gd
