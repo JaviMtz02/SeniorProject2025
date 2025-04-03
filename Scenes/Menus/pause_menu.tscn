@@ -176,7 +176,7 @@ text = "quit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ekf4n")
+&"": SubResource("AnimationLibrary_ekf4n")
 }
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]

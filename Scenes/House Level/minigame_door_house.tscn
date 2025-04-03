@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://isyhl85rrp48"]
+[gd_scene load_steps=10 format=3 uid="uid://isyhl85rrp48"]
 
 [ext_resource type="Script" uid="uid://dqey1beoakb73" path="res://Scenes/House Level/House Scripts/minigame_door_house.gd" id="1_5rnik"]
 [ext_resource type="PackedScene" uid="uid://de5pk7rj0682j" path="res://Scenes/Minigames/Stacking Blocks/main_screen.tscn" id="2_voheo"]
@@ -12,6 +12,11 @@ size = Vector2(32, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dgnl"]
 size = Vector2(32, 32)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_r82hy"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="MinigameDoorHouse" type="StaticBody2D" node_paths=PackedStringArray("door_area") groups=["doors"]]
 script = ExtResource("1_5rnik")
@@ -35,3 +40,6 @@ shape = SubResource("RectangleShape2D_2dgnl")
 
 [node name="DoorOpening" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_hdhjs")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_r82hy")

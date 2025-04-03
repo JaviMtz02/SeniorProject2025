@@ -1,0 +1,275 @@
+[gd_scene load_steps=13 format=3 uid="uid://dnd77nghobpgd"]
+
+[ext_resource type="Script" uid="uid://6wg5c75q2y6d" path="res://Scripts/multiplayer_menu.gd" id="1_y3a4g"]
+[ext_resource type="Texture2D" uid="uid://c4w3nbpw21oww" path="res://Assets/Sprites/Background/Clouds/Clouds 6/1.png" id="2_fpsry"]
+[ext_resource type="Texture2D" uid="uid://83t3l5hbaghn" path="res://Assets/Sprites/Background/Clouds/Clouds 6/3.png" id="3_x7n3a"]
+[ext_resource type="Texture2D" uid="uid://cyhf6av0pb4p4" path="res://Assets/Sprites/Background/Clouds/Clouds 6/4.png" id="4_s34gr"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_a7xpt"]
+[ext_resource type="Script" uid="uid://ccb66rqkgn805" path="res://Scripts/grab_focus.gd" id="6_468dg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwwmk"]
+
+[sub_resource type="Animation" id="Animation_y3a4g"]
+resource_name = "Connecting..."
+length = 2.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Connecting", "Connecting.", "Connecting..", "Connecting..."]
+}
+
+[sub_resource type="Animation" id="Animation_s34gr"]
+resource_name = "Flash Error"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Error:theme_override_colors/font_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.835294, 0, 0, 0), Color(0.835294, 0, 0, 1), Color(0.835294, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Error:theme_override_colors/font_shadow_color")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fpsry"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Multiplayer"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Error:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.835294, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Error:theme_override_colors/font_shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x7n3a"]
+resource_name = "Waiting for Host..."
+length = 2.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Waiting for Host", "Waiting for Host.", "Waiting for Host..", "Waiting for Host..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s34gr"]
+_data = {
+&"Connecting...": SubResource("Animation_y3a4g"),
+&"Flash Error": SubResource("Animation_s34gr"),
+&"RESET": SubResource("Animation_fpsry"),
+&"Waiting for Host...": SubResource("Animation_x7n3a")
+}
+
+[node name="MultiplayerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_y3a4g")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_fpsry")
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_x7n3a")
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_s34gr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 180
+
+[node name="Divider" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_a7xpt")
+theme_override_font_sizes/font_size = 100
+text = "Multiplayer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Divider2" type="Control" parent="MarginContainer/Buttons"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider3" type="Control" parent="MarginContainer/Buttons"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider4" type="Control" parent="MarginContainer/Buttons"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="host" type="Button" parent="MarginContainer/Buttons"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_a7xpt")
+theme_override_font_sizes/font_size = 35
+text = "Host"
+script = ExtResource("6_468dg")
+
+[node name="join" type="Button" parent="MarginContainer/Buttons"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_a7xpt")
+theme_override_font_sizes/font_size = 35
+text = "Join Host"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -525.0
+offset_top = -362.0
+offset_right = -448.0
+offset_bottom = -315.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mwwmk")
+
+[node name="back" type="Button" parent="PanelContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_a7xpt")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_s34gr")
+}
+
+[node name="Error" type="Label" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 312.0
+offset_right = 755.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(0.835294, 0, 0, 0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+text = "Someone is already hosting on your network..."
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 2
+offset_left = 510.0
+offset_top = 506.0
+offset_right = 641.0
+offset_bottom = 542.0
+placeholder_text = "Enter Host IP"
+context_menu_enabled = false
+emoji_menu_enabled = false
+
+[connection signal="pressed" from="MarginContainer/Buttons/host" to="." method="host_select"]
+[connection signal="pressed" from="MarginContainer/Buttons/join" to="." method="join_select"]
+[connection signal="pressed" from="PanelContainer/back" to="." method="back_select"]

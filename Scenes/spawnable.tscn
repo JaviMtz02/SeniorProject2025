@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ixlsim578ps"]
+
+[ext_resource type="Script" uid="uid://bxw5qy85u70ec" path="res://Scripts/spawnable.gd" id="1_f1f8h"]
+
+[node name="Spawnable" type="Marker2D"]
+script = ExtResource("1_f1f8h")

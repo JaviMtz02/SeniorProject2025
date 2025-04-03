@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh6shsucsajsq"]
+
+[ext_resource type="Script" uid="uid://cxcdianl2lrxd" path="res://Scripts/all_spawner.gd" id="1_8dexs"]
+
+[node name="AllSpawner" type="MultiplayerSpawner"]
+spawn_path = NodePath(".")
+script = ExtResource("1_8dexs")

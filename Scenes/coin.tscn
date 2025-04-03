@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://b7n2468oeulka"]
+[gd_scene load_steps=18 format=3 uid="uid://b7n2468oeulka"]
 
-[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scenes/House Level/House Scripts/loot.gd" id="1_b3aet"]
+[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scripts/loot.gd" id="1_b3aet"]
 [ext_resource type="Texture2D" uid="uid://crilyuqbwxm4y" path="res://Assets/Sprites/Loot Sprites/coin.png" id="1_v2eny"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qvuxe"]
@@ -98,6 +98,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_b8sqr"]
 radius = 5.0
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_jgi06"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
 [node name="Coin" type="Area2D" groups=["coins", "loot"]]
 collision_layer = 2
 collision_mask = 4
@@ -111,3 +116,6 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_b8sqr")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_jgi06")
