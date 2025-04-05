@@ -9,7 +9,7 @@ signal start_spawning
 
 # Default info
 @export var DEFAULT_IP_ADDRESS: String = "127.0.0.1"
-@export var PORT: int = 8080
+@export var DEFAULT_PORT: int = 8080
 @export var MAX_CLIENTS = 4
 
 # Client info
@@ -36,15 +36,28 @@ func get_local_ip() -> String:
 				return ip
 	return "Not Found"
 
+func check_valid_ip(ip: String) -> bool:
+	# Check if the IP address is valid
+	if ip.is_valid_ip_address():
+		return true
+	else:
+		print("Invalid IP address")
+		return false
+
 func is_multiplayer() -> bool:
 	return multiplayer.multiplayer_peer != null and not multiplayer.multiplayer_peer is OfflineMultiplayerPeer
 
 func is_host():
 	return multiplayer.is_server()
 
-func start_host():
+func start_host(port: int = DEFAULT_PORT):
+	# Close the current peer if it exists
+	if multiplayer.has_multiplayer_peer():
+		multiplayer.multiplayer_peer.close()
+
+	# Create a new ENetMultiplayerPeer and start the server
 	var peer = ENetMultiplayerPeer.new()
-	peer.create_server(PORT, MAX_CLIENTS)
+	peer.create_server(port, MAX_CLIENTS)
 	multiplayer.multiplayer_peer = peer
 	print("Hosting")
 
@@ -53,12 +66,27 @@ func start_host():
 	players[server_id] = player_info
 	player_connected.emit(server_id, player_info)
 
-func start_client(address: String = ""):
-	var peer = ENetMultiplayerPeer.new()
-	if address.is_empty():
+func start_client(address: String = DEFAULT_IP_ADDRESS, port: int = DEFAULT_PORT) -> bool:
+	# Check if the address is empty
+	if address == "":
 		address = DEFAULT_IP_ADDRESS
-	peer.create_client(address, PORT)
-	multiplayer.multiplayer_peer = peer
+	# Check if the IP address is valid
+	if not check_valid_ip(address):
+		print("Invalid IP address")
+		return false
+	# Close the current peer if it exists
+	if multiplayer.has_multiplayer_peer():
+		multiplayer.multiplayer_peer.close()
+
+	# Create a new ENetMultiplayerPeer and connect to the server
+	var peer = ENetMultiplayerPeer.new()
+	if peer.create_client(address, port) == OK:
+		multiplayer.multiplayer_peer = peer
+		print(peer)
+		return true
+	else:
+		print("Failed to start client")
+		return false
 	
 func _stop_multiplayer() -> void:
 	multiplayer.multiplayer_peer = OfflineMultiplayerPeer.new()
