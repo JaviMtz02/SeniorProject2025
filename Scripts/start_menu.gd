@@ -3,6 +3,7 @@ extends Control
 
 const OPTIONS_MENU = "res://Scenes/Menus/options_menu.tscn"
 const PLAY_MENU = "res://Scenes/Menus/play_menu.tscn"
+const SHOP = "res://Scenes/Shop/shop.tscn"
 
 func _on_play_pressed() -> void:
 	get_tree().call_deferred(&"change_scene_to_packed", preload(PLAY_MENU))
@@ -12,3 +13,6 @@ func _on_options_pressed():
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+func _on_shop_pressed() -> void:
+	get_tree().call_deferred(&"change_scene_to_packed", preload(SHOP))

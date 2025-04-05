@@ -12,6 +12,7 @@ signal minigame_lost
 
 signal freeze
 var by_door: bool = false
+var first_time: bool = true
 
 func _ready() -> void:
 	door_area.area_entered.connect(_on_area_entered)
@@ -19,8 +20,11 @@ func _ready() -> void:
 		
 func open_minigame() -> void:
 	# Picks a random minigame from array that holds all of them
+	if first_time:
+		first_time = false
+		
 	var index = randi() % minigames.size()
-	var title_screen = minigames[index].instantiate()
+	var title_screen = minigames[10].instantiate()
 	
 	# In the each level, there will be a Canvas Layer Node called MinigameLayer, where
 	# the minigames will be able to be displayed at the forefront of the current level

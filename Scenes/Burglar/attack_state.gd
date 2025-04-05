@@ -2,13 +2,18 @@ extends NodeState
 
 @export var burglar: CharacterBody2D
 @export var anim_sprite: AnimatedSprite2D
-@export var attack_scenes: Array[PackedScene] = [] # will add more scenes for different weapons
+@export var attack_scene: PackedScene
 
 var attack_timer: Timer
-
+var default_attack: PackedScene = preload("res://Scenes/Weapons/attack_hit_box.tscn")
 func _ready() -> void:
+	
 	# This sets up how long the burglar will be in this state
 	# modifying the wait time adds a larger delay into how frequently the burglar can attack
+	if GameManager.equipped_weapon == null:
+		attack_scene = default_attack
+	else:
+		attack_scene = GameManager.equipped_weapon.weapon
 	attack_timer = Timer.new()
 	attack_timer.wait_time = 0.4  # Duration of attack animation	
 	attack_timer.one_shot = true
@@ -31,7 +36,7 @@ func _on_enter() -> void:
 	burglar.velocity = Vector2.ZERO  # Stop moving
 	
 	# This will be changed dynamically based on what item the player chooses the equip
-	var attack_instance = attack_scenes[0].instantiate()
+	var attack_instance = attack_scene.instantiate()
 	
 	# Gets absolute direction for item z_index and correct animation to play
 	if abs(direction.x) > abs(direction.y): # Horizontal movement

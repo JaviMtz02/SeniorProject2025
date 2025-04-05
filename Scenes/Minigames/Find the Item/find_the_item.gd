@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @export var flashlight: PointLight2D
 @export var items: Node
 @export var shadow: CanvasModulate
@@ -39,7 +38,7 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	flashlight.global_position = get_global_mouse_position()
-
+	
 func play_game() -> void:
 	var random_index = randi() % item_names.size()
 	target_item = item_names[random_index]
@@ -48,11 +47,12 @@ func play_game() -> void:
 	await get_tree().create_timer(2.0).timeout
 	countdown_timer.start()
 	item_to_find.hide()
+	shadow.show()
+	flashlight.show()
 	red_bg.hide()
 	background.hide()
 	label.hide()
-	flashlight.show()
-	shadow.show()
+
 	
 func _on_node_name_received(item_name: String) -> void:
 	if item_name == target_item:

@@ -4,7 +4,7 @@ extends NodeState
 @export var burglar: CharacterBody2D
 @export var anim_sprite: AnimatedSprite2D
 @export var loot_interaction: Area2D
-@export var speed: float = 50.0
+@export var speed: float
 @export var footsteps_sound: AudioStreamPlayer2D
 
 var push_force: float = 1.0
@@ -29,6 +29,11 @@ func  _on_next_transition() -> void:
 	pass
 
 func _on_enter() -> void:
+	if GameManager.equipped_shoes == null:
+		speed = 35.0
+	else:
+		speed = GameManager.equipped_shoes.speed
+		
 	footsteps_sound.play()
 	
 func _on_exit() -> void:

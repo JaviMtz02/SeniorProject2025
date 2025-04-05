@@ -98,6 +98,8 @@ texture = ExtResource("5_dwfkc")
 
 [node name="Burglar" type="CharacterBody2D" parent="." node_paths=PackedStringArray("burglar", "anim")]
 position = Vector2(533, 209)
+collision_layer = 128
+collision_mask = 128
 script = ExtResource("6_fuby2")
 burglar = NodePath(".")
 anim = NodePath("AnimatedSprite2D")
@@ -115,7 +117,7 @@ shape = SubResource("RectangleShape2D_htcve")
 [node name="PickUpArea" type="Area2D" parent="Burglar" groups=["minigame_interaction"]]
 position = Vector2(-1, 2)
 collision_layer = 128
-collision_mask = 128
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Burglar/PickUpArea"]
 position = Vector2(2, 5)
@@ -126,6 +128,8 @@ position = Vector2(0, 1)
 
 [node name="BorderLeft" type="StaticBody2D" parent="Borders"]
 position = Vector2(816, 222)
+collision_layer = 128
+collision_mask = 128
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BorderLeft"]
@@ -134,6 +138,8 @@ shape = SubResource("RectangleShape2D_to660")
 
 [node name="BorderRight" type="StaticBody2D" parent="Borders"]
 position = Vector2(240, 184)
+collision_layer = 128
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BorderRight"]
 position = Vector2(5.5, -10.5)
@@ -141,6 +147,8 @@ shape = SubResource("RectangleShape2D_h7h8i")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["killzone"]]
 position = Vector2(520, 782)
+collision_layer = 128
+collision_mask = 8
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -149,6 +157,8 @@ shape = SubResource("WorldBoundaryShape2D_rrlin")
 [node name="Bag" parent="." instance=ExtResource("9_lkrxb")]
 position = Vector2(549, 707)
 scale = Vector2(5.0474, 4.85013)
+collision_layer = 128
+collision_mask = 128
 
 [node name="Items" type="Node" parent="."]
 

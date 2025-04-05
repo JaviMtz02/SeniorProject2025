@@ -11,11 +11,14 @@ signal minigame_won
 signal minigame_lost
 signal freeze
 
+var first_time: bool = true
 func _ready() -> void:
 	door_area.area_entered.connect(_on_area_entered)
 	door_area.area_exited.connect(_on_area_exited)
 		
 func open_minigame() -> void:
+	if first_time:
+		first_time = false
 	var index = randi() % minigames.size()
 	var title_screen = minigames[index].instantiate()
 

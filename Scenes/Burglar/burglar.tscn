@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cn2v6r5xd2gqc"]
+[gd_scene load_steps=46 format=3 uid="uid://cn2v6r5xd2gqc"]
 
 [ext_resource type="Script" uid="uid://bl1651linae2o" path="res://Scenes/Burglar/burglar.gd" id="1_ptfhq"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="2_0gd4x"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://c5xwsdwgf1sgh" path="res://Assets/Sprites/UI/deposit_key.png" id="8_7a7yh"]
 [ext_resource type="Texture2D" uid="uid://dnx8pbs7y8q5w" path="res://Assets/Sprites/UI/minigame_button.png" id="9_5r1v8"]
 [ext_resource type="Script" uid="uid://b3268acbr1nw3" path="res://Scenes/Burglar/attack_state.gd" id="12_y5cjk"]
-[ext_resource type="PackedScene" uid="uid://cwdbh3e7j7ub7" path="res://Scenes/Weapons/attack_hit_box.tscn" id="13_hfou0"]
 [ext_resource type="AudioStream" uid="uid://be432nr74ksbi" path="res://Sounds/coin.wav" id="15_rempi"]
 [ext_resource type="AudioStream" uid="uid://de7gl1u1p6qnk" path="res://Sounds/jump.wav" id="16_lqxk2"]
 [ext_resource type="AudioStream" uid="uid://dibwlioludvdb" path="res://Sounds/Ka Ching.wav" id="17_2yved"]
@@ -326,7 +325,6 @@ footsteps_sound = NodePath("../../SFX/FootSteps")
 script = ExtResource("12_y5cjk")
 burglar = NodePath("../..")
 anim_sprite = NodePath("../../AnimatedSprite2D")
-attack_scenes = Array[PackedScene]([ExtResource("13_hfou0")])
 
 [node name="LootInteraction" type="Area2D" parent="." groups=["loot_interaction"]]
 collision_layer = 4

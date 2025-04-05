@@ -10,7 +10,7 @@ radius = 22.2036
 radius = 26.4764
 
 [node name="Item5" type="RigidBody2D" node_paths=PackedStringArray("item", "pickup_area") groups=["blocks"]]
-collision_layer = 128
+collision_layer = 8
 collision_mask = 128
 script = ExtResource("1_g676p")
 item = NodePath(".")
@@ -25,6 +25,8 @@ position = Vector2(-5, -7)
 shape = SubResource("CircleShape2D_3y4aw")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-5, -7)

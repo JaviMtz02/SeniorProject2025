@@ -10699,7 +10699,7 @@ position = Vector2(-238, 611)
 scale = Vector2(5, 1)
 
 [node name="Door2" parent="DepositDoors" instance=ExtResource("15_tt1tv")]
-position = Vector2(-1170, 611)
+position = Vector2(-1170, 610)
 scale = Vector2(2, 1)
 
 [node name="Door3" parent="DepositDoors" instance=ExtResource("15_tt1tv")]

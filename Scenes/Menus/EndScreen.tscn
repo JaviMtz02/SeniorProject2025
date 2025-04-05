@@ -218,5 +218,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_3ajnu")
 }
 
+[connection signal="pressed" from="ScreenLayout/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="ScreenLayout/Control/ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="ScreenLayout/Control/LootTimer" to="." method="_on_loot_timer_timeout"]

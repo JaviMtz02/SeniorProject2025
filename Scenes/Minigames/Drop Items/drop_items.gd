@@ -27,15 +27,8 @@ func _on_successful_drop() -> void:
 	
 
 func _on_unsuccessful_drop() -> void:
-	tries_left -= 1
-	items_to_drop -= 1
-	update_display()
-	if items_in_bag < 5 and items_to_drop == 0:
-		game_lost.emit()
-		queue_free()
-	if tries_left == 0:
-		game_lost.emit()
-		queue_free()
+	game_lost.emit()
+	queue_free()
 
 func update_display() -> void:
 	tries_left_label.text = "Tries left: " + str(tries_left)

@@ -1,2 +1,4 @@
-res://Scenes/Menus/start_menu.tscn
-res://Scripts/all_spawner.gd
+res://Scenes/Lab Level/lab_level.tscn
+res://Scenes/Minigames/Find the Item/find_the_item.gdshader
+res://Scenes/Lab Level/Lab Scripts/lab_door.gd
+res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd

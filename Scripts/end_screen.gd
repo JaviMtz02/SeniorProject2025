@@ -1,5 +1,7 @@
 extends Node2D
 
+const LEVEL_SELECT = "res://Scenes/Menus/level_select.tscn"
+
 @export var parallax_bg: ParallaxBackground
 @export var camera: Camera2D
 @export var completion_textures: Array[Texture2D]
@@ -22,8 +24,10 @@ var collected_all_loot: bool = false
 
 func _ready() -> void:
 	#update variables here 
-	cash_accum = 200
-	loot_collected = 20
+	cash_accum = GameManager.curr_level_cash
+	loot_collected = GameManager.curr_level_loot_collected
+	collected_all_loot = GameManager.collected_all_loot
+	completed_minigames = GameManager.completed_minigames
 	$ScreenLayout/Control/Level.hide()
 	$ScreenLayout/Control/Loot.hide()
 	$ScreenLayout/Control/Minigame.hide()
@@ -89,3 +93,7 @@ func _on_loot_timer_timeout() -> void:
 		loot_timer.start()
 	else:
 		loot_timer.stop()
+
+
+func _on_button_pressed() -> void:
+	get_tree().call_deferred(&"change_scene_to_packed", preload(LEVEL_SELECT))

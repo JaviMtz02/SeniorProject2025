@@ -269,7 +269,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Item1" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+[node name="BasicBag" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 322.0
@@ -278,7 +278,7 @@ offset_bottom = 402.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item1"]
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/BasicBag"]
 layout_mode = 0
 offset_left = 9.33333
 offset_top = 9.33333
@@ -286,7 +286,7 @@ offset_right = 72.3333
 offset_bottom = 70.3333
 texture = ExtResource("12_ps16d")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BasicBag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -296,7 +296,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BasicBag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -306,7 +306,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BasicBag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -316,7 +316,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item1"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BasicBag"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -326,7 +326,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("30_7ec4r")
 
-[node name="Item2" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+[node name="BBB" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 543.0
@@ -335,7 +335,7 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item2"]
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/BBB"]
 layout_mode = 0
 offset_left = 9.33333
 offset_top = 6.66667
@@ -343,7 +343,7 @@ offset_right = 72.3333
 offset_bottom = 71.6667
 texture = ExtResource("29_tv2qa")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BBB" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -353,7 +353,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BBB" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -363,7 +363,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BBB" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -373,7 +373,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item2"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/BBB"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -383,7 +383,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("32_buy5q")
 
-[node name="Item3" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+[node name="Backpack" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
 layout_mode = 0
 offset_left = 448.0
 offset_top = 322.0
@@ -392,7 +392,7 @@ offset_bottom = 402.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item3"]
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Backpack"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 10.6667
@@ -400,7 +400,7 @@ offset_right = 72.0
 offset_bottom = 74.6667
 texture = ExtResource("30_ku021")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Backpack" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -410,7 +410,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Backpack" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -420,7 +420,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Backpack" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -430,7 +430,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item3"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Backpack"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -440,7 +440,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("30_wpjks")
 
-[node name="Item4" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+[node name="Dufflebag" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
 layout_mode = 0
 offset_left = 451.0
 offset_top = 543.0
@@ -449,7 +449,7 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item4"]
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Dufflebag"]
 layout_mode = 0
 offset_left = 12.6667
 offset_top = 16.6667
@@ -458,7 +458,7 @@ offset_bottom = 80.6667
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("31_gxrn4")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Dufflebag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -468,7 +468,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Dufflebag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -478,7 +478,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Dufflebag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -488,7 +488,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item4"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Dufflebag"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -498,7 +498,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("36_8gca4")
 
-[node name="Item5" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+[node name="SantaBag" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
 layout_mode = 0
 offset_left = 749.0
 offset_top = 328.0
@@ -507,7 +507,7 @@ offset_bottom = 408.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item5"]
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/SantaBag"]
 layout_mode = 0
 offset_left = 12.6667
 offset_top = 12.6667
@@ -516,7 +516,7 @@ offset_bottom = 76.6667
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("32_l6buc")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/SantaBag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -526,7 +526,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/SantaBag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -536,7 +536,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/SantaBag" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -546,7 +546,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item5"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/SantaBag"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -556,7 +556,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("38_gff3h")
 
-[node name="Item6" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
+[node name="Purse" type="TextureRect" parent="ShopLayout/BagLayout/Items"]
 layout_mode = 0
 offset_left = 749.0
 offset_top = 543.0
@@ -565,7 +565,7 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Item6"]
+[node name="Img" type="TextureRect" parent="ShopLayout/BagLayout/Items/Purse"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 7.33333
@@ -573,7 +573,7 @@ offset_right = 72.0
 offset_bottom = 71.3333
 texture = ExtResource("33_pbhkr")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Purse" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -583,7 +583,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Purse" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -593,7 +593,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Purse" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -603,7 +603,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Item6"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/BagLayout/Items/Purse"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -702,7 +702,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Item1" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+[node name="Stick" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 322.0
@@ -711,7 +711,7 @@ offset_bottom = 402.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Stick"]
 layout_mode = 0
 offset_left = 17.3333
 offset_top = 16.6667
@@ -719,7 +719,7 @@ offset_right = 57.3333
 offset_bottom = 56.6667
 texture = ExtResource("14_wcnk8")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Stick" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -729,7 +729,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Stick" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -739,7 +739,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Stick" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -749,7 +749,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item1"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Stick"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -759,7 +759,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("42_xnrj5")
 
-[node name="Item2" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+[node name="Sledgehammer" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 543.0
@@ -768,7 +768,7 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Sledgehammer"]
 layout_mode = 0
 offset_left = 17.3333
 offset_top = 21.3333
@@ -776,7 +776,7 @@ offset_right = 57.3333
 offset_bottom = 61.3333
 texture = ExtResource("35_wpjks")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sledgehammer" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -786,7 +786,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sledgehammer" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -796,7 +796,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sledgehammer" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -806,7 +806,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item2"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sledgehammer"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -816,7 +816,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("44_dq7b2")
 
-[node name="Item3" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+[node name="ThornBlade" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 448.0
 offset_top = 322.0
@@ -825,7 +825,7 @@ offset_bottom = 402.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/ThornBlade"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
@@ -833,7 +833,7 @@ offset_right = 60.0
 offset_bottom = 60.0
 texture = ExtResource("36_bog2v")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/ThornBlade" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -843,7 +843,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/ThornBlade" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -853,7 +853,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/ThornBlade" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -863,7 +863,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item3"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/ThornBlade"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -873,7 +873,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("46_dwhtv")
 
-[node name="Item4" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+[node name="Sword" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 451.0
 offset_top = 543.0
@@ -882,7 +882,7 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Sword"]
 layout_mode = 0
 offset_left = 21.3333
 offset_top = 18.0
@@ -890,7 +890,7 @@ offset_right = 61.3333
 offset_bottom = 58.0
 texture = ExtResource("37_emaaq")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -900,7 +900,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -910,7 +910,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -920,7 +920,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item4"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Sword"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -930,7 +930,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("48_tdm8a")
 
-[node name="Item5" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+[node name="StunGun" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 749.0
 offset_top = 328.0
@@ -939,7 +939,7 @@ offset_bottom = 408.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/StunGun"]
 layout_mode = 0
 offset_left = 12.6667
 offset_top = 12.6667
@@ -947,7 +947,7 @@ offset_right = 66.6667
 offset_bottom = 67.6667
 texture = ExtResource("49_8gca4")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/StunGun" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -957,7 +957,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/StunGun" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -967,7 +967,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/StunGun" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -977,7 +977,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item5"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/StunGun"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -987,7 +987,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("49_byewl")
 
-[node name="Item6" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
+[node name="PlasmaGun" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 749.0
 offset_top = 543.0
@@ -996,7 +996,7 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+[node name="Img" type="TextureRect" parent="ShopLayout/WeaponsLayout/Items/PlasmaGun"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 9.33333
@@ -1004,7 +1004,7 @@ offset_right = 72.0
 offset_bottom = 73.3333
 texture = ExtResource("51_gff3h")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/PlasmaGun" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1014,7 +1014,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/PlasmaGun" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1024,7 +1024,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/PlasmaGun" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1034,7 +1034,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/Item6"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/WeaponsLayout/Items/PlasmaGun"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -1136,13 +1136,13 @@ offset_right = 570.0
 offset_bottom = 478.0
 scale = Vector2(2, 2)
 
-[node name="Item1" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+[node name="WornOutShoes" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
 layout_mode = 2
 offset_right = 80.0
 offset_bottom = 80.0
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item1"]
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/WornOutShoes"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 18.5
@@ -1151,7 +1151,7 @@ offset_bottom = 82.5
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("39_l6buc")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/WornOutShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1161,7 +1161,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/WornOutShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1171,7 +1171,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/WornOutShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1181,7 +1181,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item1"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/WornOutShoes"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -1191,14 +1191,14 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("53_j3rhe")
 
-[node name="Item2" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+[node name="BurglarShoes" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
 layout_mode = 2
 offset_top = 90.5
 offset_right = 80.0
 offset_bottom = 170.5
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item2"]
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/BurglarShoes"]
 layout_mode = 0
 offset_left = 6.5
 offset_top = -10.5
@@ -1207,7 +1207,7 @@ offset_bottom = 53.5
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_wcnk8")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/BurglarShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1217,7 +1217,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/BurglarShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1227,7 +1227,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/BurglarShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1237,7 +1237,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item2"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/BurglarShoes"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -1247,14 +1247,14 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("54_6d3gj")
 
-[node name="Item3" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+[node name="RunningShoes" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
 layout_mode = 2
 offset_left = 222.5
 offset_right = 302.5
 offset_bottom = 80.0
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item3"]
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/RunningShoes"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 27.0
@@ -1263,7 +1263,7 @@ offset_bottom = 63.0
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("40_pbhkr")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/RunningShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1273,7 +1273,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/RunningShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1283,7 +1283,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/RunningShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1293,7 +1293,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item3"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/RunningShoes"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -1303,7 +1303,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("56_p1wkc")
 
-[node name="Item4" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
+[node name="HedgehogShoes" type="TextureRect" parent="ShopLayout/ShoesLayout/Items"]
 layout_mode = 2
 offset_left = 222.5
 offset_top = 90.5
@@ -1311,7 +1311,7 @@ offset_right = 302.5
 offset_bottom = 170.5
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/Item4"]
+[node name="Img" type="TextureRect" parent="ShopLayout/ShoesLayout/Items/HedgehogShoes"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 19.5
@@ -1319,7 +1319,7 @@ offset_right = 64.0
 offset_bottom = 59.5
 texture = ExtResource("41_wpjks")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+[node name="BuyButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/HedgehogShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1329,7 +1329,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+[node name="EquipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/HedgehogShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1339,7 +1339,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/HedgehogShoes" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1349,7 +1349,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/Item4"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayout/ShoesLayout/Items/HedgehogShoes"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0

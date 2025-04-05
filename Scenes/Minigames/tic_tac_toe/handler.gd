@@ -90,8 +90,8 @@ func ai_move():
 			alt_board[cell] = 2
 			if check_winner(alt_board):
 				board[cell] = 2
-				var button = cells.get_child(cell)
-				draw_button(button)
+				var _button = cells.get_child(cell)
+				draw_button(_button)
 				if check_winner(board) or check_draw():
 					game_over = true
 					return

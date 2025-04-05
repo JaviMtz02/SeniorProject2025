@@ -120,3 +120,5 @@ offset_bottom = 625.0
 theme_override_fonts/font = ExtResource("6_fk1br")
 theme_override_font_sizes/font_size = 64
 text = "Main Menu"
+
+[connection signal="pressed" from="ScreenLayout/Control/Button" to="." method="_on_button_pressed"]

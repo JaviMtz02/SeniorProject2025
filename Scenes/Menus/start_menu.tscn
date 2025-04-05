@@ -96,6 +96,18 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 
+[node name="Divider5" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider6" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Divider7" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
 [node name="play" type="Button" parent="MarginContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
@@ -111,6 +123,12 @@ theme_override_fonts/font = ExtResource("5_osx4t")
 theme_override_font_sizes/font_size = 35
 text = "arcade
 "
+
+[node name="shop" type="Button" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_osx4t")
+theme_override_font_sizes/font_size = 35
+text = "Shop"
 
 [node name="options" type="Button" parent="MarginContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
@@ -128,5 +146,6 @@ text = "Quit
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/quit" to="." method="_on_quit_pressed"]

@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var burglar: CharacterBody2D
 @export var loot_interaction: Area2D
 @export var minigame_interaction: Area2D
-@export var inventory_space: int = 15 # default space of 15, this should be modifiable when we add inventory upgrades
+@export var inventory_space: int = 0 # default space of 15, this should be modifiable when we add inventory upgrades
 @export var take_loot_button: AnimatedSprite2D
 @export var deposit_button: AnimatedSprite2D
 @export var minigame_button: AnimatedSprite2D
@@ -44,7 +44,15 @@ func _ready() -> void:
 		var level_data = level_node.get_level_data()
 		time_minutes = level_data["time_minutes"]
 		time_seconds = level_data["time_seconds"]
-		
+	
+
+	# Dynamically add bag capacity and adds condition for when no bag is equipped
+	if GameManager.equipped_bag == null:
+		inventory_space = 5
+	else:
+		inventory_space = GameManager.equipped_bag.capacity
+
+	
 	# Hides buttons as they only need to appear when we're around specified things
 	deposit_button.hide()
 	take_loot_button.hide()
@@ -76,10 +84,14 @@ func _input(event: InputEvent) -> void:
 		try_pick_up_loot(curr_loot)
 		
 	if event.is_action_pressed("open_minigame") and curr_minigame != null and  in_minigame == false:
-		curr_minigame.open_minigame()
-		curr_minigame.minigame_won.connect(_on_minigame_won)
-		curr_minigame.minigame_lost.connect(_on_minigame_lost)
-		in_minigame = true
+		if curr_minigame.first_time:
+			curr_minigame.open_minigame()
+			curr_minigame.minigame_won.connect(_on_minigame_won)
+			curr_minigame.minigame_lost.connect(_on_minigame_lost)
+			in_minigame = true
+		else:
+			in_minigame = true
+			curr_minigame.open_minigame()
 
 func try_pick_up_loot(loot: Area2D) -> void:
 	# If the current inventory size is less than the total inventory space, and if those two are greater
