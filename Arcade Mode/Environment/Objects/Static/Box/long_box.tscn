@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1nd6i744nf5e"]
+
+[ext_resource type="PackedScene" uid="uid://bfv1n3kyclf5c" path="res://Arcade Mode/Environment/Objects/Static/static_object.tscn" id="1_83bfj"]
+[ext_resource type="Script" uid="uid://cwjk7irvgkn8q" path="res://Arcade Mode/Scripts/long_box.gd" id="2_4ik75"]
+[ext_resource type="Texture2D" uid="uid://gs1fkt04uokl" path="res://Arcade Mode/Environment/Objects/Static/Box/long_box1.png" id="2_ynq2g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ik75"]
+radius = 3.0
+height = 24.0
+
+[node name="LongBox" instance=ExtResource("1_83bfj")]
+script = ExtResource("2_4ik75")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ynq2g")
+offset = Vector2(0, -4)
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_4ik75")

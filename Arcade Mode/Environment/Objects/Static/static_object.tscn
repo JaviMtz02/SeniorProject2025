@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bfv1n3kyclf5c"]
+
+[node name="StaticObject" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

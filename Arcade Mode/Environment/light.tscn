@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8d283k08i3wl"]
+
+[ext_resource type="Texture2D" uid="uid://bowqrlpqbobx6" path="res://Arcade Mode/Environment/light.png" id="1_d4a2o"]
+
+[node name="Light" type="PointLight2D"]
+texture = ExtResource("1_d4a2o")

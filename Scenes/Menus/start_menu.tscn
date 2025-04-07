@@ -146,6 +146,7 @@ text = "Quit
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/arcade" to="." method="_on_arcade_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/quit" to="." method="_on_quit_pressed"]

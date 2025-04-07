@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c53v6asr7jsdp"]
+
+[ext_resource type="PackedScene" uid="uid://bfv1n3kyclf5c" path="res://Arcade Mode/Environment/Objects/Static/static_object.tscn" id="1_6ypb2"]
+[ext_resource type="Script" uid="uid://dddqlf7g1cbt5" path="res://Arcade Mode/Scripts/hazard_barrel.gd" id="2_ex2us"]
+[ext_resource type="Texture2D" uid="uid://cj5tefko1k4sc" path="res://Arcade Mode/Environment/Objects/Static/Barrel/barrel1.png" id="2_ga7jg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ex2us"]
+radius = 3.0
+height = 14.0
+
+[node name="HazardBarrel" instance=ExtResource("1_6ypb2")]
+script = ExtResource("2_ex2us")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ga7jg")
+offset = Vector2(0, -6.5)
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_ex2us")

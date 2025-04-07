@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://cd6h5tqvaaymi"]
+
+[ext_resource type="PackedScene" uid="uid://bfv1n3kyclf5c" path="res://Arcade Mode/Environment/Objects/Static/static_object.tscn" id="1_foyya"]
+[ext_resource type="Script" uid="uid://dc45epy5v3vcy" path="res://Arcade Mode/Scripts/test_tube.gd" id="2_bhx7t"]
+[ext_resource type="Texture2D" uid="uid://db1l8ygejdixs" path="res://Arcade Mode/Environment/Objects/Static/Test Tube/empty_testTube.png" id="2_yjrp5"]
+[ext_resource type="PackedScene" uid="uid://8d283k08i3wl" path="res://Arcade Mode/Environment/light.tscn" id="4_v7tdb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_urbmw"]
+radius = 4.0
+height = 18.0
+
+[sub_resource type="Animation" id="Animation_yjrp5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_foyya"]
+resource_name = "default"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_urbmw"]
+_data = {
+&"RESET": SubResource("Animation_yjrp5"),
+&"default": SubResource("Animation_foyya")
+}
+
+[node name="TestTube" instance=ExtResource("1_foyya")]
+script = ExtResource("2_bhx7t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_yjrp5")
+offset = Vector2(0, -14.75)
+hframes = 4
+region_rect = Rect2(0, 0, 32, 43)
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_urbmw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+&"": SubResource("AnimationLibrary_urbmw")
+}
+
+[node name="Light" parent="." index="3" instance=ExtResource("4_v7tdb")]
+color = Color(0.623529, 0.941176, 0.529412, 1)
+energy = 0.8
+texture_scale = 0.2
