@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjv0iampk6oiw"]
+[gd_scene load_steps=6 format=3 uid="uid://cjv0iampk6oiw"]
 
 [ext_resource type="Script" uid="uid://dxlxtwuy0igr4" path="res://Scenes/Minigames/Stacking Blocks/block.gd" id="1_n6dws"]
 [ext_resource type="Texture2D" uid="uid://duvgwsse1g6wr" path="res://Assets/Sprites/Loot Sprites/House Loot/kachow.png" id="1_ucsa1"]
+[ext_resource type="AudioStream" uid="uid://cnqx7hasrtt28" path="res://Sounds/Thud.wav" id="3_7v86r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ff3hg"]
 friction = 0.5
@@ -32,5 +33,7 @@ scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_pu4pw")
 
 [node name="BlockLanded" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7v86r")
+bus = &"SFX_normal"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

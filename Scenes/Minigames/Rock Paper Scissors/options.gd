@@ -50,13 +50,10 @@ func update_sprites() -> void:
 
 func determine_winner() -> void:
 	if player_choice == ai_choice:
-		print("Tie Game")
 		tie_game.emit()
 	elif (player_choice == Choice.ROCK and ai_choice == Choice.SCISSORS) or (player_choice == Choice.PAPER and ai_choice == Choice.ROCK) or (player_choice == Choice.SCISSORS and ai_choice == Choice.PAPER):
-		print("Player won!")
 		player_won.emit()
 	else:
-		print("AI WON")
 		ai_won.emit()
 
 func _on_rock_button_pressed() -> void:

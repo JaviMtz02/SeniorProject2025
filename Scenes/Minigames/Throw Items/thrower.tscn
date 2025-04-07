@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://mrgqiamb7fr8"]
+[gd_scene load_steps=7 format=3 uid="uid://mrgqiamb7fr8"]
 
 [ext_resource type="Script" uid="uid://bxnvpondbrbia" path="res://Scenes/Minigames/Throw Items/thrower.gd" id="1_1j2io"]
 [ext_resource type="Texture2D" uid="uid://dpdj23r5bh2f6" path="res://Assets/Sprites/Minigame Sprites/red_orb.png" id="1_pv8g2"]
 [ext_resource type="PackedScene" uid="uid://bxjiy2rui6gky" path="res://Scenes/Minigames/Throw Items/item.tscn" id="2_hewqe"]
 [ext_resource type="PackedScene" uid="uid://drcapy8gd7mjh" path="res://Scenes/Minigames/Throw Items/trajectory.tscn" id="3_bvcir"]
+[ext_resource type="AudioStream" uid="uid://ckxquk1irwojc" path="res://Sounds/Throw.wav" id="5_jrlqw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4mldf"]
 radius = 24.0
@@ -32,3 +33,7 @@ default_color = Color(0.372626, 0.255634, 0.783395, 1)
 
 [node name="TrajectoryAndItemSpawner" type="Node2D" parent="."]
 position = Vector2(41, -6)
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_jrlqw")
+bus = &"SFX_normal"

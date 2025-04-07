@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b1vo7f3a8rlsk"]
+[gd_scene load_steps=25 format=3 uid="uid://b1vo7f3a8rlsk"]
 
 [ext_resource type="Texture2D" uid="uid://crilyuqbwxm4y" path="res://Assets/Sprites/Loot Sprites/coin.png" id="1_dl146"]
 [ext_resource type="Script" uid="uid://8pjgkm50iqfg" path="res://Scenes/Minigames/Coin Matching/coin_pairs.gd" id="1_x6dce"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b6x40k8gpimmq" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/moon.png" id="7_q8ypu"]
 [ext_resource type="Texture2D" uid="uid://blhiq2uor4hin" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/note.png" id="8_yd610"]
 [ext_resource type="Texture2D" uid="uid://cwrci0kagjaid" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/hammer.png" id="9_k7a6k"]
+[ext_resource type="AudioStream" uid="uid://be432nr74ksbi" path="res://Sounds/coin.wav" id="11_mvur4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amus5"]
 atlas = ExtResource("1_dl146")
@@ -124,5 +125,9 @@ offset_left = -25.0
 offset_top = -25.0
 offset_right = 25.0
 offset_bottom = 25.0
+
+[node name="FlipSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_mvur4")
+bus = &"SFX_normal"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

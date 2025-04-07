@@ -30,6 +30,7 @@ func _process(_delta: float) -> void:
 		
 		if Input.is_action_just_pressed("attack"):
 			burglar.play("shoot")
+			$Shoot.play()
 			var shot = item.instantiate()
 			get_parent().add_child(shot)
 			shot.in_bag.connect(_on_in_bag)

@@ -24,7 +24,7 @@ func _process(_delta) -> void:
 		elif position.x <= 440:
 			direction = 1
 	
-	if Input.is_action_just_pressed("down") and not dropped: # if the down key is pressed, and the block can move, the block will drop
+	if Input.is_action_just_pressed("attack") and not dropped: # if the down key is pressed, and the block can move, the block will drop
 		ball.freeze = false
 		linear_velocity = Vector2(0, drop_speed)
 		dropped = true

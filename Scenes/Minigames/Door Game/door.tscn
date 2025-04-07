@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bicl0nhyxgh5y"]
+[gd_scene load_steps=26 format=3 uid="uid://bicl0nhyxgh5y"]
 
 [ext_resource type="Texture2D" uid="uid://7hix2h66hukc" path="res://Assets/Sprites/Minigame Sprites/Door Game/23_MIlitary_Base_Dormitory_Door_2_32x32.png" id="1_11o26"]
 [ext_resource type="Script" uid="uid://ddyn65eud4vb3" path="res://Scenes/Minigames/Door Game/door.gd" id="1_xcnci"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/minus.png" id="3_ia5tq"]
 [ext_resource type="Texture2D" uid="uid://cc7sndphtd7he" path="res://Assets/Sprites/Minigame Sprites/Door Game/pass.png" id="3_ky8ul"]
 [ext_resource type="Texture2D" uid="uid://bqiya75s6jdex" path="res://Assets/Sprites/Minigame Sprites/Door Game/drop.png" id="6_fgxs1"]
+[ext_resource type="AudioStream" uid="uid://dhy7sw2vu0pfm" path="res://Sounds/sound_frogger_hop_sel.wav" id="7_i7056"]
+[ext_resource type="AudioStream" uid="uid://bdt4atgl043xm" path="res://Sounds/sound_frogger_time.wav" id="8_3qaql"]
+[ext_resource type="AudioStream" uid="uid://daywc0iid31nt" path="res://Sounds/sound_frogger_squash_sel.wav" id="9_t6lbr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ssr7f"]
 atlas = ExtResource("1_11o26")
@@ -148,3 +151,12 @@ offset_bottom = 25.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 4)
 texture = ExtResource("6_fgxs1")
+
+[node name="Forward" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_i7056")
+
+[node name="Back" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_3qaql")
+
+[node name="Lose" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_t6lbr")

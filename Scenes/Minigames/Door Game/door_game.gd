@@ -30,7 +30,6 @@ func _on_forward() -> void:
 	on_door += 1
 	if on_door > 3:
 		game_won.emit()
-		print("You win!")
 		queue_free()
 		
 	update_display()
@@ -46,7 +45,6 @@ func _on_back() -> void:
 
 func _on_lose() -> void:
 	await show_outcome()
-	print("You lose!")
 	game_lost.emit()
 	queue_free()
 

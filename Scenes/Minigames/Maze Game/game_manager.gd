@@ -11,10 +11,8 @@ func _ready() -> void:
 	
 func _on_orb_collected() -> void:
 	game_won.emit()
-	print("you won!")
 	queue_free()
 
 func _on_caught() -> void:
 	game_lost.emit()
-	print("you lost")
 	queue_free()

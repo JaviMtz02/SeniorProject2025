@@ -21,6 +21,7 @@ func _on_successful_drop() -> void:
 	items_in_bag += 1
 	items_to_drop -= 1
 	update_display()
+	$ItemInBagSound.play()
 	if items_in_bag == 5:
 		game_won.emit()
 		queue_free()

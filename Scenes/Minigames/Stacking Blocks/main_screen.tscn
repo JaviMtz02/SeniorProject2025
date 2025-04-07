@@ -42,7 +42,7 @@ offset_top = 266.0
 offset_right = 694.0
 offset_bottom = 418.0
 theme_override_font_sizes/font_size = 20
-text = "To drop a block simply press the down arrow key or the 'D' key on your keyboard. Game ends when the target line has been reached or you run out of blocks and lose.
+text = "To drop a block press the spacebar key on your keyboard. The game ends when the target line has been reached or you run out of blocks and lose.
 Press 'START' when you're ready"
 horizontal_alignment = 1
 autowrap_mode = 3

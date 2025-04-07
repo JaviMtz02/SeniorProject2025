@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 			
 func check_input() -> void:
 	if Input.is_action_just_pressed("attack"):
+		$Sound.play()
 		check_hit()
 		
 func check_hit() -> void:
@@ -43,7 +44,6 @@ func check_hit() -> void:
 	
 	if closest_bar == bars[2]:
 		game_won.emit()
-		print("you win")
 		queue_free()
 	elif closest_bar == bars[1] or bars[3]:
 		if tries > 0:
@@ -51,10 +51,8 @@ func check_hit() -> void:
 			tries -= 1
 			label.text = "Tries Left: " + str(tries)
 		else:
-			print("you lose")
 			game_lost.emit()
 			queue_free()
 	else:
-		print("you lose")
 		game_lost.emit()
 		queue_free()

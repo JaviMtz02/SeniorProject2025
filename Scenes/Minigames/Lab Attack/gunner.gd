@@ -26,7 +26,7 @@ func fire():
 	bullet.dir = rotation
 	bullet.pos = bullet_pos.global_position
 	bullet.rota = global_rotation
-	
+	$ShootSound.play()
 	get_parent().add_child(bullet)
 
 func _on_timer_timeout() -> void:
@@ -34,4 +34,5 @@ func _on_timer_timeout() -> void:
 
 func _on_mob_detection_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy_interaction"):
+		$HitSound.play()
 		player_hit.emit()

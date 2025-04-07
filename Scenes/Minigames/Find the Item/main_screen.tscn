@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_dt6de"]
 [ext_resource type="PackedScene" uid="uid://djeaiebytgtoo" path="res://Scenes/Minigames/Find the Item/find_the_item.tscn" id="2_uifpf"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="3_r5f0n"]
-[ext_resource type="Texture2D" uid="uid://cq6ok0gxx7fjr" path="res://Assets/Sprites/Minigame Sprites/find_the_item.png" id="4_bdhtt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_em7gc"]
+load_path = "res://.godot/imported/find_the_item.png-8eb22955812279198cfaad051367f156.ctex"
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
 script = ExtResource("1_dt6de")
@@ -32,7 +34,7 @@ offset_top = 203.0
 offset_right = 543.0
 offset_bottom = 386.0
 theme_override_font_sizes/font_size = 20
-text = "With only a flashlight at your disposal, find the specified item in less than 15 seconds! Search for the item in the pitch black room and win!"
+text = "In a pitch black room with a faulty light switch can you find what you're looking for? Test out your sharpness and find the item before the time runs out!"
 autowrap_mode = 3
 
 [node name="HowToPlay" type="Label" parent="."]
@@ -41,7 +43,7 @@ offset_top = 453.0
 offset_right = 915.0
 offset_bottom = 574.0
 theme_override_font_sizes/font_size = 20
-text = "The item you need to find is the first thing you'll see, after that, scan the room with your flashlight looking for the item, you have 15 seconds to find it. The game ends when you click on the item, or time runs out!
+text = "Scan the room for the item! The light turns off every second as well as turns on every other second. You have 10 seconds to find the specified item. The game ends when you click on the item, or time runs out!
 Press 'START' when you're ready"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -51,7 +53,7 @@ offset_left = 569.0
 offset_top = 203.0
 offset_right = 915.0
 offset_bottom = 441.0
-texture = ExtResource("4_bdhtt")
+texture = SubResource("CompressedTexture2D_em7gc")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
@@ -59,6 +61,8 @@ offset_left = 510.0
 offset_top = 588.0
 offset_right = 639.0
 offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("3_r5f0n")
+theme_override_font_sizes/font_size = 32
 text = "START"
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -32,6 +32,7 @@ func _on_frame_changed():
 			coin_flipped.emit(self)
 		
 func _on_button_pressed() -> void:
+	$FlipSound.play()
 	flip()
 
 func reset() -> void:

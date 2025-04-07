@@ -35,6 +35,7 @@ func show_code() -> void:
 
 
 func _on_button_pressed(button_name: String) -> void:
+	$ClickSound.play()
 	match button_name:
 		"ButtonClear":
 			clear_number()

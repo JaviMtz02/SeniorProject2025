@@ -24,7 +24,7 @@ func open_minigame() -> void:
 		first_time = false
 		
 	var index = randi() % minigames.size()
-	var title_screen = minigames[10].instantiate()
+	var title_screen = minigames[index].instantiate()
 	
 	# In the each level, there will be a Canvas Layer Node called MinigameLayer, where
 	# the minigames will be able to be displayed at the forefront of the current level

@@ -1,4 +1,36 @@
-res://Scenes/Lab Level/lab_level.tscn
-res://Scenes/Minigames/Find the Item/find_the_item.gdshader
-res://Scenes/Lab Level/Lab Scripts/lab_door.gd
-res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd
+res://Scenes/Menus/start_menu.tscn
+res://Scenes/Minigames/Coin Matching/coin_pairs.tscn
+res://Scenes/Minigames/Coin Matching/coin_pairs.gd
+res://Scenes/Minigames/Coin Matching/coin_matching.tscn
+res://Scenes/Minigames/Coin Matching/coin_matching.gd
+res://Scenes/Minigames/Door Game/door_game.tscn
+res://Scenes/Minigames/Door Game/door.tscn
+res://Scenes/Minigames/Door Game/door.gd
+res://Scenes/Minigames/Door Game/door_game.gd
+res://Scenes/Minigames/Door Unlocking/door_unlocking.tscn
+res://Scenes/Minigames/Door Unlocking/door_unlocking.gd
+res://Scenes/Minigames/Drop Items/drop_items.tscn
+res://Scenes/Minigames/Drop Items/burglar_minigame.gd
+res://Scenes/Minigames/Drop Items/drop_items.gd
+res://Scenes/Minigames/Lab Attack/mob_1.tscn
+res://Scenes/Minigames/Lab Attack/gunner.tscn
+res://Scenes/Minigames/Lab Attack/gunner.gd
+res://Scenes/Minigames/Lab Attack/mob_1.gd
+res://Scenes/Minigames/Lab Attack/lab_attack.tscn
+res://Scenes/Minigames/Lab Attack/mob_2.tscn
+res://Scenes/Minigames/Lab Attack/mob_3.tscn
+res://Scenes/Minigames/Maze Game/lab_geek.gd
+res://Scenes/Minigames/Maze Game/lab_geek.tscn
+res://Scenes/Minigames/Maze Game/maze_game.tscn
+res://Scenes/Minigames/Memorize Code/memorize_code.tscn
+res://Scenes/Minigames/Memorize Code/memorize_code.gd
+res://Scenes/Minigames/Rock Paper Scissors/rock_paper_scissors.tscn
+res://Scenes/Minigames/Stacking Blocks/block.gd
+res://Scenes/Minigames/Stacking Blocks/stacking_blocks.tscn
+res://Scenes/Minigames/Stacking Blocks/block.tscn
+res://Scenes/Minigames/Throw Items/thrower.tscn
+res://Scenes/Minigames/Throw Items/thrower.gd
+res://Scenes/Minigames/Throw Items/throw_items.tscn
+res://Scenes/Minigames/Throw Items/throw_items.gd
+res://Scenes/Menus/EndScreen.tscn
+res://Scenes/Menus/lose_screen.tscn

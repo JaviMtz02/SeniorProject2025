@@ -22,6 +22,7 @@ func _ready() -> void:
 
 func _on_hit() -> void:
 	items += 1
+	$ItemInBag.play()
 	update_display()
 	check_game()
 	bag.pick_new_pos()
@@ -38,9 +39,7 @@ func update_display() -> void:
 func check_game() -> void:
 	if items == 5:
 		game_won.emit()
-		print("you win!")
 		queue_free()
 	elif tries_left == 0:
 		game_lost.emit()
-		print("you lost")
 		queue_free()

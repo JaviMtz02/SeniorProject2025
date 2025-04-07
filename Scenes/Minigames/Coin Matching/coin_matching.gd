@@ -32,12 +32,14 @@ func check_match(coin):
 		var coin2 = flipped_coins[1]
 		
 		if coin1.card_pattern == coin2.card_pattern:
+			$CorrectPair.play()
 			curr_matches += 1
 			if curr_matches == patterns.size() / 2:
 				game_won.emit()
 				queue_free()
 			
 		else:
+			$IncorrectPair.play()
 			attempts -= 1
 			await get_tree().create_timer(0.5).timeout
 			coin1.reset()

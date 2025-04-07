@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cn8mhc52wsken"]
+[gd_scene load_steps=41 format=3 uid="uid://cn8mhc52wsken"]
 
 [ext_resource type="Script" uid="uid://bvfu1bmo4bnse" path="res://Scenes/Minigames/Memorize Code/memorize_code.gd" id="1_2jbl6"]
 [ext_resource type="Texture2D" uid="uid://dm33cnnomvr3m" path="res://Assets/Sprites/UI/Buttons/button_one_normal.png" id="1_yhsau"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://bpqcl0a4b5mrk" path="res://Assets/Sprites/UI/Buttons/button_enter_light.png" id="36_nknpm"]
 [ext_resource type="Texture2D" uid="uid://dhyh51oqoys6v" path="res://Scenes/Minigames/memory_game/tmpTextures/blank.png" id="38_xk3y1"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="39_rl1q7"]
+[ext_resource type="AudioStream" uid="uid://g4polmege6wp" path="res://Scenes/Minigames/keypad/tmpTextures/477633__joao_janz__heater-fan-snap-button-1_6.wav" id="40_h2nkt"]
 
 [node name="MemorizeCode" type="Node2D"]
 editor_description = "A 4 Digit code is briefly shown, you must type it into the keypad correctly. No do-overs, you must not make a mistake while typing it"
@@ -190,3 +191,7 @@ theme_override_colors/font_color = Color(0.549776, 0.10325, 0, 1)
 theme_override_fonts/font = ExtResource("39_rl1q7")
 theme_override_font_sizes/font_size = 80
 vertical_alignment = 1
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("40_h2nkt")
+bus = &"SFX_normal"

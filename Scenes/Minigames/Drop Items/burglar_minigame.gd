@@ -6,7 +6,7 @@ extends CharacterBody2D
 var speed = 250.0
 var item_to_pick = null
 var is_holding_item: bool = false
-var pickup_offset = Vector2(0, -20)
+var pickup_offset = Vector2(0, 15)
 var held_item = null
 
 func get_input():
@@ -51,7 +51,8 @@ func pick_up_item() -> void:
 	held_item = item_to_pick
 	held_item.get_parent().remove_child(held_item)
 	burglar.add_child(held_item)
-	held_item.global_position = burglar.global_position
+	$PickupSound.play()
+	held_item.global_position = burglar.global_position + pickup_offset
 	held_item.picked_up = true
 	burglar.show()
 
@@ -59,3 +60,4 @@ func drop_item() -> void:
 	is_holding_item = false
 	held_item.dropped = true
 	item_to_pick = null
+	$DropSound.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjynsj6wgi1rc"]
+[gd_scene load_steps=11 format=3 uid="uid://cjynsj6wgi1rc"]
 
 [ext_resource type="Texture2D" uid="uid://114qeqjqss66" path="res://Assets/Sprites/Minigame Sprites/wall.png" id="1_dfkc2"]
 [ext_resource type="Script" uid="uid://cdver5blh7ui0" path="res://Scenes/Minigames/Door Unlocking/door_unlocking.gd" id="1_ikik7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cbbjby8glgt6o" path="res://Assets/Sprites/Minigame Sprites/yello_bar.png" id="7_8347k"]
 [ext_resource type="Texture2D" uid="uid://da4cnfmwt5fj5" path="res://Assets/Sprites/Minigame Sprites/green_bar.png" id="8_o0kng"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="9_curnf"]
+[ext_resource type="AudioStream" uid="uid://bbp3ddoghjk0b" path="res://Sounds/Laser.wav" id="10_tnwks"]
 
 [node name="DoorUnlocking" type="Node2D" node_paths=PackedStringArray("pointer", "bars")]
 editor_description = "You are the player and a door is locked. Press the button at the right time for the door to unlock and win the game!"
@@ -77,3 +78,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_curnf")
 theme_override_font_sizes/font_size = 64
 text = "Tries Left: 3"
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_tnwks")
+bus = &"SFX_normal"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://g5yhbbwfrtnb"]
+[gd_scene load_steps=27 format=3 uid="uid://g5yhbbwfrtnb"]
 
 [ext_resource type="Script" uid="uid://c6ql46452p1un" path="res://Scenes/Minigames/Drop Items/drop_items.gd" id="1_a76s7"]
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="1_f5mwv"]
@@ -8,13 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://cqpwfyo5okiva" path="res://Assets/Sprites/Minigame Sprites/building.png" id="5_dwfkc"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="5_na3or"]
 [ext_resource type="Script" uid="uid://engpuayj47hg" path="res://Scenes/Minigames/Drop Items/burglar_minigame.gd" id="6_fuby2"]
+[ext_resource type="AudioStream" uid="uid://bungupk0ylhj3" path="res://Sounds/woosh_2.wav" id="9_irjr3"]
 [ext_resource type="PackedScene" uid="uid://bt7fb4dsrtpem" path="res://Scenes/Minigames/Drop Items/bag.tscn" id="9_lkrxb"]
 [ext_resource type="PackedScene" uid="uid://ngnpvabttus6" path="res://Scenes/Minigames/Drop Items/item_1.tscn" id="10_1pmwb"]
+[ext_resource type="AudioStream" uid="uid://de7gl1u1p6qnk" path="res://Sounds/jump.wav" id="10_pj0g4"]
 [ext_resource type="PackedScene" uid="uid://dn2xmxdchbu0h" path="res://Scenes/Minigames/Drop Items/item_2.tscn" id="11_amg1k"]
 [ext_resource type="PackedScene" uid="uid://do25m6x0jqivt" path="res://Scenes/Minigames/Drop Items/item_3.tscn" id="12_71tff"]
 [ext_resource type="PackedScene" uid="uid://busgaxtxheb15" path="res://Scenes/Minigames/Drop Items/item_4.tscn" id="13_1qwvw"]
 [ext_resource type="PackedScene" uid="uid://drvfhfd0x1tm7" path="res://Scenes/Minigames/Drop Items/item_5.tscn" id="14_y1vhi"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="15_qrdya"]
+[ext_resource type="AudioStream" uid="uid://cnqx7hasrtt28" path="res://Sounds/Thud.wav" id="18_pj0g4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xmxea"]
 atlas = ExtResource("5_na3or")
@@ -123,6 +126,14 @@ collision_mask = 8
 position = Vector2(2, 5)
 shape = SubResource("RectangleShape2D_p5ua7")
 
+[node name="DropSound" type="AudioStreamPlayer2D" parent="Burglar"]
+stream = ExtResource("9_irjr3")
+bus = &"SFX_normal"
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="Burglar"]
+stream = ExtResource("10_pj0g4")
+bus = &"SFX_normal"
+
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(0, 1)
 
@@ -183,25 +194,19 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TriesLeft" type="Label" parent="Labels"]
-layout_mode = 0
-offset_left = 433.0
-offset_top = 49.0
-offset_right = 641.0
-offset_bottom = 72.0
-theme_override_fonts/font = ExtResource("15_qrdya")
-theme_override_font_sizes/font_size = 16
-text = "Tries Left: 3"
-
 [node name="ItemsInBag" type="Label" parent="Labels"]
 layout_mode = 0
-offset_left = 412.0
-offset_top = 26.0
-offset_right = 712.0
-offset_bottom = 49.0
+offset_left = 317.0
+offset_top = 40.0
+offset_right = 797.0
+offset_bottom = 72.0
 theme_override_fonts/font = ExtResource("15_qrdya")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "Items in Bag: 0"
+
+[node name="ItemInBagSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_pj0g4")
+bus = &"SFX_normal"
 
 [connection signal="body_entered" from="Burglar/PickUpArea" to="Burglar" method="_on_pick_up_area_body_entered"]
 [connection signal="body_exited" from="Burglar/PickUpArea" to="Burglar" method="_on_pick_up_area_body_exited"]

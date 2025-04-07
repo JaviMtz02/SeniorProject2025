@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://djeaiebytgtoo"]
+[gd_scene load_steps=41 format=3 uid="uid://djeaiebytgtoo"]
 
 [ext_resource type="Script" uid="uid://bjxtx7c2wmuby" path="res://Scenes/Minigames/Find the Item/find_the_item.gd" id="1_8hllc"]
 [ext_resource type="Texture2D" uid="uid://114qeqjqss66" path="res://Assets/Sprites/Minigame Sprites/wall.png" id="2_ht5v3"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b465f3b2n8un6" path="res://Assets/Sprites/Minigame Sprites/wood_floor.png" id="4_newgl"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="5_q27jf"]
 [ext_resource type="Texture2D" uid="uid://c46km2s4dvlqy" path="res://Assets/Sprites/Loot Sprites/House Loot/art3.png" id="6_q27jf"]
-[ext_resource type="Texture2D" uid="uid://dxrjfn171mryq" path="res://Assets/Sprites/Minigame Sprites/flashlight_effect.png" id="6_yd1tg"]
 [ext_resource type="Texture2D" uid="uid://dyigdtsxvcf02" path="res://Assets/Sprites/UI/Buttons/button_clear_dark.png" id="7_57yqw"]
 [ext_resource type="Script" uid="uid://bnbmi4mxbmbbk" path="res://Scenes/Minigames/Find the Item/item.gd" id="7_yd1tg"]
 [ext_resource type="Texture2D" uid="uid://bcpf5kwqvmtpu" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/minus.png" id="8_newgl"]
@@ -42,10 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://db7wckqf4cfp" path="res://Assets/Sprites/Loot Sprites/House Loot/book.png" id="37_1jpmd"]
 [ext_resource type="Texture2D" uid="uid://dj45dt043atl0" path="res://Assets/Sprites/Loot Sprites/Museum Loot/disk2.png" id="38_uw7cl"]
 
-[node name="FindTheItem" type="Node2D" node_paths=PackedStringArray("flashlight", "items", "shadow", "background", "red_bg", "item_to_find", "label")]
+[node name="FindTheItem" type="Node2D" node_paths=PackedStringArray("items", "shadow", "background", "red_bg", "item_to_find", "label")]
 z_index = 1
 script = ExtResource("1_8hllc")
-flashlight = NodePath("Flashlight")
 items = NodePath("Items")
 shadow = NodePath("CanvasModulate")
 background = NodePath("InitialLayout/ColorRect")
@@ -54,7 +52,8 @@ item_to_find = NodePath("InitialLayout/Sprite2D")
 label = NodePath("InitialLayout/Label")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.381703, 0.381703, 0.381703, 1)
+visible = false
+color = Color(0, 0, 0, 1)
 
 [node name="Layout" type="Control" parent="."]
 layout_mode = 3
@@ -619,6 +618,8 @@ shortcut_context = NodePath(".")
 
 [node name="CountdownTimer" type="Timer" parent="."]
 
+[node name="LightTimer" type="Timer" parent="."]
+
 [node name="InitialLayout" type="Control" parent="."]
 z_index = 1
 layout_mode = 3
@@ -660,11 +661,5 @@ Item:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Flashlight" type="PointLight2D" parent="."]
-z_index = 1
-z_as_relative = false
-position = Vector2(585, 409)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("6_yd1tg")
-
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
+[connection signal="timeout" from="LightTimer" to="." method="_on_light_timer_timeout"]

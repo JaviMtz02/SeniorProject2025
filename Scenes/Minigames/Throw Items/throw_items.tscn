@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxs7u6wl8wsgg"]
+[gd_scene load_steps=17 format=3 uid="uid://cxs7u6wl8wsgg"]
 
 [ext_resource type="PackedScene" uid="uid://mrgqiamb7fr8" path="res://Scenes/Minigames/Throw Items/thrower.tscn" id="1_g2fe7"]
 [ext_resource type="Script" uid="uid://nuitfytgcwdh" path="res://Scenes/Minigames/Throw Items/throw_items.gd" id="1_imtbi"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="6_h38us"]
 [ext_resource type="Texture2D" uid="uid://d22bkbwceaui7" path="res://Assets/Sprites/Characters/burglar_walking.png" id="7_h38us"]
 [ext_resource type="Texture2D" uid="uid://d1aol6vhtr806" path="res://Assets/Sprites/Characters/throw_item.png" id="8_10ixv"]
+[ext_resource type="AudioStream" uid="uid://cnqx7hasrtt28" path="res://Sounds/Thud.wav" id="11_10ixv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fqskb"]
 atlas = ExtResource("7_h38us")
@@ -134,3 +135,6 @@ collision_mask = 128
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(566, 380)
 shape = SubResource("WorldBoundaryShape2D_o0f24")
+
+[node name="ItemInBag" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_10ixv")

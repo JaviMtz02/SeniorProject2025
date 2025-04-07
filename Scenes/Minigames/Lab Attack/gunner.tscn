@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1sqjx6vwixsu"]
+[gd_scene load_steps=7 format=3 uid="uid://b1sqjx6vwixsu"]
 
 [ext_resource type="Script" uid="uid://cpdkx3nqclym0" path="res://Scenes/Minigames/Lab Attack/gunner.gd" id="1_42vvq"]
 [ext_resource type="Texture2D" uid="uid://c51b2nlmqjtvl" path="res://Assets/Sprites/Minigame Sprites/Lab Attack/green_orb.png" id="2_hmw6t"]
+[ext_resource type="AudioStream" uid="uid://bbp3ddoghjk0b" path="res://Sounds/Laser.wav" id="3_y0w5w"]
+[ext_resource type="AudioStream" uid="uid://c658ch83ah754" path="res://Sounds/laser_shot3.wav" id="4_r1nj6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtt86"]
 radius = 8.0
@@ -35,5 +37,12 @@ one_shot = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MobDetection"]
 position = Vector2(-2, -2)
 shape = SubResource("CircleShape2D_mkm2q")
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_y0w5w")
+bus = &"SFX_normal"
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_r1nj6")
 
 [connection signal="area_entered" from="MobDetection" to="." method="_on_mob_detection_area_entered"]

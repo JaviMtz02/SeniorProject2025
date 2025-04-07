@@ -42,7 +42,7 @@ offset_top = 270.0
 offset_right = 764.0
 offset_bottom = 391.0
 theme_override_font_sizes/font_size = 20
-text = "To drop a ball simply press the down arrow key or 'D' key and watch the ball go! The game ends when you run out of balls.
+text = "To drop a ball press the spacebar and watch the ball go! The game ends when you run out of balls.
 Press 'START' when you're ready"
 horizontal_alignment = 1
 autowrap_mode = 3

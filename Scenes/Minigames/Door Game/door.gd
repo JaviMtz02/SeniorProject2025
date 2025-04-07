@@ -29,6 +29,7 @@ func open_door() -> void:
 		result.texture = outcome_textures[1]
 		forward.emit()
 		result.show()
+		$Forward.play()
 		await get_tree().create_timer(0.5).timeout
 		result.hide()
 		anim.play("door_close")
@@ -38,6 +39,7 @@ func open_door() -> void:
 		result.texture = outcome_textures[2]
 		back.emit()
 		result.show()
+		$Back.play()
 		await get_tree().create_timer(0.5).timeout
 		result.hide()
 		anim.play("door_close")
@@ -46,6 +48,7 @@ func open_door() -> void:
 	else:
 		result.texture = outcome_textures[0]
 		result.show()
+		$Lose.play()
 		await get_tree().create_timer(0.5).timeout
 		lose.emit()
 		clicked = false

@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var flashlight: PointLight2D
 @export var items: Node
 @export var shadow: CanvasModulate
 @export var background: ColorRect
@@ -10,12 +9,13 @@ extends Node2D
 
 @onready var countdown_timer: Timer = $CountdownTimer
 @onready var time_left: Label = $Layout/TimeLeft
+@onready var light_timer: Timer = $LightTimer
 
 
 signal game_won
 signal game_lost
 
-var time: int = 15
+var time: int = 10
 var item_names: Array[String]  = []
 var item_textures: Array[Texture2D] = []
 var target_item: String = ""
@@ -24,7 +24,6 @@ var target_item_texture: Texture2D
 func _ready() -> void:
 	countdown_timer.wait_time = 1.0
 	shadow.hide()
-	flashlight.hide()
 	background.show()
 	red_bg.show()
 	item_to_find.show()
@@ -35,20 +34,17 @@ func _ready() -> void:
 			item_names.push_back(item.name)
 			item_textures.push_back(item.texture)
 	play_game()
-	
-func _process(_delta: float) -> void:
-	flashlight.global_position = get_global_mouse_position()
-	
+
 func play_game() -> void:
 	var random_index = randi() % item_names.size()
 	target_item = item_names[random_index]
 	target_item_texture = item_textures[random_index]
 	item_to_find.texture = target_item_texture
 	await get_tree().create_timer(2.0).timeout
+	light_timer.start()
 	countdown_timer.start()
 	item_to_find.hide()
 	shadow.show()
-	flashlight.show()
 	red_bg.hide()
 	background.hide()
 	label.hide()
@@ -70,4 +66,10 @@ func _on_countdown_timer_timeout() -> void:
 	else:
 		game_lost.emit()
 		queue_free()
-		
+
+
+func _on_light_timer_timeout() -> void:
+	shadow.color = Color(1,1,1,1)
+	await get_tree().create_timer(1.0).timeout
+	shadow.color = Color(0,0,0,1)
+	light_timer.start()

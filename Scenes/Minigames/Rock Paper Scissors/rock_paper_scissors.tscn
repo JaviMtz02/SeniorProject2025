@@ -23,13 +23,50 @@ script = ExtResource("1_qf2pm")
 player_games_won_label = NodePath("Decoration/PlayerGamesWon")
 ai_games_won_label = NodePath("Decoration/AiGamesWon")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Bg" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Bg"]
 z_index = -2
+layout_mode = 0
 offset_left = -458.0
 offset_top = -330.0
 offset_right = 762.0
 offset_bottom = 536.0
-color = Color(0.529412, 0.807843, 0.921569, 1)
+color = Color(0.486275, 0.784314, 0.992157, 1)
+
+[node name="RockBg" type="TextureRect" parent="Bg"]
+modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 0
+offset_left = -17.0
+offset_top = -273.0
+offset_right = 23.0
+offset_bottom = -233.0
+scale = Vector2(8, 8)
+texture = ExtResource("1_fgjvs")
+
+[node name="ScisscorBg" type="TextureRect" parent="Bg"]
+modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 0
+offset_left = 363.0
+offset_top = -120.0
+offset_right = 403.0
+offset_bottom = -74.0
+scale = Vector2(8, 8)
+texture = ExtResource("3_qoxg4")
+
+[node name="PaperBg" type="TextureRect" parent="Bg"]
+modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 0
+offset_left = -312.0
+offset_top = -62.0
+offset_right = -272.0
+offset_bottom = -22.0
+scale = Vector2(8, 8)
+texture = ExtResource("2_bh02k")
 
 [node name="PlayerChose" type="Sprite2D" parent="."]
 position = Vector2(-248, 104)
@@ -158,3 +195,9 @@ texture_normal = ExtResource("3_qoxg4")
 texture_pressed = ExtResource("8_x0ev1")
 texture_hover = ExtResource("9_n2ydw")
 stretch_mode = 0
+
+[node name="PlayerWins" type="AudioStreamPlayer2D" parent="."]
+
+[node name="NPCWins" type="AudioStreamPlayer2D" parent="."]
+
+[node name="TieGame" type="AudioStreamPlayer2D" parent="."]

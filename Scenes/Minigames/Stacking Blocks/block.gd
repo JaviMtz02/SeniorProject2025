@@ -22,7 +22,7 @@ func _process(_delta) -> void:
 		elif position.x <= 300:
 			direction = 1
 	
-	if Input.is_action_just_pressed("down") and not dropped: # if the down key is pressed, and the block can move, the block will drop
+	if Input.is_action_just_pressed("attack") and not dropped: # if the down key is pressed, and the block can move, the block will drop
 		block.freeze = false
 		linear_velocity = Vector2(0, drop_speed)
 		dropped = true
@@ -34,4 +34,5 @@ func _on_body_entered(_body: Node) -> void:
 		landed = true
 
 func _emit_landing_signal():
+	$BlockLanded.play()
 	block_landed.emit()
