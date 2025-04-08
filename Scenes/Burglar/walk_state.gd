@@ -11,6 +11,8 @@ var push_force: float = 1.0
 
 var last_frame: int
 
+var direction: Vector2
+
 func _on_process(_delta: float) -> void:
 	get_input()
 	if Input.is_action_just_pressed("attack"):
@@ -45,8 +47,10 @@ func get_input():
 	if not burglar.input_enabled:
 		burglar.velocity = Vector2.ZERO
 		return
-		
-	var direction = Input.get_vector("left", "right", "up", "down")
+	
+	# Only the client itself should be able to define direction
+	if MultiplayerManager.is_multiplayer() and int(get_parent().get_parent().name) == multiplayer.get_unique_id():
+		direction = Input.get_vector("left", "right", "up", "down")
 	if direction != Vector2.ZERO:
 		get_parent().last_direction = direction
 	burglar.velocity = direction * speed

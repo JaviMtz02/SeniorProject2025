@@ -5,6 +5,8 @@ extends NodeState
 @export var loot_interaction: Area2D
 var last_frame: int
 
+var direction: Vector2
+
 func _on_process(_delta: float) -> void:
 	if not burglar.input_enabled:
 		return
@@ -21,7 +23,9 @@ func  _on_next_transition() -> void:
 	pass
 
 func is_moving() -> bool:
-	var direction = Input.get_vector("down", "left", "right", "up")
+	# Only the client itself should be able to define direction
+	if MultiplayerManager.is_multiplayer() and int(get_parent().get_parent().name) == multiplayer.get_unique_id():
+		direction = Input.get_vector("down", "left", "right", "up")
 	return direction != Vector2.ZERO
 
 func _on_enter() -> void:

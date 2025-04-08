@@ -30,9 +30,8 @@ var in_minigame: bool = false
 var minigames_won: int = 0
 
 func _ready() -> void:
-	# TODO temporary fix
+	# Disables the UI and input process for players that aren't yourself
 	if MultiplayerManager.is_multiplayer() and int(name) != multiplayer.get_unique_id():
-		$StateMachine.process_mode = Node.PROCESS_MODE_DISABLED
 		$Camera2D/Control.visible = false
 		set_process_input(false)
 	

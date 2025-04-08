@@ -201,6 +201,12 @@ size = Vector2(17, 24)
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
+properties/1/path = NodePath("StateMachine/Walk:direction")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("StateMachine/Idle:direction")
+properties/2/spawn = true
+properties/2/replication_mode = 1
 
 [node name="Burglar" type="CharacterBody2D" node_paths=PackedStringArray("burglar", "loot_interaction", "minigame_interaction", "take_loot_button", "deposit_button", "minigame_button", "value_label", "inventory_label", "time_label") groups=["Burglar", "minigame_interaction"]]
 collision_layer = 17
