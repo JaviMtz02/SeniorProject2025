@@ -231,6 +231,7 @@ position = Vector2(1, 2.5)
 shape = SubResource("RectangleShape2D_w1me5")
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["burglar_camera"]]
+z_index = 99
 zoom = Vector2(4, 4)
 
 [node name="Control" type="Control" parent="Camera2D"]
@@ -374,6 +375,7 @@ bus = &"SFX_lower"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MobDetection" groups=["blocks"]]
 position = Vector2(0.5, 2)
+scale = Vector2(0.989599, 1.02261)
 shape = SubResource("RectangleShape2D_mf82g")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

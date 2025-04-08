@@ -24,7 +24,7 @@ func  _on_next_transition() -> void:
 
 func is_moving() -> bool:
 	# Only the client itself should be able to define direction
-	if MultiplayerManager.is_multiplayer() and int(get_parent().get_parent().name) == multiplayer.get_unique_id():
+	if int(get_parent().get_parent().name) == multiplayer.get_unique_id():
 		direction = Input.get_vector("down", "left", "right", "up")
 	return direction != Vector2.ZERO
 

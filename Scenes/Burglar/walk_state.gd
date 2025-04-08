@@ -49,7 +49,7 @@ func get_input():
 		return
 	
 	# Only the client itself should be able to define direction
-	if MultiplayerManager.is_multiplayer() and int(get_parent().get_parent().name) == multiplayer.get_unique_id():
+	if int(get_parent().get_parent().name) == multiplayer.get_unique_id():
 		direction = Input.get_vector("left", "right", "up", "down")
 	if direction != Vector2.ZERO:
 		get_parent().last_direction = direction
