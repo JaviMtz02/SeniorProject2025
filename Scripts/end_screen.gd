@@ -12,8 +12,8 @@ var cash_accum: int
 var curr_score: int = 0
 var cash_target_score: int
 var loot_target_score: int
-var completed_minigames: bool = false
-var collected_all_loot: bool = false
+var completed_minigames: bool
+var collected_all_loot: bool
 
 @onready var value_label: Label = $ScreenLayout/Control/Value
 @onready var loot_obtained_label: Label = $ScreenLayout/Control/LootObtained
@@ -48,16 +48,19 @@ func show_achievements() -> void:
 	$ScreenLayout/Control/Label.show()
 	$ScreenLayout/Control/ColorRect.show()
 	$ScreenLayout/Control/Level.texture = completion_textures[0]
+	$SFX/ObjectiveComplete.play()
 	$ScreenLayout/Control/Level.show()
 	await get_tree().create_timer(0.4).timeout
 	if collected_all_loot:
 		$ScreenLayout/Control/Loot.texture = completion_textures[1]
+		$SFX/ObjectiveComplete.play()
 		$ScreenLayout/Control/Loot.show()
 	else:
 		$ScreenLayout/Control/Loot.show()
 	await get_tree().create_timer(0.4).timeout
 	if completed_minigames:
 		$ScreenLayout/Control/Minigame.texture = completion_textures[2]
+		$SFX/ObjectiveComplete.play()
 		$ScreenLayout/Control/Minigame.show()
 	else:
 		$ScreenLayout/Control/Minigame.show()
@@ -83,6 +86,7 @@ func _on_score_timer_timeout() -> void:
 		curr_score += 1
 		value_label.text = "Cash Obtained: " + str(curr_score)
 		score_timer.start()
+		$SFX/CashAccumulating.play()
 	else:
 		score_timer.stop()
 		

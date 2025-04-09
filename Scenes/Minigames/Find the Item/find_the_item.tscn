@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://djeaiebytgtoo"]
+[gd_scene load_steps=43 format=3 uid="uid://djeaiebytgtoo"]
 
 [ext_resource type="Script" uid="uid://bjxtx7c2wmuby" path="res://Scenes/Minigames/Find the Item/find_the_item.gd" id="1_8hllc"]
 [ext_resource type="Texture2D" uid="uid://114qeqjqss66" path="res://Assets/Sprites/Minigame Sprites/wall.png" id="2_ht5v3"]
@@ -40,6 +40,8 @@
 [ext_resource type="Texture2D" uid="uid://cxvir6pmae0mw" path="res://Assets/Sprites/Loot Sprites/Museum Loot/vase3.png" id="36_6v633"]
 [ext_resource type="Texture2D" uid="uid://db7wckqf4cfp" path="res://Assets/Sprites/Loot Sprites/House Loot/book.png" id="37_1jpmd"]
 [ext_resource type="Texture2D" uid="uid://dj45dt043atl0" path="res://Assets/Sprites/Loot Sprites/Museum Loot/disk2.png" id="38_uw7cl"]
+[ext_resource type="AudioStream" uid="uid://cjbhojgfa5la6" path="res://Sounds/ufo.mp3" id="41_6v633"]
+[ext_resource type="AudioStream" uid="uid://g4polmege6wp" path="res://Scenes/Minigames/keypad/tmpTextures/477633__joao_janz__heater-fan-snap-button-1_6.wav" id="42_1jpmd"]
 
 [node name="FindTheItem" type="Node2D" node_paths=PackedStringArray("items", "shadow", "background", "red_bg", "item_to_find", "label")]
 z_index = 1
@@ -660,6 +662,14 @@ text = "Find the
 Item:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Ambience" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("41_6v633")
+bus = &"SFX_normal"
+
+[node name="Switch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("42_1jpmd")
+bus = &"SFX_normal"
 
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 [connection signal="timeout" from="LightTimer" to="." method="_on_light_timer_timeout"]

@@ -57,10 +57,13 @@ func determine_winner() -> void:
 		ai_won.emit()
 
 func _on_rock_button_pressed() -> void:
+	$"../Click".play()
 	_on_player_choice(Choice.ROCK)
 
 func _on_paper_button_pressed() -> void:
+	$"../Click".play()
 	_on_player_choice(Choice.PAPER)
 
 func _on_scissors_button_pressed() -> void:
+	$"../Click".play()
 	_on_player_choice(Choice.SCISSORS)

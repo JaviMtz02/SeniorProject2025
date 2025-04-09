@@ -22,6 +22,7 @@ var target_item: String = ""
 var target_item_texture: Texture2D
 
 func _ready() -> void:
+	$Ambience.play()
 	countdown_timer.wait_time = 1.0
 	shadow.hide()
 	background.show()
@@ -69,7 +70,9 @@ func _on_countdown_timer_timeout() -> void:
 
 
 func _on_light_timer_timeout() -> void:
+	$Switch.play()
 	shadow.color = Color(1,1,1,1)
 	await get_tree().create_timer(1.0).timeout
 	shadow.color = Color(0,0,0,1)
+	$Switch.play()
 	light_timer.start()

@@ -28,6 +28,7 @@ func _on_ai_wins() -> void:
 	check_game()
 	
 func _on_game_tied() -> void:
+	$TieGame.play()
 	check_game()
 	
 func check_game() -> void:

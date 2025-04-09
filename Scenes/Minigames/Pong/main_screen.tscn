@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc8th24loxxxu"]
+
+[ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_44w83"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="1_iafe0"]
+[ext_resource type="PackedScene" uid="uid://cgfoq7eo31ul3" path="res://Scenes/Minigames/Pong/pong.tscn" id="2_0yjur"]
+[ext_resource type="Texture2D" uid="uid://h4ntlqho1a1c" path="res://Assets/Sprites/Minigame Sprites/pong.png" id="2_fmfgy"]
+
+[node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
+script = ExtResource("1_44w83")
+start_game = NodePath("Button")
+minigame_scene = ExtResource("2_0yjur")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 137.0
+offset_top = 111.0
+offset_right = 1046.0
+offset_bottom = 682.0
+color = Color(0.027451, 0, 0.129412, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 511.0
+offset_top = 131.0
+offset_right = 624.0
+offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("1_iafe0")
+theme_override_font_sizes/font_size = 64
+text = "Pong"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 206.0
+offset_top = 197.0
+offset_right = 474.0
+offset_bottom = 349.0
+theme_override_font_sizes/font_size = 20
+text = "In this classic game of pong, beat the CPU in this first to 5 game to win! Can you beat the super smart CPU?"
+autowrap_mode = 3
+
+[node name="HowToPlay" type="Label" parent="."]
+offset_left = 311.0
+offset_top = 422.0
+offset_right = 867.0
+offset_bottom = 574.0
+theme_override_font_sizes/font_size = 20
+text = "To play the game, use the up and down arrow keys to move your paddle. The paddle's speed increases for every hit until someone loses. Game ends whenever you or the CPU reaches 5 games won.
+Press 'START' when you're ready"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GameImg" type="TextureRect" parent="."]
+offset_left = 541.0
+offset_top = 191.0
+offset_right = 962.0
+offset_bottom = 422.0
+texture = ExtResource("2_fmfgy")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(592, 398)
+zoom = Vector2(1.4, 1.4)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 541.0
+offset_top = 596.0
+offset_right = 670.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("1_iafe0")
+theme_override_font_sizes/font_size = 32
+text = "Start"

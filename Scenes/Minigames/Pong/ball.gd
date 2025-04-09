@@ -13,6 +13,7 @@ func _ready() -> void:
 	
 func new_ball() -> void:
 	#Randomize start position and direction
+	$"../NewBall".play()
 	position.x = window_size.x / 2
 	position.y = randi_range(200, window_size.y - 200)
 	speed = START_SPEED
@@ -22,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(dir * speed * delta)
 	var collider
 	if collision:
+		$"../Collision".play()
 		collider = collision.get_collider()
 		if collider == $"../Player" or collider == $"../CPU":
 			speed += ACCEL

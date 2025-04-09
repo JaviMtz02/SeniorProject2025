@@ -5,6 +5,7 @@ const speed = 190
 @export var nav_agent: NavigationAgent2D
 
 func _ready() -> void:
+	$Chasing.play()
 	make_path()
 	
 func _physics_process(_delta: float) -> void:

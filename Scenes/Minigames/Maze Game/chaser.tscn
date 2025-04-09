@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2qcqw4p5a3xk"]
+[gd_scene load_steps=5 format=3 uid="uid://d2qcqw4p5a3xk"]
 
 [ext_resource type="Texture2D" uid="uid://c04chnt5blok4" path="res://Assets/Sprites/Minigame Sprites/Maze Game/chaser.png" id="1_igokl"]
 [ext_resource type="Script" uid="uid://bf8708xkugylr" path="res://Scenes/Minigames/Maze Game/chaser.gd" id="1_s18ll"]
+[ext_resource type="AudioStream" uid="uid://cjbhojgfa5la6" path="res://Sounds/ufo.mp3" id="3_bofjc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y1c45"]
 radius = 8.0
@@ -25,5 +26,9 @@ simplify_path = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
+
+[node name="Chasing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bofjc")
+bus = &"SFX_normal"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://skvaaoqiuaj7"]
+[gd_scene load_steps=5 format=3 uid="uid://skvaaoqiuaj7"]
 
 [ext_resource type="Script" uid="uid://dbqgcbpp2eqmo" path="res://Scenes/Minigames/tic_tac_toe/button.gd" id="1_figii"]
 [ext_resource type="Texture2D" uid="uid://cq3yvgs65xps6" path="res://Scenes/Minigames/tic_tac_toe/tmpTextures/blank.png" id="1_hri60"]
+[ext_resource type="AudioStream" uid="uid://b855hpboieqwe" path="res://Sounds/select_4.wav" id="3_qob7a"]
+[ext_resource type="AudioStream" uid="uid://bh3y2o7b7nui3" path="res://Sounds/select_2.wav" id="4_hxus4"]
 
 [node name="button" type="Control"]
 texture_filter = 1
@@ -20,5 +22,11 @@ offset_right = 64.0
 offset_bottom = 64.0
 texture = ExtResource("1_hri60")
 expand_mode = 1
+
+[node name="XSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qob7a")
+
+[node name="OSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_hxus4")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

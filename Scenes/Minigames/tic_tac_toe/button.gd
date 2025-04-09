@@ -10,9 +10,11 @@ func _ready():
 	$texture.custom_minimum_size = size
 
 func draw_o():
+	$OSound.play()
 	$texture.texture = o_texture
 	
 func draw_x():
+	$XSound.play()
 	$texture.texture = x_texture
 
 func _on_gui_input(event):

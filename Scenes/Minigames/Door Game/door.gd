@@ -19,6 +19,7 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	if can_click:
+		$Click.play()
 		open_door()
 		clicked = true
 

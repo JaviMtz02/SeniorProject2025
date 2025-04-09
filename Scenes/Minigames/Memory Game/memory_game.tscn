@@ -1,11 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://dshiic14vk4gk"]
+[gd_scene load_steps=13 format=4 uid="uid://dshiic14vk4gk"]
 
 [ext_resource type="Texture2D" uid="uid://chv57f5aynskh" path="res://Assets/Sprites/Loot Sprites/Museum Loot/butterfly.png" id="1_gqjoh"]
 [ext_resource type="Script" uid="uid://cnpr4ccolwwkn" path="res://Scenes/Minigames/Memory Game/memory_game.gd" id="1_v4aqd"]
 [ext_resource type="Texture2D" uid="uid://bjkf4qcwxi2as" path="res://Assets/Sprites/Loot Sprites/Museum Loot/butterfly3.png" id="2_grfb3"]
 [ext_resource type="Texture2D" uid="uid://cmy27nb0meg71" path="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="2_u3jib"]
 [ext_resource type="Texture2D" uid="uid://bhoahlt5mh2oy" path="res://Assets/Sprites/Loot Sprites/Museum Loot/butterfly2.png" id="3_33wgu"]
+[ext_resource type="AudioStream" uid="uid://bid7tc66w4ji1" path="res://Sounds/note_C.wav" id="4_m2j7w"]
 [ext_resource type="Texture2D" uid="uid://4x7obw4upadx" path="res://Assets/Sprites/Minigame Sprites/Memory Game/butterfly5.png" id="5_g8ffm"]
+[ext_resource type="AudioStream" uid="uid://drfhom01wvtah" path="res://Sounds/note_D.wav" id="6_bf0gh"]
+[ext_resource type="AudioStream" uid="uid://4lko7wigo5t3" path="res://Sounds/note_E.wav" id="8_iyv6p"]
+[ext_resource type="AudioStream" uid="uid://b8q5whgkr7s6p" path="res://Sounds/note_F.wav" id="10_41vl8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkec7"]
 texture = ExtResource("2_u3jib")
@@ -470,6 +474,10 @@ offset_top = -2.0
 offset_right = 3.0
 offset_bottom = 10.0
 
+[node name="SoundA" type="AudioStreamPlayer2D" parent="Buttons/ButtonA"]
+stream = ExtResource("4_m2j7w")
+bus = &"SFX_normal"
+
 [node name="ButtonB" type="Sprite2D" parent="Buttons"]
 position = Vector2(-35, 7)
 scale = Vector2(10, 10)
@@ -482,6 +490,10 @@ offset_left = -10.0
 offset_top = -2.0
 offset_right = 3.0
 offset_bottom = 10.0
+
+[node name="SoundB" type="AudioStreamPlayer2D" parent="Buttons/ButtonB"]
+stream = ExtResource("6_bf0gh")
+bus = &"SFX_normal"
 
 [node name="ButtonC" type="Sprite2D" parent="Buttons"]
 position = Vector2(249, 15)
@@ -496,6 +508,10 @@ offset_top = -2.0
 offset_right = 3.0
 offset_bottom = 10.0
 
+[node name="SoundC" type="AudioStreamPlayer2D" parent="Buttons/ButtonC"]
+stream = ExtResource("8_iyv6p")
+bus = &"SFX_normal"
+
 [node name="ButtonD" type="Sprite2D" parent="Buttons"]
 position = Vector2(524, 20)
 scale = Vector2(10, 10)
@@ -508,3 +524,7 @@ offset_left = -10.0
 offset_top = -2.0
 offset_right = 3.0
 offset_bottom = 10.0
+
+[node name="SoundD" type="AudioStreamPlayer2D" parent="Buttons/ButtonD"]
+stream = ExtResource("10_41vl8")
+bus = &"SFX_normal"

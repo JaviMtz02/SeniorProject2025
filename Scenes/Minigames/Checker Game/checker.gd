@@ -14,6 +14,7 @@ func _ready():
 		self.checker_toggled.connect(checker._on_checker_toggled)
 
 func _on_button_pressed() -> void:
+	$"../CheckerFlip".play()
 	toggle()
 	checker_toggled.emit()
 	

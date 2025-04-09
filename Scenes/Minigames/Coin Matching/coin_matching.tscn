@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cmy27nb0meg71" path="res://Assets/Sprites/Furniture/Interiors/16x16/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="3_q7q5k"]
 [ext_resource type="FontFile" uid="uid://bcomx8bxn0j1" path="res://Text/PressStart2P.ttf" id="4_sreog"]
 [ext_resource type="AudioStream" uid="uid://b8bqwhcrsw430" path="res://Sounds/wrong-47985.mp3" id="5_crbub"]
-[ext_resource type="AudioStream" uid="uid://dhy7sw2vu0pfm" path="res://Sounds/sound_frogger_hop_sel.wav" id="5_hb0pl"]
+[ext_resource type="AudioStream" uid="uid://cd6vjnc2nd71" path="res://Sounds/objective_complete_2.wav" id="5_hb0pl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85j54"]
 texture = ExtResource("3_q7q5k")

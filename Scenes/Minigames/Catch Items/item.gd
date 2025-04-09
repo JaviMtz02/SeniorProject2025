@@ -13,6 +13,7 @@ signal block_landed
 signal null_space
 
 func _ready():
+	$Thrown.play()
 	add_to_group("blocks")
 	apply_random_movement()
 

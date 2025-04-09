@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dmoatjjldboop"]
+[gd_scene load_steps=21 format=3 uid="uid://dmoatjjldboop"]
 
 [ext_resource type="Texture2D" uid="uid://corn7wj6qmye2" path="res://Assets/Sprites/Background/Clouds/Clouds 8/1.png" id="1_5sxot"]
 [ext_resource type="Script" uid="uid://b2uf1x5jx24kg" path="res://Scripts/end_screen.gd" id="1_kp4rt"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://bouq1ng776kip" path="res://Assets/Sprites/UI/loot_button.png" id="9_1bcx5"]
 [ext_resource type="Texture2D" uid="uid://dnx8pbs7y8q5w" path="res://Assets/Sprites/UI/minigame_button.png" id="10_jjwh6"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="11_1bcx5"]
+[ext_resource type="AudioStream" uid="uid://cgpo6p41kxone" path="res://Sounds/level_complete.wav" id="15_s3xli"]
+[ext_resource type="AudioStream" uid="uid://bgy4gy21yy3mn" path="res://Sounds/cash_accumulation.wav" id="16_c80id"]
+[ext_resource type="AudioStream" uid="uid://d1njbi2ttqs58" path="res://Sounds/objective_complete.wav" id="17_yn5fy"]
 
 [sub_resource type="Animation" id="Animation_yn5fy"]
 length = 0.001
@@ -64,6 +67,18 @@ tracks/1/keys = {
 "args": [],
 "method": &"update_score"
 }]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../SFX/InitialScreen:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ajnu"]
@@ -221,6 +236,18 @@ libraries = {
 [node name="SFX" type="Node" parent="."]
 
 [node name="InitialScreen" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("15_s3xli")
+bus = &"SFX_normal"
+
+[node name="CashAccumulating" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("16_c80id")
+bus = &"SFX_normal"
+
+[node name="LootCollected" type="AudioStreamPlayer2D" parent="SFX"]
+bus = &"SFX_normal"
+
+[node name="ObjectiveComplete" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("17_yn5fy")
 bus = &"SFX_normal"
 
 [connection signal="pressed" from="ScreenLayout/Control/Button" to="." method="_on_button_pressed"]

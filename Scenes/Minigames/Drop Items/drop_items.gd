@@ -8,8 +8,6 @@ var items_in_bag: int = 0
 var items_to_drop: int = 5
 
 @export var items: Node
-
-@onready var tries_left_label: Label = $Labels/TriesLeft
 @onready var items_in_bag_label: Label = $Labels/ItemsInBag
 
 func _ready() -> void:
@@ -32,5 +30,4 @@ func _on_unsuccessful_drop() -> void:
 	queue_free()
 
 func update_display() -> void:
-	tries_left_label.text = "Tries left: " + str(tries_left)
 	items_in_bag_label.text = "Items in Bag: " + str(items_in_bag)	

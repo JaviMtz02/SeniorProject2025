@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dl0js7or6hf1p"]
+[gd_scene load_steps=19 format=3 uid="uid://dl0js7or6hf1p"]
 
 [ext_resource type="Script" uid="uid://bk12ul8m4m88" path="res://Scenes/Minigames/Rock Paper Scissors/options.gd" id="1_8waia"]
 [ext_resource type="Texture2D" uid="uid://beaiaewbs4vw0" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/rock.png" id="1_fgjvs"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://5myvri6b1qme" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/circle.png" id="12_udijb"]
 [ext_resource type="Texture2D" uid="uid://dy45df3qvjflj" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/burglar_head.png" id="13_wi0ib"]
 [ext_resource type="Texture2D" uid="uid://b260stepjk6ep" path="res://Assets/Sprites/Minigame Sprites/Rock Paper Scissors/bum_head.png" id="14_jgu82"]
+[ext_resource type="AudioStream" uid="uid://b8bqwhcrsw430" path="res://Sounds/wrong-47985.mp3" id="17_bj276"]
+[ext_resource type="AudioStream" uid="uid://cjgcbi54gcinp" path="res://Sounds/select_1.wav" id="17_y83my"]
 
 [node name="RockPaperScissors" type="Node2D" node_paths=PackedStringArray("player_games_won_label", "ai_games_won_label")]
 position = Vector2(400, 300)
@@ -199,5 +201,12 @@ stretch_mode = 0
 [node name="PlayerWins" type="AudioStreamPlayer2D" parent="."]
 
 [node name="NPCWins" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX_normal"
 
 [node name="TieGame" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_bj276")
+bus = &"SFX_normal"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_y83my")
+bus = &"SFX_normal"
