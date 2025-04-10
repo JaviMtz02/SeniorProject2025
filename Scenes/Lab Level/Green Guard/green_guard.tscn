@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bd17uo0wesown"]
+[gd_scene load_steps=43 format=3 uid="uid://bd17uo0wesown"]
 
 [ext_resource type="Script" uid="uid://dxmu4r10rc7lh" path="res://Scenes/Lab Level/Green Guard/green_guard.gd" id="1_o7vhk"]
 [ext_resource type="Texture2D" uid="uid://dbvv55fogyodj" path="res://Assets/Sprites/Characters/Green_Lab_Gurad.png" id="1_xsboy"]
@@ -239,6 +239,9 @@ radius = 6.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ckbi"]
 size = Vector2(20, 28)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hy8ib"]
+radius = 47.3814
+
 [node name="Green Guard" type="CharacterBody2D"]
 script = ExtResource("1_o7vhk")
 
@@ -264,12 +267,13 @@ script = ExtResource("3_ejn82")
 green_guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("green_guard", "anim", "nav_agent", "detector")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("green_guard", "anim", "nav_agent", "detector", "detector_radius")]
 script = ExtResource("4_wlfp2")
 green_guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
+detector_radius = NodePath("../../DetectorRadius")
 
 [node name="Frozen" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector")]
 script = ExtResource("5_s5rpo")
@@ -307,3 +311,10 @@ collision_mask = 64
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3ckbi")
+
+[node name="DetectorRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorRadius"]
+shape = SubResource("CircleShape2D_hy8ib")
+
+[connection signal="body_entered" from="DetectorRadius" to="StateMachine/Walk" method="_on_detector_radius_body_entered"]

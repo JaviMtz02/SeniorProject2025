@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var health: int = 20
+var burglar: CharacterBody2D
 
 func _ready() -> void:
 	pass

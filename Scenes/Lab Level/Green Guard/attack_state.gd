@@ -29,7 +29,7 @@ func  _on_next_transition() -> void:
 	
 
 func _on_enter() -> void:
-	var direction_to_burglar = (burglar.global_position - green_guard.global_position).normalized()
+	var direction_to_burglar = (green_guard.burglar.global_position - green_guard.global_position).normalized()
 	green_guard.velocity = Vector2.ZERO
 	green_guard.move_and_slide()
 	nav_agent.avoidance_enabled = false
@@ -41,6 +41,7 @@ func _on_enter() -> void:
 	attack_instance.direction = direction_to_burglar
 	
 func _on_exit() -> void:
+	green_guard.burglar = null
 	nav_agent.avoidance_enabled = true
 
 func _on_attack_finished() -> void:

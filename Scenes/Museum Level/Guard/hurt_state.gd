@@ -28,6 +28,7 @@ func  _on_next_transition() -> void:
 		transition.emit("Idle")
 
 func _on_enter() -> void:
+	$"../../SFX/Hit".play()
 	var direction = get_parent().last_direction
 	guard.velocity = Vector2.ZERO
 	guard.move_and_slide()
@@ -46,7 +47,7 @@ func _on_enter() -> void:
 		if direction.y > 0:
 			anim.play("hurt_forward")
 		else:
-			anim.play("hurt_back")
+			anim.play("hurt_forward")
 	
 func _on_exit() -> void:
 	hurt_state_timer.stop()

@@ -9,7 +9,7 @@ var loot_obtained = 0
 var minigames_won = 0 # Used to add up the amount of minigames won
 
 @export var level_time_seconds = 59
-@export var level_time_minutes = 3
+@export var level_time_minutes = 1
 @export var level_name: String = "laboratory"
 
 func _ready() -> void:

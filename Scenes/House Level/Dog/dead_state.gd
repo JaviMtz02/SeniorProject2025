@@ -20,6 +20,7 @@ func _on_enter() -> void:
 	# play some dying sound here
 	nav_agent.target_position = dog.global_position
 	nav_agent.avoidance_enabled = false
+	$"../../SFX/Dead".play()
 	anim_sprite.play("dead")
 	await anim_sprite.animation_finished
 	

@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://cef1hhkrogsvm" path="res://Scripts/main_screen.gd" id="1_dt6de"]
 [ext_resource type="PackedScene" uid="uid://djeaiebytgtoo" path="res://Scenes/Minigames/Find the Item/find_the_item.tscn" id="2_uifpf"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="3_r5f0n"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_em7gc"]
-load_path = "res://.godot/imported/find_the_item.png-8eb22955812279198cfaad051367f156.ctex"
+[ext_resource type="Texture2D" uid="uid://c4hdkqwscsjay" path="res://Assets/Sprites/Minigame Sprites/find_the_item.png" id="4_dt6de"]
 
 [node name="MainScreen" type="Node2D" node_paths=PackedStringArray("start_game")]
 script = ExtResource("1_dt6de")
@@ -53,7 +51,7 @@ offset_left = 569.0
 offset_top = 203.0
 offset_right = 915.0
 offset_bottom = 441.0
-texture = SubResource("CompressedTexture2D_em7gc")
+texture = ExtResource("4_dt6de")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="."]

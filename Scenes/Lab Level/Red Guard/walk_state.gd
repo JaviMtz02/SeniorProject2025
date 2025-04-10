@@ -35,7 +35,8 @@ func _on_process(_delta: float) -> void:
 		
 	if detector.is_colliding():
 		var collider = detector.get_collider()
-		if collider == burglar:
+		if collider.is_in_group("Burglar"):
+			red_guard.burglar = collider
 			transition.emit("FollowBurglar")
 
 func _on_physics_process(_delta: float) -> void:
@@ -112,3 +113,7 @@ func _on_area_entered(area: Area2D) -> void:
 		max_speed += 3
 		# add some sound here with an await, after that the emote goes away
 		emote.hide()
+
+func _on_detection_radius_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Burglar"):
+		nav_agent.target_position = body.global_position

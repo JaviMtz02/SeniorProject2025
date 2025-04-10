@@ -28,6 +28,7 @@ func  _on_next_transition() -> void:
 		transition.emit("Walk")
 
 func _on_enter() -> void:
+	$"../../SFX/Hurt".play()
 	var direction = get_parent().last_direction
 	lab_guard.velocity = Vector2.ZERO
 	lab_guard.move_and_slide()

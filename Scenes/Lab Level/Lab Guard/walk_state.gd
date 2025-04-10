@@ -6,6 +6,7 @@ extends NodeState
 @export var detector: RayCast2D
 @export var min_speed = 20
 @export var max_speed = 30
+@export var detection_radius: Area2D
 
 @onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
 var speed: float
@@ -32,7 +33,8 @@ func _on_process(_delta: float) -> void:
 		transition.emit("Dead")
 	if detector.is_colliding():
 		var collider = detector.get_collider()
-		if collider == burglar:
+		if collider.is_in_group("Burglar"):
+			lab_guard.burglar = collider
 			transition.emit("Attack")
 
 func _on_physics_process(_delta: float) -> void:
@@ -105,3 +107,7 @@ func _on_area_entered(area: Area2D) -> void:
 		var damage_val = damage_source.damage
 		lab_guard.take_damage(damage_val)
 		transition.emit("Hurt")
+
+func _on_detection_radius_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Burglar"):
+		nav_agent.target_position = body.global_position

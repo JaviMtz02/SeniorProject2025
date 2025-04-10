@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bg7fofw2p6tku"]
+[gd_scene load_steps=43 format=3 uid="uid://bg7fofw2p6tku"]
 
 [ext_resource type="Script" uid="uid://d2wbgk4kij2sa" path="res://Scenes/Lab Level/Blue Guard/blue_guard.gd" id="1_5sr8v"]
 [ext_resource type="Texture2D" uid="uid://bherk0lrhp6l2" path="res://Assets/Sprites/Characters/Blue_Lab_Guard.png" id="1_keeug"]
@@ -241,14 +241,15 @@ size = Vector2(16, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5jh6"]
 size = Vector2(20, 30)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqmrt"]
+radius = 31.0
+
 [node name="BlueGuard" type="CharacterBody2D"]
 script = ExtResource("1_5sr8v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pfypl")
-animation = &"dead"
-frame = 11
-frame_progress = 1.0
+animation = &"forward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -320,3 +321,10 @@ collision_mask = 64
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_s5jh6")
+
+[node name="DetectionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius"]
+shape = SubResource("CircleShape2D_rqmrt")
+
+[connection signal="body_entered" from="DetectionRadius" to="StateMachine/Walk" method="_on_detection_radius_body_entered"]

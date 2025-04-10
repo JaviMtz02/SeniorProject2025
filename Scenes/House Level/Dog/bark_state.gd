@@ -22,6 +22,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_enter() -> void:
+	$"../../SFX/Bark".play()
 	dog.velocity = Vector2.ZERO # Sets dog velocity to zero
 	dog.move_and_slide()
 	anim_sprite.play("attack")
@@ -45,6 +46,7 @@ func _on_exit() -> void:
 	anim_sprite.stop()
 	bark_timer.stop()
 	nav_agent.avoidance_enabled = true
+	$"../../SFX/Bark".stop()
 
 func _on_next_transition() -> void:
 	pass

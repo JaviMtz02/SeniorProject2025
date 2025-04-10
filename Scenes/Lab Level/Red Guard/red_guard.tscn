@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bxwr7q0mpyrrw"]
+[gd_scene load_steps=37 format=3 uid="uid://bxwr7q0mpyrrw"]
 
 [ext_resource type="Texture2D" uid="uid://cj6s3lqpdatx7" path="res://Assets/Sprites/Characters/Red_Lab_Guard.png" id="1_aejxo"]
 [ext_resource type="Script" uid="uid://21jyyckaup6j" path="res://Scenes/Lab Level/Red Guard/red_guard.gd" id="1_xvphh"]
@@ -190,6 +190,9 @@ size = Vector2(22, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bx86t"]
 size = Vector2(20, 23)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2cwqu"]
+radius = 29.1548
+
 [node name="RedGuard" type="CharacterBody2D" node_paths=PackedStringArray("emote") groups=["mob_near"]]
 motion_mode = 1
 wall_min_slide_angle = 0.0
@@ -271,3 +274,10 @@ shape = SubResource("RectangleShape2D_bx86t")
 [node name="AngryEmote" type="Sprite2D" parent="."]
 position = Vector2(2, -16)
 texture = ExtResource("8_dvggu")
+
+[node name="DetectionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius"]
+shape = SubResource("CircleShape2D_2cwqu")
+
+[connection signal="body_entered" from="DetectionRadius" to="StateMachine/Walk" method="_on_detection_radius_body_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://clthap6kcidbf"]
+[gd_scene load_steps=23 format=3 uid="uid://clthap6kcidbf"]
 
 [ext_resource type="Script" uid="uid://cx2uwmulykh4n" path="res://Scenes/Lab Level/Lab Scripts/green_time_adder.gd" id="1_i3k4l"]
 [ext_resource type="Texture2D" uid="uid://ddoaq2ageqhu3" path="res://Assets/Sprites/Items/green_time_adder.png" id="2_j3gfc"]
+[ext_resource type="AudioStream" uid="uid://dugwfc6oqurvk" path="res://Sounds/Powerup 2.wav" id="3_eir53"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73r2s"]
 atlas = ExtResource("2_j3gfc")
@@ -158,5 +159,9 @@ position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_xnbhg")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_eir53")
+bus = &"SFX_normal"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

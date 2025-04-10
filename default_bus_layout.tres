@@ -23,5 +23,5 @@ bus/4/name = &"SFX_lower"
 bus/4/solo = false
 bus/4/mute = false
 bus/4/bypass_fx = false
-bus/4/volume_db = -16.4004
+bus/4/volume_db = -13.5162
 bus/4/send = &"Master"

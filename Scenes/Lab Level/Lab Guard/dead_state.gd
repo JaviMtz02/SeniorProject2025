@@ -22,6 +22,7 @@ func _on_enter() -> void:
 	# play some dying sound here
 	nav_agent.avoidance_enabled = false
 	anim.play("dead")
+	$"../../SFX/Dead".play()
 	await anim.animation_finished
 	lab_guard.queue_free()
 	queue_free()

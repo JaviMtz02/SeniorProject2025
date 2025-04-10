@@ -6,9 +6,13 @@ extends NodeState
 @export var detector: RayCast2D
 @onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
 @export var min_speed: float = 20
-@export var max_speed: float = 30
+@export var max_speed: float = 35
 @export var vision_cone: Polygon2D
 @onready var raycast_container: Node2D
+@export var detection_radius: Area2D
+@onready var looking_timer: Timer = $"../../LookingTimer"
+
+
 var speed: float
 
 const NUM_RAYS = 10
@@ -98,6 +102,7 @@ func update_animation(direction: Vector2):
 		else:
 			anim.play("back")
 
+
 func update_detector(direction: Vector2) -> void:
 	if direction.length() == 0:
 		return
@@ -105,7 +110,8 @@ func update_detector(direction: Vector2) -> void:
 	detector.target_position = direction * 75
 	if detector.is_colliding():
 		var collider = detector.get_collider()
-		if collider == burglar:
+		if collider.is_in_group("Burglar"):
+			guard.burglar = collider
 			transition.emit("FollowBurglar")
 
 func _on_area_entered(area: Area2D) -> void:
@@ -142,3 +148,12 @@ func update_vision_rays(direction: Vector2) -> void:
 		var end_point = ray.get_collision_point() if ray.is_colliding() else guard.global_position + dir
 		points.append(end_point - guard.global_position)
 	vision_cone.polygon = points
+
+
+func _on_detection_radius_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Burglar"):
+		nav_agent.target_position = body.global_position
+		looking_timer.start()
+
+func _on_looking_timer_timeout() -> void:
+	set_moving_target()

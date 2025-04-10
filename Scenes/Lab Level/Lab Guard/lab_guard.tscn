@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://blnvrkjcn1lsm"]
+[gd_scene load_steps=47 format=3 uid="uid://blnvrkjcn1lsm"]
 
 [ext_resource type="Script" uid="uid://x8iejjeybsnc" path="res://Scenes/Lab Level/Lab Guard/lab_guard.gd" id="1_k8k8w"]
 [ext_resource type="Texture2D" uid="uid://dk84rkj5yxo3x" path="res://Assets/Sprites/Characters/Lab_Guard.png" id="1_lags1"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cy3p6hq0wija6" path="res://Scenes/Weapons/beaker_hit_box.tscn" id="7_ieisr"]
 [ext_resource type="Script" uid="uid://5ia647s2g3y4" path="res://Scenes/Lab Level/Lab Guard/hurt_state.gd" id="7_lgdo4"]
 [ext_resource type="Script" uid="uid://dwmwmu738u5fr" path="res://Scenes/Lab Level/Lab Guard/dead_state.gd" id="8_kb3br"]
+[ext_resource type="AudioStream" uid="uid://dllfno3m5ep5t" path="res://Sounds/hurt_2.wav" id="13_7faeo"]
+[ext_resource type="AudioStream" uid="uid://b0hwfkbo52u6c" path="res://Sounds/enemy_dying.wav" id="14_vvcjb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vh65v"]
 atlas = ExtResource("1_lags1")
@@ -253,14 +255,15 @@ radius = 6.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnraj"]
 size = Vector2(20, 27)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_f0br6"]
+radius = 44.1022
+
 [node name="LabGuard" type="CharacterBody2D"]
 script = ExtResource("1_k8k8w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4owfw")
-animation = &"dead"
-frame = 13
-frame_progress = 1.0
+animation = &"forward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
@@ -323,3 +326,23 @@ collision_mask = 64
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_qnraj")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("13_7faeo")
+bus = &"SFX_normal"
+
+[node name="Dead" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("14_vvcjb")
+bus = &"SFX_normal"
+
+[node name="Angry" type="AudioStreamPlayer2D" parent="SFX"]
+bus = &"SFX_normal"
+
+[node name="DetectionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius"]
+shape = SubResource("CircleShape2D_f0br6")
+
+[connection signal="body_entered" from="DetectionRadius" to="StateMachine/Walk" method="_on_detection_radius_body_entered"]

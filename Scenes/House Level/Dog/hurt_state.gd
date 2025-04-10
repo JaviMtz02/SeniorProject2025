@@ -30,7 +30,7 @@ func  _on_next_transition() -> void:
 func _on_enter() -> void:
 	# Similarly to the bark, this stops all movement and plays the hurt animation
 	anim_sprite.play("hurt")
-	#play some hurt dog sound here
+	$"../../SFX/Hurt".play()
 	dog.velocity = Vector2.ZERO # Sets dog velocity to zero
 	dog.move_and_slide()
 	nav_agent.target_position = dog.global_position

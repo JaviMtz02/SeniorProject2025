@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://sdns7q1mfc6t"]
+[gd_scene load_steps=45 format=3 uid="uid://sdns7q1mfc6t"]
 
 [ext_resource type="Script" uid="uid://b3f5g33678lyn" path="res://Scenes/House Level/Dog/dog.gd" id="1_a8i3j"]
 [ext_resource type="Texture2D" uid="uid://r4dmsd5wykkm" path="res://Assets/Sprites/animals/1 Dog/Death.png" id="2_7lm3c"]
@@ -12,6 +12,9 @@
 [ext_resource type="Script" uid="uid://cd8nsiytjel03" path="res://Scenes/House Level/Dog/bark_state.gd" id="9_0d7xg"]
 [ext_resource type="Script" uid="uid://bb4ycxair3hv1" path="res://Scenes/House Level/Dog/hurt_state.gd" id="10_brke5"]
 [ext_resource type="Script" uid="uid://c5e331uwfa1tr" path="res://Scenes/House Level/Dog/dead_state.gd" id="12_2v3e8"]
+[ext_resource type="AudioStream" uid="uid://bknlq42kkjl3v" path="res://Sounds/dog_whine_1.mp3" id="13_biqu3"]
+[ext_resource type="AudioStream" uid="uid://2f0h3cd8eqru" path="res://Sounds/dog_bark.mp3" id="14_41woi"]
+[ext_resource type="AudioStream" uid="uid://bhfvsrcws61dc" path="res://Sounds/dead_dog.wav" id="15_41woi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33wmv"]
 atlas = ExtResource("3_hhmpc")
@@ -219,6 +222,9 @@ size = Vector2(17, 6.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12coq"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rs27m"]
+radius = 36.2215
+
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rs27m"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
@@ -265,12 +271,13 @@ dog = NodePath("../..")
 anim_sprite = NodePath("../../AnimatedSprite2D")
 detector = NodePath("../../RayCast2D")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("dog", "anim_sprite", "detector", "nav_agent")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("dog", "anim_sprite", "detector", "nav_agent", "detection_radius")]
 script = ExtResource("8_e48on")
 dog = NodePath("../..")
 anim_sprite = NodePath("../../AnimatedSprite2D")
 detector = NodePath("../../RayCast2D")
 nav_agent = NodePath("../../NavigationAgent2D")
+detection_radius = NodePath("../../DetectionRadius")
 
 [node name="Bark" type="Node" parent="StateMachine" node_paths=PackedStringArray("dog", "anim_sprite", "nav_agent", "detector")]
 script = ExtResource("9_0d7xg")
@@ -308,5 +315,24 @@ shape = SubResource("CapsuleShape2D_12coq")
 
 [node name="SFX" type="Node" parent="."]
 
+[node name="Hurt" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("13_biqu3")
+bus = &"SFX_normal"
+
+[node name="Bark" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("14_41woi")
+bus = &"SFX_normal"
+
+[node name="Dead" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("15_41woi")
+bus = &"SFX_normal"
+
+[node name="DetectionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius"]
+shape = SubResource("CircleShape2D_rs27m")
+
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_rs27m")
+
+[connection signal="body_entered" from="DetectionRadius" to="StateMachine/Walk" method="_on_detection_radius_body_entered"]

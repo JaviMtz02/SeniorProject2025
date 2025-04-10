@@ -4,7 +4,7 @@ extends NodeState
 @export var detector: RayCast2D
 @export var nav_agent: NavigationAgent2D
 @export var anim: AnimatedSprite2D
-@export var speed: float = 20
+@export var speed: float = 50
 @export var sound: AudioStreamPlayer2D
 @export var surprised_texture: Sprite2D
 @export var burglar_detection: Area2D
@@ -27,7 +27,7 @@ func _ready() -> void:
 	burglar_detection.area_entered.connect(_on_area_entered)
 	
 func _on_process(_delta: float) -> void:
-	if detector.is_colliding() and detector.get_collider() == burglar:
+	if detector.is_colliding() and detector.get_collider() == guard.burglar:
 		is_following = true
 		lost_burglar_time = 0
 	else:
@@ -37,7 +37,7 @@ func _on_process(_delta: float) -> void:
 			transition.emit("Walk")
 
 func _on_physics_process(_delta: float) -> void:
-	if is_following and burglar:
+	if is_following and guard.burglar:
 		follow_burglar()
 
 func  _on_next_transition() -> void:
@@ -47,15 +47,16 @@ func _on_enter() -> void:
 	surprised_texture.show()
 	sound.play()
 	detector.enabled = true
-	nav_agent.target_position = burglar.global_position
+	nav_agent.target_position = guard.burglar.global_position
 	if !is_following:
 		transition.emit("Walk")
 	
 func _on_exit() -> void:
+	guard.burglar = null # Resets to empty for multiplayer purposes :D
 	surprised_texture.hide()
 	
 func follow_burglar() -> void:
-	target_pos = burglar.global_position
+	target_pos = guard.burglar.global_position
 	nav_agent.target_position = target_pos
 	var next_position = nav_agent.get_next_path_position()
 	var direction = (next_position - guard.global_position).normalized()

@@ -4,7 +4,7 @@ extends NodeState
 @export var anim_sprite: AnimatedSprite2D
 @export var detector: RayCast2D
 @export var nav_agent: NavigationAgent2D
-
+@export var detection_radius: Area2D
 
 @export var min_speed: float = 15.0
 @export var max_speed: float = 30.0
@@ -81,3 +81,8 @@ func _on_area_entered(area: Area2D) -> void:
 		var damage_val = damage_source.damage
 		dog.take_damage(damage_val)
 		transition.emit("Hurt")
+
+
+func _on_detection_radius_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Burglar"):
+		nav_agent.target_position = body.global_position

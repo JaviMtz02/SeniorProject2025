@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dwyseg08pilxd"]
+[gd_scene load_steps=70 format=3 uid="uid://dwyseg08pilxd"]
 
 [ext_resource type="Texture2D" uid="uid://tlytoldcs2iw" path="res://Assets/Sprites/Characters/guard_museum_movement.png" id="1_q3qar"]
 [ext_resource type="Script" uid="uid://c7smu71aimwry" path="res://Scenes/Museum Level/Guard/guard.gd" id="1_qknjc"]
@@ -11,10 +11,12 @@
 [ext_resource type="Script" uid="uid://dv3ayl5wkoikd" path="res://Scenes/Museum Level/Guard/follow_burglar_state.gd" id="5_4tvxb"]
 [ext_resource type="Texture2D" uid="uid://5khx825i4nqy" path="res://Assets/Sprites/Characters/guard_hurt.png" id="5_wnd0n"]
 [ext_resource type="Script" uid="uid://2dw5obdbu51v" path="res://Scenes/Museum Level/Guard/frozen_state.gd" id="6_5iej3"]
-[ext_resource type="AudioStream" uid="uid://b26e54u63k6y4" path="res://Sounds/surprised.mp3" id="6_uv8vu"]
 [ext_resource type="Texture2D" uid="uid://dvfwprji0mn38" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/exclamation.png" id="10_u6qbj"]
 [ext_resource type="Script" uid="uid://dg444l0u6jbp8" path="res://Scenes/Museum Level/Guard/hurt_state.gd" id="12_0m8xq"]
 [ext_resource type="Script" uid="uid://b73roq8kqeka2" path="res://Scenes/Museum Level/Guard/dead_state.gd" id="13_ank0b"]
+[ext_resource type="AudioStream" uid="uid://svm74uc1074r" path="res://Sounds/surprised.mp3" id="14_fen0k"]
+[ext_resource type="AudioStream" uid="uid://dllfno3m5ep5t" path="res://Sounds/hurt_2.wav" id="15_go8eh"]
+[ext_resource type="AudioStream" uid="uid://b0hwfkbo52u6c" path="res://Sounds/enemy_dying.wav" id="16_mv18b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m0ve"]
 atlas = ExtResource("1_q3qar")
@@ -403,19 +405,21 @@ height = 26.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ssxe"]
 height = 28.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fen0k"]
+radius = 37.6563
+
 [node name="Guard" type="CharacterBody2D" node_paths=PackedStringArray("surprised_texture")]
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_qknjc")
 surprised_texture = NodePath("Exclamation")
-metadata/_edit_group_ = true
 
 [node name="RayCastContainer" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_ld6fn")
-animation = &"hurt_left_right"
+animation = &"forward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
@@ -442,13 +446,14 @@ script = ExtResource("3_cfqwd")
 guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector", "vision_cone")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector", "vision_cone", "detection_radius")]
 script = ExtResource("4_4xrdr")
 guard = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
 vision_cone = NodePath("../../VisionCone")
+detection_radius = NodePath("../../DetectionRadius")
 
 [node name="FollowBurglar" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "detector", "nav_agent", "anim", "sound", "surprised_texture", "burglar_detection", "vision_cone")]
 script = ExtResource("5_4tvxb")
@@ -485,7 +490,15 @@ detector = NodePath("../../RayCast2D")
 [node name="SFX" type="Node" parent="."]
 
 [node name="Surprised" type="AudioStreamPlayer2D" parent="SFX"]
-stream = ExtResource("6_uv8vu")
+stream = ExtResource("14_fen0k")
+bus = &"SFX_normal"
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("15_go8eh")
+bus = &"SFX_normal"
+
+[node name="Dead" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("16_mv18b")
 bus = &"SFX_normal"
 
 [node name="Exclamation" type="Sprite2D" parent="."]
@@ -505,3 +518,14 @@ shape = SubResource("CapsuleShape2D_vet41")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BurglarDetection"]
 position = Vector2(1, -1)
 shape = SubResource("CapsuleShape2D_6ssxe")
+
+[node name="DetectionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius"]
+shape = SubResource("CircleShape2D_fen0k")
+
+[node name="LookingTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="body_entered" from="DetectionRadius" to="StateMachine/Walk" method="_on_detection_radius_body_entered"]
+[connection signal="timeout" from="LookingTimer" to="StateMachine/Walk" method="_on_looking_timer_timeout"]

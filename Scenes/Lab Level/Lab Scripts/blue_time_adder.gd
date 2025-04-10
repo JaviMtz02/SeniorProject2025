@@ -16,6 +16,7 @@ func _ready() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Burglar") and can_add_time:
+		$Sound.play()
 		can_add_time = false
 		add_time.emit() # emits signal for burglar to add time
 		# add sound here

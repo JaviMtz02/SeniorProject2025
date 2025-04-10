@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://isyhl85rrp48"]
+[gd_scene load_steps=11 format=3 uid="uid://isyhl85rrp48"]
 
 [ext_resource type="Script" uid="uid://dqey1beoakb73" path="res://Scenes/House Level/House Scripts/minigame_door_house.gd" id="1_5rnik"]
 [ext_resource type="PackedScene" uid="uid://de5pk7rj0682j" path="res://Scenes/Minigames/Stacking Blocks/main_screen.tscn" id="2_voheo"]
 [ext_resource type="PackedScene" uid="uid://bhydsxh27v0ug" path="res://Scenes/Minigames/Plinko/main_screen.tscn" id="3_drpwo"]
 [ext_resource type="PackedScene" uid="uid://dllpfcjatqqry" path="res://Scenes/Minigames/tic_tac_toe/main_screen.tscn" id="4_anrfw"]
 [ext_resource type="Texture2D" uid="uid://pdt15ub83g4i" path="res://Assets/Sprites/Items/house_door.png" id="4_e3l4x"]
+[ext_resource type="PackedScene" uid="uid://dc8th24loxxxu" path="res://Scenes/Minigames/Pong/main_screen.tscn" id="5_w3qe4"]
 [ext_resource type="AudioStream" uid="uid://cd4mx1y26i38q" path="res://Sounds/Punch.wav" id="6_hdhjs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02303"]
@@ -20,7 +21,7 @@ properties/0/replication_mode = 1
 
 [node name="MinigameDoorHouse" type="StaticBody2D" node_paths=PackedStringArray("door_area") groups=["doors"]]
 script = ExtResource("1_5rnik")
-minigames = Array[PackedScene]([ExtResource("2_voheo"), ExtResource("3_drpwo"), ExtResource("4_anrfw")])
+minigames = Array[PackedScene]([ExtResource("2_voheo"), ExtResource("3_drpwo"), ExtResource("4_anrfw"), ExtResource("5_w3qe4")])
 door_area = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
