@@ -49,6 +49,7 @@ func _on_enter() -> void:
 			anim.play("hurt_back")
 	
 func _on_exit() -> void:
+	$"../../SFX/Hurt".play()
 	hurt_state_timer.stop()
 	nav_agent.avoidance_enabled = true
 	#anim.stop()

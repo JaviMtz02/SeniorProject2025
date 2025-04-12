@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=4 uid="uid://f1i8qyoj157k"]
+[gd_scene load_steps=92 format=4 uid="uid://f1i8qyoj157k"]
 
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="1_grgwg"]
 [ext_resource type="Script" uid="uid://ctrcexglbc7j2" path="res://Scenes/Lab Level/lab.gd" id="1_jvsnw"]
@@ -57,6 +57,9 @@
 [ext_resource type="PackedScene" uid="uid://uk1r2afjs701" path="res://Scenes/Lab Level/Interactables/green_to_red.tscn" id="54_10iag"]
 [ext_resource type="PackedScene" uid="uid://8k1qyskunxey" path="res://Scenes/player_spawn_point.tscn" id="56_0nkte"]
 [ext_resource type="PackedScene" uid="uid://bbaht3pwcox0g" path="res://Scenes/Lab Level/Interactables/portal.tscn" id="57_cs6uk"]
+[ext_resource type="AudioStream" uid="uid://b8i2iq2byhjww" path="res://Sounds/lab_level_music.mp3" id="58_m8vbj"]
+[ext_resource type="AudioStream" uid="uid://cmu7si0do7dyh" path="res://Sounds/time_warning.wav" id="59_xsaly"]
+[ext_resource type="AudioStream" uid="uid://dx3cre0xmam2x" path="res://Sounds/level_failed.wav" id="60_yqq01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpxap"]
 texture = ExtResource("1_grgwg")
@@ -9828,3 +9831,16 @@ metadata/_edit_lock_ = true
 position = Vector2(1326, -45)
 scale = Vector2(3.07046, 2.04903)
 orb = NodePath("../Loot/PurpleOrb")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="LevelMusic" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("58_m8vbj")
+bus = &"Music"
+
+[node name="TimeWarning" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("59_xsaly")
+bus = &"Music"
+
+[node name="LevelFailed" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("60_yqq01")

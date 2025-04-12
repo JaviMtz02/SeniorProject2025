@@ -337,9 +337,6 @@ bus = &"SFX_normal"
 stream = ExtResource("14_vvcjb")
 bus = &"SFX_normal"
 
-[node name="Angry" type="AudioStreamPlayer2D" parent="SFX"]
-bus = &"SFX_normal"
-
 [node name="DetectionRadius" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius"]

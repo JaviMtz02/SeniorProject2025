@@ -17,6 +17,7 @@ func  _on_next_transition() -> void:
 	pass
 
 func _on_enter() -> void:
+	$"../../SFX/Dead".play()
 	green_guard.velocity = Vector2.ZERO 
 	green_guard.move_and_slide()
 	# play some dying sound here

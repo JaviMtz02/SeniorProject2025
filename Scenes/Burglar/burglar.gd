@@ -29,6 +29,10 @@ var input_enabled: bool = true
 var in_minigame: bool = false
 var minigames_won: int = 0
 
+signal time_warning
+signal out_of_time
+signal level_complete
+
 func _ready() -> void:
 	# Disables the UI and input process for players that aren't yourself
 	if MultiplayerManager.is_multiplayer() and int(name) != multiplayer.get_unique_id():
@@ -43,6 +47,8 @@ func _ready() -> void:
 		var level_data = level_node.get_level_data()
 		time_minutes = level_data["time_minutes"]
 		time_seconds = level_data["time_seconds"]
+	if level_node.has_method("connect_signals"):
+		level_node.connect_signals(self)
 	
 
 	# Dynamically add bag capacity and adds condition for when no bag is equipped
@@ -83,6 +89,7 @@ func _input(event: InputEvent) -> void:
 		try_pick_up_loot(curr_loot)
 		
 	if event.is_action_pressed("open_minigame") and curr_minigame != null and  in_minigame == false:
+		$SFX/FootSteps.stop() # footsteps sound stops regardless of current burglar state
 		if curr_minigame.first_time:
 			curr_minigame.open_minigame()
 			curr_minigame.minigame_won.connect(_on_minigame_won)
@@ -135,7 +142,12 @@ func _on_timer_timeout() -> void:
 		else:
 			time_label.text = str(time_minutes) + ":" + str(time_seconds)
 		
-		if time_minutes == 0 and time_seconds == 0:
+		if time_minutes == 0 and time_seconds == 59:
+			time_label.add_theme_color_override("font_color", Color(1.0, 0.4, 0.4))
+			time_warning.emit()
+		if time_minutes <= 0 and time_seconds <= 0:
+			$AnimatedSprite2D.play("throw_front")
+			out_of_time.emit()
 			timer.stop()
 		## When timer ends, screen that shows stats will come out
 

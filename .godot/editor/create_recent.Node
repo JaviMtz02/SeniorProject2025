@@ -1,10 +1,11 @@
+Label
 AudioStreamPlayer2D
+AudioListener2D
+Node
 CollisionShape2D
 Area2D
-Node
 Timer
 Button
 Camera2D
 TextureRect
-Label
 ColorRect

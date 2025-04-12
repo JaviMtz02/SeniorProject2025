@@ -111,7 +111,8 @@ func _on_area_entered(area: Area2D) -> void:
 		red_guard.take_damage(damage_val)
 		emote.show()
 		max_speed += 3
-		# add some sound here with an await, after that the emote goes away
+		$"../../SFX/Hurt".play()
+		await $"../../SFX/Hurt".finished
 		emote.hide()
 
 func _on_detection_radius_body_entered(body: Node2D) -> void:

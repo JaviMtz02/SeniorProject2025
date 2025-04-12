@@ -14,6 +14,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_enter() -> void:
+	$"../../SFX/Dead".play()
 	guard.velocity = Vector2.ZERO 
 	guard.move_and_slide()
 	# play some dying sound here

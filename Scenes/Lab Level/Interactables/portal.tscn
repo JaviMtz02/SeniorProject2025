@@ -174,7 +174,9 @@ animations = [{
 radius = 6.0
 height = 42.0
 
-[node name="Portal" type="Area2D" node_paths=PackedStringArray("portal", "anim")]
+[node name="Portal" type="Area2D" node_paths=PackedStringArray("portal", "anim") groups=["winning_items"]]
+collision_layer = 18
+collision_mask = 18
 script = ExtResource("1_ea4go")
 portal = NodePath(".")
 anim = NodePath("AnimatedSprite2D")

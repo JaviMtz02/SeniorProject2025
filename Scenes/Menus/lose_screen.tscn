@@ -103,12 +103,19 @@ theme_override_font_sizes/font_size = 32
 text = "Maybe you should've tried harder"
 horizontal_alignment = 1
 
+[node name="Label3" type="Label" parent="ScreenLayout/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_fk1br")
+theme_override_font_sizes/font_size = 32
+text = "Cash Salvaged: 0"
+horizontal_alignment = 1
+
 [node name="TextureRect2" type="TextureRect" parent="ScreenLayout/Control"]
 layout_mode = 2
-offset_left = 492.0
-offset_top = 373.0
-offset_right = 690.0
-offset_bottom = 551.0
+offset_left = 499.0
+offset_top = 410.0
+offset_right = 668.0
+offset_bottom = 557.0
 texture = ExtResource("7_r1mx7")
 
 [node name="Button" type="Button" parent="ScreenLayout/Control"]
