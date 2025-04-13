@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfa27xs3r6mrl"]
+[gd_scene load_steps=6 format=3 uid="uid://dfa27xs3r6mrl"]
 
 [ext_resource type="Script" uid="uid://dp7t15ibfm01" path="res://Scenes/Weapons/attack_hit_box.gd" id="1_rui6g"]
 [ext_resource type="Texture2D" uid="uid://dxl4k55yow1o3" path="res://Assets/Sprites/Items/18.png" id="2_1cvda"]
+[ext_resource type="AudioStream" uid="uid://d0klpqkaw1gjl" path="res://Sounds/sword_hit.mp3" id="3_fu0ff"]
+[ext_resource type="AudioStream" uid="uid://bungupk0ylhj3" path="res://Sounds/woosh_2.wav" id="4_ef8lr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fu0ff"]
 radius = 4.0
@@ -12,7 +14,7 @@ script = ExtResource("1_rui6g")
 timer = NodePath("Timer")
 damage = 10
 hitbox = NodePath("Area2D")
-sound = NodePath("AudioStreamPlayer2D")
+sound = NodePath("HitSound")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_1cvda")
@@ -27,4 +29,10 @@ shape = SubResource("CapsuleShape2D_fu0ff")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fu0ff")
+bus = &"SFX_normal"
+
+[node name="ThrowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ef8lr")
+bus = &"SFX_normal"

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwdbh3e7j7ub7"]
+[gd_scene load_steps=6 format=3 uid="uid://cwdbh3e7j7ub7"]
 
 [ext_resource type="Script" uid="uid://dp7t15ibfm01" path="res://Scenes/Weapons/attack_hit_box.gd" id="1_8brn0"]
 [ext_resource type="Texture2D" uid="uid://cf3lg78vbxh4r" path="res://Assets/Sprites/Items/4.png" id="2_fgdyh"]
 [ext_resource type="AudioStream" uid="uid://cd4mx1y26i38q" path="res://Sounds/Punch.wav" id="3_ia5ya"]
+[ext_resource type="AudioStream" uid="uid://bungupk0ylhj3" path="res://Sounds/woosh_2.wav" id="4_fxtbx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b7b5t"]
 radius = 2.82843
@@ -29,3 +30,7 @@ shape = SubResource("CapsuleShape2D_b7b5t")
 
 [node name="WhackSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ia5ya")
+
+[node name="ThrowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_fxtbx")
+bus = &"SFX_normal"

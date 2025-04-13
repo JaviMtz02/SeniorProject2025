@@ -1,24 +1,8 @@
-res://Scenes/House Level/house.tscn
-res://Scenes/Burglar/burglar.gd
-res://Scenes/House Level/House Scripts/house.gd
-res://Scenes/Burglar/burglar.tscn
-res://Scenes/Museum Level/museum.gd
+res://Scenes/Weapons/beaker_hit_box.tscn
+res://Scenes/Weapons/beaker_hit_box.gd
+res://Scenes/Weapons/green_beaker_hit_box.tscn
+res://Scenes/Weapons/green_beaker_hit_box.gd
+res://Scenes/Weapons/sledge_hammer.tscn
+res://Scenes/Weapons/thorn_blade.tscn
+res://Scenes/Weapons/mighty_sword.tscn
 res://Scenes/Menus/start_menu.tscn
-res://Scenes/Museum Level/museum.tscn
-res://default_bus_layout.tres
-res://Scenes/Minigames/Pong/pong.tscn
-res://Scenes/Minigames/Pong/player.gd
-res://Scenes/Minigames/Pong/cpu.gd
-res://Scenes/Minigames/Pong/ball.gd
-res://Scripts/end_screen.gd
-res://Scripts/Singletons (Autoloads)/game_manager.gd
-res://Scenes/Menus/EndScreen.tscn
-res://Scenes/Shop/shop.tscn
-res://Scenes/Shop/shop.gd
-res://Scenes/Shop/bag_layout.gd
-res://Scenes/Shop/shoes_layout.gd
-res://Scenes/Shop/weapons_layout.gd
-res://Scenes/game_music.tscn
-res://Scripts/Singletons (Autoloads)/game_music.gd
-res://Scenes/Lab Level/lab_level.tscn
-res://Arcade Mode/Scripts/player.gd

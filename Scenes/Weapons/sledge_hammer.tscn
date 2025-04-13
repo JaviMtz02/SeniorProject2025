@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://brl7pd2h2ttsv"]
+[gd_scene load_steps=6 format=3 uid="uid://brl7pd2h2ttsv"]
 
 [ext_resource type="Texture2D" uid="uid://b1lu4y3d7gh0n" path="res://Assets/Sprites/Items/24.png" id="1_7qvf1"]
 [ext_resource type="Script" uid="uid://dp7t15ibfm01" path="res://Scenes/Weapons/attack_hit_box.gd" id="1_tbyix"]
+[ext_resource type="AudioStream" uid="uid://c4os15kmajxhj" path="res://Sounds/hammer.wav" id="3_eyhfv"]
+[ext_resource type="AudioStream" uid="uid://bungupk0ylhj3" path="res://Sounds/woosh_2.wav" id="4_o1m12"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tbyix"]
 radius = 3.53553
@@ -28,3 +30,9 @@ shape = SubResource("CapsuleShape2D_tbyix")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_eyhfv")
+bus = &"SFX_normal"
+
+[node name="ThrowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_o1m12")
+bus = &"SFX_normal"

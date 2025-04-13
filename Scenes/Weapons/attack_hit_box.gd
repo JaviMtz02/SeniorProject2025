@@ -16,6 +16,7 @@ func _ready() -> void:
 	timer.wait_time = lifetime
 	timer.one_shot = true
 	timer.timeout.connect(queue_free)
+	$ThrowSound.play()
 	timer.start()
 
 func _process(delta: float) -> void:

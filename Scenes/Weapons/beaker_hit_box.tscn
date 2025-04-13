@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy3p6hq0wija6"]
+[gd_scene load_steps=6 format=3 uid="uid://cy3p6hq0wija6"]
 
 [ext_resource type="Script" uid="uid://cj7pu8pst0dki" path="res://Scenes/Weapons/beaker_hit_box.gd" id="1_5mjk5"]
 [ext_resource type="Texture2D" uid="uid://vg6xdwbgtl88" path="res://Assets/Sprites/Loot Sprites/Lab Loot/mustard_flask.png" id="1_6yyc0"]
+[ext_resource type="AudioStream" uid="uid://bungupk0ylhj3" path="res://Sounds/woosh_2.wav" id="3_5rkgs"]
+[ext_resource type="AudioStream" uid="uid://cc15a7w2trtk3" path="res://Sounds/glass_break.wav" id="4_oopyt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o3e7w"]
 radius = 4.24264
@@ -23,3 +25,11 @@ rotation = 0.785398
 shape = SubResource("CapsuleShape2D_o3e7w")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="ThrowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5rkgs")
+bus = &"SFX_normal"
+
+[node name="CollisionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_oopyt")
+bus = &"SFX_normal"
