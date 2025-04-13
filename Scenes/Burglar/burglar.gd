@@ -145,9 +145,14 @@ func _on_timer_timeout() -> void:
 		if time_minutes == 0 and time_seconds == 59:
 			time_label.add_theme_color_override("font_color", Color(1.0, 0.4, 0.4))
 			time_warning.emit()
-		if time_minutes <= 0 and time_seconds <= 0:
+		if time_minutes <= 0 and time_seconds <= 0 and level_node.level_name != "house":
+			level_node.minigames_won = minigames_won
 			$AnimatedSprite2D.play("throw_front")
 			out_of_time.emit()
+			timer.stop()
+		elif time_minutes <= 0 and time_seconds <= 0 and level_node.level_name == "house":
+			level_node.minigames_won = minigames_won
+			level_complete.emit()
 			timer.stop()
 		## When timer ends, screen that shows stats will come out
 

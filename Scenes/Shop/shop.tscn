@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://e4xf61urqhyu"]
+[gd_scene load_steps=80 format=3 uid="uid://e4xf61urqhyu"]
 
 [ext_resource type="Script" uid="uid://b21wasrniq2ej" path="res://Scenes/Shop/shop.gd" id="1_kcc5r"]
 [ext_resource type="Texture2D" uid="uid://bbllbssa44ln" path="res://Assets/Sprites/UI/Loading Animation/Loading1.png" id="2_kcc5r"]
@@ -64,6 +64,12 @@
 [ext_resource type="Texture2D" uid="uid://ihmg6vuwl0cw" path="res://Assets/Sprites/UI/Shop/Item Info/burglar_ones.png" id="54_6d3gj"]
 [ext_resource type="Texture2D" uid="uid://1sko23pvy6aj" path="res://Assets/Sprites/UI/Shop/Item Info/running_shoes.png" id="56_p1wkc"]
 [ext_resource type="Texture2D" uid="uid://ypr65ng3et78" path="res://Assets/Sprites/UI/Shop/Item Info/hedgehog_shoes.png" id="58_w5ai8"]
+[ext_resource type="AudioStream" uid="uid://cxbgbu67bnklo" path="res://Sounds/shop_music.mp3" id="65_gff3h"]
+[ext_resource type="AudioStream" uid="uid://c418ymy17u72u" path="res://Sounds/Confirm 1.wav" id="65_tdm8a"]
+[ext_resource type="AudioStream" uid="uid://cjbhojgfa5la6" path="res://Sounds/ufo.mp3" id="66_tyggv"]
+[ext_resource type="AudioStream" uid="uid://dlns2eoxkmnmh" path="res://Sounds/Cancel 1.wav" id="67_byewl"]
+[ext_resource type="AudioStream" uid="uid://dibwlioludvdb" path="res://Sounds/Ka Ching.wav" id="68_gipkh"]
+[ext_resource type="AudioStream" uid="uid://cjgcbi54gcinp" path="res://Sounds/select_1.wav" id="70_j3rhe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3u78"]
 atlas = ExtResource("2_kcc5r")
@@ -1373,3 +1379,28 @@ texture_hover = ExtResource("18_33sfn")
 position = Vector2(576, 400)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("10_xybqi")
+
+[node name="Sounds_SFX" type="Node" parent="."]
+
+[node name="Equip" type="AudioStreamPlayer2D" parent="Sounds_SFX"]
+stream = ExtResource("65_tdm8a")
+bus = &"SFX_normal"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Sounds_SFX"]
+stream = ExtResource("65_gff3h")
+bus = &"Music"
+
+[node name="Unequip" type="AudioStreamPlayer2D" parent="Sounds_SFX"]
+stream = ExtResource("67_byewl")
+bus = &"SFX_normal"
+
+[node name="Buy" type="AudioStreamPlayer2D" parent="Sounds_SFX"]
+stream = ExtResource("68_gipkh")
+bus = &"SFX_normal"
+
+[node name="Loading" type="AudioStreamPlayer2D" parent="Sounds_SFX"]
+stream = ExtResource("66_tyggv")
+
+[node name="SwitchTab" type="AudioStreamPlayer2D" parent="Sounds_SFX"]
+stream = ExtResource("70_j3rhe")
+bus = &"SFX_normal"

@@ -9,13 +9,14 @@ var dir: Vector2
 const MAX_Y_VECTOR: float = 0.6
 
 func _ready() -> void:
-	window_size = get_viewport_rect().size
+
+	window_size = Vector2(1152.0, 800.0)
 	
 func new_ball() -> void:
 	#Randomize start position and direction
 	$"../NewBall".play()
-	position.x = window_size.x / 2
-	position.y = randi_range(200, window_size.y - 200)
+	global_position.x = window_size.x / 2
+	global_position.y = randi_range(200, window_size.y - 200)
 	speed = START_SPEED
 	dir = random_direction()
 
@@ -38,8 +39,8 @@ func random_direction() -> Vector2:
 	return _new_dir.normalized()
 
 func new_dir(collider):
-	var ball_y = position.y
-	var pad_y = collider.position.y
+	var ball_y = global_position.y
+	var pad_y = collider.global_position.y
 	var dist = ball_y - pad_y
 	var _new_dir_: Vector2
 	

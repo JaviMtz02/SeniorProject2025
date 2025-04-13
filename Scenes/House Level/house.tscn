@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://dthi565027qtm"]
+[gd_scene load_steps=71 format=4 uid="uid://dthi565027qtm"]
 
 [ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Tileset_16x16_16.png" id="1_848k0"]
 [ext_resource type="Script" uid="uid://b61exlu2om48x" path="res://Scenes/House Level/House Scripts/house.gd" id="1_dvkor"]
@@ -45,6 +45,9 @@
 [ext_resource type="PackedScene" uid="uid://ch7fp8it6w4du" path="res://Scenes/door.tscn" id="41_fdx47"]
 [ext_resource type="PackedScene" uid="uid://isyhl85rrp48" path="res://Scenes/House Level/minigame_door_house.tscn" id="42_8nuk2"]
 [ext_resource type="AudioStream" uid="uid://cwjdn1w21su5g" path="res://Sounds/warm-evening-outdoors.mp3" id="43_og0ok"]
+[ext_resource type="AudioStream" uid="uid://b6e1tw5ey018v" path="res://Sounds/house_level_music.mp3" id="46_k105v"]
+[ext_resource type="AudioStream" uid="uid://cmu7si0do7dyh" path="res://Sounds/time_warning.wav" id="47_2n002"]
+[ext_resource type="AudioStream" uid="uid://dx3cre0xmam2x" path="res://Sounds/level_failed.wav" id="48_m5qit"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_typuc"]
 texture = ExtResource("1_848k0")
@@ -10723,3 +10726,13 @@ metadata/_edit_lock_ = true
 stream = ExtResource("43_og0ok")
 autoplay = true
 bus = &"Ambience"
+
+[node name="LevelMusic" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("46_k105v")
+bus = &"Music"
+
+[node name="TimeWarning" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("47_2n002")
+
+[node name="LevelFailed" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("48_m5qit")

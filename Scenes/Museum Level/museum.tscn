@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=4 uid="uid://cyol785xdr16c"]
+[gd_scene load_steps=103 format=4 uid="uid://cyol785xdr16c"]
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
 [ext_resource type="Script" uid="uid://bxuxdnau45sj" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
@@ -62,6 +62,9 @@
 [ext_resource type="PackedScene" uid="uid://cu215lf7exnsv" path="res://Scenes/Museum Level/Loot Scenes/art_2.tscn" id="58_tsuaq"]
 [ext_resource type="PackedScene" uid="uid://b7n2468oeulka" path="res://Scenes/coin.tscn" id="59_ikusx"]
 [ext_resource type="PackedScene" uid="uid://8k1qyskunxey" path="res://Scenes/player_spawn_point.tscn" id="61_ppi4i"]
+[ext_resource type="AudioStream" uid="uid://dx3cre0xmam2x" path="res://Sounds/level_failed.wav" id="62_wk0yx"]
+[ext_resource type="AudioStream" uid="uid://cmu7si0do7dyh" path="res://Sounds/time_warning.wav" id="63_a3784"]
+[ext_resource type="AudioStream" uid="uid://bp03uauinwuuw" path="res://Sounds/museum_level_music.mp3" id="64_a3784"]
 [ext_resource type="PackedScene" uid="uid://frb0t0q7uplf" path="res://Scenes/Museum Level/Doors/minigame_door_museum_top.tscn" id="64_yqu0f"]
 [ext_resource type="PackedScene" uid="uid://brxasy1h2ujoa" path="res://Scenes/Museum Level/Doors/minigame_door_museum_down.tscn" id="65_eyw68"]
 [ext_resource type="PackedScene" uid="uid://8ccgsxyrbo8l" path="res://Scenes/Museum Level/Doors/minigame_door_museum_side.tscn" id="66_bhj46"]
@@ -10628,6 +10631,16 @@ offset_bottom = 1112.0
 color = Color(0.168627, 0.184314, 0.466667, 0.392157)
 
 [node name="Sounds" type="Node" parent="."]
+
+[node name="LevelFailed" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("62_wk0yx")
+
+[node name="TimeWarning" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("63_a3784")
+
+[node name="LevelMusic" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("64_a3784")
+bus = &"Music"
 
 [node name="MinigameDoors" type="Node" parent="."]
 

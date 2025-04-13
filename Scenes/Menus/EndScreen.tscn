@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bqfjimdcpjlgw" path="res://Assets/Sprites/UI/bg.png" id="7_6u27u"]
 [ext_resource type="Texture2D" uid="uid://d1nu8swpkn7t1" path="res://Assets/Sprites/UI/level_button.png" id="8_0ko58"]
 [ext_resource type="Texture2D" uid="uid://bouq1ng776kip" path="res://Assets/Sprites/UI/loot_button.png" id="9_1bcx5"]
-[ext_resource type="Texture2D" uid="uid://dnx8pbs7y8q5w" path="res://Assets/Sprites/UI/minigame_button.png" id="10_jjwh6"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="11_1bcx5"]
+[ext_resource type="Texture2D" uid="uid://b574hbbyp5af7" path="res://Assets/Sprites/UI/minigame_door_button.png" id="13_c80id"]
 [ext_resource type="AudioStream" uid="uid://cgpo6p41kxone" path="res://Sounds/level_complete.wav" id="15_s3xli"]
 [ext_resource type="AudioStream" uid="uid://bgy4gy21yy3mn" path="res://Sounds/cash_accumulation.wav" id="16_c80id"]
 [ext_resource type="AudioStream" uid="uid://d1njbi2ttqs58" path="res://Sounds/objective_complete.wav" id="17_yn5fy"]
@@ -170,7 +170,7 @@ texture = ExtResource("9_1bcx5")
 [node name="Minigame" type="Sprite2D" parent="ScreenLayout/Control"]
 position = Vector2(724, 296)
 scale = Vector2(4, 4)
-texture = ExtResource("10_jjwh6")
+texture = ExtResource("13_c80id")
 
 [node name="ColorRect" type="ColorRect" parent="ScreenLayout/Control"]
 layout_mode = 0

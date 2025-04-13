@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dswut4jwh0pcm"]
+
+[ext_resource type="AudioStream" uid="uid://x5pmlirsf7ch" path="res://Sounds/title_screen_music.mp3" id="1_0po0m"]
+[ext_resource type="Script" uid="uid://dfn2hxk1358r" path="res://Scripts/Singletons (Autoloads)/game_music.gd" id="1_taonh"]
+
+[node name="GameMusic" type="Node2D"]
+script = ExtResource("1_taonh")
+excluded_scenes = Array[String](["Shop", "House", "Museum", "lab_level"])
+included_scenes = Array[String](["StartMenu", "LevelSelect"])
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_0po0m")
+bus = &"Music"

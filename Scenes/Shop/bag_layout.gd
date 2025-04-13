@@ -17,10 +17,12 @@ func _ready() -> void:
 	
 
 func _on_weapons_button_pressed() -> void:
+	$"../../Sounds_SFX/SwitchTab".play()
 	bag_layout.hide()
 	weapons_layout.show()
 
 func _on_shoes_button_pressed() -> void:
+	$"../../Sounds_SFX/SwitchTab".play()
 	bag_layout.hide()
 	shoes_layout.show()
 
@@ -76,16 +78,19 @@ func _on_button_pressed(item, button_name) -> void:
 				desired_item.buy()
 				GameManager.cash -= desired_item.price
 				$"../..".available_cash.text = str(GameManager.cash)
+				$"../../Sounds_SFX/Buy".play()
 				display_button()
 		"EquipButton":
 			if desired_item.bought == true and GameManager.equipped_bag == null:
 				GameManager.equipped_bag = desired_item
 				desired_item.equip()
+				$"../../Sounds_SFX/Equip".play()
 				display_button()
 		"UnequipButton":
 			if desired_item.bought == true and desired_item.equipped == true and GameManager.equipped_bag != null:
 				GameManager.equipped_bag = null
 				desired_item.unequip()
+				$"../../Sounds_SFX/Unequip".play()
 				display_button()
 		_:
 			pass # If it's not a button with those specific names it'll just ignore them

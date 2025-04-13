@@ -1,20 +1,24 @@
-res://Scenes/Menus/start_menu.tscn
-res://Scenes/Burglar/burglar.tscn
+res://Scenes/House Level/house.tscn
 res://Scenes/Burglar/burglar.gd
-res://Scenes/Lab Level/lab_level.tscn
-res://Scenes/Lab Level/lab.gd
-res://Scenes/Lab Level/Blue Guard/blue_guard.tscn
-res://Scenes/Lab Level/Green Guard/green_guard.tscn
-res://Scenes/Lab Level/Lab Guard/lab_guard.tscn
-res://Scenes/Lab Level/Red Guard/red_guard.tscn
+res://Scenes/House Level/House Scripts/house.gd
+res://Scenes/Burglar/burglar.tscn
+res://Scenes/Museum Level/museum.gd
+res://Scenes/Menus/start_menu.tscn
+res://Scenes/Museum Level/museum.tscn
 res://default_bus_layout.tres
-res://Scenes/Lab Level/Blue Guard/hurt_state.gd
-res://Scenes/Lab Level/Blue Guard/dead_state.gd
-res://Scenes/Lab Level/Green Guard/dead_state.gd
-res://Scenes/Lab Level/Green Guard/hurt_state.gd
-res://Scenes/Lab Level/Red Guard/walk_state.gd
-res://Scenes/Lab Level/Red Guard/dead_state.gd
-res://Scenes/Menus/lose_screen.tscn
-res://Scripts/lose_screen.gd
-res://Scenes/Lab Level/Interactables/portal.tscn
-res://Scenes/Lab Level/Lab Scripts/portal.gd
+res://Scenes/Minigames/Pong/pong.tscn
+res://Scenes/Minigames/Pong/player.gd
+res://Scenes/Minigames/Pong/cpu.gd
+res://Scenes/Minigames/Pong/ball.gd
+res://Scripts/end_screen.gd
+res://Scripts/Singletons (Autoloads)/game_manager.gd
+res://Scenes/Menus/EndScreen.tscn
+res://Scenes/Shop/shop.tscn
+res://Scenes/Shop/shop.gd
+res://Scenes/Shop/bag_layout.gd
+res://Scenes/Shop/shoes_layout.gd
+res://Scenes/Shop/weapons_layout.gd
+res://Scenes/game_music.tscn
+res://Scripts/Singletons (Autoloads)/game_music.gd
+res://Scenes/Lab Level/lab_level.tscn
+res://Arcade Mode/Scripts/player.gd

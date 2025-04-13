@@ -20,6 +20,7 @@ func get_level_data(level_cash: int, level_loot: int, did_collect_all_loot: bool
 	curr_level_loot_collected = level_loot
 	collected_all_loot = did_collect_all_loot
 	completed_minigames = did_complete_minigames
+	accumulate_cash(curr_level_cash)
 
 # When level ends, cash that was successfully deposited at door will be added to the total cash amount
 func accumulate_cash(level_cash: int) -> void: 
