@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmphvjk2e1kfo"]
+
+[ext_resource type="PackedScene" uid="uid://d0og17ji5og0q" path="res://Arcade Mode/UI/health_bar.tscn" id="1_gap4x"]
+[ext_resource type="Script" uid="uid://bjmo7h5bxwc2f" path="res://Arcade Mode/Scripts/ui.gd" id="1_hx4fk"]
+[ext_resource type="PackedScene" uid="uid://xv2yo8m1p5lu" path="res://Arcade Mode/UI/ammo_bar.tscn" id="3_gqr31"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hx4fk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" parent="VBoxContainer" instance=ExtResource("1_gap4x")]
+layout_mode = 2
+
+[node name="AmmoBar" parent="VBoxContainer" instance=ExtResource("3_gqr31")]
+layout_mode = 2
+
+[connection signal="ammo_change" from="." to="VBoxContainer/AmmoBar" method="_on_ui_ammo_change"]
+[connection signal="health_change" from="." to="VBoxContainer/HealthBar" method="_on_ui_health_change"]

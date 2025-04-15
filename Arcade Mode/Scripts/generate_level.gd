@@ -20,6 +20,13 @@ func generate() -> void:
 	add_child(player)
 	player.position = map.front() * 32
 	
+	player.connect("health_change", %UI._on_player_health_change)
+	player.emit_signal("health_change", player.health)
+	
+	var weapon = player.get_node("ProjectileWeapon")
+	weapon.connect("ammo_change", %UI._on_projectile_weapon_ammo_change)
+	weapon.emit_signal("ammo_change", weapon.ammo_capacity)
+	
 	var available_rooms = walker.available_rooms
 
 	walker.queue_free()
