@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://2p14c4u2vteh"]
+
+[node name="Gun" type="Node2D"]
+
+[node name="Pivot" type="Marker2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="Pivot"]
+unique_name_in_owner = true
+
+[node name="ShootPoint" type="Marker2D" parent="Pivot/Sprite"]
+unique_name_in_owner = true

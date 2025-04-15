@@ -24,6 +24,5 @@ position = Vector2(96, 0)
 [node name="UI" parent="CanvasLayer" instance=ExtResource("3_lf25b")]
 
 [connection signal="health_change" from="Player" to="CanvasLayer/UI" method="_on_player_health_change"]
-[connection signal="ammo_change" from="Player/ProjectileWeapon" to="CanvasLayer/UI" method="_on_projectile_weapon_ammo_change"]
 
 [editable path="Player"]

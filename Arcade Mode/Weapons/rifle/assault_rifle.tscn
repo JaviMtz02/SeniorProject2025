@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://1w2fj54idfac"]
+
+[ext_resource type="PackedScene" uid="uid://2p14c4u2vteh" path="res://Arcade Mode/Weapons/gun.tscn" id="1_p8db8"]
+[ext_resource type="Script" uid="uid://sy4kcipiu1kb" path="res://Arcade Mode/Weapons/rifle/assault_rifle.gd" id="2_63444"]
+[ext_resource type="Texture2D" uid="uid://dn7mckw3lcguo" path="res://Arcade Mode/Weapons/rifle/assault_rifle.png" id="2_gci4p"]
+
+[node name="AssaultRifle" instance=ExtResource("1_p8db8")]
+script = ExtResource("2_63444")
+
+[node name="Sprite" parent="Pivot" index="0"]
+position = Vector2(12, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_gci4p")
+
+[node name="ShootPoint" parent="Pivot/Sprite" index="0"]
+position = Vector2(16.6667, -1.66667)

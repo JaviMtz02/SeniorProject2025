@@ -11,6 +11,11 @@ signal health_change(health)
 var MAX_HEALTH: int = 50
 var health: int = 50
 
+@onready var pistol: PackedScene = preload("res://Arcade Mode/Weapons/pistol/pistol.tscn")
+@onready var shotgun: PackedScene = preload("res://Arcade Mode/Weapons/shotgun/shotgun.tscn")
+@onready var rifle: PackedScene = preload("res://Arcade Mode/Weapons/rifle/assault_rifle.tscn")
+@onready var weapon: Node2D = $Weapon
+
 func _ready() -> void:
 	anim_tree.active = true
 	emit_signal("health_change", health)
@@ -60,3 +65,21 @@ func _input(event: InputEvent) -> void:
 		if health > MAX_HEALTH:
 			health = MAX_HEALTH
 		health_change.emit(health)
+	elif event.is_action_pressed("pistol"):
+		clear_weapon_children(weapon)
+		var pistol_inst = pistol.instantiate() 
+		weapon.add_child(pistol_inst)
+	elif event.is_action_pressed("shotgun"):
+		clear_weapon_children(weapon)
+		var shotgun_inst = shotgun.instantiate() 
+		weapon.add_child(shotgun_inst)
+	elif event.is_action_pressed("rifle"):
+		clear_weapon_children(weapon)
+		var rifle_inst = rifle.instantiate() 
+		weapon.add_child(rifle_inst)
+
+func clear_weapon_children(weapon: Node2D) -> void:
+	var children = weapon.get_children()
+	if children:
+		for child in children:
+			child.queue_free()
