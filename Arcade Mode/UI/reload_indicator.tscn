@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cueogalw3xv4f"]
+
+[ext_resource type="Texture2D" uid="uid://dqde8bognevv1" path="res://Arcade Mode/UI/reload_key.png" id="1_7hls0"]
+[ext_resource type="Script" uid="uid://c5s6c3rwio1a" path="res://Arcade Mode/Scripts/reload_indicator.gd" id="1_ya56g"]
+
+[node name="ReloadIndicator" type="Node2D"]
+script = ExtResource("1_ya56g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7hls0")

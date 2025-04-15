@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0og17ji5og0q"]
+
+[ext_resource type="Texture2D" uid="uid://sbf1cfqof7or" path="res://Arcade Mode/UI/healthbar.png" id="1_20vnq"]
+[ext_resource type="Script" uid="uid://blb3h23pxp85o" path="res://Arcade Mode/Scripts/health_bar.gd" id="1_a3cgi"]
+[ext_resource type="Texture2D" uid="uid://cdw4yt6wwnd7p" path="res://Arcade Mode/UI/healthbar_fill.png" id="2_a3cgi"]
+
+[node name="HealthBar" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_a3cgi")
+
+[node name="HealthProgress" type="TextureProgressBar" parent="."]
+layout_mode = 2
+max_value = 50.0
+texture_under = ExtResource("1_20vnq")
+texture_progress = ExtResource("2_a3cgi")

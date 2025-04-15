@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://xv2yo8m1p5lu"]
+
+[ext_resource type="Texture2D" uid="uid://cwu72yhfr3fhi" path="res://Arcade Mode/UI/ammo_bar.png" id="1_ivt0n"]
+[ext_resource type="Script" uid="uid://ctg8co3kl35gm" path="res://Arcade Mode/Scripts/ammo_bar.gd" id="1_lmgsv"]
+[ext_resource type="Texture2D" uid="uid://cdgws8rj2fvg7" path="res://Arcade Mode/UI/ammo_fill.png" id="2_lmgsv"]
+
+[node name="AmmoBar" type="HBoxContainer"]
+offset_right = 246.0
+offset_bottom = 54.0
+script = ExtResource("1_lmgsv")
+
+[node name="AmmoProgress" type="TextureProgressBar" parent="."]
+layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("1_ivt0n")
+texture_progress = ExtResource("2_lmgsv")
+texture_progress_offset = Vector2(48, 0)
