@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dym0nl5x237rc"]
+[gd_scene load_steps=12 format=3 uid="uid://dym0nl5x237rc"]
 
 [ext_resource type="Script" uid="uid://wudic21014jv" path="res://Scripts/level_select.gd" id="1_5xiyy"]
 [ext_resource type="Texture2D" uid="uid://bsxxuyvd1yrbx" path="res://Assets/Sprites/Background/Clouds/Clouds 2/1.png" id="1_r1hh2"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://3j22at14ldao" path="res://Assets/Sprites/Background/Clouds/Clouds 2/4.png" id="4_g2q18"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_8ijpj"]
 [ext_resource type="Script" uid="uid://ccb66rqkgn805" path="res://Scripts/grab_focus.gd" id="7_k3gi6"]
+[ext_resource type="Texture2D" uid="uid://b18pnqi8xs2cc" path="res://Assets/Sprites/UI/museum_level.png" id="7_orx1g"]
+[ext_resource type="Texture2D" uid="uid://bn8luaugoimqq" path="res://Assets/Sprites/UI/lab_level.png" id="8_fkxht"]
+[ext_resource type="Texture2D" uid="uid://bvhs7l1u4sapm" path="res://Assets/Sprites/UI/house_level.png" id="9_y60pb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dyf1r"]
 
@@ -125,6 +128,11 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 
+[node name="TextureRect" type="TextureRect" parent="museumLevel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_orx1g")
+expand_mode = 5
+
 [node name="Divider3" type="Control" parent="museumLevel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
@@ -203,6 +211,11 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 
+[node name="TextureRect" type="TextureRect" parent="labLevel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_fkxht")
+expand_mode = 5
+
 [node name="Divider3" type="Control" parent="labLevel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
@@ -280,6 +293,11 @@ mouse_filter = 2
 [node name="Divider2" type="Control" parent="houseLevel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="houseLevel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_y60pb")
+expand_mode = 5
 
 [node name="Divider3" type="Control" parent="houseLevel/MarginContainer/VBoxContainer"]
 layout_mode = 2

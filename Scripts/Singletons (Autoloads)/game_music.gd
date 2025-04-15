@@ -7,7 +7,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
-	$Music.play()
+	_check_scene_name(get_tree().current_scene.name)
 	get_tree().connect("node_added",Callable(self, "_on_node_added"))
 
 func _on_node_added(node) -> void:

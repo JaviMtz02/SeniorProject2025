@@ -223,7 +223,7 @@ size = Vector2(17, 6.5)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12coq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rs27m"]
-radius = 36.2215
+radius = 54.0833
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rs27m"]
 properties/0/path = NodePath(".:position")

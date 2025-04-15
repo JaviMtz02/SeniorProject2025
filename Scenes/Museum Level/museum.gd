@@ -22,6 +22,7 @@ func _ready() -> void:
 	# This gets the amount of scenens in the loot and coins node, this will be useful for 
 	# the achievement system that I (Javi) want to incorporate
 	$Sounds/LevelMusic.play()
+	print(door_code)
 	max_loot = loot.get_children().size() + coins.get_children().size()
 
 func get_level_data() -> Dictionary:

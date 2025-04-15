@@ -14,6 +14,7 @@ signal minigame_lost
 signal freeze
 
 var by_door: bool = false
+var first_time: bool = true
 
 func _ready() -> void:
 	random_number = randi_range(100000, 999999)

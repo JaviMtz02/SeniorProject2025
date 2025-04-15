@@ -430,7 +430,6 @@ simplify_path = true
 avoidance_enabled = true
 radius = 15.0
 neighbor_distance = 4231.34
-debug_enabled = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 

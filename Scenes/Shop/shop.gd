@@ -3,32 +3,28 @@ extends Node2D
 const MAIN_MENU: String = "res://Scenes/Menus/start_menu.tscn"
 
 var mouse_pos: Vector2
-@onready var go_back_button: TextureButton = $GoBackButton
-@onready var available_cash: Label = $ShopLayout/Cash
+@onready var go_back_button: TextureButton = $ShopLayer/ShopLayout/GoBackButton
+@onready var available_cash: Label = $ShopLayer/ShopLayout/Cash
 
 func _ready() -> void:
 	# Initially hides the whole shop for loading effect
 	$Sounds_SFX/Loading.play()
-	$ShopLayout.hide()
-	$InitialLayout/Loading.play("default")
+	$ShopLayer/ShopLayout.hide()
+	$ShopLayer/InitialLayout/Loading.play("default")
 	go_back_button.pressed.connect(_on_go_back_pressed)
 	await get_tree().create_timer(2.0).timeout
 	# Hides loading screen and shows shop, shop should show bag screen first
 	$Sounds_SFX/Loading.play()
-	$InitialLayout.hide()
-	$InitialLayout/Loading.stop()
-	$ShopLayout.show()
-	$ShopLayout/WeaponsLayout.hide()
-	$ShopLayout/ShoesLayout.hide()
+	$ShopLayer/InitialLayout.hide()
+	$ShopLayer/InitialLayout/Loading.stop()
+	$ShopLayer/ShopLayout.show()
+	$ShopLayer/ShopLayout/WeaponsLayout.hide()
+	$ShopLayer/ShopLayout/ShoesLayout.hide()
 	$Sounds_SFX/Music.play()
 	available_cash.text = str(GameManager.cash)
 	
 func _process(_delta: float) -> void:
-	mouse_pos = get_global_mouse_position()
-	if mouse_pos.x > 0.0 and mouse_pos.x < 1152.0 and mouse_pos.y > 0.0 and mouse_pos.y < 800.0:
-		$Pointer.position = get_global_mouse_position()
-	else:
-		$Pointer.position = $Pointer.global_position
+	$Camera2D.position.x += 0.5
 
 func _on_go_back_pressed() -> void:
 	$Sounds_SFX/SwitchTab.play()

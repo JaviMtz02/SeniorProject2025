@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://pfkjcpfc7tf2"]
 
-[ext_resource type="Script" uid="uid://cp2vr8r6gmw68" path="res://Scripts/loot.gd" id="1_n22fs"]
+[ext_resource type="Script" uid="uid://ddxncutktaiwf" path="res://Scenes/Museum Level/Museum Scripts/mona_lisa.gd" id="1_4b6ds"]
 [ext_resource type="Texture2D" uid="uid://c7la81jffchd4" path="res://Assets/Sprites/Loot Sprites/Museum Loot/mona_lisa.png" id="2_3at6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aurxr"]
 size = Vector2(26, 31)
 
 [node name="MonaLisa" type="Area2D" groups=["loot"]]
-script = ExtResource("1_n22fs")
+script = ExtResource("1_4b6ds")
 value = 200.0
 inventory_space_req = 100.0
 
