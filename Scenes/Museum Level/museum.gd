@@ -38,6 +38,7 @@ func deposit_loot(value: int, loot_amount: int) -> void:
 func connect_signals(player) -> void:
 	player.time_warning.connect(on_time_warning)
 	player.out_of_time.connect(on_out_of_time)
+	player.level_complete.connect(on_level_complete)
 
 func on_time_warning() -> void:
 	$Sounds/TimeWarning.play()

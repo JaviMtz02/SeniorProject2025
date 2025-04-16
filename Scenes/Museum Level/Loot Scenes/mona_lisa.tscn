@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aurxr"]
 size = Vector2(26, 31)
 
-[node name="MonaLisa" type="Area2D" groups=["loot"]]
+[node name="MonaLisa" type="Area2D" groups=["loot", "winning_items"]]
 script = ExtResource("1_4b6ds")
 value = 200.0
 inventory_space_req = 100.0

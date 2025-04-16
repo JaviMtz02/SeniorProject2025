@@ -179,6 +179,11 @@ func poi_nearby(poi) -> void:
 		curr_minigame = poi
 		minigame_button.show()
 		minigame_button.play()
+	if poi.is_in_group("winning_items"):
+		level_node.minigames_won = minigames_won
+		# Play some sound here indicating level was won, should give enough time for player to pick item if they have the space for it
+		level_complete.emit()
+		timer.stop()
 
 func poi_leave(poi) -> void:
 	#loot

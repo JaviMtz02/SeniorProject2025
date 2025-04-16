@@ -22,7 +22,6 @@ func _ready() -> void:
 	# This gets the amount of scenens in the loot and coins node, this will be useful for 
 	# the achievement system that I (Javi) want to incorporate
 	$Sounds/LevelMusic.play()
-	portal.level_complete.connect(on_level_complete)
 	max_loot = loot.get_children().size() + coins.get_children().size()
 
 func get_level_data() -> Dictionary:
@@ -34,6 +33,7 @@ func get_level_data() -> Dictionary:
 func connect_signals(player) -> void:
 	player.time_warning.connect(on_time_warning)
 	player.out_of_time.connect(on_out_of_time)
+	player.level_complete.connect(on_level_complete)
 	
 func deposit_loot(value: int, loot_amount: int) -> void:
 	total_value += value

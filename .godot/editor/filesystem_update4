@@ -1,23 +1,10 @@
 res://Scenes/Menus/start_menu.tscn
-res://Scenes/House Level/minigame_door_house.tscn
-res://Scenes/House Level/house.tscn
-res://Scenes/House Level/Dog/dog.tscn
 res://Scenes/Museum Level/Loot Scenes/mona_lisa.tscn
-res://Scenes/Museum Level/Museum Scripts/mona_lisa.gd
-res://Scenes/Burglar/burglar.tscn
 res://Scenes/Burglar/burglar.gd
 res://Scenes/Museum Level/museum.gd
 res://Scenes/Museum Level/museum.tscn
-res://Scenes/Museum Level/Museum Scripts/office_door.gd
-res://Scenes/Shop/shop.tscn
-res://Scenes/Shop/shop.gd
-res://Scenes/Menus/lose_screen.tscn
-res://Scripts/Singletons (Autoloads)/game_music.gd
-res://Scenes/game_music.tscn
-res://Scenes/Shop/bag_layout.gd
-res://Scenes/Shop/shoes_layout.gd
-res://Scenes/Shop/weapons_layout.gd
-res://Scenes/Museum Level/Guard/guard.tscn
-res://Scenes/Lab Level/Blue Guard/blue_guard.tscn
-res://Scenes/Lab Level/Red Guard/red_guard.tscn
-res://Scenes/Menus/level_select.tscn
+res://Scenes/Lab Level/Lab Scripts/portal.gd
+res://Scenes/Lab Level/Interactables/portal.tscn
+res://Scenes/Lab Level/lab_level.tscn
+res://Scenes/Lab Level/lab.gd
+res://Scenes/Burglar/burglar.tscn
