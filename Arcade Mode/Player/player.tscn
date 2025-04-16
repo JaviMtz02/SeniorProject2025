@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hex28wg6vi6h" path="res://Arcade Mode/Scripts/player.gd" id="1_fuy8f"]
 [ext_resource type="Texture2D" uid="uid://dapy7ihxe6n1i" path="res://Arcade Mode/Player/player-sheet.png" id="2_hwcyv"]
-[ext_resource type="PackedScene" uid="uid://o3u2niaa51el" path="res://Arcade Mode/Weapons/shotgun/shotgun.tscn" id="2_sp0yw"]
+[ext_resource type="PackedScene" uid="uid://c34y5ojb7irkq" path="res://Arcade Mode/Weapons/pistol/pistol.tscn" id="2_sp0yw"]
 [ext_resource type="PackedScene" uid="uid://8d283k08i3wl" path="res://Arcade Mode/Environment/light.tscn" id="3_hwcyv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwcyv"]
@@ -300,7 +300,7 @@ script = ExtResource("1_fuy8f")
 
 [node name="Weapon" type="Node2D" parent="."]
 
-[node name="Shotgun" parent="Weapon" instance=ExtResource("2_sp0yw")]
+[node name="Pistol" parent="Weapon" instance=ExtResource("2_sp0yw")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k56mv")

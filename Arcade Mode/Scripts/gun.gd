@@ -28,10 +28,11 @@ const RELOAD_INDICATOR = preload("res://Arcade Mode/UI/reload_indicator.tscn")
 
 func _ready() -> void:
 	var weapon = get_parent()
-	var player = weapon.get_parent()
-	var weapon_pivot = player.get_node("WeaponPivot")
-	position = Vector2.ZERO
-	global_position = weapon_pivot.global_position
+	if weapon:
+		var player = weapon.get_parent()
+		var weapon_pivot = player.get_node("WeaponPivot")
+		position = Vector2.ZERO
+		global_position = weapon_pivot.global_position
 	
 	Input.set_custom_mouse_cursor(CURSOR, Input.CURSOR_ARROW, Vector2(24, 24))
 	ammo_change.emit(ammo_capacity, max_ammo)

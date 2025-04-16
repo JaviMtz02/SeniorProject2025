@@ -13,4 +13,4 @@ scale = Vector2(0.597, 0.55)
 texture = ExtResource("3_kcdrl")
 
 [node name="ShootPoint" parent="Pivot/Sprite" index="0"]
-position = Vector2(5.65326, -2.04545)
+position = Vector2(5.65327, -2.04545)

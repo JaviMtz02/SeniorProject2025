@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpfre6wjtfk2v"]
+
+[ext_resource type="PackedScene" uid="uid://b3nckhx38yno3" path="res://Arcade Mode/Weapons/weapon_pickup.tscn" id="1_fo7b8"]
+[ext_resource type="Script" uid="uid://cpnegfd2s6rde" path="res://Arcade Mode/Weapons/rifle/rifle_pickup.gd" id="2_5isxc"]
+[ext_resource type="Texture2D" uid="uid://dn7mckw3lcguo" path="res://Arcade Mode/Weapons/rifle/assault_rifle.png" id="3_8gu20"]
+
+[node name="RiflePickup" instance=ExtResource("1_fo7b8")]
+script = ExtResource("2_5isxc")
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(0, -5)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_8gu20")

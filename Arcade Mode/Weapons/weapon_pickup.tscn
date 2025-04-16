@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3nckhx38yno3"]
+
+[ext_resource type="Texture2D" uid="uid://w2f5qq641q1k" path="res://Arcade Mode/Weapons/shadow.png" id="1_12wfv"]
+[ext_resource type="Script" uid="uid://b6yeoa2pydsjt" path="res://Arcade Mode/Weapons/weapon_pickup.gd" id="1_66mx4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_12wfv"]
+radius = 21.0
+
+[node name="WeaponPickup" type="Area2D"]
+script = ExtResource("1_66mx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_12wfv")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = ExtResource("1_12wfv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

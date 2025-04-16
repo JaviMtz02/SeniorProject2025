@@ -17,8 +17,10 @@ var health: int = 50
 @onready var weapon: Node2D = $Weapon
 
 func _ready() -> void:
+	add_to_group("player")
 	anim_tree.active = true
 	emit_signal("health_change", health)
+	SignalBus.weapon_swap.connect(_on_weapon_swap)
 	update_blend_position()
 
 func _physics_process(_delta: float) -> void:
@@ -78,8 +80,13 @@ func _input(event: InputEvent) -> void:
 		var rifle_inst = rifle.instantiate() 
 		weapon.add_child(rifle_inst)
 
-func clear_weapon_children(weapon: Node2D) -> void:
-	var children = weapon.get_children()
+func _on_weapon_swap(new_gun_scene):
+	clear_weapon_children(weapon)
+	var new_gun = new_gun_scene.instantiate()
+	weapon.add_child(new_gun)
+
+func clear_weapon_children(weapon_node: Node2D) -> void:
+	var children = weapon_node.get_children()
 	if children:
 		for child in children:
 			child.queue_free()
