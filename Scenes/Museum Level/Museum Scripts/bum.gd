@@ -15,12 +15,15 @@ var curr_text = ""
 var passcode_reversed: String = "" # get passcode from global museum script
 var msg: String = ""
 var has_shown_passcode: bool = false
+var first_time: bool = true
 
 signal freeze
 signal near_minigame
 signal away_minigame
 signal minigame_won
 signal minigame_lost
+
+signal play_game
 @warning_ignore("unused_signal")
 
 func _ready() -> void:
@@ -42,10 +45,12 @@ func _process(_delta: float) -> void:
 		start_typing_effect()
 
 func start_typing_effect() -> void:
+	first_time = false
 	control.show()
 	await type_multiple_texts(0, 3)
 	control.hide()
-	open_minigame()
+	play_game.emit()
+	#open_minigame()
 
 func type_multiple_texts(start: int, end: int) -> void:
 	for i in range(start, end):
@@ -72,15 +77,15 @@ func wait_for_next_text() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Burglar"):
+		near_minigame.emit()
 		burglar_near = true
-		anim.show()
-		anim.play()
+		body.poi_nearby(self)
 
-
-func _on_area_2d_body_exited(_body: Node2D) -> void:
-	burglar_near = false
-	anim.hide()
-	anim.stop()
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Burglar"):
+		away_minigame.emit()
+		burglar_near = false
+		body.poi_leave(self)
 
 func open_minigame() -> void:
 	var title_screen = minigame.instantiate()
@@ -100,12 +105,12 @@ func _on_minigame_started(title_screen: Node2D) -> void:
 	minigame_instance.game_lost.connect(_on_minigame_lost)
 	
 func _on_minigame_won() -> void:
-	minigame_won.emit()
 	has_won_and_encountered = true
 	control.show()
 	await type_multiple_texts(3, 7)
 	await show_and_type_text(msg)
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
+	minigame_won.emit()
 	control.hide()
 	control.hide()
 

@@ -2,6 +2,7 @@ extends Node2D
 
 @export var to_weapons_button: Button
 @export var to_shoes_button: Button
+@export var cash_label: Label
 @onready var bag_layout: Node2D = $"."
 @onready var weapons_layout: Node2D = $"../WeaponsLayout"
 @onready var shoes_layout: Node2D = $"../ShoesLayout"
@@ -77,7 +78,7 @@ func _on_button_pressed(item, button_name) -> void:
 			elif desired_item.bought == false && GameManager.cash >= desired_item.price:
 				desired_item.buy()
 				GameManager.cash -= desired_item.price
-				$"../Cash".available_cash.text = str(GameManager.cash)
+				cash_label.text = str(GameManager.cash)
 				$"../../../Sounds_SFX/Buy".play()
 				display_button()
 		"EquipButton":

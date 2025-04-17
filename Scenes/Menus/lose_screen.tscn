@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcahyk5b0wn4d"]
+[gd_scene load_steps=9 format=3 uid="uid://bcahyk5b0wn4d"]
 
 [ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="1_23cbs"]
 [ext_resource type="Script" uid="uid://bcgmuspn217km" path="res://Scripts/lose_screen.gd" id="1_io8wc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bqfjimdcpjlgw" path="res://Assets/Sprites/UI/bg.png" id="5_d0ni1"]
 [ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="6_fk1br"]
 [ext_resource type="Texture2D" uid="uid://47rr4h0pvgub" path="res://Assets/Sprites/UI/behind_bars.png" id="7_r1mx7"]
+[ext_resource type="AudioStream" uid="uid://c4cs7uvx0fnip" path="res://Sounds/lose_screen_initial.wav" id="8_k4h5x"]
 
 [node name="LoseScreen" type="Node2D"]
 script = ExtResource("1_io8wc")
@@ -127,5 +128,9 @@ offset_bottom = 625.0
 theme_override_fonts/font = ExtResource("6_fk1br")
 theme_override_font_sizes/font_size = 64
 text = "Main Menu"
+
+[node name="LoseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_k4h5x")
+bus = &"SFX_normal"
 
 [connection signal="pressed" from="ScreenLayout/Control/Button" to="." method="_on_button_pressed"]

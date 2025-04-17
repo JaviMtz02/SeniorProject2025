@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dym0nl5x237rc"]
+[gd_scene load_steps=13 format=3 uid="uid://dym0nl5x237rc"]
 
 [ext_resource type="Script" uid="uid://wudic21014jv" path="res://Scripts/level_select.gd" id="1_5xiyy"]
 [ext_resource type="Texture2D" uid="uid://bsxxuyvd1yrbx" path="res://Assets/Sprites/Background/Clouds/Clouds 2/1.png" id="1_r1hh2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b18pnqi8xs2cc" path="res://Assets/Sprites/UI/museum_level.png" id="7_orx1g"]
 [ext_resource type="Texture2D" uid="uid://bn8luaugoimqq" path="res://Assets/Sprites/UI/lab_level.png" id="8_fkxht"]
 [ext_resource type="Texture2D" uid="uid://bvhs7l1u4sapm" path="res://Assets/Sprites/UI/house_level.png" id="9_y60pb"]
+[ext_resource type="AudioStream" uid="uid://db3wow65icvp" path="res://Sounds/level_enter.wav" id="11_fkxht"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dyf1r"]
 
@@ -359,6 +360,10 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("5_8ijpj")
 theme_override_font_sizes/font_size = 35
 text = "Back"
+
+[node name="LevelEnter" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_fkxht")
+bus = &"Music"
 
 [connection signal="pressed" from="museumLevel/MarginContainer/VBoxContainer/museum" to="." method="_on_museum_pressed"]
 [connection signal="pressed" from="labLevel/MarginContainer/VBoxContainer/lab" to="." method="_on_lab_pressed"]

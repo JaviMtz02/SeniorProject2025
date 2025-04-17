@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dmoatjjldboop"]
+[gd_scene load_steps=22 format=3 uid="uid://dmoatjjldboop"]
 
 [ext_resource type="Texture2D" uid="uid://corn7wj6qmye2" path="res://Assets/Sprites/Background/Clouds/Clouds 8/1.png" id="1_5sxot"]
 [ext_resource type="Script" uid="uid://b2uf1x5jx24kg" path="res://Scripts/end_screen.gd" id="1_kp4rt"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://cgpo6p41kxone" path="res://Sounds/level_complete.wav" id="15_s3xli"]
 [ext_resource type="AudioStream" uid="uid://bgy4gy21yy3mn" path="res://Sounds/cash_accumulation.wav" id="16_c80id"]
 [ext_resource type="AudioStream" uid="uid://d1njbi2ttqs58" path="res://Sounds/objective_complete.wav" id="17_yn5fy"]
+[ext_resource type="AudioStream" uid="uid://gli3h5v38ckn" path="res://Sounds/screen_music.mp3" id="18_yn5fy"]
 
 [sub_resource type="Animation" id="Animation_yn5fy"]
 length = 0.001
@@ -249,6 +250,10 @@ bus = &"SFX_normal"
 [node name="ObjectiveComplete" type="AudioStreamPlayer2D" parent="SFX"]
 stream = ExtResource("17_yn5fy")
 bus = &"SFX_normal"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("18_yn5fy")
+bus = &"SFX_lower"
 
 [connection signal="pressed" from="ScreenLayout/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="ScreenLayout/Control/ScoreTimer" to="." method="_on_score_timer_timeout"]

@@ -4,6 +4,8 @@ extends Node2D
 @export var excluded_scenes: Array[String] = []
 @export var included_scenes: Array[String] = []
 
+@onready var music: AudioStreamPlayer2D = $Music
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame

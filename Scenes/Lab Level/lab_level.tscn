@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=4 uid="uid://f1i8qyoj157k"]
+[gd_scene load_steps=93 format=4 uid="uid://f1i8qyoj157k"]
 
 [ext_resource type="Texture2D" uid="uid://7ej8eovvsr01" path="res://Assets/Sprites/Nature/decor_16x16.png" id="1_grgwg"]
 [ext_resource type="Script" uid="uid://ctrcexglbc7j2" path="res://Scenes/Lab Level/lab.gd" id="1_jvsnw"]
@@ -60,6 +60,7 @@
 [ext_resource type="AudioStream" uid="uid://b8i2iq2byhjww" path="res://Sounds/lab_level_music.mp3" id="58_m8vbj"]
 [ext_resource type="AudioStream" uid="uid://cmu7si0do7dyh" path="res://Sounds/time_warning.wav" id="59_xsaly"]
 [ext_resource type="AudioStream" uid="uid://dx3cre0xmam2x" path="res://Sounds/level_failed.wav" id="60_yqq01"]
+[ext_resource type="AudioStream" uid="uid://ctweu1ofwyae4" path="res://Sounds/level_complete.mp3" id="61_kyqjy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpxap"]
 texture = ExtResource("1_grgwg")
@@ -9844,3 +9845,7 @@ bus = &"Music"
 
 [node name="LevelFailed" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("60_yqq01")
+
+[node name="LevelComplete" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("61_kyqjy")
+bus = &"Music"

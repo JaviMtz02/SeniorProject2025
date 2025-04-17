@@ -11,6 +11,7 @@ func _ready() -> void:
 	var index = randi() % msgs.size()
 	cash_salvaged_label.text = "Cash Salvaged: " + str(GameManager.curr_level_cash)
 	msg.text = msgs[index]
+	$LoseSound.play()
 	
 func _process(_delta: float) -> void:
 	camera.position.x += 0.5

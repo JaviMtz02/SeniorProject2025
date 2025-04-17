@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=4 uid="uid://cyol785xdr16c"]
+[gd_scene load_steps=104 format=4 uid="uid://cyol785xdr16c"]
 
 [ext_resource type="Texture2D" uid="uid://75i65fkgc3l" path="res://Assets/Sprites/Background/Setting Design/Museum/Museum_room_1_layer_1.png" id="1_40f3k"]
 [ext_resource type="Script" uid="uid://bxuxdnau45sj" path="res://Scenes/Museum Level/museum.gd" id="1_73gus"]
@@ -66,6 +66,7 @@
 [ext_resource type="AudioStream" uid="uid://cmu7si0do7dyh" path="res://Sounds/time_warning.wav" id="63_a3784"]
 [ext_resource type="AudioStream" uid="uid://bp03uauinwuuw" path="res://Sounds/museum_level_music.mp3" id="64_a3784"]
 [ext_resource type="PackedScene" uid="uid://frb0t0q7uplf" path="res://Scenes/Museum Level/Doors/minigame_door_museum_top.tscn" id="64_yqu0f"]
+[ext_resource type="AudioStream" uid="uid://ctweu1ofwyae4" path="res://Sounds/level_complete.mp3" id="65_e00l2"]
 [ext_resource type="PackedScene" uid="uid://brxasy1h2ujoa" path="res://Scenes/Museum Level/Doors/minigame_door_museum_down.tscn" id="65_eyw68"]
 [ext_resource type="PackedScene" uid="uid://8ccgsxyrbo8l" path="res://Scenes/Museum Level/Doors/minigame_door_museum_side.tscn" id="66_bhj46"]
 [ext_resource type="PackedScene" uid="uid://oo7cdda6ms30" path="res://Scenes/Museum Level/Doors/office_door.tscn" id="66_yq2xv"]
@@ -10640,6 +10641,10 @@ stream = ExtResource("63_a3784")
 
 [node name="LevelMusic" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("64_a3784")
+bus = &"Music"
+
+[node name="LevelComplete" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("65_e00l2")
 bus = &"Music"
 
 [node name="MinigameDoors" type="Node" parent="."]

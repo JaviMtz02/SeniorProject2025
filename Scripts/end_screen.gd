@@ -36,7 +36,7 @@ func _ready() -> void:
 	button.hide()
 	value_label.hide()
 	loot_obtained_label.hide()
-	
+	$SFX/Music.play()
 	anim_player.play("end_screen")
 
 	

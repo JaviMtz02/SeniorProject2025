@@ -246,10 +246,11 @@ theme_override_fonts/font = ExtResource("19_t1yip")
 theme_override_font_sizes/font_size = 128
 text = "0"
 
-[node name="BagLayout" type="Node2D" parent="ShopLayer/ShopLayout" node_paths=PackedStringArray("to_weapons_button", "to_shoes_button")]
+[node name="BagLayout" type="Node2D" parent="ShopLayer/ShopLayout" node_paths=PackedStringArray("to_weapons_button", "to_shoes_button", "cash_label")]
 script = ExtResource("12_33sfn")
 to_weapons_button = NodePath("Tabs/WeaponTab/Button")
 to_shoes_button = NodePath("Tabs/ShoeTab/Button")
+cash_label = NodePath("../Cash")
 
 [node name="Tabs" type="Control" parent="ShopLayer/ShopLayout/BagLayout"]
 layout_mode = 3
@@ -679,11 +680,12 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("40_tyggv")
 
-[node name="WeaponsLayout" type="Node2D" parent="ShopLayer/ShopLayout" node_paths=PackedStringArray("to_bags_button", "to_shoes_button")]
+[node name="WeaponsLayout" type="Node2D" parent="ShopLayer/ShopLayout" node_paths=PackedStringArray("to_bags_button", "to_shoes_button", "cash_label")]
 visible = false
 script = ExtResource("18_0inpq")
 to_bags_button = NodePath("Tabs/BagTab/Button")
 to_shoes_button = NodePath("Tabs/ShoeTab/Button")
+cash_label = NodePath("../Cash")
 
 [node name="Tabs" type="Control" parent="ShopLayer/ShopLayout/WeaponsLayout"]
 layout_mode = 3
@@ -1111,11 +1113,12 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("50_gipkh")
 
-[node name="ShoesLayout" type="Node2D" parent="ShopLayer/ShopLayout" node_paths=PackedStringArray("to_bags_button", "to_weapons_button")]
+[node name="ShoesLayout" type="Node2D" parent="ShopLayer/ShopLayout" node_paths=PackedStringArray("to_bags_button", "to_weapons_button", "cash_label")]
 visible = false
 script = ExtResource("19_tknpo")
 to_bags_button = NodePath("Tabs/BagTab/Button")
 to_weapons_button = NodePath("Tabs/WeaponTab/Button")
+cash_label = NodePath("../Cash")
 
 [node name="Tabs" type="Control" parent="ShopLayer/ShopLayout/ShoesLayout"]
 layout_mode = 3
@@ -1428,6 +1431,7 @@ texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("58_w5ai8")
 
 [node name="GoBackButton" type="TextureButton" parent="ShopLayer/ShopLayout"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 40.0
 offset_right = 35.0

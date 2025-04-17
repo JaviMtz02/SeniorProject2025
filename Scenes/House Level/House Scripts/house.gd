@@ -45,4 +45,7 @@ func on_level_complete() -> void:
 	if loot_obtained == max_loot:
 		collected_all_loot = true
 	GameManager.get_level_data(total_value, loot_obtained, collected_all_loot, won_all_minigames)
+	$Sounds/LevelMusic.stop()
+	$Sounds/LevelComplete.play()
+	await $Sounds/LevelComplete.finished
 	get_tree().change_scene_to_file(WIN_SCREEN)

@@ -51,6 +51,9 @@ func on_out_of_time() -> void:
 	get_tree().change_scene_to_file(LOSE_SCREEN)
 
 func on_level_complete() -> void:
+	$Sounds/LevelMusic.stop()
+	$Sounds/LevelComplete.play()
+	await $Sounds/LevelComplete.finished
 	if minigames_won == 7:
 		won_all_minigames = true
 	if loot_obtained == max_loot:

@@ -36,7 +36,7 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Bum" type="StaticBody2D" node_paths=PackedStringArray("label", "control", "anim") groups=["doors"]]
+[node name="Bum" type="StaticBody2D" node_paths=PackedStringArray("label", "control", "anim") groups=["Bum", "doors"]]
 script = ExtResource("1_kieay")
 label = NodePath("Control/Label")
 texts = Array[String](["\"I've been living in this place for years, they've never gotten this exhibit done.\"", "\"You should scram before I sick the guards on you.\"", "\"But tell you what, since you can be useful, beat me at this game and I'll give you something that'll make us rich!\"", "\"BLAST, you got lucky that time\"", "\"Well, as promised, here's your prize...\"", "\"Use these numbers to enter the Curator's office, they have something in there that's very valuable\"", "\"Good luck, heh heh heh heh heh\"", "\"You're such a doofus.\"", "\"No point in alerting the guards you're here, with your brain you'll give yourself away!\"", "\"Now scram before I alert them\"", "\"Scram Doofus\""])

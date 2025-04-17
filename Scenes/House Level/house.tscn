@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://dthi565027qtm"]
+[gd_scene load_steps=72 format=4 uid="uid://dthi565027qtm"]
 
 [ext_resource type="Texture2D" uid="uid://dfkaemy6j22ds" path="res://Assets/Sprites/Floors_Walls/Tileset_16x16_16.png" id="1_848k0"]
 [ext_resource type="Script" uid="uid://b61exlu2om48x" path="res://Scenes/House Level/House Scripts/house.gd" id="1_dvkor"]
@@ -48,6 +48,7 @@
 [ext_resource type="AudioStream" uid="uid://b6e1tw5ey018v" path="res://Sounds/house_level_music.mp3" id="46_k105v"]
 [ext_resource type="AudioStream" uid="uid://cmu7si0do7dyh" path="res://Sounds/time_warning.wav" id="47_2n002"]
 [ext_resource type="AudioStream" uid="uid://dx3cre0xmam2x" path="res://Sounds/level_failed.wav" id="48_m5qit"]
+[ext_resource type="AudioStream" uid="uid://ctweu1ofwyae4" path="res://Sounds/level_complete.mp3" id="49_2n002"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_typuc"]
 texture = ExtResource("1_848k0")
@@ -10736,3 +10737,7 @@ stream = ExtResource("47_2n002")
 
 [node name="LevelFailed" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("48_m5qit")
+
+[node name="LevelComplete" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("49_2n002")
+bus = &"Music"

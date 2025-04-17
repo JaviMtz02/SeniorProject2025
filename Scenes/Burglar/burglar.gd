@@ -91,13 +91,21 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("open_minigame") and curr_minigame != null and  in_minigame == false:
 		$SFX/FootSteps.stop() # footsteps sound stops regardless of current burglar state
 		if curr_minigame.first_time:
-			curr_minigame.open_minigame()
-			curr_minigame.minigame_won.connect(_on_minigame_won)
-			curr_minigame.minigame_lost.connect(_on_minigame_lost)
-			in_minigame = true
+			if curr_minigame.is_in_group("Bum"):
+				curr_minigame.play_game.connect(_on_play_level)
+				curr_minigame.minigame_won.connect(_on_minigame_won)
+				curr_minigame.minigame_lost.connect(_on_minigame_lost)
+			else:
+				curr_minigame.minigame_won.connect(_on_minigame_won)
+				curr_minigame.minigame_lost.connect(_on_minigame_lost)
+				curr_minigame.open_minigame()
+				in_minigame = true
 		else:
-			in_minigame = true
-			curr_minigame.open_minigame()
+			if curr_minigame.is_in_group("Bum"):
+				pass
+			else:
+				in_minigame = true
+				curr_minigame.open_minigame()
 
 func try_pick_up_loot(loot: Area2D) -> void:
 	# If the current inventory size is less than the total inventory space, and if those two are greater
@@ -236,3 +244,7 @@ func _on_mob_detection_area_entered(area: Area2D) -> void:
 # Time adder signal that adds time to the game!
 func _on_add_time() -> void:
 	time_minutes += 1
+
+func _on_play_level() -> void:
+	curr_minigame.open_minigame()
+	in_minigame = true
