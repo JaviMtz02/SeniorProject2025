@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://k1oqr76r6jkd"]
+
+[ext_resource type="Script" uid="uid://dp7t15ibfm01" path="res://Scenes/Weapons/attack_hit_box.gd" id="1_4200y"]
+[ext_resource type="Texture2D" uid="uid://r7ox8ua4383i" path="res://Assets/Sprites/Items/21.png" id="1_fdu6t"]
+[ext_resource type="AudioStream" uid="uid://bungupk0ylhj3" path="res://Sounds/woosh_2.wav" id="3_m1hqf"]
+[ext_resource type="AudioStream" uid="uid://cnqx7hasrtt28" path="res://Sounds/Thud.wav" id="4_hxfcj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4200y"]
+radius = 1.41421
+height = 21.2132
+
+[node name="Baton" type="Node2D" node_paths=PackedStringArray("timer", "hitbox", "sound")]
+script = ExtResource("1_4200y")
+attack_speed = 200.0
+timer = NodePath("Timer")
+hitbox = NodePath("Area2D")
+sound = NodePath("HitSound")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fdu6t")
+
+[node name="Area2D" type="Area2D" parent="." groups=["mob_near"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_4200y")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="ThrowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m1hqf")
+bus = &"SFX_normal"
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_hxfcj")
+bus = &"SFX_normal"

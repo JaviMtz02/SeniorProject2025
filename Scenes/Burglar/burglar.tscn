@@ -372,9 +372,9 @@ bus = &"SFX_normal"
 stream = ExtResource("19_bymvf")
 bus = &"SFX_lower"
 
-[node name="MobDetection" type="Area2D" parent="."]
+[node name="MobDetection" type="Area2D" parent="." groups=["blocks"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MobDetection" groups=["blocks"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MobDetection"]
 position = Vector2(0.5, 2)
 scale = Vector2(0.989599, 1.02261)
 shape = SubResource("RectangleShape2D_mf82g")

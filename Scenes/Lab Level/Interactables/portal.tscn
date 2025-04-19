@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://bbaht3pwcox0g"]
+[gd_scene load_steps=28 format=3 uid="uid://bbaht3pwcox0g"]
 
 [ext_resource type="Script" uid="uid://bikhlqbnvxg5j" path="res://Scenes/Lab Level/Lab Scripts/portal.gd" id="1_ea4go"]
 [ext_resource type="Texture2D" uid="uid://b1qc51yxh01ty" path="res://Assets/Sprites/Items/Purple Portal Sprite Sheet.png" id="1_gp7hm"]
+[ext_resource type="AudioStream" uid="uid://cjbhojgfa5la6" path="res://Sounds/ufo.mp3" id="3_gehjw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_va4xk"]
 atlas = ExtResource("1_gp7hm")
@@ -188,5 +189,8 @@ animation = &"portal_opening"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_6uw2n")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_gehjw")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

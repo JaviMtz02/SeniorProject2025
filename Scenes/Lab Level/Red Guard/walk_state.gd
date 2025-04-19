@@ -37,7 +37,7 @@ func _on_process(_delta: float) -> void:
 		var collider = detector.get_collider()
 		if collider.is_in_group("Burglar"):
 			red_guard.burglar = collider
-			transition.emit("FollowBurglar")
+			transition.emit("Attack")
 
 func _on_physics_process(_delta: float) -> void:
 	if nav_agent.is_navigation_finished():

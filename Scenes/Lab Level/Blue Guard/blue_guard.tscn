@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bg7fofw2p6tku"]
+[gd_scene load_steps=46 format=3 uid="uid://bg7fofw2p6tku"]
 
 [ext_resource type="Script" uid="uid://d2wbgk4kij2sa" path="res://Scenes/Lab Level/Blue Guard/blue_guard.gd" id="1_5sr8v"]
 [ext_resource type="Texture2D" uid="uid://bherk0lrhp6l2" path="res://Assets/Sprites/Characters/Blue_Lab_Guard.png" id="1_keeug"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dr5aesj4sfq0g" path="res://Scenes/Lab Level/Blue Guard/follow_burglar_state.gd" id="6_26kga"]
 [ext_resource type="Script" uid="uid://4tm3l0hm87sm" path="res://Scenes/Lab Level/Blue Guard/hurt_state.gd" id="9_6d3f3"]
 [ext_resource type="Script" uid="uid://fqhxs1n6c6uj" path="res://Scenes/Lab Level/Blue Guard/dead_state.gd" id="10_hdx4m"]
+[ext_resource type="PackedScene" uid="uid://b13msb0p0kafo" path="res://Scenes/Weapons/blue_beaker.tscn" id="10_p7r0g"]
 [ext_resource type="AudioStream" uid="uid://csp6tl54g210e" path="res://Sounds/hurt_5.mp3" id="12_5x7en"]
 [ext_resource type="AudioStream" uid="uid://b0hwfkbo52u6c" path="res://Sounds/enemy_dying.wav" id="12_ojb6t"]
 
@@ -293,13 +294,13 @@ anim = NodePath("../../AnimatedSprite2D")
 nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
 
-[node name="FollowBurglar" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "detector", "nav_agent", "anim", "burglar_detection")]
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("blue_guard", "detector", "anim", "nav_agent")]
 script = ExtResource("6_26kga")
-guard = NodePath("../..")
+blue_guard = NodePath("../..")
 detector = NodePath("../../RayCast2D")
-nav_agent = NodePath("../../NavigationAgent2D")
 anim = NodePath("../../AnimatedSprite2D")
-burglar_detection = NodePath("../../BurglarDetection")
+throwable = ExtResource("10_p7r0g")
+nav_agent = NodePath("../../NavigationAgent2D")
 
 [node name="Hurt" type="Node" parent="StateMachine" node_paths=PackedStringArray("blue_guard", "anim", "nav_agent", "detector")]
 script = ExtResource("9_6d3f3")

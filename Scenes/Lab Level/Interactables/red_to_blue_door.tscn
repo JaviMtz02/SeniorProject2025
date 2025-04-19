@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7b2jtmvha80x"]
+[gd_scene load_steps=16 format=3 uid="uid://b7b2jtmvha80x"]
 
 [ext_resource type="Texture2D" uid="uid://rnm3rxrkx8nq" path="res://Assets/Sprites/Items/door_top_red_to_blue.png" id="1_uu5bd"]
 [ext_resource type="Script" uid="uid://cxh203xxvjvpb" path="res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd" id="1_uxatp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://0hf2gpbiqaux" path="res://Scenes/Minigames/Drop Items/main_screen.tscn" id="11_jelhq"]
 [ext_resource type="PackedScene" uid="uid://xv5u0owo36ok" path="res://Scenes/Minigames/Find the Item/main_screen.tscn" id="12_5wt0m"]
 [ext_resource type="PackedScene" uid="uid://dy1m3i5wp5iw4" path="res://Scenes/Minigames/keypad/main_screen.tscn" id="13_a85eb"]
+[ext_resource type="AudioStream" uid="uid://cd4mx1y26i38q" path="res://Sounds/Punch.wav" id="13_r8214"]
 [ext_resource type="PackedScene" uid="uid://dshcmh2afvovk" path="res://Scenes/Minigames/Memorize Code/main_screen.tscn" id="14_ek81t"]
 [ext_resource type="PackedScene" uid="uid://i37lgfcedlvb" path="res://Scenes/Minigames/memory_game/main_screen.tscn" id="15_2ab11"]
 [ext_resource type="PackedScene" uid="uid://cc20sd71o8fvk" path="res://Scenes/Minigames/Throw Items/main_screen.tscn" id="16_fj31p"]
@@ -36,3 +37,7 @@ shape = SubResource("RectangleShape2D_n01l0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-0.5, -3)
 shape = SubResource("RectangleShape2D_lj3cv")
+
+[node name="DoorOpening" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_r8214")
+bus = &"SFX_normal"

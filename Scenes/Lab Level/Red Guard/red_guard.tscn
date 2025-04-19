@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bxwr7q0mpyrrw"]
+[gd_scene load_steps=40 format=3 uid="uid://bxwr7q0mpyrrw"]
 
 [ext_resource type="Texture2D" uid="uid://cj6s3lqpdatx7" path="res://Assets/Sprites/Characters/Red_Lab_Guard.png" id="1_aejxo"]
 [ext_resource type="Script" uid="uid://21jyyckaup6j" path="res://Scenes/Lab Level/Red Guard/red_guard.gd" id="1_xvphh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://d4ctiiaw8p7hx" path="res://Scenes/Lab Level/Red Guard/follow_burglar_state.gd" id="6_xg3yt"]
 [ext_resource type="Script" uid="uid://baukx5s33l22h" path="res://Scenes/Lab Level/Red Guard/dead_state.gd" id="8_1qavp"]
 [ext_resource type="Texture2D" uid="uid://kawayol40m2s" path="res://Assets/Sprites/UI/knife.png" id="8_dvggu"]
+[ext_resource type="PackedScene" uid="uid://dqxv40yqfj17b" path="res://Scenes/Weapons/red_beaker.tscn" id="9_hdy2s"]
 [ext_resource type="AudioStream" uid="uid://b7h2vrfp5us08" path="res://Sounds/hurt_4.mp3" id="11_kmtw6"]
 [ext_resource type="AudioStream" uid="uid://b0hwfkbo52u6c" path="res://Sounds/enemy_dying.wav" id="12_epum4"]
 
@@ -249,13 +250,13 @@ anim = NodePath("../../AnimatedSprite2D")
 nav_agent = NodePath("../../NavigationAgent2D")
 detector = NodePath("../../RayCast2D")
 
-[node name="FollowBurglar" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "detector", "nav_agent", "anim", "burglar_detection")]
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("red_guard", "detector", "anim", "nav_agent")]
 script = ExtResource("6_xg3yt")
-guard = NodePath("../..")
+red_guard = NodePath("../..")
 detector = NodePath("../../RayCast2D")
-nav_agent = NodePath("../../NavigationAgent2D")
 anim = NodePath("../../AnimatedSprite2D")
-burglar_detection = NodePath("../../BurglarDetection")
+throwable = ExtResource("9_hdy2s")
+nav_agent = NodePath("../../NavigationAgent2D")
 
 [node name="Dead" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector")]
 script = ExtResource("8_1qavp")

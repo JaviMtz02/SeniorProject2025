@@ -52,7 +52,9 @@ func _on_minigame_started(title_screen: Node2D) -> void:
 func _on_minigame_won() -> void:
 	minigame_won.emit()
 	toggled_door.queue_free() # opens door that needs this door to open
+	$DoorOpening.play()
 	hide()
+	await $DoorOpening.finished
 	queue_free()
 	
 func _on_minigame_lost() -> void:

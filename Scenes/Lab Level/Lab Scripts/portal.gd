@@ -16,6 +16,7 @@ func _on_portal_opened() -> void:
 	portal.show()
 	anim.play("portal_opening")
 	await anim.animation_finished
+	$Sound.play()
 	anim.play("portal_open")
 
 func _on_area_entered(area: Area2D) -> void:

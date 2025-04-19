@@ -60,9 +60,9 @@ func _on_minigame_started(title_screen: Node2D) -> void:
 
 func _on_minigame_won() -> void:
 	minigame_won.emit()
-	#$DoorOpening.play()
+	$DoorOpening.play()
 	hide()
-	#await $DoorOpening.finished
+	await $DoorOpening.finished
 	queue_free()
 	
 func _on_minigame_lost() -> void:

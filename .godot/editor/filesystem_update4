@@ -1,24 +1,29 @@
-res://Scenes/Menus/EndScreen.tscn
-res://Scripts/end_screen.gd
-res://Scenes/Menus/start_menu.tscn
-res://Scenes/Menus/lose_screen.tscn
-res://Scripts/lose_screen.gd
-res://Scenes/Menus/level_select.tscn
-res://Scripts/level_select.gd
-res://Scenes/game_music.tscn
-res://Scripts/Singletons (Autoloads)/game_music.gd
-res://Scenes/House Level/house.tscn
-res://Scenes/House Level/House Scripts/house.gd
-res://Scenes/Shop/shop.tscn
-res://Scenes/Shop/shoes_layout.gd
-res://Scenes/Shop/weapons_layout.gd
-res://Scenes/Shop/bag_layout.gd
+res://Scenes/Weapons/red_beaker.tscn
+res://Scenes/Weapons/blue_beaker.tscn
+res://Scenes/Lab Level/Blue Guard/blue_guard.tscn
+res://Scenes/Lab Level/Blue Guard/walk_state.gd
+res://Scenes/Lab Level/Lab Guard/lab_guard.tscn
+res://Scenes/Lab Level/Blue Guard/follow_burglar_state.gd
+res://Scenes/Lab Level/Red Guard/red_guard.tscn
+res://Scenes/Lab Level/Red Guard/walk_state.gd
+res://Scenes/Lab Level/Red Guard/follow_burglar_state.gd
+res://Scenes/Weapons/baton.tscn
+res://Scenes/Weapons/beaker_hit_box.tscn
 res://Scenes/Burglar/burglar.tscn
-res://Scenes/Museum Level/Museum Scripts/bum.gd
-res://Scenes/Museum Level/bum.tscn
-res://Scenes/Museum Level/museum.tscn
-res://Scenes/Museum Level/Doors/minigame_door_museum_top.tscn
+res://Scenes/Weapons/beaker_hit_box.gd
 res://Scenes/Burglar/burglar.gd
-res://Scenes/Museum Level/museum.gd
-res://Scenes/Lab Level/lab_level.tscn
-res://Scenes/Lab Level/lab.gd
+res://Scenes/Weapons/green_beaker_hit_box.tscn
+res://Scenes/Weapons/green_beaker_hit_box.gd
+res://Scenes/Museum Level/museum.tscn
+res://Scenes/Museum Level/Guard/follow_burglar_state.gd
+res://Scenes/Museum Level/Doors/minigame_door_museum_down.tscn
+res://Scenes/Museum Level/Doors/minigame_door_museum_side.tscn
+res://Scenes/Museum Level/Doors/minigame_door_museum_top.tscn
+res://Scenes/Museum Level/Doors/office_door.tscn
+res://Scenes/Museum Level/Museum Scripts/office_door.gd
+res://Scenes/Lab Level/Interactables/blue_to_red_door.tscn
+res://Scenes/Lab Level/Lab Scripts/lab_minigame_door.gd
+res://Scenes/Lab Level/Interactables/portal.tscn
+res://Scenes/Lab Level/Lab Scripts/portal.gd
+res://Scenes/Lab Level/Interactables/red_to_blue_door.tscn
+res://Scenes/Lab Level/Interactables/red_to_green_door.tscn

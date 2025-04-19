@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://dwyseg08pilxd"]
+[gd_scene load_steps=71 format=3 uid="uid://dwyseg08pilxd"]
 
 [ext_resource type="Texture2D" uid="uid://tlytoldcs2iw" path="res://Assets/Sprites/Characters/guard_museum_movement.png" id="1_q3qar"]
 [ext_resource type="Script" uid="uid://c7smu71aimwry" path="res://Scenes/Museum Level/Guard/guard.gd" id="1_qknjc"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://5khx825i4nqy" path="res://Assets/Sprites/Characters/guard_hurt.png" id="5_wnd0n"]
 [ext_resource type="Script" uid="uid://2dw5obdbu51v" path="res://Scenes/Museum Level/Guard/frozen_state.gd" id="6_5iej3"]
 [ext_resource type="Texture2D" uid="uid://dvfwprji0mn38" path="res://Assets/Sprites/Minigame Sprites/Coin Matching/exclamation.png" id="10_u6qbj"]
+[ext_resource type="PackedScene" uid="uid://k1oqr76r6jkd" path="res://Scenes/Weapons/baton.tscn" id="11_go8eh"]
 [ext_resource type="Script" uid="uid://dg444l0u6jbp8" path="res://Scenes/Museum Level/Guard/hurt_state.gd" id="12_0m8xq"]
 [ext_resource type="Script" uid="uid://b73roq8kqeka2" path="res://Scenes/Museum Level/Guard/dead_state.gd" id="13_ank0b"]
 [ext_resource type="AudioStream" uid="uid://svm74uc1074r" path="res://Sounds/surprised.mp3" id="14_fen0k"]
@@ -464,6 +465,7 @@ sound = NodePath("../../SFX/Surprised")
 surprised_texture = NodePath("../../Exclamation")
 burglar_detection = NodePath("../../BurglarDetection")
 vision_cone = NodePath("../../VisionCone")
+throwable = ExtResource("11_go8eh")
 
 [node name="Frozen" type="Node" parent="StateMachine" node_paths=PackedStringArray("guard", "anim", "nav_agent", "detector")]
 script = ExtResource("6_5iej3")
@@ -524,7 +526,7 @@ shape = SubResource("CapsuleShape2D_6ssxe")
 shape = SubResource("CircleShape2D_fen0k")
 
 [node name="LookingTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 4.0
 
 [connection signal="body_entered" from="DetectionRadius" to="StateMachine/Walk" method="_on_detection_radius_body_entered"]
-[connection signal="timeout" from="LookingTimer" to="StateMachine/Walk" method="_on_looking_timer_timeout"]
+[connection signal="timeout" from="LookingTimer" to="StateMachine/FollowBurglar" method="_on_looking_timer_timeout"]

@@ -9,10 +9,12 @@ extends NodeState
 @export var surprised_texture: Sprite2D
 @export var burglar_detection: Area2D
 @export var vision_cone: Polygon2D
+@export var throwable: PackedScene
 @onready var raycast_container: Node2D
 
-@onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
+@onready var looking_timer: Timer = $"../../LookingTimer"
 
+var attack_timer: Timer
 var target_pos: Vector2
 var is_following: bool = true
 var lost_burglar_time: float = 0.0
@@ -27,17 +29,10 @@ func _ready() -> void:
 	burglar_detection.area_entered.connect(_on_area_entered)
 	
 func _on_process(_delta: float) -> void:
-	if detector.is_colliding() and detector.get_collider() == guard.burglar:
-		is_following = true
-		lost_burglar_time = 0
-	else:
-		lost_burglar_time += _delta
-		if lost_burglar_time > MAX_LOST_TIME:
-			is_following = false
-			transition.emit("Walk")
+	pass
 
 func _on_physics_process(_delta: float) -> void:
-	if is_following and guard.burglar:
+	if guard.burglar:
 		follow_burglar()
 
 func  _on_next_transition() -> void:
@@ -47,12 +42,14 @@ func _on_enter() -> void:
 	surprised_texture.show()
 	sound.play()
 	detector.enabled = true
-	nav_agent.target_position = guard.burglar.global_position
-	if !is_following:
-		transition.emit("Walk")
+	looking_timer.start()
+	if detector.is_colliding():
+		var collider = detector.get_collider()
+		if collider.is_in_group("Burglar"):
+			throw_item()
 	
 func _on_exit() -> void:
-	guard.burglar = null # Resets to empty for multiplayer purposes :D
+	#guard.burglar = null # Resets to empty for multiplayer purposes :D
 	surprised_texture.hide()
 	
 func follow_burglar() -> void:
@@ -120,3 +117,23 @@ func update_vision_rays(direction: Vector2) -> void:
 		var end_point = ray.get_collision_point() if ray.is_colliding() else guard.global_position + dir
 		points.append(end_point - guard.global_position)
 	vision_cone.polygon = points
+
+func _on_looking_timer_timeout() -> void:
+	transition.emit("Walk")
+
+func throw_item() -> void:
+	attack_timer = Timer.new()
+	attack_timer.wait_time = 0.4  # Duration of attack animation	
+	attack_timer.one_shot = true
+	attack_timer.timeout.connect(_on_attack_finished)
+	add_child(attack_timer)
+	
+	var direction_to_burglar = (guard.burglar.global_position - guard.global_position).normalized()
+	var attack_instance = throwable.instantiate()
+	attack_timer.start()  # Start cooldown timer
+	get_parent().add_child(attack_instance)
+	attack_instance.global_position = guard.global_position
+	attack_instance.direction = direction_to_burglar
+	
+func _on_attack_finished() -> void:
+	pass

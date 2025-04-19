@@ -4,13 +4,11 @@ extends NodeState
 @export var anim: AnimatedSprite2D
 @export var nav_agent: NavigationAgent2D
 @export var detector: RayCast2D
-@onready var burglar: CharacterBody2D = get_tree().get_first_node_in_group("Burglar")
 @export var min_speed: float = 20
 @export var max_speed: float = 35
 @export var vision_cone: Polygon2D
 @onready var raycast_container: Node2D
 @export var detection_radius: Area2D
-@onready var looking_timer: Timer = $"../../LookingTimer"
 
 
 var speed: float
@@ -40,7 +38,8 @@ func set_moving_target() -> void:
 func _on_process(_delta: float) -> void:
 	if detector.is_colliding():
 		var collider = detector.get_collider()
-		if collider == burglar:
+		if collider.is_in_group("Burglar"):
+			guard.burglar = collider
 			transition.emit("FollowBurglar")
 
 func _on_physics_process(_delta: float) -> void:
@@ -152,8 +151,9 @@ func update_vision_rays(direction: Vector2) -> void:
 
 func _on_detection_radius_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Burglar"):
+		guard.burglar = body
 		nav_agent.target_position = body.global_position
-		looking_timer.start()
+		transition.emit("FollowBurglar")
 
 func _on_looking_timer_timeout() -> void:
 	set_moving_target()

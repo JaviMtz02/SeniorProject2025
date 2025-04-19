@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bmhge748b37y5" path="res://Scenes/Minigames/Memory Game/main_screen.tscn" id="5_rke33"]
 [ext_resource type="PackedScene" uid="uid://bpd3ffp1lyhyv" path="res://Scenes/Minigames/Rock Paper Scissors/main_screen.tscn" id="7_qha7t"]
 [ext_resource type="PackedScene" uid="uid://b3iw0n8le3pkv" path="res://Scenes/Minigames/Door Unlocking/main_screen.tscn" id="10_httg8"]
-[ext_resource type="AudioStream" uid="uid://cd4mx1y26i38q" path="res://Sounds/Punch.wav" id="11_bjysx"]
 [ext_resource type="PackedScene" uid="uid://0hf2gpbiqaux" path="res://Scenes/Minigames/Drop Items/main_screen.tscn" id="11_ccr07"]
 [ext_resource type="PackedScene" uid="uid://xv5u0owo36ok" path="res://Scenes/Minigames/Find the Item/main_screen.tscn" id="12_njftt"]
 [ext_resource type="PackedScene" uid="uid://dshcmh2afvovk" path="res://Scenes/Minigames/Memorize Code/main_screen.tscn" id="13_3gfof"]
+[ext_resource type="AudioStream" uid="uid://dpopfhrp3mrl0" path="res://Sounds/computer_1.wav" id="13_on730"]
 [ext_resource type="PackedScene" uid="uid://cc20sd71o8fvk" path="res://Scenes/Minigames/Throw Items/main_screen.tscn" id="14_n0pi0"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hhluh"]
@@ -44,4 +44,4 @@ position = Vector2(3, 16)
 shape = SubResource("RectangleShape2D_67mj1")
 
 [node name="DoorOpening" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_bjysx")
+stream = ExtResource("13_on730")
