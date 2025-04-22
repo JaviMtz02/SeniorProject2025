@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o6rrr3wqc1g4"
-path="res://.godot/imported/stun_gun.png-12a822532e60ac2cce7c3b5ae8fb6048.ctex"
+uid="uid://bq0h0cce06x5h"
+path="res://.godot/imported/double_bladed_sword_info.png-14a34dc608913c530c959a6ba354fbd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI/Shop/Item Info/stun_gun.png"
-dest_files=["res://.godot/imported/stun_gun.png-12a822532e60ac2cce7c3b5ae8fb6048.ctex"]
+source_file="res://Assets/Sprites/UI/Shop/Item Info/double_bladed_sword_info.png"
+dest_files=["res://.godot/imported/double_bladed_sword_info.png-14a34dc608913c530c959a6ba354fbd2.ctex"]
 
 [params]
 

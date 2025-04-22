@@ -18,11 +18,14 @@ func _ready() -> void:
 	connect("area_entered", Callable(self, "_on_area_entered"))
 	connect("area_exited", Callable(self, "_on_area_exited"))
 	
-func _on_area_entered(area: Area2D) -> void: 
-	if area.is_in_group("loot_interaction"):
-		open_portal.emit()
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("loot_interaction") and int(area.get_parent().name) == multiplayer.get_unique_id():
 		emit_signal("burglar_nearby", self)
+		open_portal.emit()
+		area.get_parent().poi_nearby(self)
 		
-func _on_area_exited(_area: Area2D) -> void:
-	emit_signal("burglar_away", self)
+func _on_area_exited(area: Area2D) -> void:
+	if area.is_in_group("loot_interaction") and int(area.get_parent().name) == multiplayer.get_unique_id():
+		emit_signal("burglar_away", self)
+		area.get_parent().poi_leave(self)
 		

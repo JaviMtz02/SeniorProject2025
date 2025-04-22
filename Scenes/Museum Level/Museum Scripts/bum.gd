@@ -16,6 +16,7 @@ var passcode_reversed: String = "" # get passcode from global museum script
 var msg: String = ""
 var has_shown_passcode: bool = false
 var first_time: bool = true
+var is_talking: bool = false
 
 signal freeze
 signal near_minigame
@@ -36,15 +37,16 @@ func _ready() -> void:
 	label.text = ""
 
 func _process(_delta: float) -> void:
-	if has_won_and_encountered and Input.is_action_just_pressed("open_minigame") and burglar_near:
+	if has_won_and_encountered and Input.is_action_just_pressed("open_minigame") and burglar_near and not is_talking:
 		control.show()
 		await show_and_type_text(msg)
 		control.hide()
-	elif burglar_near and Input.is_action_just_pressed("open_minigame") and not has_encountered:
+	elif burglar_near and Input.is_action_just_pressed("open_minigame") and not has_encountered and not is_talking:
 		anim.hide()
 		start_typing_effect()
 
 func start_typing_effect() -> void:
+	is_talking = true
 	first_time = false
 	control.show()
 	await type_multiple_texts(0, 3)
@@ -110,6 +112,7 @@ func _on_minigame_won() -> void:
 	await type_multiple_texts(3, 7)
 	await show_and_type_text(msg)
 	await get_tree().create_timer(2.0).timeout
+	is_talking = false
 	minigame_won.emit()
 	control.hide()
 	control.hide()
@@ -117,6 +120,7 @@ func _on_minigame_won() -> void:
 func _on_minigame_lost() -> void:
 	minigame_lost.emit()
 	control.show()
+	is_talking = false
 	await type_multiple_texts(7, 10)
 	control.hide()
 	has_encountered = false

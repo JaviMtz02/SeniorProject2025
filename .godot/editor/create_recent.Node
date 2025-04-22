@@ -1,8 +1,9 @@
+Label
+Sprite2D
 AudioStreamPlayer2D
 Timer
 CollisionShape2D
 Area2D
-Sprite2D
 Node
 TextureRect
 ColorRect
@@ -10,5 +11,4 @@ ParallaxLayer
 ParallaxBackground
 CanvasLayer
 Camera2D
-Label
 AudioListener2D

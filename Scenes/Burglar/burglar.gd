@@ -20,7 +20,7 @@ extends CharacterBody2D
 var curr_inventory_size: int = 0 # Checks to see if the burglar has not surpassed the bounds of what the inventory allows
 var curr_loot: Area2D = null # When we're near loot, we can get its details with this variable
 var curr_minigame: StaticBody2D = null
-var inventory: Array = [] # This is to know how many single pieces of loot were obtained, Could probably do this with a variable
+var inventory: int = 0 # This is to know how many single pieces of loot were obtained, Could probably do this with a variable
 var value_accu: int = 0 # current value of loot obtained, this resets to zero when deposited
 var time_seconds: int
 var time_minutes: int
@@ -77,8 +77,8 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("deposit") and near_deposit: # If you're near the door then you can deposit your loot
 		$SFX/Deposit.play()
-		level_node.deposit_loot(value_accu, inventory.size()) # That way you can pick up more, 
-		inventory.clear()
+		level_node.deposit_loot(value_accu, inventory) # That way you can pick up more, 
+		inventory = 0
 		value_accu = 0
 		curr_inventory_size = 0
 		value_label.text = str(value_accu)
@@ -92,6 +92,7 @@ func _input(event: InputEvent) -> void:
 		$SFX/FootSteps.stop() # footsteps sound stops regardless of current burglar state
 		if curr_minigame.first_time:
 			if curr_minigame.is_in_group("Bum"):
+				input_enabled = false
 				curr_minigame.play_game.connect(_on_play_level)
 				curr_minigame.minigame_won.connect(_on_minigame_won)
 				curr_minigame.minigame_lost.connect(_on_minigame_lost)
@@ -102,7 +103,7 @@ func _input(event: InputEvent) -> void:
 				in_minigame = true
 		else:
 			if curr_minigame.is_in_group("Bum"):
-				pass
+				input_enabled = false
 			else:
 				in_minigame = true
 				curr_minigame.open_minigame()
@@ -113,7 +114,7 @@ func try_pick_up_loot(loot: Area2D) -> void:
 	# we can pick up the loot
 	if curr_inventory_size <= inventory_space and (inventory_space - curr_inventory_size) >= loot.inventory_space_req:
 		curr_inventory_size += loot.inventory_space_req
-		inventory.append(loot)
+		inventory += 1
 		value_accu += loot.value
 		poi_leave(loot)
 		
@@ -156,10 +157,12 @@ func _on_timer_timeout() -> void:
 		if time_minutes <= 0 and time_seconds <= 0 and level_node.level_name != "house":
 			level_node.minigames_won = minigames_won
 			$AnimatedSprite2D.play("throw_front")
+			level_node.deposit_loot(value_accu, inventory)
 			out_of_time.emit()
 			timer.stop()
 		elif time_minutes <= 0 and time_seconds <= 0 and level_node.level_name == "house":
 			level_node.minigames_won = minigames_won
+			level_node.deposit_loot(value_accu, inventory)
 			level_complete.emit()
 			timer.stop()
 		## When timer ends, screen that shows stats will come out
@@ -190,6 +193,7 @@ func poi_nearby(poi) -> void:
 	if poi.is_in_group("winning_items"):
 		level_node.minigames_won = minigames_won
 		# Play some sound here indicating level was won, should give enough time for player to pick item if they have the space for it
+		level_node.deposit_loot(value_accu, inventory)
 		level_complete.emit()
 		timer.stop()
 

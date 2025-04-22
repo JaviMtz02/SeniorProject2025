@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bihoucpqpqaef"
-path="res://.godot/imported/plasma_gun.png-9998b6fde16c39565dce926cf7bf11e8.ctex"
+uid="uid://b6yrq00ft5j3i"
+path="res://.godot/imported/26.png-b5e1e5b2ed5c857584e23d1b96cb53e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI/Shop/Item Info/plasma_gun.png"
-dest_files=["res://.godot/imported/plasma_gun.png-9998b6fde16c39565dce926cf7bf11e8.ctex"]
+source_file="res://Assets/Sprites/Items/26.png"
+dest_files=["res://.godot/imported/26.png-b5e1e5b2ed5c857584e23d1b96cb53e3.ctex"]
 
 [params]
 

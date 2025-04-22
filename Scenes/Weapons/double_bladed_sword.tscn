@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3t2b5fdv2ord"]
+
+[ext_resource type="Script" uid="uid://dp7t15ibfm01" path="res://Scenes/Weapons/attack_hit_box.gd" id="1_4bm0k"]
+[ext_resource type="Texture2D" uid="uid://bek7y4tgka5br" path="res://Assets/Sprites/Items/13.png" id="1_pftbc"]
+[ext_resource type="AudioStream" uid="uid://ckxquk1irwojc" path="res://Sounds/Throw.wav" id="3_rrjr5"]
+[ext_resource type="AudioStream" uid="uid://4lgbmvxdr8u2" path="res://Sounds/metal_sound.mp3" id="4_fsyr8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4bm0k"]
+radius = 2.12132
+height = 21.2132
+
+[node name="DoubleBladedSword" type="Node2D" node_paths=PackedStringArray("timer", "hitbox", "sound")]
+script = ExtResource("1_4bm0k")
+timer = NodePath("Timer")
+damage = 13
+hitbox = NodePath("Area2D")
+sound = NodePath("HitSound")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pftbc")
+
+[node name="Area2D" type="Area2D" parent="." groups=["killzone"]]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_4bm0k")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="ThrowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_rrjr5")
+bus = &"SFX_normal"
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_fsyr8")
+bus = &"SFX_normal"

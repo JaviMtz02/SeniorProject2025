@@ -44,6 +44,8 @@ func on_time_warning() -> void:
 	$Sounds/LevelMusic.pitch_scale = 1.5
 
 func on_out_of_time() -> void:
+	var divider: int = randi() % 4
+	total_value /= divider
 	GameManager.get_level_data(total_value, loot_obtained, false, false)
 	$Sounds/LevelMusic.stop()
 	$Sounds/LevelFailed.play()

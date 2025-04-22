@@ -28,6 +28,7 @@ func  _on_next_transition() -> void:
 		transition.emit("Idle")
 
 func _on_enter() -> void:
+	$"../../SFX/Hurt".play()
 	var direction = get_parent().last_direction
 	blue_guard.velocity = Vector2.ZERO
 	blue_guard.move_and_slide()
@@ -46,10 +47,9 @@ func _on_enter() -> void:
 		if direction.y > 0:
 			anim.play("hurt_forward")
 		else:
-			anim.play("hurt_back")
+			anim.play("hurt_forward")
 	
 func _on_exit() -> void:
-	$"../../SFX/Hurt".play()
 	hurt_state_timer.stop()
 	nav_agent.avoidance_enabled = true
 	#anim.stop()

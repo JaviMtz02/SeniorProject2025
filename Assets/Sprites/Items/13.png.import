@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kmivxekal3x2"
-path="res://.godot/imported/UI_thinking_emotes_animation_16x16.png-d5686725cd1e402b64c8a02918c0e4a8.ctex"
+uid="uid://bek7y4tgka5br"
+path="res://.godot/imported/13.png-17742164107d4e3316e4ba3577067764.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/UI/UI_thinking_emotes_animation_16x16.png"
-dest_files=["res://.godot/imported/UI_thinking_emotes_animation_16x16.png-d5686725cd1e402b64c8a02918c0e4a8.ctex"]
+source_file="res://Assets/Sprites/Items/13.png"
+dest_files=["res://.godot/imported/13.png-17742164107d4e3316e4ba3577067764.ctex"]
 
 [params]
 

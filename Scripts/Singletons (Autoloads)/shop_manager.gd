@@ -9,8 +9,8 @@ var stick: PackedScene = preload("res://Scenes/Weapons/attack_hit_box.tscn")
 var sledge_hammer: PackedScene = preload("res://Scenes/Weapons/sledge_hammer.tscn")
 var thorn_blade: PackedScene = preload("res://Scenes/Weapons/thorn_blade.tscn")
 var sword: PackedScene = preload("res://Scenes/Weapons/mighty_sword.tscn")
-var stun_gun: PackedScene
-var plasma_gun: PackedScene
+var double_bladed_sword: PackedScene = preload("res://Scenes/Weapons/double_bladed_sword.tscn")
+var laser_sword: PackedScene = preload("res://Scenes/Weapons/laser_sword.tscn")
 
 func _ready() -> void:
 	create_bags()
@@ -48,10 +48,10 @@ func create_weapons() -> void:
 	weapon_set.append(thornblade)
 	var _sword = buyable.new("Sword", "weapon", 90, sword, 0, 0)
 	weapon_set.append(_sword)
-	var stungun = buyable.new("StunGun", "weapon", 125, stun_gun, 0, 0)
-	weapon_set.append(stungun)
-	var plasmagun = buyable.new("PlasmaGun", "weapon", 200, plasma_gun, 0, 0)
-	weapon_set.append(plasmagun)
+	var doublebladedsword = buyable.new("DoubleBladedSword", "weapon", 125, double_bladed_sword, 0, 0)
+	weapon_set.append(doublebladedsword)
+	var lasersword = buyable.new("LaserSword", "weapon", 200, laser_sword, 0, 0)
+	weapon_set.append(lasersword)
 	GameManager.equipped_weapon = _stick
 
 func create_shoes() -> void:

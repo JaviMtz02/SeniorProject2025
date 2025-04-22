@@ -57,10 +57,10 @@
 [ext_resource type="Texture2D" uid="uid://b1gv55mf7rsx6" path="res://Assets/Sprites/UI/Shop/Item Info/sledgehammer.png" id="44_dq7b2"]
 [ext_resource type="Texture2D" uid="uid://tb4rw8q8bctf" path="res://Assets/Sprites/UI/Shop/Item Info/thorn_blade.png" id="46_dwhtv"]
 [ext_resource type="Texture2D" uid="uid://5rk6xj5npq7e" path="res://Assets/Sprites/UI/Shop/Item Info/mighty_sword.png" id="48_tdm8a"]
-[ext_resource type="Texture2D" uid="uid://cd0p665ukok61" path="res://Assets/Sprites/Items/stun_gun.png" id="49_8gca4"]
-[ext_resource type="Texture2D" uid="uid://o6rrr3wqc1g4" path="res://Assets/Sprites/UI/Shop/Item Info/stun_gun.png" id="49_byewl"]
-[ext_resource type="Texture2D" uid="uid://bihoucpqpqaef" path="res://Assets/Sprites/UI/Shop/Item Info/plasma_gun.png" id="50_gipkh"]
-[ext_resource type="Texture2D" uid="uid://bldoviv0rn5mp" path="res://Assets/Sprites/Items/plasma_gun.png" id="51_gff3h"]
+[ext_resource type="Texture2D" uid="uid://bek7y4tgka5br" path="res://Assets/Sprites/Items/13.png" id="50_byewl"]
+[ext_resource type="Texture2D" uid="uid://bq0h0cce06x5h" path="res://Assets/Sprites/UI/Shop/Item Info/double_bladed_sword_info.png" id="51_byewl"]
+[ext_resource type="Texture2D" uid="uid://b6yrq00ft5j3i" path="res://Assets/Sprites/Items/26.png" id="52_gipkh"]
+[ext_resource type="Texture2D" uid="uid://bjrwvhqdu4u3w" path="res://Assets/Sprites/UI/Shop/Item Info/laser_sword_info.png" id="53_gipkh"]
 [ext_resource type="Texture2D" uid="uid://1mqajot4sse5" path="res://Assets/Sprites/UI/Shop/Item Info/worn_out_shoes.png" id="53_j3rhe"]
 [ext_resource type="Texture2D" uid="uid://ihmg6vuwl0cw" path="res://Assets/Sprites/UI/Shop/Item Info/burglar_ones.png" id="54_6d3gj"]
 [ext_resource type="Texture2D" uid="uid://1sko23pvy6aj" path="res://Assets/Sprites/UI/Shop/Item Info/running_shoes.png" id="56_p1wkc"]
@@ -999,7 +999,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
 texture_hover = ExtResource("48_tdm8a")
 
-[node name="StunGun" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items"]
+[node name="DoubleBladedSword" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 749.0
 offset_top = 328.0
@@ -1008,15 +1008,15 @@ offset_bottom = 408.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/StunGun"]
+[node name="Img" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/DoubleBladedSword"]
 layout_mode = 0
 offset_left = 12.6667
 offset_top = 12.6667
 offset_right = 66.6667
 offset_bottom = 67.6667
-texture = ExtResource("49_8gca4")
+texture = ExtResource("50_byewl")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/StunGun" groups=["interactables"]]
+[node name="BuyButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/DoubleBladedSword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1026,7 +1026,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/StunGun" groups=["interactables"]]
+[node name="EquipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/DoubleBladedSword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1036,7 +1036,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/StunGun" groups=["interactables"]]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/DoubleBladedSword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1046,7 +1046,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/StunGun"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/DoubleBladedSword"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -1054,9 +1054,9 @@ offset_right = 51.3333
 offset_bottom = 50.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
-texture_hover = ExtResource("49_byewl")
+texture_hover = ExtResource("51_byewl")
 
-[node name="PlasmaGun" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items"]
+[node name="LaserSword" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items"]
 layout_mode = 0
 offset_left = 749.0
 offset_top = 543.0
@@ -1065,15 +1065,15 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_m2v70")
 
-[node name="Img" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/PlasmaGun"]
+[node name="Img" type="TextureRect" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/LaserSword"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 9.33333
 offset_right = 72.0
 offset_bottom = 73.3333
-texture = ExtResource("51_gff3h")
+texture = ExtResource("52_gipkh")
 
-[node name="BuyButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/PlasmaGun" groups=["interactables"]]
+[node name="BuyButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/LaserSword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1083,7 +1083,7 @@ texture_normal = ExtResource("19_yn0sp")
 texture_pressed = ExtResource("20_qydip")
 texture_hover = ExtResource("21_wdfyn")
 
-[node name="EquipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/PlasmaGun" groups=["interactables"]]
+[node name="EquipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/LaserSword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1093,7 +1093,7 @@ texture_normal = ExtResource("22_gp0wy")
 texture_pressed = ExtResource("23_5veni")
 texture_hover = ExtResource("24_jkp36")
 
-[node name="UnequipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/PlasmaGun" groups=["interactables"]]
+[node name="UnequipButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/LaserSword" groups=["interactables"]]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 4.0
@@ -1103,7 +1103,7 @@ texture_normal = ExtResource("25_lrquv")
 texture_pressed = ExtResource("26_csrq7")
 texture_hover = ExtResource("27_11txg")
 
-[node name="InfoButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/PlasmaGun"]
+[node name="InfoButton" type="TextureButton" parent="ShopLayer/ShopLayout/WeaponsLayout/Items/LaserSword"]
 layout_mode = 0
 offset_left = 3.33333
 offset_top = 2.0
@@ -1111,7 +1111,7 @@ offset_right = 51.3333
 offset_bottom = 50.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("28_qydip")
-texture_hover = ExtResource("50_gipkh")
+texture_hover = ExtResource("53_gipkh")
 
 [node name="ShoesLayout" type="Node2D" parent="ShopLayer/ShopLayout" node_paths=PackedStringArray("to_bags_button", "to_weapons_button", "cash_label")]
 visible = false
