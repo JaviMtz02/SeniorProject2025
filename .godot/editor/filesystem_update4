@@ -1,12 +1,6 @@
-res://Scenes/Burglar/burglar.tscn
-res://Scenes/Burglar/burglar.gd
 res://Scenes/Menus/start_menu.tscn
-res://Scenes/Lab Level/Interactables/portal.tscn
-res://Scenes/Lab Level/Lab Scripts/portal.gd
-res://Scenes/Lab Level/lab.gd
+res://Scenes/House Level/house.tscn
+res://Scenes/Minigames/Stacking Blocks/stacking_blocks.gd
+res://Scenes/Lab Level/lab_level.tscn
 res://Scenes/Museum Level/museum.tscn
-res://Scenes/Museum Level/museum.gd
-res://Scenes/Lab Level/Lab Scripts/purple_orb.gd
-res://Scenes/Museum Level/bum.tscn
-res://Scenes/Museum Level/Museum Scripts/bum.gd
-res://Scenes/Museum Level/Museum Scripts/mona_lisa.gd
+res://Scenes/Minigames/Lab Attack/lab_attack.tscn
