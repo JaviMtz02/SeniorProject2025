@@ -181,3 +181,9 @@ func remove_item_from_clients(item_path: NodePath):
 	var item = get_node_or_null(item_path)
 	if item:
 		item.queue_free()
+
+@rpc("any_peer", "call_remote")
+func transition_state_machine(state: String, node_path: NodePath):
+	var node = get_node_or_null(node_path)
+	if node:
+		node.transition_to(state, false)

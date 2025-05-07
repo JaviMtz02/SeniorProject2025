@@ -3,3 +3,8 @@ res://Scenes/House Level/Dog/dog.tscn
 res://Scenes/House Level/Dog/walk_state.gd
 res://Scenes/Museum Level/museum.tscn
 res://Scenes/Museum Level/Guard/guard.tscn
+res://Scenes/Museum Level/Guard/walk_state.gd
+res://Scenes/House Level/Dog/dog.gd
+res://Scripts/Singletons (Autoloads)/multiplayer_manager.gd
+res://Scripts/node_state_machine.gd
+res://Scripts/grab_focus.gd
