@@ -9,6 +9,8 @@ extends NodeState
 @export var min_speed: float = 15.0
 @export var max_speed: float = 30.0
 var speed: float
+var target_pos: Vector2
+var target_position: Vector2
 var target_direction: Vector2
 
 func _ready() -> void:
@@ -20,7 +22,7 @@ func character_setup() -> void:
 	set_movement_target()
 
 func set_movement_target() -> void:
-	var target_pos: Vector2 = NavigationServer2D.map_get_random_point(nav_agent.get_navigation_map(), nav_agent.navigation_layers, false)
+	target_pos = NavigationServer2D.map_get_random_point(nav_agent.get_navigation_map(), nav_agent.navigation_layers, false)
 	nav_agent.target_position = target_pos
 	speed = randf_range(min_speed, max_speed) # chooses a speed based off of the min and max, for different speeds
 	
@@ -33,7 +35,7 @@ func _on_physics_process(_delta: float) -> void:
 		return
 	
 		
-	var target_position: Vector2 = nav_agent.get_next_path_position()
+	target_position = nav_agent.get_next_path_position()
 	target_direction = dog.global_position.direction_to(target_position) # gets facing direction of character
 	anim_sprite.flip_h = target_direction.x < 0 # easier way of saying if our character is pointing left, then flip the sprite as its default is looking right
 	var velocity: Vector2 = target_direction * speed
