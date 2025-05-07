@@ -10495,215 +10495,205 @@ z_as_relative = false
 navigation_polygon = SubResource("NavigationPolygon_r1ddd")
 metadata/_edit_lock_ = true
 
-[node name="Loot" parent="." instance=ExtResource("23_atr7s")]
+[node name="Loot" type="Node" parent="."]
 
-[node name="Phone" parent="Loot" instance=ExtResource("24_5ryl1")]
+[node name="Phone" parent="Loot" instance=ExtResource("23_lub5n")]
 position = Vector2(-353, 532)
-object_to_spawn = ExtResource("23_lub5n")
 
-[node name="Ball" parent="Loot" instance=ExtResource("24_5ryl1")]
+[node name="Ball" parent="Loot" instance=ExtResource("23_iwso7")]
 position = Vector2(-137, 516)
-object_to_spawn = ExtResource("23_iwso7")
 
-[node name="Loot_old" type="Node" parent="."]
-
-[node name="Vase" parent="Loot_old" groups=["loot"] instance=ExtResource("25_dgrcy")]
+[node name="Vase" parent="Loot" groups=["loot"] instance=ExtResource("25_dgrcy")]
 position = Vector2(-186, 347)
 script = ExtResource("24_lfu3r")
 value = 7.0
 inventory_space_req = 6.0
 
-[node name="Kachow" parent="Loot_old" groups=["loot"] instance=ExtResource("26_fqyn1")]
+[node name="Kachow" parent="Loot" groups=["loot"] instance=ExtResource("26_fqyn1")]
 position = Vector2(-38, 416)
 script = ExtResource("24_lfu3r")
 value = 10.0
 inventory_space_req = 1.0
 
-[node name="Artifact" parent="Loot_old" instance=ExtResource("27_arj0y")]
+[node name="Artifact" parent="Loot" instance=ExtResource("27_arj0y")]
 position = Vector2(-33, 751)
 value = 8.0
 inventory_space_req = 5.0
 
-[node name="Keyboard" parent="Loot_old" groups=["loot"] instance=ExtResource("28_dxgwq")]
+[node name="Keyboard" parent="Loot" groups=["loot"] instance=ExtResource("28_dxgwq")]
 position = Vector2(91, 690)
 script = ExtResource("24_lfu3r")
 value = 25.0
 inventory_space_req = 15.0
 
-[node name="Book" parent="Loot_old" groups=["loot"] instance=ExtResource("29_ewlil")]
+[node name="Book" parent="Loot" groups=["loot"] instance=ExtResource("29_ewlil")]
 position = Vector2(145, 385)
 
-[node name="Art2" parent="Loot_old" groups=["loot"] instance=ExtResource("30_g8sa4")]
+[node name="Art2" parent="Loot" groups=["loot"] instance=ExtResource("30_g8sa4")]
 position = Vector2(-61, 668)
 
-[node name="Art" parent="Loot_old" instance=ExtResource("31_ayuub")]
+[node name="Art" parent="Loot" instance=ExtResource("31_ayuub")]
 position = Vector2(-54, 564)
 
-[node name="Art3" parent="Loot_old" groups=["loot"] instance=ExtResource("32_2jcoy")]
+[node name="Art3" parent="Loot" groups=["loot"] instance=ExtResource("32_2jcoy")]
 position = Vector2(-187, 564)
 script = ExtResource("24_lfu3r")
 value = 9.0
 inventory_space_req = 4.0
 
-[node name="Art4" parent="Loot_old" groups=["loot"] instance=ExtResource("33_lwjgl")]
+[node name="Art4" parent="Loot" groups=["loot"] instance=ExtResource("33_lwjgl")]
 position = Vector2(-156, 676)
 script = ExtResource("24_lfu3r")
 value = 1.0
 inventory_space_req = 5.0
 
-[node name="Robot" parent="Loot_old" groups=["loot"] instance=ExtResource("34_765gb")]
+[node name="Robot" parent="Loot" groups=["loot"] instance=ExtResource("34_765gb")]
 position = Vector2(-322, 385)
 script = ExtResource("24_lfu3r")
 value = 2.0
 inventory_space_req = 7.0
 
-[node name="Skateboard" parent="Loot_old" groups=["loot"] instance=ExtResource("35_g50dt")]
+[node name="Skateboard" parent="Loot" groups=["loot"] instance=ExtResource("35_g50dt")]
 position = Vector2(278, 387)
 script = ExtResource("24_lfu3r")
 value = 5.0
 inventory_space_req = 10.0
 
-[node name="Trophy" parent="Loot_old" groups=["loot"] instance=ExtResource("37_lryl0")]
+[node name="Trophy" parent="Loot" groups=["loot"] instance=ExtResource("37_lryl0")]
 position = Vector2(-42, 329)
 script = ExtResource("24_lfu3r")
 value = 10.0
 
-[node name="Vase2" parent="Loot_old" groups=["loot"] instance=ExtResource("25_dgrcy")]
+[node name="Vase2" parent="Loot" groups=["loot"] instance=ExtResource("25_dgrcy")]
 position = Vector2(-9, 393)
 script = ExtResource("24_lfu3r")
 value = 8.0
 inventory_space_req = 3.0
 
-[node name="Coins" parent="." instance=ExtResource("23_atr7s")]
+[node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("24_5ryl1")]
+[node name="Coin1" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-98, 776)
-object_to_spawn = ExtResource("39_xe4ym")
 
-[node name="Coins_old" type="Node" parent="."]
-
-[node name="Coin2" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin2" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-295, 710)
 
-[node name="Coin3" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin3" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-249, 712)
 
-[node name="Coin4" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin4" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-273, 697)
 
-[node name="Coin5" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin5" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-349, 709)
 
-[node name="Coin6" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin6" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-354, 787)
 
-[node name="Coin7" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin7" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-353, 838)
 
-[node name="Coin8" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin8" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-264, 839)
 
-[node name="Coin9" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin9" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(168, 766)
 
-[node name="Coin10" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin10" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(217, 766)
 
-[node name="Coin11" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin11" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-21, 807)
 
-[node name="Coin12" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin12" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(116, 812)
 
-[node name="Coin13" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin13" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(260, 814)
 
-[node name="Coin14" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin14" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(281, 709)
 
-[node name="Coin15" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin15" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(195, 609)
 
-[node name="Coin16" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin16" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(241, 590)
 
-[node name="Coin17" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin17" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(242, 645)
 
-[node name="Coin18" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin18" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-293, 622)
 
-[node name="Coin19" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin19" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-232, 622)
 
-[node name="Coin20" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin20" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-115, 621)
 
-[node name="Coin21" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin21" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-10, 622)
 
-[node name="Coin22" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin22" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(115, 623)
 
-[node name="Coin23" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin23" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-56, 457)
 
-[node name="Coin24" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin24" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-9, 536)
 
-[node name="Coin25" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin25" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-167, 451)
 
-[node name="Coin26" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin26" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-288, 496)
 
-[node name="Coin27" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin27" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-233, 535)
 
-[node name="Coin28" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin28" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(271, 499)
 
-[node name="Coin29" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin29" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(139, 500)
 
-[node name="Coin30" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin30" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(242, 372)
 
-[node name="Coin31" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin31" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(173, 346)
 
-[node name="Coin32" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin32" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-227, 386)
 
-[node name="Coin33" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin33" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(-62, 358)
 
-[node name="Coin34" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin34" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(41, 356)
 
-[node name="Coin35" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin35" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(190, 816)
 
-[node name="Coin36" parent="Coins_old" instance=ExtResource("39_xe4ym")]
+[node name="Coin36" parent="Coins" instance=ExtResource("39_xe4ym")]
 position = Vector2(63, 729)
 
-[node name="MinigameDoors" parent="." instance=ExtResource("23_atr7s")]
+[node name="MinigameDoors" type="Node" parent="."]
 
-[node name="MinigameDoor1" parent="MinigameDoors" instance=ExtResource("24_5ryl1")]
+[node name="MinigameDoorHouse1" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
 position = Vector2(-240, 530)
-object_to_spawn = ExtResource("42_8nuk2")
 
-[node name="MinigameDoors_old" type="Node" parent="."]
-
-[node name="MinigameDoorHouse3" parent="MinigameDoors_old" instance=ExtResource("42_8nuk2")]
+[node name="MinigameDoorHouse3" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
 position = Vector2(240, 386)
 
-[node name="MinigameDoorHouse2" parent="MinigameDoors_old" instance=ExtResource("42_8nuk2")]
+[node name="MinigameDoorHouse2" parent="MinigameDoors" instance=ExtResource("42_8nuk2")]
 position = Vector2(-16, 530)
 
 [node name="PlayerSpawnPoint" parent="." node_paths=PackedStringArray("minigame_door") instance=ExtResource("40_gaq4g")]
 position = Vector2(-96, 810)
-minigame_door = NodePath("../MinigameDoors_old")
+minigame_door = NodePath("../MinigameDoors")
 
 [node name="Door" parent="." instance=ExtResource("41_fdx47")]
 position = Vector2(-94, 851)
