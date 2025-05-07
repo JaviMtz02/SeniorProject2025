@@ -15,10 +15,9 @@ func _ready():
 	MultiplayerManager.player_disconnected.connect(player_left)
 	if multiplayer.is_server():
 		level_select.visible = true
-		# This causes quite a bit of delay unfortunately. Fix if possible
-		local_ip.text = "Local IP: " + MultiplayerManager.get_local_ip()
-	else:
-		local_ip.hide()
+		# TODO This causes quite a bit of delay unfortunately. Fix if possible
+		#local_ip.text = "Local IP: " + MultiplayerManager.get_local_ip()
+	local_ip.hide()
 
 func back_pressed():
 	MultiplayerManager.leave_game()
