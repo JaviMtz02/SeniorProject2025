@@ -31,7 +31,7 @@ func _on_enter() -> void:
 	var collider = detector.get_collider()
 	# As long as the dog is looking at the burglar, the burglar will get time deducted off the clock
 	if collider and collider.is_in_group("Burglar"):
-			deduct_burglar_time(collider)
+			deduct_burglar_time()
 	# IMPORTANT: avoidance must be disabled otherwise dog will continue to glide
 	nav_agent.avoidance_enabled = false
 	# add some logic for sound
@@ -54,5 +54,8 @@ func _on_next_transition() -> void:
 func on_bark_finished() -> void:
 	transition.emit("Idle") # After dog finishes barking, it just returns to normal
 
-func deduct_burglar_time(burglar) -> void:
-	burglar.time_seconds -= 10
+func deduct_burglar_time() -> void:
+	# Doesn't matter if it's in multiplayer or not
+	var players = get_tree().get_nodes_in_group("Burglar")
+	for p in players:
+		p.time_seconds -= 10
