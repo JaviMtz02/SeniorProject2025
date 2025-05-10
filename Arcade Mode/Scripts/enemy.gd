@@ -135,6 +135,9 @@ func _update_random_offset():
 
 func take_damage(damage: int = 25) -> void:
 	health -= damage
+	modulate = Color(1, 0.3, 0.3)  # Red flash
+	await get_tree().create_timer(0.1).timeout
+	modulate = Color(1, 1, 1)  # Back to normal
 	if health <= 0:
 		update_blend_position()
 		anim_tree["parameters/conditions/die"] = true
