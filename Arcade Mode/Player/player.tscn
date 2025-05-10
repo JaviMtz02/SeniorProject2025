@@ -1,9 +1,10 @@
-[gd_scene load_steps=36 format=3 uid="uid://dlcs46dibd2ir"]
+[gd_scene load_steps=37 format=3 uid="uid://dlcs46dibd2ir"]
 
 [ext_resource type="Script" uid="uid://hex28wg6vi6h" path="res://Arcade Mode/Scripts/player.gd" id="1_fuy8f"]
 [ext_resource type="Texture2D" uid="uid://dapy7ihxe6n1i" path="res://Arcade Mode/Player/player-sheet.png" id="2_hwcyv"]
 [ext_resource type="PackedScene" uid="uid://c34y5ojb7irkq" path="res://Arcade Mode/Weapons/pistol/pistol.tscn" id="2_sp0yw"]
 [ext_resource type="PackedScene" uid="uid://8d283k08i3wl" path="res://Arcade Mode/Environment/light.tscn" id="3_hwcyv"]
+[ext_resource type="AudioStream" uid="uid://bengedwoxanhb" path="res://Arcade Mode/Player/hurt.mp3" id="5_dsut6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwcyv"]
 atlas = ExtResource("2_hwcyv")
@@ -335,3 +336,7 @@ parameters/walk/blend_position = 0
 
 [node name="WeaponPivot" type="Marker2D" parent="."]
 position = Vector2(0, -5)
+
+[node name="Damage" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dsut6")
+volume_db = -15.0

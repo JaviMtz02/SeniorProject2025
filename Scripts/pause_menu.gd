@@ -7,10 +7,13 @@ extends Control
 var exit_game_path := "res://Scenes/Menus/start_menu.tscn"
 var level_select := "res://Scenes/Menus/level_select.tscn"
 var paused = false
+var root
 
 func _ready() -> void:
 	$AnimationPlayer.play("RESET")
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	var canvasLayer = get_parent()
+	root = canvasLayer.get_parent()
 
 func resume() -> void:
 	if paused:
@@ -31,13 +34,12 @@ func _on_restart_pressed() -> void:
 		resume()
 		get_tree().reload_current_scene()
 
-func _on_options_pressed() -> void:
-	if paused:
-		pass # Replace with function body.
-
 func _on_level_select_pressed() -> void:
 	if paused:
-		get_tree().change_scene_to_file(level_select)
+		if root.level_name == "arcade_level":
+			get_tree().change_scene_to_file("res://Arcade Mode/UI/arcade_menu.tscn")
+		else:
+			get_tree().change_scene_to_file(level_select)
 
 func _on_exit_pressed() -> void:
 	if paused:

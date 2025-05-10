@@ -12,5 +12,5 @@ func _ready() -> void:
 	max_ammo = 2
 	fire_rate = 0.8
 	reload_time = 0.6
-	damage = 50
-	bullet_range = 55
+	damage = 35
+	bullet_range = 25

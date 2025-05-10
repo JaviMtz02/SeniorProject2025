@@ -1,21 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://ck718meym8xx3"]
+[gd_scene load_steps=6 format=3 uid="uid://boa33umao4jku"]
 
-[ext_resource type="Texture2D" uid="uid://ckhve70sn8xqn" path="res://Assets/Sprites/Background/Clouds/Clouds 3/1.png" id="1_00e0p"]
-[ext_resource type="Script" uid="uid://ccr4twfr0lsj6" path="res://Scripts/start_menu.gd" id="1_jbod3"]
-[ext_resource type="Texture2D" uid="uid://dhmljcbnbh4xf" path="res://Assets/Sprites/Background/Clouds/Clouds 3/3.png" id="2_xcop4"]
-[ext_resource type="Texture2D" uid="uid://dvergsij0vrm0" path="res://Assets/Sprites/Background/Clouds/Clouds 3/4.png" id="3_2rjp5"]
-[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_osx4t"]
-[ext_resource type="Script" uid="uid://ccb66rqkgn805" path="res://Scripts/grab_focus.gd" id="6_k7472"]
+[ext_resource type="Script" uid="uid://dtqwgjhxx60cu" path="res://Arcade Mode/UI/arcade_menu.gd" id="1_b2s12"]
+[ext_resource type="Texture2D" uid="uid://c4w3nbpw21oww" path="res://Assets/Sprites/Background/Clouds/Clouds 6/1.png" id="1_k6ilc"]
+[ext_resource type="Texture2D" uid="uid://83t3l5hbaghn" path="res://Assets/Sprites/Background/Clouds/Clouds 6/3.png" id="2_j1yso"]
+[ext_resource type="Texture2D" uid="uid://cyhf6av0pb4p4" path="res://Assets/Sprites/Background/Clouds/Clouds 6/4.png" id="3_mn65v"]
+[ext_resource type="FontFile" uid="uid://doo2djw4si86l" path="res://Text/Pixel Game.otf" id="5_yrs8y"]
 
-[node name="StartMenu" type="Control"]
+[node name="arcade_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("1_jbod3")
+script = ExtResource("1_b2s12")
 
 [node name="Background" type="Node" parent="."]
 
@@ -27,17 +25,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_00e0p")
+texture = ExtResource("1_k6ilc")
 
 [node name="TextureRect3" type="TextureRect" parent="Background"]
 z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -89.0
+offset_bottom = -89.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_xcop4")
+texture = ExtResource("2_j1yso")
 
 [node name="TextureRect2" type="TextureRect" parent="Background"]
 z_index = -1
@@ -47,7 +47,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_2rjp5")
+texture = ExtResource("3_mn65v")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -72,9 +72,9 @@ layout_mode = 2
 z_index = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_osx4t")
+theme_override_fonts/font = ExtResource("5_yrs8y")
 theme_override_font_sizes/font_size = 100
-text = "Out of Time"
+text = "Aracde Mode"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -96,49 +96,18 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Divider5" type="Control" parent="MarginContainer/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="Divider6" type="Control" parent="MarginContainer/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="Divider7" type="Control" parent="MarginContainer/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-
 [node name="play" type="Button" parent="MarginContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_osx4t")
+theme_override_fonts/font = ExtResource("5_yrs8y")
 theme_override_font_sizes/font_size = 35
-text = "play"
-script = ExtResource("6_k7472")
+text = "Start"
 
-[node name="arcade" type="Button" parent="MarginContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(120, 32)
+[node name="back" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_osx4t")
+theme_override_fonts/font = ExtResource("5_yrs8y")
 theme_override_font_sizes/font_size = 35
-text = "arcade
-"
-
-[node name="shop" type="Button" parent="MarginContainer/VBoxContainer2"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("5_osx4t")
-theme_override_font_sizes/font_size = 35
-text = "Shop"
-
-[node name="quit" type="Button" parent="MarginContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(120, 32)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("5_osx4t")
-theme_override_font_sizes/font_size = 35
-text = "Quit
-"
+text = "Back"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/arcade" to="." method="_on_arcade_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/shop" to="." method="_on_shop_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/back" to="." method="_on_back_pressed"]

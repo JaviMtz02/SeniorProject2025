@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://b6pdoof7cflsj"]
+[gd_scene load_steps=11 format=4 uid="uid://b6pdoof7cflsj"]
 
 [ext_resource type="Script" uid="uid://b1wil0trmgl5c" path="res://Arcade Mode/Scripts/generate_level.gd" id="1_1sjx1"]
 [ext_resource type="Texture2D" uid="uid://cc3n738yx4t44" path="res://Arcade Mode/Environment/walls-sheet.png" id="1_x5g5y"]
 [ext_resource type="Texture2D" uid="uid://edvygg6q3aok" path="res://Arcade Mode/Environment/floor_tile.png" id="2_bfcc3"]
 [ext_resource type="PackedScene" uid="uid://bmphvjk2e1kfo" path="res://Arcade Mode/UI/ui.tscn" id="4_oku50"]
+[ext_resource type="AudioStream" uid="uid://vceopttoask6" path="res://Arcade Mode/UI/music.mp3" id="5_t267k"]
+[ext_resource type="PackedScene" uid="uid://dphs7mmyn8ocp" path="res://Scenes/Menus/pause_menu.tscn" id="5_tnkwn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfcc3"]
 texture = ExtResource("1_x5g5y")
@@ -498,3 +500,10 @@ color = Color(0.256485, 0.336148, 0.336133, 0.933333)
 
 [node name="UI" parent="Interface" instance=ExtResource("4_oku50")]
 unique_name_in_owner = true
+
+[node name="PauseMenu" parent="Interface" instance=ExtResource("5_tnkwn")]
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_t267k")
+volume_db = 15.0
+parameters/looping = true

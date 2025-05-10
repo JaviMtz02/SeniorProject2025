@@ -58,6 +58,7 @@ func is_walking(value : bool) -> void:
 
 func take_damage(damage: int) -> void:
 	health -= damage
+	$Damage.play()
 	if health < 0:
 		health = 0
 	health_change.emit(health)

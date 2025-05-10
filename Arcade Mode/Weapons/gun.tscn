@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://2p14c4u2vteh"]
+[gd_scene load_steps=2 format=3 uid="uid://2p14c4u2vteh"]
+
+[ext_resource type="AudioStream" uid="uid://b175yaf2wtvaw" path="res://Arcade Mode/Weapons/blaster.mp3" id="1_ygxka"]
 
 [node name="Gun" type="Node2D"]
 
@@ -9,3 +11,7 @@ unique_name_in_owner = true
 
 [node name="ShootPoint" type="Marker2D" parent="Pivot/Sprite"]
 unique_name_in_owner = true
+
+[node name="Gunshot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_ygxka")
+volume_db = -20.0

@@ -146,14 +146,6 @@ theme_override_font_sizes/font_size = 35
 text = "restart
 "
 
-[node name="options" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_k0or1")
-theme_override_font_sizes/font_size = 35
-text = "options
-"
-
 [node name="levelSelect" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_k0or1")
@@ -181,7 +173,6 @@ libraries = {
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/levelSelect" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -75,7 +75,7 @@ func _physics_process(delta):
 			elif distance_to_player < minimum_distance:
 				# Too close - circle around
 				if not circling_mode:
-					# Just entered circling mode - apply immediate direction change
+					# Just entered circling mode apply immediate direction change
 					circling_mode = true
 					
 				# Create a perpendicular vector for circling
@@ -142,7 +142,7 @@ func take_damage(damage: int = 25) -> void:
 		update_blend_position()
 		anim_tree["parameters/conditions/die"] = true
 		set_physics_process(false)
-		var timer = get_tree().create_timer(1.5)
+		var timer = get_tree().create_timer(2.5)
 		await timer.timeout
 		queue_free()
 
@@ -164,7 +164,7 @@ func perform_attack():
 	update_blend_position()
 	var saved_velocity = velocity
 	velocity = Vector2.ZERO
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.1).timeout
 	anim_tree["parameters/conditions/is_attacking"] = false
 	velocity = saved_velocity
 

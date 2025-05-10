@@ -91,6 +91,7 @@ func handle_input() -> void:
 func shoot() -> void:
 	if can_fire and ammo_capacity > 0:
 		var new_bullet = bullet_scene.instantiate()
+		$Gunshot.play()
 		new_bullet.damage = damage
 		new_bullet.bullet_range = bullet_range
 		new_bullet.global_position = shoot_point.global_position

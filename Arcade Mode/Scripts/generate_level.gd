@@ -4,6 +4,7 @@ const Player = preload("res://Arcade Mode/Player/player.tscn")
 
 @onready var wallMap : TileMapLayer = $Walls
 @onready var floorMap : TileMapLayer = $Floor
+@export var level_name: String = "arcade_level"
 var borders = Rect2(1, 1, 47, 30)
 var player = null
 var object_placer = null
@@ -11,6 +12,8 @@ var object_placer = null
 func _ready() -> void:
 	randomize()
 	generate()
+	TitleMusic.music.stop()
+	$BGMusic.play()
 
 func generate() -> void:
 	var walker = Walker.new(Vector2(24, 15), borders)
