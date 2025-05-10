@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hex28wg6vi6h" path="res://Arcade Mode/Scripts/player.gd" id="1_fuy8f"]
 [ext_resource type="Texture2D" uid="uid://dapy7ihxe6n1i" path="res://Arcade Mode/Player/player-sheet.png" id="2_hwcyv"]
-[ext_resource type="PackedScene" uid="uid://dkc2tomnhprfa" path="res://Arcade Mode/Weapons/projectile_weapon.tscn" id="2_sp0yw"]
+[ext_resource type="PackedScene" uid="uid://c34y5ojb7irkq" path="res://Arcade Mode/Weapons/pistol/pistol.tscn" id="2_sp0yw"]
 [ext_resource type="PackedScene" uid="uid://8d283k08i3wl" path="res://Arcade Mode/Environment/light.tscn" id="3_hwcyv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwcyv"]
@@ -298,8 +298,9 @@ graph_offset = Vector2(127.98, -11.5875)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_fuy8f")
 
-[node name="ProjectileWeapon" parent="." instance=ExtResource("2_sp0yw")]
-position = Vector2(0, -5)
+[node name="Weapon" type="Node2D" parent="."]
+
+[node name="Pistol" parent="Weapon" instance=ExtResource("2_sp0yw")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k56mv")
@@ -331,3 +332,6 @@ parameters/conditions/idle = false
 parameters/conditions/is_walking = false
 parameters/idle/blend_position = 0
 parameters/walk/blend_position = 0
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+position = Vector2(0, -5)

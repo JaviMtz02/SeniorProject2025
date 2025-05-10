@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oo7er86hlx2p"
-path="res://.godot/imported/cyberpistol.png-f2d3559f0698cebe6d98edca49bd8403.ctex"
+path="res://.godot/imported/cyberpistol.png-bfa0a4f3a12d003899a291e2f47fbc58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arcade Mode/Weapons/cyberpistol.png"
-dest_files=["res://.godot/imported/cyberpistol.png-f2d3559f0698cebe6d98edca49bd8403.ctex"]
+source_file="res://Arcade Mode/Weapons/pistol/cyberpistol.png"
+dest_files=["res://.godot/imported/cyberpistol.png-bfa0a4f3a12d003899a291e2f47fbc58.ctex"]
 
 [params]
 

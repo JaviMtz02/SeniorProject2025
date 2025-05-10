@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://o3u2niaa51el"]
+
+[ext_resource type="PackedScene" uid="uid://2p14c4u2vteh" path="res://Arcade Mode/Weapons/gun.tscn" id="1_pinhj"]
+[ext_resource type="Script" uid="uid://dm6ygeq7wyy3k" path="res://Arcade Mode/Weapons/shotgun/shotgun.gd" id="2_7bogw"]
+[ext_resource type="Texture2D" uid="uid://d333bkx8rvqox" path="res://Arcade Mode/Weapons/shotgun/shotgun.png" id="2_y8hph"]
+
+[node name="Shotgun" instance=ExtResource("1_pinhj")]
+script = ExtResource("2_7bogw")
+
+[node name="Sprite" parent="Pivot" index="0"]
+position = Vector2(11, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_y8hph")
+
+[node name="ShootPoint" parent="Pivot/Sprite" index="0"]
+position = Vector2(11.6667, -3.33333)

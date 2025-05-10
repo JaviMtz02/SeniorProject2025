@@ -23,12 +23,13 @@ func generate() -> void:
 	player.connect("health_change", %UI._on_player_health_change)
 	player.emit_signal("health_change", player.health)
 	
-	var weapon = player.get_node("ProjectileWeapon")
-	weapon.connect("ammo_change", %UI._on_projectile_weapon_ammo_change)
-	weapon.emit_signal("ammo_change", weapon.ammo_capacity)
+	# really dumb code -- FIX LATER
+	var weapon: Node2D = player.get_node("Weapon")
+	var gun = weapon.get_children()
+	gun[0].connect("ammo_change", %UI._on_gun_ammo_change)
+	gun[0].emit_signal("ammo_change", gun[0].ammo_capacity, gun[0].max_ammo)
 	
 	var available_rooms = walker.available_rooms
-
 	walker.queue_free()
 	
 	for location in map:

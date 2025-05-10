@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfmxwnqis2b0a"]
+[gd_scene load_steps=7 format=3 uid="uid://bfmxwnqis2b0a"]
 
 [ext_resource type="PackedScene" uid="uid://dlcs46dibd2ir" path="res://Arcade Mode/Player/player.tscn" id="1_5wwgf"]
 [ext_resource type="PackedScene" uid="uid://cd6h5tqvaaymi" path="res://Arcade Mode/Environment/Objects/Static/Test Tube/test_tube.tscn" id="2_lf25b"]
 [ext_resource type="PackedScene" uid="uid://bmphvjk2e1kfo" path="res://Arcade Mode/UI/ui.tscn" id="3_lf25b"]
+[ext_resource type="PackedScene" uid="uid://cr5uug07eefhn" path="res://Arcade Mode/Weapons/pistol/pistol_pickup.tscn" id="4_thbde"]
+[ext_resource type="PackedScene" uid="uid://cli73bq34lyp2" path="res://Arcade Mode/Weapons/shotgun/shotgun_pickup.tscn" id="5_cn2ak"]
+[ext_resource type="PackedScene" uid="uid://cpfre6wjtfk2v" path="res://Arcade Mode/Weapons/rifle/rifle_pickup.tscn" id="6_ewk2d"]
 
 [node name="TestScene" type="Node2D"]
 y_sort_enabled = true
@@ -17,13 +20,21 @@ position = Vector2(64, 96)
 position = Vector2(160, 64)
 
 [node name="TestTube3" parent="." instance=ExtResource("2_lf25b")]
-position = Vector2(96, 0)
+position = Vector2(160, -32)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("3_lf25b")]
 
+[node name="PistolPickup" parent="." instance=ExtResource("4_thbde")]
+position = Vector2(32, -32)
+
+[node name="ShotgunPickup" parent="." instance=ExtResource("5_cn2ak")]
+position = Vector2(96, 0)
+
+[node name="RiflePickup" parent="." instance=ExtResource("6_ewk2d")]
+position = Vector2(160, 0)
+
 [connection signal="health_change" from="Player" to="CanvasLayer/UI" method="_on_player_health_change"]
-[connection signal="ammo_change" from="Player/ProjectileWeapon" to="CanvasLayer/UI" method="_on_projectile_weapon_ammo_change"]
 
 [editable path="Player"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://yp735m0h3tfy"]
+
+[ext_resource type="Texture2D" uid="uid://c2nqkl6vl2kco" path="res://Arcade Mode/UI/interact_key.png" id="1_y06ec"]
+
+[node name="InteractButton" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_y06ec")

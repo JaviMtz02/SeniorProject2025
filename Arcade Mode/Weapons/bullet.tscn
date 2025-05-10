@@ -160,8 +160,8 @@ libraries = {
 autoplay = "default"
 
 [node name="Light" parent="." instance=ExtResource("3_a85h1")]
-color = Color(0.466667, 0.811765, 0.980392, 0.823529)
-energy = 0.3
+color = Color(0.941176, 0.584314, 0.929412, 0.670588)
+energy = 0.5
 texture_scale = 0.2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

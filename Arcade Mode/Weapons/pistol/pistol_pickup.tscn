@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr5uug07eefhn"]
+
+[ext_resource type="PackedScene" uid="uid://b3nckhx38yno3" path="res://Arcade Mode/Weapons/weapon_pickup.tscn" id="1_m74ly"]
+[ext_resource type="Script" uid="uid://me8hvjodi4m" path="res://Arcade Mode/Weapons/pistol/pistol_pickup.gd" id="2_dfvef"]
+[ext_resource type="Texture2D" uid="uid://oo7er86hlx2p" path="res://Arcade Mode/Weapons/pistol/cyberpistol.png" id="2_fr0qs"]
+
+[node name="PistolPickup" instance=ExtResource("1_m74ly")]
+script = ExtResource("2_dfvef")
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(0, -5)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_fr0qs")

@@ -11,6 +11,6 @@ script = ExtResource("1_a3cgi")
 
 [node name="HealthProgress" type="TextureProgressBar" parent="."]
 layout_mode = 2
-max_value = 50.0
+max_value = 75.0
 texture_under = ExtResource("1_20vnq")
 texture_progress = ExtResource("2_a3cgi")
