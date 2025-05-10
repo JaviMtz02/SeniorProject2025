@@ -5,7 +5,7 @@ extends CharacterBody2D
 var direction : Vector2 = Vector2.ZERO
 var last_direction : Vector2 = Vector2(1, 0)
 var blend_value : float = 1.0
-const SPEED : int = 70
+const SPEED : int = 60
 
 signal health_change(health)
 var MAX_HEALTH: int = 50

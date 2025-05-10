@@ -8,7 +8,7 @@ var health = 100
 
 @export var detection_radius = 125 # range of enemy sight
 @export var minimum_distance = 12 # minimum distance to keep from player
-@export var move_speed = 50
+@export var move_speed = 65
 @export var circle_speed_multiplier = 1.3 # Speed boost when circling
 @export var direction_change_speed = 2.0 # How quickly the enemy changes direction
 @export var circle_direction_change_speed = 4.0 # Faster direction changes when circling
