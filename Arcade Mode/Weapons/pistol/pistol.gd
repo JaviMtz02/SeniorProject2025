@@ -8,3 +8,4 @@ func get_weapon_sprite() -> Node:
 func _ready() -> void:
 	super._ready()
 	ammo_capacity = 5
+	damage = 20

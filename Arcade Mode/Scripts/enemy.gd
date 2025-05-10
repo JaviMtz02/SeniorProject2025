@@ -14,6 +14,11 @@ var health = 100
 @export var circle_direction_change_speed = 4.0 # Faster direction changes when circling
 @export var random_movement_factor = 0.2 # How much randomness in movement
 
+@export var attack_range = 20  # Range at which enemy will attack
+@export var attack_cooldown = 1.0  # Time between attacks
+var can_attack = true
+var attack_timer = 0.0
+
 var player = null
 var random_offset = Vector2.ZERO
 var random_offset_timer = 0
@@ -41,6 +46,7 @@ func _ready():
 	
 	# Add to enemy group for loot detection
 	add_to_group("enemy")
+	$HurtBox.body_entered.connect(_on_hurt_box_body_entered)
 
 func _physics_process(delta):
 	if player:
@@ -51,13 +57,22 @@ func _physics_process(delta):
 		random_offset_timer -= delta
 		if random_offset_timer <= 0:
 			_update_random_offset()
+			
+		if !can_attack:
+			attack_timer -= delta
+			if attack_timer <= 0:
+				can_attack = true
 		
 		if distance_to_player <= detection_radius: # if distance is less than sight radius
 			# Calculate base direction toward player
 			var to_player = global_position.direction_to(player.global_position)
-			
-			# Determine behavior based on distance
-			if distance_to_player < minimum_distance:
+			# Check for attack first (highest priority)
+			if distance_to_player <= attack_range and can_attack:
+				perform_attack()
+				velocity = Vector2.ZERO
+				direction = to_player  # Keep facing the player
+			# Determine movement behavior based on distance
+			elif distance_to_player < minimum_distance:
 				# Too close - circle around
 				if not circling_mode:
 					# Just entered circling mode - apply immediate direction change
@@ -91,9 +106,6 @@ func _physics_process(delta):
 			# Update blend_value based on direction
 			if direction.x != 0:
 				blend_value = direction.x
-			# If you need vertical blend based on a top-down perspective, uncomment:
-			# elif direction.y != 0:
-			#     blend_value = direction.y
 			
 			# Update the animation blend position
 			update_blend_position()
@@ -124,13 +136,35 @@ func _update_random_offset():
 func take_damage(damage: int = 25) -> void:
 	health -= damage
 	if health <= 0:
+		update_blend_position()
+		anim_tree["parameters/conditions/die"] = true
+		set_physics_process(false)
+		var timer = get_tree().create_timer(1.5)
+		await timer.timeout
 		queue_free()
 
 func update_blend_position() -> void:
 	# Use the blend_value which is updated in _physics_process
 	anim_tree["parameters/idle/blend_position"] = blend_value
 	anim_tree["parameters/walk/blend_position"] = blend_value
+	anim_tree["parameters/die/blend_position"] = blend_value
+	anim_tree["parameters/attack/blend_position"] = blend_value
 
 func is_walking(value : bool) -> void:
 	anim_tree["parameters/conditions/is_walking"] = value
 	anim_tree["parameters/conditions/idle"] = not value
+
+func perform_attack():
+	anim_tree["parameters/conditions/is_attacking"] = true
+	can_attack = false
+	attack_timer = attack_cooldown
+	update_blend_position()
+	var saved_velocity = velocity
+	velocity = Vector2.ZERO
+	await get_tree().create_timer(0.5).timeout
+	anim_tree["parameters/conditions/is_attacking"] = false
+	velocity = saved_velocity
+
+func _on_hurt_box_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		body.take_damage(15)
