@@ -26,6 +26,8 @@ var reload_indicator = null
 const CURSOR = preload("res://Arcade Mode/UI/basic_crosshair.png")
 const RELOAD_INDICATOR = preload("res://Arcade Mode/UI/reload_indicator.tscn")
 
+var is_game_paused: bool = false
+
 func _ready() -> void:
 	var weapon = get_parent()
 	if weapon:
@@ -37,8 +39,12 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(CURSOR, Input.CURSOR_ARROW, Vector2(24, 24))
 	ammo_change.emit(ammo_capacity, max_ammo)
 	SignalBus.emit_ammo_change(ammo_capacity, max_ammo)
+	SignalBus.paused.connect(_on_game_paused)
 
 func _process(delta: float) -> void:
+	if is_game_paused:
+		return
+	
 	handle_aiming()
 	handle_weapon_state(delta)
 	handle_input()
@@ -121,3 +127,11 @@ func update_reload_indicator() -> void:
 	else:
 		if has_indicator:
 			player.get_node("ReloadIndicator").queue_free()
+
+func _on_game_paused(is_paused) -> void:
+	is_game_paused = is_paused
+	if is_paused:
+		can_fire = false
+	else:
+		if not reloading and timer <= 0:
+			can_fire = true

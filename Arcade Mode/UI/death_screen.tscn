@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxwwv6k521xe"]
+
+[ext_resource type="Shader" uid="uid://7idnd075edh8" path="res://Scenes/Menus/pause_menu.gdshader" id="1_2gb6m"]
+[ext_resource type="Script" uid="uid://lh720qv7p101" path="res://Arcade Mode/UI/death_screen.gd" id="1_tmam7"]
+[ext_resource type="FontFile" uid="uid://cq6kk4wtxjrhb" path="res://Text/OptimusPrincepsSemiBold.ttf" id="2_mxslf"]
+[ext_resource type="AudioStream" uid="uid://dki7rb1xjpjwj" path="res://Arcade Mode/UI/death.mp3" id="4_n7nhl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tmam7"]
+shader = ExtResource("1_2gb6m")
+shader_parameter/lod = 0.0
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tmam7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_tmam7")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -11.5
+offset_right = 34.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_mxslf")
+theme_override_font_sizes/font_size = 140
+text = "GAME  OVER"
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_n7nhl")
+volume_db = -15.0

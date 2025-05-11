@@ -22,7 +22,7 @@ func walk(steps) -> Array:
 	place_room(pos)
 	
 	for step in range(steps):
-		if steps_since_turn >= 7: # Change walker direction after 6 steps
+		if steps_since_turn >= 6: # Change walker direction after 6 steps
 			change_direction()
 		
 		if valid_step(): # If the step is validated...
@@ -61,7 +61,7 @@ func create_room(position, size) -> Dictionary:
 	return {position = position, size = size}
 
 func place_room(position) -> void:
-	var size = Vector2(randi() % 3 + 4, randi() % 3 + 4)
+	var size = Vector2(randi() % 3 + 2, randi() % 3 + 2)
 	var top_left = (position - size / 2).ceil()
 	
 	rooms.append(create_room(position, size))

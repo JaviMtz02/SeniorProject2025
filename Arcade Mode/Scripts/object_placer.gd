@@ -23,7 +23,7 @@ var obj_defs = {
 		],
 		"room_prob": 0.9,
 		"min_distance": 2,
-		"density": 0.05
+		"density": 0.2
 	}
 }
 
