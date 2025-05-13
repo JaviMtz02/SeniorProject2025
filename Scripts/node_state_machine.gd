@@ -40,8 +40,6 @@ func transition_to(node_state_name: String, initiator: bool = true) -> void:
 	# Makes sure it only initiates once
 	if initiator:
 		MultiplayerManager.transition_state_machine(node_state_name, get_path())
-	else:
-		print("i got it")
 	if node_state_name == curr_node_state.name.to_lower():
 		return
 	var new_node_state = node_states.get(node_state_name.to_lower())

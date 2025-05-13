@@ -241,6 +241,9 @@ properties/3/replication_mode = 1
 properties/4/path = NodePath("StateMachine/Walk:target_position")
 properties/4/spawn = true
 properties/4/replication_mode = 1
+properties/5/path = NodePath(".:health")
+properties/5/spawn = true
+properties/5/replication_mode = 1
 
 [node name="Dog" type="CharacterBody2D" groups=["enemy_interaction"]]
 z_index = 1

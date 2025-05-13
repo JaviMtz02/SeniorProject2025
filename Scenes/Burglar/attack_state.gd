@@ -54,10 +54,11 @@ func _on_enter() -> void:
 			attack_instance.z_index = burglar.z_index + 1
 			
 	attack_timer.start()  # Start cooldown timer
-
-	get_parent().add_child(attack_instance)
-	attack_instance.global_position = burglar.global_position
-	attack_instance.direction = direction
+	
+	if int(get_parent().get_parent().name) == multiplayer.get_unique_id():
+		get_parent().add_child(attack_instance)
+		attack_instance.global_position = burglar.global_position
+		attack_instance.direction = direction
 
 func _on_exit() -> void:
 	pass
